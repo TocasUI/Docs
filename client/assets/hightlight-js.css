@@ -1,0 +1,54 @@
+.hljs {
+    background: none !important;
+    color: #8E8E8E !important;
+    line-height: 21px !important;
+    font-size: 14px;
+    overflow-x: scroll;
+    font-weight: normal;
+    font-family: "Ubuntu Mono";
+    word-spacing: 2px;
+    letter-spacing: .02em;
+}
+
+.hljs .hljs-variable,
+.hljs .hljs-template-variable,
+.hljs .hljs-tag,
+.hljs .hljs-name,
+.hljs .hljs-selector-id,
+.hljs .hljs-selector-class,
+.hljs .hljs-regexp,
+.hljs .hljs-deletion {
+    color: #8E8E8E;
+}
+
+.hljs .hljs-string,
+.hljs .hljs-symbol,
+.hljs .hljs-bullet,
+.hljs .hljs-addition {
+    color: #0683A3 !important;
+}
+
+.hljs .hljs-attribute {
+    color: #B58E00 !important;
+    margin-right: 0.2em;
+}
+
+.hljs .hljs-important-class {
+    background-color: #52C6CA;
+    padding: 1px 3px;
+    border-radius: 4px;
+    color: #FFF !important;
+}
+
+.hljs .hljs-important-class * {
+   color: #FFF !important;
+}
+
+.hljs * {
+  font-weight: normal!important;
+  font-family: "Ubuntu Mono" !important;
+}
+
+code.hljs.javascript{
+    color: #008076 !important;
+}
