@@ -29,7 +29,13 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.vue$/,
-            use: 'vue-loader'
+            loader: 'vue-loader',
+            options: {
+                cssModules: {
+                    localIdentName: '[md5:hash:hex:3]',
+                    camelCase: true
+                }
+            }
         }, {
             test: /\.js$/,
             loader: 'babel-loader',

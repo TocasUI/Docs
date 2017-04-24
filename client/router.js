@@ -22,6 +22,7 @@ router.afterEach((to, from, next) => {
         document.querySelectorAll('code.hljs').forEach((el) => {
             el.innerText = el.innerHTML
         })
+
         // 呼叫 HightlightJS 來將剛才脫逸的 <code> 區塊全部上色。
         hljs.initHighlighting.called = false
         hljs.initHighlighting()
