@@ -12,7 +12,7 @@
 //
 
 .slate
-    padding-bottom: 7em !important
+    padding-bottom: 0 !important
     background: linear-gradient(180deg,#e7eae3 0,#f9fcf7) !important
 
 .slate_header
@@ -27,13 +27,26 @@
     color: #656565
     font-size: 16px
 
+.slate_importMessage
+    margin-top: 6em !important
+    width: 100%
+    max-width: 692px
+    line-height: 1.9em !important
+    font-size: .9em !important
+
 .slate_import
     width: 100%
-    max-width: 340px
+    max-width: 692px
+    overflow: scroll
+    line-height: 1.6em !important
+    box-shadow: none !important
+    border-bottom: 1px solid #f7faf5 !important
+    padding-bottom: 6em !important
 
-    textarea
-        white-space: nowrap
-        line-height: 1.45em !important
+[data-clipboard-target="#import"]
+    position: absolute !important
+    right: 20px
+    bottom: 20px
 
 //
 // Donators
@@ -130,11 +143,18 @@
                 .sub.header(:class='$style.slate_subHeader') 這裡迎來新世界
 
             //- 快速使用
-            p(:class='$style.slate_description') 現在開始試用！
-            .ts.fluid.input(:class='$style.slate_import')
-                textarea(rows='2').
-                    <link rel="stylesheet" href="//cdn.rawgit.com/TeaMeow/TocasUI/latest/dist/tocas.css">
-                    <script src="//cdn.rawgit.com/TeaMeow/TocasUI/latest/dist/tocas.js"></script>
+            .ts.fluid.mini.top.attached.message(:class="$style.slate_importMessage")
+                | 現在開始試用！將下列程式碼複製並貼上於 HTML 中。
+            pre.ts.bottom.attached.padded.segment(:class="$style.slate_import")
+                code.html.hljs.escaped#import.
+                    &lt;!-- Tocas UI：CSS 與元件 --&gt;
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.rawgit.com/TeaMeow/TocasUI/latest/dist/tocas.css&quot;&gt;
+                    &lt;!-- Tocas JS：模塊與 JavaScript 函式 --&gt;
+                    &lt;script src=&quot;//cdn.rawgit.com/TeaMeow/TocasUI/latest/dist/tocas.js&quot;&gt;&lt;/script&gt;
+                button.ts.mini.circular.basic.inverted.positive.button(data-clipboard-target="#import")
+                    i.copy.icon
+                    | 複製
+
         //- 友情贊助
         div(:class="$style.donators")
             .ts.center.aligned.narrow.container
@@ -236,6 +256,18 @@
 
 <script>
 export default {
-    name: 'Homepage'
+    name: 'Homepage',
+    mounted() {
+        var clipboard = new Clipboard('[data-clipboard-target="#import"]')
+
+        clipboard.on('success', function(e) {
+            document.querySelectorAll('[data-clipboard-target="#import"]').forEach((el) => {
+                el.innerText = '已成功複製！'
+                el.className += ' disabled'
+            })
+
+            e.clearSelection()
+        })
+    }
 }
 </script>

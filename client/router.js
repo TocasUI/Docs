@@ -19,7 +19,7 @@ router.afterEach((to, from, next) => {
     // 類似 Async 的概念，沒有 setTimeout 的話 HightlightJS 無法替元素上色。
     setTimeout(() => {
         // 脫逸 <code> 裡面的 HTML。
-        document.querySelectorAll('code.hljs').forEach((el) => {
+        document.querySelectorAll('code.hljs:not(.escaped)').forEach((el) => {
             el.innerText = el.innerHTML
         })
 
