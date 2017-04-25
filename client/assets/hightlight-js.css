@@ -52,3 +52,7 @@
 code.hljs.javascript{
     color: #008076 !important;
 }
+
+.hljs-comment {
+    opacity: 0.75;
+}

@@ -5,7 +5,7 @@
 
 .menu
     font-size: 16px !important
-    background-color: #e7eae3 !important
+    background-color: #87bdd1 !important
 
 //
 // Slate
@@ -13,7 +13,17 @@
 
 .slate
     padding-bottom: 0 !important
-    background: linear-gradient(180deg,#e7eae3 0,#f9fcf7) !important
+    background: linear-gradient(180deg, #5fafe8 5%, #cde5f7) !important
+    overflow: hidden
+
+.slate_background
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: url(http://i.imgur.com/Fk1Nsw1.png)
+    opacity: 0.5
 
 .slate_header
     font-size: 5rem !important
@@ -28,20 +38,24 @@
     font-size: 16px
 
 .slate_importMessage
-    margin-top: 6em !important
+    margin-top: 7em !important
+    padding-left: 1.7em !important
     width: 100%
     max-width: 692px
     line-height: 1.9em !important
     font-size: .9em !important
+    z-index: 2
 
 .slate_import
     width: 100%
     max-width: 692px
     overflow: scroll
     line-height: 1.6em !important
-    box-shadow: none !important
-    border-bottom: 1px solid #f7faf5 !important
+    box-shadow: 1px -10px 12px 3px rgba(128, 128, 128, 0.17) !important
+    border-radius: 0 !important
+    border-bottom: 2px solid #f7faf5 !important
     padding-bottom: 6em !important
+    z-index: 1
 
 [data-clipboard-target="#import"]
     position: absolute !important
@@ -101,6 +115,9 @@
 // Description
 //
 
+.description
+    padding-bottom: 6em
+
 .description_header
     color: #646464
     font-size: 2.143rem !important
@@ -117,12 +134,34 @@
 
 .description_compareHeader
     margin-top: 1.2em !important
+
+//
+// Components
+//
+
+.components
+    background-color: #fbfbfb
+    padding-top: 6em
+
+.componentsLabel
+    margin-top: 4px !important
+    margin-bottom: 4px !important
+
+.componentsHeader
+    font-size: 2.143rem !important
+    margin-bottom: 2em !important
+
+    i
+        font-size: 128px !important
+
+.componentsSubHeader
+    color: #848181 !important
 </style>
 
 <template lang="pug">
     div
         //- 導航選單
-        .ts.top.attached.pure.basic.menu(:class='$style.menu')
+        .ts.fluid.inverted.top.attached.pure.basic.menu(:class='$style.menu')
             .ts.narrow.container
                 router-link.item(to='/getting-started') Tocas UI
                 router-link.item(to='/getting-started') 從這開始
@@ -137,9 +176,11 @@
                     router-link.item(to='/getting-started') GitHub
 
         //- 主要板岩
-        .ts.vertically.very.padded.slate(:class='$style.slate')
-            .ts.center.aligned.header(:class='$style.slate_header')
-                | Tocas UI 2
+        .ts.fluid.vertically.very.padded.slate(:class='$style.slate')
+            div(:class="$style.slate_background")
+
+            .ts.inverted.center.aligned.header(:class='$style.slate_header')
+                | Tocas UI 2.3
                 .sub.header(:class='$style.slate_subHeader') 這裡迎來新世界
 
             //- 快速使用
@@ -185,7 +226,7 @@
             a(href='https://patreon.com/yamiodymel', target='_blank', :class="$style.donators_bePatreon") 成為贊助者
 
         //- 簡介大綱
-        .ts.narrow.container
+        .ts.narrow.container(:class="$style.description")
             .ts.relaxed.grid
                 //- 更有意義
                 .eight.wide.column
@@ -252,6 +293,146 @@
                                     </li>
                                 </ul>
                             </nav>
+
+        div(:class="$style.components")
+            .ts.narrow.container
+                .ts.massive.center.aligned.icon.header(:class="$style.componentsHeader")
+                    i.gift.icon
+                    | 眾多搭配
+                    .sub.header(:class="$style.componentsSubHeader") 元件除了可以單獨使用，還可以混搭著使用
+
+                .ts.relaxed.stackable.grid
+                    //- 左側展示欄位
+                    .four.wide.column
+                        //- 圖片卡片
+                        .ts.header 圖片卡片
+                        .ts.card
+                            .image
+                                img(src="~images/image_placeholder_4-3.png")
+                            .content
+                                .header iPhone 8 開賣！
+                                .meta
+                                    a(href="#!") 兩天前
+
+                        //- 垂直選單
+                        .ts.header 垂直選單
+                        .ts.inverted.vertical.positive.menu
+                            a.item(href="#!")
+                                i.picture.icon
+                                | 相片
+                            a.item(href="#!")
+                                i.users.icon
+                                | 群組
+                            a.item(href="#!")
+                                i.star.icon
+                                | 收藏
+
+                        //- 標籤
+                        .ts.header 標籤
+                        .ts.label(:class="$style.componentsLabel")
+                            i.gift.icon
+                            | 標籤
+                        .ts.image.label(:class="$style.componentsLabel")
+                            img(src='~images/image_placeholder_user.png')
+                            | Yami Odymel
+                        .ts.image.label(:class="$style.componentsLabel")
+                            img(src='~images/image_placeholder_user2.png')
+                            | Xiaoan
+                        .ts.image.label(:class="$style.componentsLabel")
+                            img(src='~images/image_placeholder_user3.png')
+                            | 卡莉絲
+                            .detail 實況主
+                        .ts.circular.primary.label(:class="$style.componentsLabel") 9
+                        .ts.circular.info.label(:class="$style.componentsLabel") 14
+                        .ts.warning.label(:class="$style.componentsLabel") 7
+                        .ts.positive.label(:class="$style.componentsLabel") 13
+
+                    //- 中間展示欄位
+                    .eight.wide.column
+                        //- 文章卡片
+                        .ts.header 文章卡片
+                        .ts.card
+                            .content
+                                .header
+                                    | Yami Odymel
+                                .middoted.meta
+                                    div @yamiodymel
+                                    div 2 分鐘前
+                                .description
+                                    p 看似最重要的東西卻沒能被妥善利用，
+                                    p 沒有人能發現這一點，因為他們早已活在過去，
+                                    p 才剛開始的序章卻被放在頁尾。
+
+                        //- 圖示選單
+                        .ts.header 圖示選單
+                        .ts.icon.inverted.info.borderless.menu
+                            a.item
+                                i.bell.icon
+                            a.item
+                                i.music.icon
+                            a.item
+                                i.search.icon
+
+                        //- 按鈕群組
+                        .ts.header 按鈕群組
+                        .ts.fluid.buttons
+                            button.ts.button 預設
+                            button.ts.warning.button 警告
+                            button.ts.negative.button 錯誤
+                            button.ts.loading.primary.button 讀取
+
+                        //- 表單
+                        .ts.header 表單
+                        .ts.segment
+                            form.ts.form
+                                .field
+                                    label 真實姓名
+                                    .two.fields
+                                        .field
+                                            input(type='text', placeholder="姓氏")
+                                        .field
+                                            input(type='text', placeholder="名字")
+                                button.ts.button 送出
+
+                    //- 右側展示欄位
+                    .four.wide.column
+                        //- 讀取中的段落
+                        .ts.header 讀取中的段落
+                        .ts.loading.segment
+                            p &nbsp;
+                            p &nbsp;
+                            p &nbsp;
+
+                        //- 浮起來的段落
+                        h4.ts.header 浮起來的段落
+                        .ts.raised.segment
+                            blockquote.ts.quote
+                                p 你將看見一個魔法師的日常生活，
+                                p 只要你能夠單身三十年，
+                                p 你也可以跟我一樣成為魔法師。
+
+                        //- 留言
+                        h4.ts.header 留言
+                        .ts.segment: .ts.comments
+                            .comment
+                                a.avatar
+                                    img(src='~images/image_placeholder_user.png')
+                                .content
+                                    a.author Mac Taylor
+                                    .metadata
+                                        div 2 天前
+                                        div
+                                            i.star.icon
+                                            | 5 次收藏
+                                    .text 如果你有去釣魚大賽，你可能會被禁止進入：「我們不歡迎職業選手」
+                            .comment
+                                a.avatar
+                                    img(src='~images/image_placeholder_user2.png')
+                                .content
+                                    a.author Yami Odymel
+                                    .metadata
+                                        div 42 分鐘前
+                                    .text 你很機車人
 </template>
 
 <script>
