@@ -1,179 +1,11 @@
 <style lang="sass" module>
-//
-// Menu
-//
-
-.menu
-    font-size: 16px !important
-    background-color: #87bdd1 !important
-
-//
-// Slate
-//
-
-.slate
-    padding-bottom: 0 !important
-    background: linear-gradient(180deg, #5fafe8 5%, #cde5f7) !important
-    overflow: hidden
-
-.slate_background
-    position: absolute
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    background: url(http://i.imgur.com/Fk1Nsw1.png)
-    opacity: 0.5
-
-.slate_header
-    font-size: 5rem !important
-
-.slate_subHeader
-    font-size: 2rem !important
-
-.slate_description
-    display: block
-    margin-top: 4em !important
-    color: #656565
-    font-size: 16px
-
-.slate_importMessage
-    margin-top: 7em !important
-    padding-left: 1.7em !important
-    width: 100%
-    max-width: 692px
-    line-height: 1.9em !important
-    font-size: .9em !important
-    z-index: 2
-
-.slate_import
-    width: 100%
-    max-width: 692px
-    overflow: scroll
-    line-height: 1.6em !important
-    box-shadow: 1px -10px 12px 3px rgba(128, 128, 128, 0.17) !important
-    border-radius: 0 !important
-    border-bottom: 2px solid #f7faf5 !important
-    padding-bottom: 6em !important
-    z-index: 1
-
-[data-clipboard-target="#import"]
-    position: absolute !important
-    right: 20px
-    bottom: 20px
-
-//
-// Donators
-//
-
-.donators
-    text-align: center
-    opacity: 0.9
-    padding-top: 4em
-    padding-bottom: 4em
-    margin-bottom: 4.3em
-    border-bottom: 1px solid #f5f5f5;
-
-    strong
-        display: block
-        margin-bottom: 3em
-        color: #646464
-
-.donators_grid:not(:last-of-type)
-    margin-bottom: 1.3em !important
-
-.donators_primary,
-.donators_secondary
-    color: #848484;
-    font-size: 1.2em
-
-    img
-        max-width: 50px !important
-        max-height: 50px !important
-        min-width: 40px !important
-        min-height: 40px !important
-        margin-right: 2em !important
-        margin-left: 0 !important
-
-.donators_secondary
-    font-size: 1em
-
-.donators_bePatreon
-    display: inline-block
-    text-align: center
-    padding: .7em 1.2em
-    border-radius: 500em
-    color: #777
-    margin-top: 3em
-    border: 1px solid #e6e6e6
-
-    &:hover
-        background-color: #e2e2e2
-        color: #6f6f6f
-
-//
-// Description
-//
-
-.description
-    padding-bottom: 6em
-
-.description_header
-    color: #646464
-    font-size: 2.143rem !important
-    margin-bottom: 1em !important
-
-    & ~ p
-        font-size: 16px
-        color: #848181
-
-.description_demoHeader,
-.description_compareHeader
-    font-size: 1.815rem !important
-    color: #646464
-
-.description_compareHeader
-    margin-top: 1.2em !important
-
-//
-// Components
-//
-
-.components
-    background-color: #fbfbfb
-    padding-top: 6em
-
-.componentsLabel
-    margin-top: 4px !important
-    margin-bottom: 4px !important
-
-.componentsHeader
-    font-size: 2.143rem !important
-    margin-bottom: 2em !important
-
-    i
-        font-size: 128px !important
-
-.componentsSubHeader
-    color: #848181 !important
+@import "~styles/homepage.sass"
 </style>
 
 <template lang="pug">
     div
         //- 導航選單
-        .ts.fluid.inverted.top.attached.pure.basic.menu(:class='$style.menu')
-            .ts.narrow.container
-                router-link.item(to='/getting-started') Tocas UI
-                router-link.item(to='/getting-started') 從這開始
-                router-link.item(to='/getting-started') 一般元素
-                router-link.item(to='/getting-started') 聚合型
-                router-link.item(to='/getting-started') 模塊
-                router-link.item(to='/getting-started') 視圖型
-                router-link.item(to='/getting-started') 響應式
-
-                //- 右側選單
-                .right.menu
-                    router-link.item(to='/getting-started') GitHub
+        docs-navbar(:isHomepage="true")
 
         //- 主要板岩
         .ts.fluid.vertically.very.padded.slate(:class='$style.slate')
@@ -237,13 +69,12 @@
 
                 .eight.wide.column
                     .ts.header(:class="$style.description_demoHeader") HTML
-                    pre.ts.padded.segment
-                        code.html.hljs.
-                            <div class="ts fluid buttons">
-                                <button class="ts button">卡莉絲</button>
-                                <button class="ts button">亞凡芽</button>
-                                <button class="ts warning button">橙希</button>
-                            </div>
+                    pre.ts.padded.segment(html-code).
+                        <div class="ts fluid buttons">
+                            <button class="ts button">卡莉絲</button>
+                            <button class="ts button">亞凡芽</button>
+                            <button class="ts warning button">橙希</button>
+                        </div>
                     .ts.fluid.buttons
                         button.ts.button 卡莉絲
                         button.ts.button 亞凡芽
@@ -262,37 +93,35 @@
 
                 .eight.wide.column
                     .ts.header(:class="$style.description_compareHeader") Tocas UI
-                    pre.ts.padded.segment
-                        code.html.hljs.
-                            <nav class="ts menu">
-                                <a class="header item">商標</a>
-                                <a class="active item">首頁</a>
-                                <a class="item">特色</a>
-                                <a class="item">價格</a>
-                                <a class="item">關於</a>
-                            </nav>
+                    pre.ts.padded.segment(html-code).
+                        <nav class="ts menu">
+                            <a class="header item">商標</a>
+                            <a class="active item">首頁</a>
+                            <a class="item">特色</a>
+                            <a class="item">價格</a>
+                            <a class="item">關於</a>
+                        </nav>
 
                 .eight.wide.column
                     .ts.header(:class="$style.description_compareHeader") Bootstrap 4
-                    pre.ts.padded.segment
-                        code.html.hljs.
-                            <nav class="navbar navbar-light bg-faded">
-                                <a class="navbar-brand">商標</a>
-                                <ul class="nav navbar-nav">
-                                    <li class="nav-item active">
-                                        <a class="nav-link">首頁</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link">特色</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link">價格</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link">關於</a>
-                                    </li>
-                                </ul>
-                            </nav>
+                    pre.ts.padded.segment(html-code)
+                        <nav class="navbar navbar-light bg-faded">
+                            <a class="navbar-brand">商標</a>
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link">首頁</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">特色</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">價格</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">關於</a>
+                                </li>
+                            </ul>
+                        </nav>
 
         div(:class="$style.components")
             .ts.narrow.container
@@ -353,8 +182,7 @@
                         .ts.header 文章卡片
                         .ts.card
                             .content
-                                .header
-                                    | Yami Odymel
+                                .header Yami Odymel
                                 .middoted.meta
                                     div @yamiodymel
                                     div 2 分鐘前
@@ -433,9 +261,87 @@
                                     .metadata
                                         div 42 分鐘前
                                     .text 你很機車人
+
+        //- 使用感言
+        div(:class="$style.quotes")
+            .ts.narrow.container
+                .ts.massive.inverted.center.aligned.icon.header(:class="$style.quotesHeader")
+                    i.smile.icon
+                    | 看看用戶怎麼說
+                    .sub.header 他們對 Tocas UI 的評價
+
+                .ts.four.column.stackable.grid
+                    //- Hiram Huang
+                    .center.aligned.column
+                        img.ts.bordered.small.circular.image(src="~images/users/hiram.png")
+                        .ts.inverted.header(:class="$style.quoteBlockHeader") Hiram Huang
+                        .ts.quote(:class="$style.quoteBlock")
+                            p Gan 我快哭了
+                            p 感動屎了
+                            p 我的淚
+
+                    //- Tsundere Chen
+                    .center.aligned.column
+                        img.ts.bordered.small.circular.image(src="~images/users/tsundere.png")
+                        .ts.inverted.header(:class="$style.quoteBlockHeader") Tsundere Chen
+                        .ts.quote(:class="$style.quoteBlock")
+                            p 等很久了
+                            p 請問什麼時候換 TeaMeow v1.0.0？
+
+                    //- Sciuridae
+                    .center.aligned.column
+                        img.ts.bordered.small.circular.image(src="~images/users/sciuridae.png")
+                        .ts.inverted.header(:class="$style.quoteBlockHeader") Sciuridae
+                        .ts.quote(:class="$style.quoteBlock")
+                            p 洨安都做好 Tocas UI 了
+                            p 我們該開個洨安教
+                            p 信洨安，得永生
+
+                    //- Jasper Yu
+                    .center.aligned.column
+                        img.ts.bordered.small.circular.image(src="~images/users/jasper.png")
+                        .ts.inverted.header(:class="$style.quoteBlockHeader") Jasper Yu
+                        .ts.quote(:class="$style.quoteBlock")
+                            p 潮爆了 所以我說那個始春呢
+
+                    //- Chris
+                    .center.aligned.column
+                        img.ts.bordered.small.circular.image(src="~images/users/chris.png")
+                        .ts.inverted.header(:class="$style.quoteBlockHeader") Chris
+                        .ts.quote(:class="$style.quoteBlock")
+                            p 哪時候 TeaMeow 的 Messenger 會出現
+
+                    //- Sean
+                    .center.aligned.column
+                        img.ts.bordered.small.circular.image(src="~images/users/sean.png")
+                        .ts.inverted.header(:class="$style.quoteBlockHeader") Sean
+                        .ts.quote(:class="$style.quoteBlock")
+                            p One Tocas UI a Page Keep the Designer away
+
+                    //- Choukai
+                    .center.aligned.column
+                        img.ts.bordered.small.circular.image(src="~images/users/choukai.png")
+                        .ts.inverted.header(:class="$style.quoteBlockHeader") Choukai
+                        .ts.quote(:class="$style.quoteBlock")
+                            p 快來用 Tocas UI
+                            p 這真是，太潮惹！
+                            p 三朝★身寸☆惹ㄦ
+
+                    //- Henry Wu
+                    .center.aligned.column
+                        img.ts.bordered.small.circular.image(src="~images/users/henry.jpg")
+                        .ts.inverted.header(:class="$style.quoteBlockHeader") Henry Wu
+                        .ts.quote(:class="$style.quoteBlock")
+                            p 希望2.0趕快出來
+
+        //- 頁腳
+        docs-footer
 </template>
 
 <script>
+import DocsFooter from 'components/footer.vue'
+import DocsNavbar from 'components/navbar.vue'
+
 export default {
     name: 'Homepage',
     mounted() {
@@ -449,6 +355,10 @@ export default {
 
             e.clearSelection()
         })
+    },
+    components: {
+        DocsFooter,
+        DocsNavbar
     }
 }
 </script>

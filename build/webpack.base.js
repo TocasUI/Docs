@@ -22,7 +22,10 @@ module.exports = {
     },
     resolve: {
         alias: {
-            images: path.resolve(__dirname, '../client/assets/images')
+            images: path.resolve(__dirname, '../client/assets/images'),
+            components: path.resolve(__dirname, '../client/components'),
+            views: path.resolve(__dirname, '../client/views'),
+            styles: path.resolve(__dirname, '../client/styles')
         },
         extensions: ['.js', '.vue', '.css', '.json'],
     },
