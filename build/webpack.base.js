@@ -25,6 +25,7 @@ module.exports = {
             images: path.resolve(__dirname, '../client/assets/images'),
             components: path.resolve(__dirname, '../client/components'),
             views: path.resolve(__dirname, '../client/views'),
+            docs: path.resolve(__dirname, '../client/docs'),
             styles: path.resolve(__dirname, '../client/styles')
         },
         extensions: ['.js', '.vue', '.css', '.json'],
@@ -39,6 +40,9 @@ module.exports = {
                     camelCase: true
                 }
             }
+        }, {
+            test: /\.yml$/,
+            loader: 'json-loader!yaml-loader',
         }, {
             test: /\.js$/,
             loader: 'babel-loader',

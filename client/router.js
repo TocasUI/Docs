@@ -3,14 +3,18 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+//import test from 'docs/elements/button.yml'
+
+
+
 const router = new Router({
     mode: 'history',
     routes: [{
         path: '/',
-        component: require('views/homepage.vue')
+        component: (resolve) => require(['views/homepage.vue'], resolve)
     }, {
         path: '/elements',
-        component: require('views/elements.vue')
+        component: (resolve) => require(['views/elements.vue'], resolve)
     }, {
         path: '*',
         redirect: '/'

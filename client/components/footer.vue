@@ -8,7 +8,7 @@
     margin-bottom: .6em !important
 
 .item:not(:last-child)
-    margin-right: 1.6em
+    margin-right: 1.6em !important
 
 .toTop
     opacity: .7

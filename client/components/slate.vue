@@ -10,6 +10,9 @@
 
 .description
     font-size: .8em !important
+
+.tab
+    margin-bottom: -5.1em !important
 </style>
 
 <template lang="pug">
@@ -19,6 +22,9 @@
                 slot(name="header")
             .description(:class="$style.description")
                 slot(name="description")
+        .ts.bottom.attached.tabbed.menu(:class="$style.tab")
+            .ts.narrow.container
+                slot(name="tab")
 </template>
 
 <script>
