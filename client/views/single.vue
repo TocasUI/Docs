@@ -100,6 +100,7 @@
         padding: 3px 4px
         border-bottom: 1px dashed #b5b5b5
         color: #0683a5
+        margin-bottom: 3px
         line-height: 1
 
         &:hover

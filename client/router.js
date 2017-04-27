@@ -3,11 +3,19 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // Docs
-import elements from 'docs/elements.yml'
-import button   from 'docs/elements/button.yml'
-import divider  from 'docs/elements/divider.yml'
-import header   from 'docs/elements/header.yml'
-import input   from 'docs/elements/input.yml'
+import elements   from 'docs/elements'
+import button     from 'docs/elements/button'
+import divider    from 'docs/elements/divider'
+import header     from 'docs/elements/header'
+import input      from 'docs/elements/input'
+import label      from 'docs/elements/label'
+import list       from 'docs/elements/list'
+import loader     from 'docs/elements/loader'
+import quote      from 'docs/elements/quote'
+import segment    from 'docs/elements/segment'
+import slate      from 'docs/elements/slate'
+import step       from 'docs/elements/step'
+import breadcrumb from 'docs/collections/breadcrumb'
 
 const router = new Router({
     mode: 'history',
@@ -34,6 +42,38 @@ const router = new Router({
         path: '/elements/input',
         component: (resolve) => require(['views/single'], resolve),
         meta: input
+    }, {
+        path: '/elements/label',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: label
+    }, {
+        path: '/elements/list',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: list
+    }, {
+        path: '/elements/loader',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: loader
+    }, {
+        path: '/elements/quote',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: quote
+    }, {
+        path: '/elements/segment',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: segment
+    }, {
+        path: '/elements/slate',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: slate
+    }, {
+        path: '/elements/step',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: step
+    }, {
+        path: '/collections/breadcrumb',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: breadcrumb
     }, {
         path: '*',
         redirect: '/'

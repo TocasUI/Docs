@@ -28,7 +28,7 @@ module.exports = {
             docs: path.resolve(__dirname, '../client/docs'),
             styles: path.resolve(__dirname, '../client/styles')
         },
-        extensions: ['.js', '.vue', '.css', '.json'],
+        extensions: ['.js', '.vue', '.css', '.json', '.yml'],
     },
     module: {
         loaders: [{
