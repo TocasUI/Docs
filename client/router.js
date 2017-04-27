@@ -4,7 +4,10 @@ Vue.use(Router)
 
 // Docs
 import elements from 'docs/elements.yml'
-import button  from 'docs/elements/button.yml'
+import button   from 'docs/elements/button.yml'
+import divider  from 'docs/elements/divider.yml'
+import header   from 'docs/elements/header.yml'
+import input   from 'docs/elements/input.yml'
 
 const router = new Router({
     mode: 'history',
@@ -15,10 +18,22 @@ const router = new Router({
         path: '/elements',
         component: (resolve) => require(['views/list'], resolve),
         meta: elements
-    },{
+    }, {
+        path: '/elements/divider',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: divider
+    }, {
         path: '/elements/button',
         component: (resolve) => require(['views/single'], resolve),
         meta: button
+    }, {
+        path: '/elements/header',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: header
+    }, {
+        path: '/elements/input',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: input
     }, {
         path: '*',
         redirect: '/'

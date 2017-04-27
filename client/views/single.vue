@@ -30,7 +30,6 @@
     border-bottom: 1px dashed #b3ffff
     padding-bottom: .8em
     margin-bottom: .6em
-
     &:not(:first-child)
         margin-top: 1.4em !important
 
@@ -79,6 +78,11 @@
     font-size: 28px !important
     line-height: 1.5em !important
     border-bottom: 2px solid #d9d9d9 !important
+
+    &:first-child
+        margin-top: 0 !important
+        line-height: .6 !important
+        padding-bottom: 17px !important
 
 .demo
     margin-top: 28px !important
@@ -130,8 +134,9 @@
                 .twelve.wide.column
 
                     //- 主要說明
-                    .ts.huge.dividing.header(:class="$style.introHeader") 說明
-                    div(v-html="$route.meta.intro")
+                    template(v-if="$route.meta.intro")
+                        .ts.huge.dividing.header(:class="$style.introHeader") 說明
+                        div(v-html="$route.meta.intro")
 
                     //-
                     template(v-for="styles in $route.meta.styles")
