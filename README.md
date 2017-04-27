@@ -31,3 +31,44 @@ $ npm run dev
 ```
 
 接著參訪 `http://localhost:8080` 即可直接開啟本地教學文件頁面。
+
+## 文件格式
+
+每單個元件的文件皆由 `.yml` 格式作為基礎。
+
+```yml
+slate:
+  title      : 按鈕
+  description: 一個重要的按鈕，我們將它視為核彈按鈕般，精心設計和呵護。
+
+intro: |
+  <p>按鈕具有多種樣式和語意，請注意的是，語意和顏色不同，請不要為了要新增紅色按鈕，就建立一個「負面」按鈕。</p>
+  <p>請務必遵循 CSS 樣式中的含意。</p>
+
+styles:
+  - category   : 種類
+    description: 一個按鈕具有多個不同的種類。
+    items      :
+      - title      : 按鈕
+        description: 一個正常的按鈕。
+        code       : |
+          <button class="ts [[button]]">按鈕</button>
+```
+
+### 特殊格式
+
+在 Tocas UI 中有兩個特殊標記：
+
+* `[[文字]]`：這會用來凸顯包覆的文字，很常用在需要特別標記重要樣式名稱（Class）的時候。
+* `{{文字}}`：自動將包覆的文字轉換成相關連結，如 `{{segment}}` 將會被轉換成 `<a href="//tocas-ui.com/elements/segment">segment</a>`，這很常用在希望能將樣式名稱中的某元素加上相關連結時候。
+
+具體範例如下：
+
+```yml
+- title      : 按鈕
+  description: 一個正常的按鈕。
+  code       : |
+      <button class="ts icon [[button]]">
+          <i class="heart {{icon}}"></i>
+      </button>
+```
