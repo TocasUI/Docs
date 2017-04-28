@@ -17,6 +17,7 @@ import slate      from 'docs/elements/slate'
 import step       from 'docs/elements/step'
 import breadcrumb from 'docs/collections/breadcrumb'
 import form       from 'docs/collections/form'
+import grid       from 'docs/collections/grid'
 
 const router = new Router({
     mode: 'history',
@@ -79,6 +80,10 @@ const router = new Router({
         path: '/collections/form',
         component: (resolve) => require(['views/single'], resolve),
         meta: form
+    }, {
+        path: '/collections/grid',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: grid
     }, {
         path: '*',
         redirect: '/'

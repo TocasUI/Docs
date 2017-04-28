@@ -144,8 +144,7 @@
                         //-
                         .ts.big.dividing.header(:class="$style.categoryHeader")
                             | {{ styles.category }}
-                        div
-                            | {{ styles.description }}
+                        div(v-html="styles.description")
 
                         //-
                         template(v-for="item in styles.items")
