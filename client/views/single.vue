@@ -1,6 +1,6 @@
 <style lang="sass" module>
 .container
-    margin-top: 3em
+    margin-top: 4em
 
 .listColumn
     padding-right: 4rem !important
@@ -114,9 +114,12 @@
         docs-navbar
 
         //- 文件板岩
-        docs-slate
+        docs-slate(:tab="$route.meta.tabs")
             template(slot="header") {{ $route.meta.slate.title }}
             template(slot="description") {{ $route.meta.slate.description }}
+            template(slot="tab")
+                router-link.item(:class="{active: tab.to == $route.path}", v-for="tab in $route.meta.tabs", :to="tab.to", key="tab.to")
+                    | {{ tab.type == 'styles' ? '基本樣式' : 'JavaScript 模塊' }}
 
         //- 元素卡片
         .ts.narrow.container(:class="$style.container")
@@ -156,6 +159,9 @@
                                 .ts.secondary.padded.segment
                                     pre(html-code, v-text="item.code", :class="$style.code")
 
+                            .ts.header(:class="$style.itemSubHeader", v-if="item.javascript") JavaScript
+                            .ts.secondary.padded.segment
+                                pre(js-code, v-text="item.javascript", :class="$style.code")
         //- 頁腳
         docs-footer
 </template>

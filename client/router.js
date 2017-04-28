@@ -19,6 +19,8 @@ import breadcrumb from 'docs/collections/breadcrumb'
 import form       from 'docs/collections/form'
 import grid       from 'docs/collections/grid'
 import menu       from 'docs/collections/menu'
+import message    from 'docs/collections/message'
+import messageJS  from 'docs/collections/message-js'
 
 const router = new Router({
     mode: 'history',
@@ -90,6 +92,14 @@ const router = new Router({
         component: (resolve) => require(['views/single'], resolve),
         meta: menu
     }, {
+        path: '/collections/message',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: message
+    }, {
+        path: '/collections/message/javascript',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: messageJS
+    }, {
         path: '*',
         redirect: '/'
     }]
@@ -99,14 +109,18 @@ const router = new Router({
 router.afterEach((to, from, next) => {
     // 類似 Async 的概念，沒有 setTimeout 的話 HightlightJS 無法替元素上色。
     setTimeout(() => {
-        document.querySelectorAll('[html-code]').forEach((el) => {
-
-            var text       = el.innerHTML,
+        document.querySelectorAll('[html-code], [js-code]').forEach((el) => {
+            var isJS       = el.getAttribute('js-code') == 'js-code',
+                text       = el.innerHTML,
                 unescaped  = new DOMParser().parseFromString(text, 'text/html').documentElement.textContent,
-                beautified = html_beautify(unescaped),
                 code       = document.createElement('code')
 
-            code.className = 'hljs html'
+            var beautified
+
+            beautified = isJS ? js_beautify(unescaped) : html_beautify(unescaped)
+
+            console.log(el, isJS)
+            code.className = isJS ? 'hljs javascript' : 'hljs html'
             code.innerText = beautified
 
             el.innerHTML = ''
@@ -117,7 +131,7 @@ router.afterEach((to, from, next) => {
         hljs.initHighlighting.called = false
         hljs.initHighlighting()
 
-        document.querySelectorAll('[html-code]').forEach((el) => {
+        document.querySelectorAll('[html-code], [js-code]').forEach((el) => {
             el.innerHTML = el.innerHTML.replace(/\[\[(.*?)\]\]/g, '<mark>$1</mark>')
             el.innerHTML = el.innerHTML.replace(/\{{(.*?)}}/g, (match, first) => {
                 return `<a href="#">${first}</a>`

@@ -1,0 +1,27 @@
+slate:
+  title      : 訊息
+  description: 傳遞訊息至遠方。
+
+tabs:
+  - type  : styles
+    to    : /collections/message
+  - type  : javascript
+    to    : /collections/message/javascript
+    active: true
+
+styles:
+  - category   : JavaScript
+    description: 訊息有提供可用的 JavaScript 模塊。
+    items      :
+      - title      : 可關閉的
+        description: 訊息中的關閉按鈕預設並沒有動作，僅是裝飾而已。但是你可以透過 JavaScript 將該按鈕套上一個關閉訊息的動作。
+        code       : |
+          <div class="ts [[dismissable]] message">
+              <i class="close {{icon}}"></i>
+              <div class="header">
+                  不喜歡我？
+              </div>
+              <p>那就關閉我吧。</p>
+          </div>
+        javascript: |
+          ts('.dismissable.message').message()

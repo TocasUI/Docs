@@ -11,8 +11,17 @@
 .description
     font-size: .8em !important
 
+.tabGird
+    margin-bottom: -4em !important
+
 .tab
     margin-bottom: -5.1em !important
+    margin: 2.1em 0 1.3em 0 !important
+    width: 100% !important
+
+    a
+        flex: 1
+        justify-content: center
 </style>
 
 <template lang="pug">
@@ -22,9 +31,12 @@
                 slot(name="header")
             .description(:class="$style.description")
                 slot(name="description")
-        .ts.bottom.attached.tabbed.menu(:class="$style.tab")
-            .ts.narrow.container
-                slot(name="tab")
+        .ts.narrow.container(v-if="this.$slots.tab")
+            .ts.relaxed.grid(:class="$style.tabGird")
+                .four.wide.column
+                .twelve.wide.column
+                    .ts.bottom.attached.tabbed.menu(:class="$style.tab")
+                        slot(name="tab")
 </template>
 
 <script>
