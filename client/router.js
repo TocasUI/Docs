@@ -16,6 +16,7 @@ import segment    from 'docs/elements/segment'
 import slate      from 'docs/elements/slate'
 import step       from 'docs/elements/step'
 import breadcrumb from 'docs/collections/breadcrumb'
+import form       from 'docs/collections/form'
 
 const router = new Router({
     mode: 'history',
@@ -74,6 +75,10 @@ const router = new Router({
         path: '/collections/breadcrumb',
         component: (resolve) => require(['views/single'], resolve),
         meta: breadcrumb
+    }, {
+        path: '/collections/form',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: form
     }, {
         path: '*',
         redirect: '/'
