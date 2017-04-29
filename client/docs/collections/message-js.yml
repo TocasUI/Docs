@@ -7,7 +7,6 @@ tabs:
     to    : /collections/message
   - type  : javascript
     to    : /collections/message/javascript
-    active: true
 
 styles:
   - category   : JavaScript

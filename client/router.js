@@ -21,6 +21,15 @@ import grid       from 'docs/collections/grid'
 import menu       from 'docs/collections/menu'
 import message    from 'docs/collections/message'
 import messageJS  from 'docs/collections/message-js'
+import table      from 'docs/collections/table'
+import tableJS    from 'docs/collections/table-js'
+import accordion  from 'docs/modules/accordion'
+import calendar   from 'docs/modules/calendar'
+import checkbox   from 'docs/modules/checkbox'
+import checkboxJS from 'docs/modules/checkbox-js'
+import dimmer     from 'docs/modules/dimmer'
+import dropdown   from 'docs/modules/dropdown'
+import dropdownJS from 'docs/modules/dropdown-js'
 
 const router = new Router({
     mode: 'history',
@@ -99,6 +108,42 @@ const router = new Router({
         path: '/collections/message/javascript',
         component: (resolve) => require(['views/single'], resolve),
         meta: messageJS
+    }, {
+        path: '/collections/table',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: table
+    }, {
+        path: '/collections/table/javascript',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: tableJS
+    }, {
+        path: '/modules/accordion',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: accordion
+    }, {
+        path: '/modules/calendar',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: calendar
+    }, {
+        path: '/modules/checkbox',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: checkbox
+    }, {
+        path: '/modules/checkbox/javascript',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: checkboxJS
+    }, {
+        path: '/modules/dimmer',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: dimmer
+    }, {
+        path: '/modules/dropdown',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: dropdown
+    }, {
+        path: '/modules/dropdown/javascript',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: dropdownJS
     }, {
         path: '*',
         redirect: '/'
