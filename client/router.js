@@ -30,6 +30,12 @@ import checkboxJS from 'docs/modules/checkbox-js'
 import dimmer     from 'docs/modules/dimmer'
 import dropdown   from 'docs/modules/dropdown'
 import dropdownJS from 'docs/modules/dropdown-js'
+import modal      from 'docs/modules/modal'
+import modalJS    from 'docs/modules/modal-js'
+import popup      from 'docs/modules/popup'
+import popupJS    from 'docs/modules/popup-js'
+import progress   from 'docs/modules/progress'
+import slider     from 'docs/modules/slider'
 
 const router = new Router({
     mode: 'history',
@@ -144,6 +150,30 @@ const router = new Router({
         path: '/modules/dropdown/javascript',
         component: (resolve) => require(['views/single'], resolve),
         meta: dropdownJS
+    }, {
+        path: '/modules/modal',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: modal
+    }, {
+        path: '/modules/modal/javascript',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: modalJS
+    }, {
+        path: '/modules/popup',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: popup
+    }, {
+        path: '/modules/popup/javascript',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: popupJS
+    }, {
+        path: '/modules/progress',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: progress
+    }, {
+        path: '/modules/slider',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: slider
     }, {
         path: '*',
         redirect: '/'

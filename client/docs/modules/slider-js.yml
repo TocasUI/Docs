@@ -1,0 +1,22 @@
+slate:
+  title      : 滑桿
+  description: 省去手動輸入數值的麻煩。
+
+tabs:
+  - type  : styles
+    to    : /modules/progress
+  - type  : javascript
+    to    : /modules/progress/javascript
+
+styles:
+  - category   : JavaScript
+    description: 滑桿有提供可用的 JavaScript 模塊。
+    items      :
+      - title      : 基本
+        description: 套用基本的 JavaScript 能夠使你的滑桿左側擁有指示條顏色。
+        code       : |
+          <div class="ts [[slider]]">
+              <input type="range">
+          </div>
+        javascript:
+          ts('.ts.slider').slider()
