@@ -16,7 +16,7 @@
 
 .tab
     margin-bottom: -5.1em !important
-    margin: 2.1em 0 1.3em 0 !important
+    margin: 3.1em 0 1.3em 0 !important
     width: 100% !important
 
     a
