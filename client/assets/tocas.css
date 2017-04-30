@@ -12836,6 +12836,47 @@ img.ts.bordered.image {
   margin-bottom: 0em !important;
   padding-bottom: 0em !important; }
 
+@keyframes indeterminate-bar-animation {
+  /* one open */
+  0% {
+    transform: translateX(-100%) scaleX(0.2); }
+  20% {
+    transform: translateX(-40%) scaleX(0.2); }
+  30% {
+    transform: translateX(0%) scaleX(0.5); }
+  55% {
+    transform: translateX(100%) scaleX(0.7); }
+  55.99% {
+    transform: scaleX(0); }
+  /* two close */
+  56% {
+    transform: translateX(-100%) scaleX(0); }
+  56.99% {
+    transform: translateX(-100%) scaleX(0.6); }
+  75% {
+    transform: translateX(-5%) scaleX(0.6); }
+  85% {
+    transform: translateX(30%) scaleX(0.3); }
+  98% {
+    transform: translateX(100%) scaleX(0.2); }
+  99.99% {
+    transform: scaleX(0); }
+  100% {
+    transform: translateX(-100%); } }
+@keyframes buffer-bar-animation {
+  0% {
+    opacity: 1;
+    background-position: 0px -23px; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    background-position: -200px -23px; } }
+@keyframes process-bar-animation {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 40px; } }
 .ts.progress {
   position: relative;
   display: flex;
@@ -12844,7 +12885,8 @@ img.ts.bordered.image {
   margin: 1em 0em 1em;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 0em;
-  border-radius: 0.28571rem; }
+  border-radius: 0.28571rem;
+  overflow: hidden; }
 
 .ts.progress:first-child {
   margin: 0em 0em 1em; }
@@ -12862,7 +12904,7 @@ img.ts.bordered.image {
   background-color: #888888;
   border-radius: 0.28571rem; }
 
-.ts.progress .bar:not(:last-child) {
+.ts.progress:not(.buffering) .bar:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
@@ -12888,16 +12930,26 @@ img.ts.bordered.image {
   font-weight: 500;
   text-align: left; }
 
-.ts.progress.indeterminate {
+.ts.progress.indeterminate .bar {
+  animation: indeterminate-bar-animation 2.8s linear 0s infinite;
+  width: 100% !important; }
+
+.ts.progress.query.indeterminate .bar {
+  animation: indeterminate-bar-animation 2.8s linear 0s infinite;
+  animation-direction: reverse;
+  width: 100% !important; }
+
+.ts.progress.buffering .buffer.bar {
+  position: absolute;
+  left: 0;
+  opacity: 0.3; }
+
+.ts.progress.preparing {
   background-size: 40px 40px;
   background-image: linear-gradient(135deg, #959595 25%, #8b8b8b 25%, #8b8b8b 50%, #959595 50%, #959595 75%, #8b8b8b 75%, #8b8b8b 100%);
   animation: process-bar-animation 2s linear 0s infinite; }
-@keyframes process-bar-animation {
-  from {
-    background-position: 0px; }
-  to {
-    background-position: 40px; } }
-.ts.progress.indeterminate .bar {
+
+.ts.progress.preparing .bar {
   visibility: hidden; }
 
 .ts.active.progress .bar {
@@ -12938,7 +12990,7 @@ img.ts.bordered.image {
   .ts.progress .primary.bar:after {
     background-color: #0c8bb8; }
 
-.ts.progress.indeterminate.primary {
+.ts.progress.preparing.primary {
   background-image: linear-gradient(135deg, #37c1f3 25%, #24bbf1 25%, #24bbf1 50%, #37c1f3 50%, #37c1f3 75%, #24bbf1 75%, #24bbf1 100%); }
 
 .ts.progress.info .bar,
@@ -12951,7 +13003,7 @@ img.ts.bordered.image {
   .ts.progress .info.bar:after {
     background-color: #4f8497; }
 
-.ts.progress.indeterminate.info {
+.ts.progress.preparing.info {
   background-image: linear-gradient(135deg, #8ab3c2 25%, #7caabb 25%, #7caabb 50%, #8ab3c2 50%, #8ab3c2 75%, #7caabb 75%, #7caabb 100%); }
 
 .ts.progress.warning .bar,
@@ -12964,7 +13016,7 @@ img.ts.bordered.image {
   .ts.progress .warning:after {
     background-color: #f0c21a; }
 
-.ts.progress.indeterminate.warning {
+.ts.progress.preparing.warning {
   background-image: linear-gradient(135deg, #f7db7a 25%, #f5d667 25%, #f5d667 50%, #f7db7a 50%, #f7db7a 75%, #f5d667 75%, #f5d667 100%); }
 
 .ts.progress.positive .bar,
@@ -12983,8 +13035,8 @@ img.ts.bordered.image {
   .ts.progress .positive.bar:after {
     background-color: #659347; }
 
-.ts.progress.indeterminate.success,
-.ts.progress.indeterminate.positive {
+.ts.progress.preparing.success,
+.ts.progress.preparing.positive {
   background-image: linear-gradient(135deg, #99c17f 25%, #8ebb71 25%, #8ebb71 50%, #99c17f 50%, #99c17f 75%, #8ebb71 75%, #8ebb71 100%); }
 
 .ts.progress.negative .bar,
@@ -13003,8 +13055,8 @@ img.ts.bordered.image {
   .ts.progress .negative.bar:after {
     background-color: #a83831; }
 
-.ts.progress.indeterminate.negative,
-.ts.progress.indeterminate.error {
+.ts.progress.preparing.negative,
+.ts.progress.preparing.error {
   background-image: linear-gradient(135deg, #d4726c 25%, #cf635c 25%, #cf635c 50%, #d4726c 50%, #d4726c 75%, #cf635c 75%, #cf635c 100%); }
 
 /* bottom attached */
