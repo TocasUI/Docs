@@ -325,10 +325,10 @@ styles:
               我置右對齊。
           </div>
 
-      - title      : 抬舉
+      - title      : 漂浮
         description: 訊息可以看起來是被舉起、漂浮的。
         code       : |
-          <div class="ts [[raised]] message">
+          <div class="ts [[floating]] message">
               我好像被舉起來了。
           </div>
 
