@@ -33,7 +33,7 @@ styles:
           </form>
           <br><br>
           <form class="ts [[form]]">
-              <h4 class="ts dividing {{header}}">結帳資訊</h4>
+              <div class="ts dividing {{header}}">結帳資訊</div>
               <div class="field">
                   <label>真實姓名</label>
                   <div class="two fields">
@@ -58,6 +58,33 @@ styles:
               </div>
               <button class="ts {{button}}">送出</button>
           </form>
+
+      - title      : 水平表單
+        description: 表單可以切分成兩欄並且水平排列每個欄位。
+        code       : |
+          <div class="ts [[horizontal]] form">
+              <div class="field">
+                  <label>真實姓名</label>
+                  <input type="text">
+              </div>
+              <div class="field">
+                  <label>自我介紹</label>
+                  <textarea rows="4"></textarea>
+              </div>
+              <div class="field">
+                  <label>性別</label>
+                  <div class="ts checkboxes">
+                      <div class="ts radio checkbox">
+                          <input id="firstMale" type="radio" name="firstGender">
+                          <label for="firstMale">男性</label>
+                      </div>
+                      <div class="ts radio checkbox">
+                          <input id="firstFemale" type="radio" name="firstGender">
+                          <label for="firstFemale">女性</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
   - category   : 內容
     description: 表單內可以有許多不同種類的內容、欄位。
@@ -491,6 +518,72 @@ styles:
                       <label for="agree3">我同意伊繁星最高協議。</label>
                   </div>
               </div>
+          </div>
+
+  - category   : 群組組織
+    description: 透過 <span class="ts horizontal label">&lt;fieldset&gt;</span> 標籤你可以包覆一個欄位群組，並凸顯、說明其群組的用意。
+    items      :
+
+      - title      : 基本組織
+        description: 一個最基本的群組組織。
+        code       : |
+          <div class="ts form">
+              <div class="fields">
+                  <div class="field">
+                      <label>申辦人姓名</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>監護人姓名</label>
+                      <input type="text">
+                  </div>
+              </div>
+              <[[fieldset]]>
+                <[[legend]]>機密資料</[[legend]]>
+                <div class="fields">
+                    <div class="field">
+                        <label>信用卡卡號</label>
+                        <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx">
+                    </div>
+                    <div class="field">
+                        <label>到期日</label>
+                        <input type="text" placeholder="月月/年年">
+                    </div>
+                    <div class="field">
+                        <label>安全碼</label>
+                        <input type="text">
+                    </div>
+                </div>
+              </[[fieldset]]>
+          </div>
+
+      - title      : 組織語氣
+        description: 不同的發音語氣也可以用在欄位組織上，用以呈現需注意的地方。
+        code       : |
+          <div class="ts form">
+              <fieldset class="[[secondary]]">
+                <div class="fields">
+                    <div class="field">
+                        <label>暱稱</label>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <label>帳號</label>
+                        <input type="text">
+                    </div>
+                </div>
+              </fieldset>
+              <fieldset class="[[tertiary]]">
+                <legend>選填資料</legend>
+                <div class="fields">
+                    <div class="field">
+                        <input type="text" placeholder="住址">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="興趣">
+                    </div>
+                </div>
+              </fieldset>
           </div>
 
   - category   : 群組外觀
