@@ -52,6 +52,23 @@ styles:
               <i class="heart {{icon}}"></i>
           </button>
 
+      - title      : 連結
+        description: 按鈕可以看起來像純文字連結。
+        code       : |
+          這是個<button class="ts [[link]] button">連結按鈕</button>喔！
+
+      - title      : 關閉
+        description: 按鈕可以呈現一個用於關閉其他元件的樣式。
+        code       : |
+          <button class="ts mini [[close]] button"></button>
+          <button class="ts tiny [[close]] button"></button>
+          <button class="ts small [[close]] button"></button>
+          <button class="ts [[close]] button"></button>
+          <button class="ts large [[close]] button"></button>
+          <button class="ts big [[close]] button"></button>
+          <button class="ts huge [[close]] button"></button>
+          <button class="ts massive [[close]] button"></button>
+
       - title      : 基本
         description: 讓按鈕只帶有基本的架構。
         code       : |
