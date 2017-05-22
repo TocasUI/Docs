@@ -16,7 +16,7 @@
                 .sub.header(:class='$style.slate_subHeader') 這裡迎來新世界
 
             //- 快速使用
-            .ts.fluid.mini.top.attached.message(:class="$style.slate_importMessage")
+            .ts.mini.top.attached.message(:class="$style.slate_importMessage")
                 | 現在開始試用！將下列程式碼複製並貼上於 HTML 中。
             pre.ts.bottom.attached.padded.segment(:class="$style.slate_import")
                 code.html.hljs.escaped#import.
@@ -339,8 +339,8 @@
 </template>
 
 <script>
-import DocsFooter from 'components/footer.vue'
-import DocsNavbar from 'components/navbar.vue'
+import DocsFooter from 'components/footer'
+import DocsNavbar from 'components/navbar'
 
 export default {
     name: 'Homepage',
