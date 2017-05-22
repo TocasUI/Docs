@@ -27,13 +27,13 @@ styles:
               <a class="item">文件</a>
           </div>
 
-      - title      : 單純
-        description: 一個十分單純的選單，這種選單沒有左右內距，因此很適合對齊其他元件。
+      - title      : 連結
+        description: 一個擺放連結的選單，這種選單項目沒有左右內距，因此很適合對齊其他元件。
         code       : |
-          <div class="ts [[pure]] basic borderless menu">
-              <a class="item">合作</a>
-              <a class="item">外框</a>
-              <a class="item">除錯器</a>
+          <div class="ts [[link]] menu">
+              <a class="item">戀愛</a>
+              <a class="item">選舉</a>
+              <a class="item">巧克力</a>
           </div>
 
       - title      : 其次
@@ -185,14 +185,47 @@ styles:
               </a>
           </div>
 
+      - title      : 拉伸的
+        description: 單個、或多個項目可以被拉伸到填滿整個選單，並將其他項目縮短至它們的內容寬度。這很適合用在排版上。
+        code       : |
+          <div class="ts menu">
+              <div class="[[stretched]] item">
+                  <div class="ts fluid input">
+                      <input type="text" placeholder="在此輸入您想找的資料⋯⋯">
+                  </div>
+              </div>
+              <div class="item">
+                  <button class="ts button">搜尋</button>
+              </div>
+          </div>
+
+      - title      : 項目縮減
+        description: 項目可以不要有垂直或是水平內距。
+        code       : |
+          <div class="ts menu">
+              <a class="[[horizontally fitted]] item"> 水平縮減 </a>
+              <a class="[[vertically fitted]] item"> 垂直縮減 </a>
+              <a class="item"> 一般選項 </a>
+          </div>
+
+      - title      : 置右項目
+        description: 選單內的單個項目可以置右。
+        code       : |
+          <div class="ts menu">
+              <a class="item">儀表板</a>
+              <a class="item">彙整</a>
+              <a class="[[right]] item">登出</a>
+          </div>
+
       - title      : 置右選單
-        description: 一個選單內可以再放置一個向右靠齊的選單。
+        description: 倘若你有多個項目要置右，請透過一個向右靠齊的選單。
         code       : |
           <div class="ts menu">
               <a class="item">首頁</a>
               <a class="item">關於</a>
               <a class="item">文件</a>
               <div class="[[right]] menu">
+                  <a class="item">會員清單</a>
                   <a class="item">檔案</a>
                   <a class="item">Github</a>
               </div>
@@ -206,32 +239,24 @@ styles:
               <a class="item">首頁</a>
               <a class="item">關於</a>
               <a class="item">文件</a>
-              <div class="right menu">
-                  <div class="fitted item">
-                      <div class="ts borderless right icon inverted primary [[input]]">
-                          <input type="text" placeholder="文字欄位">
-                          <i class="search {{icon}}"></i>
-                      </div>
+              <div class="right fitted item">
+                  <div class="ts borderless right icon inverted primary [[input]]">
+                      <input type="text" placeholder="文字欄位">
+                      <i class="search {{icon}}"></i>
                   </div>
               </div>
           </div>
           <br>
           <div class="ts vertical compact inverted info borderless menu">
-              <div class="item">
-                  <div class="ts fluid right icon inverted info [[input]]">
-                      <input type="text" placeholder="搜尋">
+              <div class="fitted item">
+                  <div class="ts fluid borderless basic icon inverted [[input]]">
+                      <input type="text" placeholder="搜尋 ...">
                       <i class="search {{icon}}"></i>
                   </div>
               </div>
               <a class="item">首頁</a>
               <a class="item">關於</a>
               <a class="item">文件</a>
-              <div class="fitted item">
-                  <div class="ts fluid borderless basic  icon inverted [[input]]">
-                      <input type="text" placeholder="搜尋 ...">
-                      <i class="search {{icon}}"></i>
-                  </div>
-              </div>
           </div>
 
       - title      : 標籤
@@ -392,8 +417,17 @@ styles:
               </a>
           </div>
 
+      - title      : 置中項目
+        description: 選單的項目可以從中間開始。
+        code       : |
+          <div class="ts [[centered]] menu">
+              <a class="item">首頁</a>
+              <a class="item">貼文</a>
+              <a class="item">照片</a>
+          </div>
+
       - title      : 平均劃分
-        description: 選單的項目寬度可以平均劃分。
+        description: 項目寬度可以平均劃分並填滿整個選單。
         code       : |
           <div class="ts [[evenly divided]] menu">
               <a class="item">
@@ -410,6 +444,39 @@ styles:
               </a>
           </div>
 
+      - title      : 附著
+        description: 選單可以附著在其他元件上。
+        code       : |
+          <div class="ts [[top attached]] menu">
+              <a class="item">資料</a>
+              <a class="item">隱私</a>
+              <a class="item">權限</a>
+          </div>
+          <div class="ts attached {{segment}}">
+              根據你眼睛所看到的，這是個被附著選單團團包圍的片段。
+          </div>
+          <div class="ts [[attached]] menu">
+              <a class="item">首頁</a>
+              <a class="item">影片</a>
+          </div>
+          <div class="ts attached {{segment}}">
+              這個片段⋯⋯十分地難過、悲傷、無奈，覺得被選單霸凌了。
+          </div>
+          <div class="ts [[bottom attached]] menu">
+              <a class="item">音樂</a>
+              <a class="item">程式</a>
+              <a class="item">運動</a>
+          </div>
+
+      - title      : 手動均分
+        description: 你可以自訂選單中應有幾個項目，從 <span class="ts horizontal label">one</span> 到 <span class="ts horizontal label">ten</span>。
+        code       : |
+          <div class="ts [[four item]] menu">
+              <a class="item">鐘錶</a>
+              <a class="item">電子產品</a>
+              <a class="item">家具</a>
+          </div>
+
       - title      : 減少框線
         description: 選單也可以選擇不要有內部框線。
         code       : |
@@ -420,12 +487,14 @@ styles:
           </div>
 
       - title      : 縮減
-        description: 項目可以不要有垂直或是水平內距。
+        description: 選單可以不要有垂直或是水平內距，這很適合當作網格系統以外的排版方式。
         code       : |
-          <div class="ts menu">
-              <a class="[[horizontally fitted]] item"> 水平縮減 </a>
-              <a class="[[vertically fitted]] item"> 垂直縮減 </a>
-              <a class="item"> 一般選項 </a>
+          <div class="ts secondary [[fitted]] menu">
+              <div class="item">
+                  <i class="user icon"></i>
+                  Yami Odymel
+              </div>
+              <a class="right item">登出</a>
           </div>
 
       - title      : 抬舉
