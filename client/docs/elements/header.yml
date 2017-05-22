@@ -153,11 +153,3 @@ styles:
               頓時；一陣涼風吹過，而我——又射了。
           </div>
           <h5 class="ts [[bottom attached]] header">吸附於底部</h5>
-
-      - title      : 較細的
-        description: 標題可以略細一些。
-        code       : <h3 class="ts [[thinner]] header">細一點的標題</h3>
-
-      - title      : 較粗的
-        description: 標題也可以略粗一些。
-        code       : <h3 class="ts [[bolder]] header">粗略的標題</h3>
