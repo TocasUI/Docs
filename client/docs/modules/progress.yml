@@ -87,7 +87,7 @@ styles:
       - title      : 已詢問未知
         description: 一個已經向伺服器發送請求，但狀態仍處於未知的進度列。
         code       : |
-          <div class="ts [[query indeterminate]] progress">
+          <div class="ts [[queried indeterminate]] progress">
               <div class="bar"></div>
           </div>
 
@@ -142,6 +142,16 @@ styles:
               <div class="ts [[bottom attached]] progress">
                   <div class="bar" style="width: 70%"></div>
               </div>
+          </div>
+          <br><br>
+          <div class="ts top attached {{segment}}">
+              將進度列擺放於片段中間。
+          </div>
+          <div class="ts [[attached]] progress">
+              <div class="bar" style="width: 35%"></div>
+          </div>
+          <div class="ts bottom attached {{segment}}">
+              就像你看到的ㄧ樣，這個範例示範著你可以將進度列安插在多個片段之中。
           </div>
 
       - title      : 尺寸
