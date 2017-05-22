@@ -49,23 +49,6 @@ styles:
               </div>
           </details>
 
-      - title      : 清單
-        description: 手風琴內可以包含一個正常的 <span class="ts horizontal label">ul</span> 清單。
-        code       : |
-          <details class="ts accordion" open>
-              <summary>
-                  <i class="dropdown {{icon}}"></i>
-                  伊繁星最高協議——第六條
-              </summary>
-              <div class="content">
-                  <p>設計一項產品，或是任何服務，都應抱持原本創作的理念，不得因自我、商業利益進而更改創作理念。</p>
-                  <[[ul]]>
-                      <[[li]]>建立於 Github。</[[li]]>
-                      <[[li]]>適用於所有伊繁星旗下產品。</[[li]]>
-                  </[[ul]]>
-              </div>
-          </details>
-
   - category   : 外觀
     description: 手風琴的外觀可以有所不同。
     items      :
