@@ -3,39 +3,43 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // Docs
-import elements   from 'docs/elements'
-import button     from 'docs/elements/button'
-import divider    from 'docs/elements/divider'
-import header     from 'docs/elements/header'
-import input      from 'docs/elements/input'
-import label      from 'docs/elements/label'
-import list       from 'docs/elements/list'
-import loader     from 'docs/elements/loader'
-import quote      from 'docs/elements/quote'
-import segment    from 'docs/elements/segment'
-import slate      from 'docs/elements/slate'
-import step       from 'docs/elements/step'
-import breadcrumb from 'docs/collections/breadcrumb'
-import form       from 'docs/collections/form'
-import grid       from 'docs/collections/grid'
-import menu       from 'docs/collections/menu'
-import message    from 'docs/collections/message'
-import messageJS  from 'docs/collections/message-js'
-import table      from 'docs/collections/table'
-import tableJS    from 'docs/collections/table-js'
-import accordion  from 'docs/modules/accordion'
-import calendar   from 'docs/modules/calendar'
-import checkbox   from 'docs/modules/checkbox'
-import checkboxJS from 'docs/modules/checkbox-js'
-import dimmer     from 'docs/modules/dimmer'
-import dropdown   from 'docs/modules/dropdown'
-import dropdownJS from 'docs/modules/dropdown-js'
-import modal      from 'docs/modules/modal'
-import modalJS    from 'docs/modules/modal-js'
-import popup      from 'docs/modules/popup'
-import popupJS    from 'docs/modules/popup-js'
-import progress   from 'docs/modules/progress'
-import slider     from 'docs/modules/slider'
+import elements    from 'docs/elements'
+import button      from 'docs/elements/button'
+import divider     from 'docs/elements/divider'
+import header      from 'docs/elements/header'
+import input       from 'docs/elements/input'
+import label       from 'docs/elements/label'
+import list        from 'docs/elements/list'
+import loader      from 'docs/elements/loader'
+import quote       from 'docs/elements/quote'
+import segment     from 'docs/elements/segment'
+import slate       from 'docs/elements/slate'
+import step        from 'docs/elements/step'
+import collections from 'docs/collections'
+import breadcrumb  from 'docs/collections/breadcrumb'
+import form        from 'docs/collections/form'
+import grid        from 'docs/collections/grid'
+import menu        from 'docs/collections/menu'
+import message     from 'docs/collections/message'
+import messageJS   from 'docs/collections/message-js'
+import table       from 'docs/collections/table'
+import tableJS     from 'docs/collections/table-js'
+import modules     from 'docs/modules'
+import accordion   from 'docs/modules/accordion'
+import calendar    from 'docs/modules/calendar'
+import checkbox    from 'docs/modules/checkbox'
+import checkboxJS  from 'docs/modules/checkbox-js'
+import dimmer      from 'docs/modules/dimmer'
+import dropdown    from 'docs/modules/dropdown'
+import dropdownJS  from 'docs/modules/dropdown-js'
+import modal       from 'docs/modules/modal'
+import modalJS     from 'docs/modules/modal-js'
+import popup       from 'docs/modules/popup'
+import popupJS     from 'docs/modules/popup-js'
+import progress    from 'docs/modules/progress'
+import slider      from 'docs/modules/slider'
+import views       from 'docs/views'
+import speeches    from 'docs/views/speeches'
 
 const router = new Router({
     mode: 'history',
@@ -91,6 +95,10 @@ const router = new Router({
         component: (resolve) => require(['views/single'], resolve),
         meta: step
     }, {
+        path: '/collections',
+        component: (resolve) => require(['views/list'], resolve),
+        meta: collections
+    }, {
         path: '/collections/breadcrumb',
         component: (resolve) => require(['views/single'], resolve),
         meta: breadcrumb
@@ -122,6 +130,10 @@ const router = new Router({
         path: '/collections/table/javascript',
         component: (resolve) => require(['views/single'], resolve),
         meta: tableJS
+    }, {
+        path: '/modules',
+        component: (resolve) => require(['views/list'], resolve),
+        meta: modules
     }, {
         path: '/modules/accordion',
         component: (resolve) => require(['views/single'], resolve),
@@ -175,6 +187,14 @@ const router = new Router({
         component: (resolve) => require(['views/single'], resolve),
         meta: slider
     }, {
+        path: '/views',
+        component: (resolve) => require(['views/list'], resolve),
+        meta: views
+    }, {
+        path: '/views/speeches',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: speeches
+    }, {
         path: '*',
         redirect: '/'
     }]
@@ -206,6 +226,7 @@ router.afterEach((to, from, next) => {
         hljs.initHighlighting.called = false
         hljs.initHighlighting()
 
+        // 將 <code> 裡面的 [[]] 和 {{}} 與 !--! 標籤替換掉。
         document.querySelectorAll('[html-code], [js-code]').forEach((el) => {
             el.innerHTML = el.innerHTML.replace(/\[\[(.*?)\]\]/g, '<mark>$1</mark>')
             el.innerHTML = el.innerHTML.replace(/\{{(.*?)}}/g, (match, first) => {
