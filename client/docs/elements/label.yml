@@ -44,7 +44,7 @@ styles:
           <div class="ts [[pointing top]] label">
               上面
           </div>
-          <div class="ts [[pointing bottom]] label">
+          <div class="ts [[pointing below]] label">
               下面
           </div>
           <div class="ts basic [[left pointing]] label">
@@ -56,7 +56,7 @@ styles:
           <div class="ts basic [[pointing top]] label">
               上面
           </div>
-          <div class="ts basic [[pointing bottom]] label">
+          <div class="ts basic [[pointing below]] label">
               下面
           </div>
 
