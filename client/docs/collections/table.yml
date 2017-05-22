@@ -634,6 +634,31 @@ styles:
               </tbody>
           </table>
 
+      - title      : 無框線
+        description: 一個表格可以沒有框線。
+        code       : |
+          <table class="ts [[borderless]] table">
+              <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>姓名</th>
+                      <th>英文暱稱</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td>卡莉絲</td>
+                      <td>Caris</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td>橙希</td>
+                      <td>Orenji</td>
+                  </tr>
+              </tbody>
+          </table>
+
       - title      : 自動重疊
         description: 表格可以在行動裝置上自動重疊。
         code       : |
