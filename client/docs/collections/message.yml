@@ -42,7 +42,7 @@ styles:
                   <img src="${imgPlaceholderUser}">
               </div>
               <div class="content">
-                  <div class="text">
+                  <div class="description">
                       <p>有位使用者跑到了你的小屋並向你道聲早安，</p>
                       <p>但就在你卸下心防的同時，你意識到有什麼東西從身邊消失了。</p>
                   </div>
@@ -177,13 +177,27 @@ styles:
     description: 訊息裡面可以帶有不同的內容。
     items      :
 
-      - title      : 文字
-        description: 訊息裡可以擺放基本的文字，這只用於結構較複雜的訊息，通常你不需要這麼做。
+      - title      : 註釋
+        description: 訊息裡可以擺放基本的文字註釋，這只用於結構較複雜的訊息，通常你不需要這麼做。
         code       : |
           <div class="ts message">
               <div class="content">
-                  <div class="[[text]]">
+                  <div class="[[description]]">
                       雖然開始是一樣的，但經歷令我們成為了不同人。
+                  </div>
+              </div>
+          </div>
+
+      - title      : 額外註釋
+        description: 一個與這個訊息有關連的額外內容。
+        code       : |
+          <div class="ts structured message">
+              <div class="content">
+                  <div class="description">
+                      您已獲得 iPhone 9S 抽獎機會！但是你永遠都不會中獎，我們很期待您的參與。
+                  </div>
+                  <div class="[[extra description]]">
+                      注意，你只有三十秒的選擇機會！
                   </div>
               </div>
           </div>
@@ -193,7 +207,7 @@ styles:
         code       : |
           <div class="ts message">
               <div class="content">
-                  <div class="text">
+                  <div class="description">
                       我們已接獲版權警告並將此影片進行消音處理，這可能導致你的影片觀看次數下降。
                   </div>
                   <div class="[[actions]]">
@@ -210,8 +224,11 @@ styles:
                   <i class="trash {{icon}}"></i>
               </div>
               <div class="content">
-                  <div class="text">
+                  <div class="description">
                       你已成功地將文章移動至垃圾桶了。
+                  </div>
+                  <div class="actions">
+                      <a href="#!">還原文章</a>
                   </div>
               </div>
           </div>
@@ -224,7 +241,7 @@ styles:
                   <img src="${imgPlaceholderUser}">
               </div>
               <div class="content">
-                  <div class="text">
+                  <div class="description">
                       你的朋友剛才在你的文章中留言。
                   </div>
                   <div class="actions">
@@ -282,8 +299,14 @@ styles:
               </div>
               <p>請檢查以下「關於我」是否正確。</p>
           </div>
-          <div class="ts bottom attached {{segment}}">
+          <div class="ts attached {{segment}}">
               始春到底是什麼？始春，絕不向日曆妥協始春，絕不向預告低頭只要 CM3D2 在手，就能夠永遠地始春始春是一種精神，一種態度一種革命，一種叛逆。於是我了解「跳票、延期、三螢幕，這就是始春。」
+          </div>
+          <div class="ts positive [[attached]] message">
+              以下是已核准內容。
+          </div>
+          <div class="ts bottom attached {{segment}}">
+              夏希是一個基於 PHP 的時間類別， 用以取得現在的時間，或者是數天後的現在時刻。
           </div>
           <br><br>
           <div class="ts fluid top attached {{input}}">
