@@ -118,21 +118,21 @@ styles:
         code       : |
           <div class="ts list">
               <div class="item">
-                  <img class="ts avatar [[image]]" src="${imgPlaceholderUser}">
+                  <img class="ts avatar [[image]]" src="!-user-!">
                   <div class="content">
                       <a class="header">Yami Odymel</a>
                       <div class="description">正在遊玩 <a><b>Battlefield 1</b></a>。</div>
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar [[image]]" src="${imgPlaceholderUser2}">
+                  <img class="ts avatar [[image]]" src="!-user2-!">
                   <div class="content">
                       <a class="header">Mac Taylor</a>
                       <div class="description">正在研發 <a><b>Alan Wakeup</b></a>。</div>
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar [[image]]" src="${imgPlaceholderUser3}">
+                  <img class="ts avatar [[image]]" src="!-user3-!">
                   <div class="content">
                       <a class="header">Karisu</a>
                       <div class="description">正在觀看 <a><b>麻辣鮮師</b></a>。</div>
@@ -226,21 +226,21 @@ styles:
         code       : |
           <div class="ts [[horizontal]] list">
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser}">
+                  <img class="ts avatar {{image}}" src="!-user-!">
                   <div class="content">
                       <div class="header">Yami Odymel</div>
                       研發 2016 始春的人
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser2}">
+                  <img class="ts avatar {{image}}" src="!-user2-!">
                   <div class="content">
                       <div class="header">Mac Taylor</div>
                       好基友
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser3}">
+                  <img class="ts avatar {{image}}" src="!-user3-!">
                   <div class="content">
                       <div class="header">Val Pyen</div>
                       OSU! 喜好者
@@ -338,19 +338,19 @@ styles:
         code       : |
           <div class="ts middle aligned [[selection]] list">
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser}">
+                  <img class="ts avatar {{image}}" src="!-user-!">
                   <div class="content">
                       <div class="header">Yami Odymel</div>
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser2}">
+                  <img class="ts avatar {{image}}" src="!-user2-!">
                   <div class="content">
                       <div class="header">Mac Taylor</div>
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser3}">
+                  <img class="ts avatar {{image}}" src="!-user3-!">
                   <div class="content">
                       <div class="header">Ruby</div>
                   </div>
@@ -464,19 +464,19 @@ styles:
         code       : |
           <div class="ts horizontal list">
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser}">
+                  <img class="ts avatar {{image}}" src="!-user-!">
                   <div class="[[top aligned]] content">
                       向上置齊
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser2}">
+                  <img class="ts avatar {{image}}" src="!-user2-!">
                   <div class="[[middle aligned]] content">
                       置中
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser3}">
+                  <img class="ts avatar {{image}}" src="!-user3-!">
                   <div class="[[bottom aligned]] content">
                       向下置齊
                   </div>
@@ -488,7 +488,7 @@ styles:
         code       : |
           <div class="ts middle aligned divided list">
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser}">
+                  <img class="ts avatar {{image}}" src="!-user-!">
                   <div class="content">
                       Aoi
                   </div>
@@ -497,7 +497,7 @@ styles:
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser2}">
+                  <img class="ts avatar {{image}}" src="!-user2-!">
                   <div class="content">
                       Orenji
                   </div>
@@ -506,7 +506,7 @@ styles:
                   </div>
               </div>
               <div class="item">
-                  <img class="ts avatar {{image}}" src="${imgPlaceholderUser3}">
+                  <img class="ts avatar {{image}}" src="!-user3-!">
                   <div class="content">
                       Shirone
                   </div>
