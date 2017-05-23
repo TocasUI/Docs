@@ -228,9 +228,22 @@ router.afterEach((to, from, next) => {
 
         // 將 <code> 裡面的 [[]] 和 {{}} 與 !--! 標籤替換掉。
         document.querySelectorAll('[html-code], [js-code]').forEach((el) => {
+            // 標記程式碼。 - [[segment]]
             el.innerHTML = el.innerHTML.replace(/\[\[(.*?)\]\]/g, '<mark>$1</mark>')
-            el.innerHTML = el.innerHTML.replace(/\{{(.*?)}}/g, (match, first) => {
+            // 相關元件連結。 - {{segment}}
+            el.innerHTML = el.innerHTML.replace(/{{(.*?)}}/g, (match, first) => {
                 return `<a href="#">${first}</a>`
+            })
+            // 示範圖片標籤換成單純的假路徑，這樣比較簡潔。 - !-16:9-!
+            el.innerHTML = el.innerHTML.replace(/!-(.*?)-!/g, (match, first) => {
+                switch(first) {
+                    case '16:9' : return '16-9.png'
+                    case '1:1'  : return '1-1.png'
+                    case '4:3'  : return '4-3.png'
+                    case 'user' : return 'user.png'
+                    case 'user2': return 'user2.png'
+                    case 'user3': return 'user3.png'
+                }
             })
         })
     }, 1)

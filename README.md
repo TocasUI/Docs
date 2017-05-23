@@ -57,10 +57,11 @@ styles:
 
 ### 特殊格式
 
-在 Tocas UI 中有兩個特殊標記：
+在 Tocas UI 中有三個特殊標記：
 
 * `[[文字]]`：這會用來凸顯包覆的文字，很常用在需要特別標記重要樣式名稱（Class）的時候。
 * `{{文字}}`：自動將包覆的文字轉換成相關連結，如 `{{segment}}` 將會被轉換成 `<a href="//tocas-ui.com/elements/segment">segment</a>`，這很常用在希望能將樣式名稱中的某元素加上相關連結時候。
+* `!-文字-!`：這會將文字轉換成圖片，可用關鍵字有：`16:9`、`1:1`、`4:3`、`user`、`user2`、`user3`。
 
 具體範例如下：
 
@@ -71,4 +72,5 @@ styles:
       <button class="ts icon [[button]]">
           <i class="heart {{icon}}"></i>
       </button>
+      <img src="!-user-!">
 ```

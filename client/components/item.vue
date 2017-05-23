@@ -73,6 +73,14 @@
 </template>
 
 <script>
+// Images
+import placeholder169   from 'images/image_placeholder_16-9.png'
+import placeholder11    from 'images/image_placeholder_1-1.png'
+import placeholder43    from 'images/image_placeholder_4-3.png'
+import placeholderUser  from 'images/image_placeholder_user.png'
+import placeholderUser2 from 'images/image_placeholder_user2.png'
+import placeholderUser3 from 'images/image_placeholder_user3.png'
+
 export default {
     name : 'Item',
     props: {
@@ -85,7 +93,20 @@ export default {
     },
     methods: {
         cleanMark(code) {
-            return code.replace(/\[\[(.*?)\]\]/g, "$1").replace(/{{(.*?)}}/g, "$1")
+            // 將程式碼裡的 [[]] 和 {{}} 標籤去除掉。
+            code = code.replace(/\[\[(.*?)\]\]/g, "$1").replace(/{{(.*?)}}/g, "$1")
+            // 將程式碼裡的 !--! 圖片標籤換成真的圖片路徑。
+            code = code.replace(/!-(.*?)-!/g, (match, first) => {
+                switch(first) {
+                    case '16:9' : return placeholder169
+                    case '1:1'  : return placeholder11
+                    case '4:3'  : return placeholder43
+                    case 'user' : return placeholderUser
+                    case 'user2': return placeholderUser2
+                    case 'user3': return placeholderUser3
+                }
+            })
+            return code
         },
         toggleCode() {
             this.showingCode = !this.showingCode
