@@ -66,7 +66,7 @@ styles:
         code       : |
           <div class="ts slate">
               <div class="image">
-                  <img src="${imgPlaceholderWide}">
+                  <img src="!-16:9-!">
               </div>
               <span class="header">Tryment 計畫</span>
               <span class="description">模擬就學制度，協助在年者再次就職支援計劃。</span>
