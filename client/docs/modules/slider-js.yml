@@ -19,4 +19,5 @@ styles:
               <input type="range">
           </div>
         javascript:
-          ts('.ts.slider').slider()
+          ts('.ts.slider').slider();
+        autoExecute: true
