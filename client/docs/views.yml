@@ -28,8 +28,8 @@ items:
     symbol     : rss
 
   - title      : 項目
-    class      : .ts.item
-    link       : /views/item/
+    class      : .ts.items
+    link       : /views/items/
     description: 區隔項目並作為統整的元件。
     symbol     : th list
 
