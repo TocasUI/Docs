@@ -1,6 +1,7 @@
 <style lang="sass" module>
 .container
-    margin-top: 4em !important
+    margin-top   : 4em !important
+    margin-bottom: 4em !important
 
 .listColumn
     padding-right: 4rem !important
