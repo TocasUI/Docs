@@ -15,7 +15,7 @@ styles:
       - title      : 功能選單
         description: 一個用以呈現功能的下拉式功能選單
         code       : |
-          <div class="ts dropdown">
+          <div class="ts [[dropdown]]">
               <div class="text">檔案</div>
               <i class="caret down {{icon}}"></i>
               <div class="menu">
@@ -41,4 +41,5 @@ styles:
               </div>
           </div>
         javascript: |
-          ts('.ts.dropdown:not(.basic)').dropdown()
+          ts('.ts.dropdown:not(.basic)').dropdown();
+        autoExecute: true
