@@ -38,10 +38,10 @@ styles:
           你需要有個額外的容器包覆這些不適用的元素，然後在容器上配置彈出式訊息，請參閱下面這個範例。
         code       : |
           <a href="#!" [[data-tooltip]]="這是洨洨安。">
-              <img class="ts circular avatar {{image}}" src="${imgPlaceholderUser}">
+              <img class="ts circular avatar {{image}}" src="!-user-!">
           </a>
           <a href="#!" [[data-tooltip]]="這是我好朋友，長得跟洨洨安有點像。">
-              <img class="ts circular avatar {{image}}" src="${imgPlaceholderUser}">
+              <img class="ts circular avatar {{image}}" src="!-user-!">
           </a>
           <span>當然，你也能夠讓</span>
           <a href="#!" [[data-tooltip]]="早安！朋友！">
