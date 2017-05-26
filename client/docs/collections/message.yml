@@ -39,7 +39,7 @@ styles:
         code       : |
           <div class="ts [[structured]] message">
               <div class="avatar">
-                  <img src="${imgPlaceholderUser}">
+                  <img src="!-user-!">
               </div>
               <div class="content">
                   <div class="description">
@@ -238,7 +238,7 @@ styles:
         code       : |
           <div class="ts structured message">
               <div class="[[avatar]]">
-                  <img src="${imgPlaceholderUser}">
+                  <img src="!-user-!">
               </div>
               <div class="content">
                   <div class="description">
