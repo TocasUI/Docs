@@ -8,6 +8,7 @@ import button      from 'docs/elements/button'
 import divider     from 'docs/elements/divider'
 import header      from 'docs/elements/header'
 import input       from 'docs/elements/input'
+import image       from 'docs/elements/image'
 import label       from 'docs/elements/label'
 import list        from 'docs/elements/list'
 import loader      from 'docs/elements/loader'
@@ -38,8 +39,15 @@ import popup       from 'docs/modules/popup'
 import popupJS     from 'docs/modules/popup-js'
 import progress    from 'docs/modules/progress'
 import slider      from 'docs/modules/slider'
+import embed       from 'docs/modules/embed'
+import sidebar     from 'docs/modules/sidebar'
+import snackbar    from 'docs/modules/snackbar'
+import tab         from 'docs/modules/tab'
 import views       from 'docs/views'
 import speeches    from 'docs/views/speeches'
+import card        from 'docs/views/card'
+import items       from 'docs/views/items'
+import statistic   from 'docs/views/statistic'
 
 const router = new Router({
     mode: 'history',
@@ -66,6 +74,10 @@ const router = new Router({
         path: '/elements/input',
         component: (resolve) => require(['views/single'], resolve),
         meta: input
+    }, {
+        path: '/elements/image',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: image
     }, {
         path: '/elements/label',
         component: (resolve) => require(['views/single'], resolve),
@@ -187,6 +199,22 @@ const router = new Router({
         component: (resolve) => require(['views/single'], resolve),
         meta: slider
     }, {
+        path: '/modules/sidebar',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: sidebar
+    }, {
+        path: '/modules/embed',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: embed
+    }, {
+        path: '/modules/snackbar',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: snackbar
+    }, {
+        path: '/modules/tab',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: tab
+    }, {
         path: '/views',
         component: (resolve) => require(['views/list'], resolve),
         meta: views
@@ -194,6 +222,18 @@ const router = new Router({
         path: '/views/speeches',
         component: (resolve) => require(['views/single'], resolve),
         meta: speeches
+    }, {
+        path: '/views/card',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: card
+    }, {
+        path: '/views/items',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: items
+    }, {
+        path: '/views/statistic',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: statistic
     }, {
         path: '*',
         redirect: '/'
@@ -230,19 +270,42 @@ router.afterEach((to, from, next) => {
         document.querySelectorAll('[html-code], [js-code]').forEach((el) => {
             // 標記程式碼。 - [[segment]]
             el.innerHTML = el.innerHTML.replace(/\[\[(.*?)\]\]/g, '<mark>$1</mark>')
+
             // 相關元件連結。 - {{segment}}
-            el.innerHTML = el.innerHTML.replace(/{{(.*?)}}/g, (match, first) => {
-                return `<a href="#">${first}</a>`
+            el.innerHTML = el.innerHTML.replace(/{{(.*?)}}/g, (match, name) => {
+                // 這裡的順序需要依照 yml 檔案排序，這樣才能對到正確的資訊。
+                var els     = ['button', 'container', 'divider', 'header', 'icon', 'image', 'input', 'slate', 'label', 'list', 'loader', 'quote', 'segment', 'step'],
+                    cos     = ['breadcrumb', 'form', 'grid', 'menu', 'message', 'table'],
+                    mos     = ['accordion', 'calendar', 'checkbox', 'dimmer', 'dropdown', 'progress', 'slider', 'popup', 'modal', 'embed', 'sidebar', 'snackbar', 'tab', 'contextmenu', 'scrollspy'],
+                    vis     = ['card', 'speeches', 'comment', 'feed', 'items', 'statistic'],
+                    elIndex = els.indexOf(name),
+                    coIndex = cos.indexOf(name),
+                    moIndex = mos.indexOf(name),
+                    viIndex = vis.indexOf(name)
+
+                if (elIndex !== -1)
+                    return `<a href="/elements/${name}" data-tooltip="${elements.items[elIndex].description}">${name}</a>`
+                if (coIndex !== -1)
+                    return `<a href="/collections/${name}" data-tooltip="${collections.items[coIndex].description}">${name}</a>`
+                if (moIndex !== -1)
+                    return `<a href="/modules/${name}" data-tooltip="${modules.items[moIndex].description}">${name}</a>`
+                if (viIndex !== -1)
+                    return `<a href="/views/${name}" data-tooltip="${views.items[viIndex].description}">${name}</a>`
+
+                return `<a href="#">${name}</a>`
             })
-            // 示範圖片標籤換成單純的假路徑，這樣比較簡潔。 - !-16:9-!
+
+            // 示範圖片標籤換成單純的假路徑，這樣看起來比較簡潔。 - !-16:9-!
             el.innerHTML = el.innerHTML.replace(/!-(.*?)-!/g, (match, first) => {
                 switch(first) {
-                    case '16:9' : return '16-9.png'
-                    case '1:1'  : return '1-1.png'
-                    case '4:3'  : return '4-3.png'
-                    case 'user' : return 'user.png'
-                    case 'user2': return 'user2.png'
-                    case 'user3': return 'user3.png'
+                    case '16:9'       : return 'image.png'
+                    case '1:1'        : return 'image.png'
+                    case '4:3'        : return 'image.png'
+                    case 'user'       : return 'user.png'
+                    case 'user2'      : return 'user.png'
+                    case 'user3'      : return 'user.png'
+                    case 'embed:karen': return 'youtube.png'
+                    case 'embed:vimeo': return 'vimeo.png'
                 }
             })
         })
