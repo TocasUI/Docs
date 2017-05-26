@@ -92,7 +92,7 @@ styles:
                   <tr>
                       <td>
                           <h6 class="ts image {{header}}">
-                              <img src="${imgPlaceholderUser}" class="ts mini rounded {{image}}">
+                              <img class="ts mini rounded {{image}}" src="!-user-!">
                               <div class="content">
                                   雷莉亞
                                   <div class="sub header">科學家</div>
@@ -106,7 +106,7 @@ styles:
                   <tr>
                       <td>
                           <h6 class="ts image {{header}}">
-                              <img src="${imgPlaceholderUser2}" class="ts mini rounded {{image}}">
+                              <img class="ts mini rounded {{image}}" src="!-user2-!">
                               <div class="content">
                                   卡莉絲·伊繁特
                                   <div class="sub header">初中生</div>
@@ -543,6 +543,35 @@ styles:
               </tbody>
           </table>
 
+      - title      : 註釋
+        description: 你可以透過 <span class="ts horizontal label">&lt;caption&gt;</span> 來詮釋一個表格。
+        code       : |
+          <table class="ts table">
+              <thead>
+                  <tr>
+                      <th>姓名</th>
+                      <th>電子郵件地址</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>卡莉絲</td>
+                      <td>caris@gmail.com</td>
+                  </tr>
+                  <tr>
+                      <td>橙希</td>
+                      <td>orenji@gmail.com</td>
+                  </tr>
+                  <tr>
+                      <td>吳雨藍</td>
+                      <td>aoi@gmail.com</td>
+                  </tr>
+              </tbody>
+              <[[caption]]>
+                  這是個使用者清單列表與相關資料，請注意這屬於商業機密，不應該外露或公開給第三者得知。
+              </[[caption]]>
+          </table>
+
       - title      : 單行
         description: 欄位可以保持單行而避免因擠壓而自動換行。
         code       : |
@@ -781,6 +810,47 @@ styles:
                       <td class="[[selectable]] negative">
                           <a href="#">移除</a>
                       </td>
+                  </tr>
+              </tbody>
+          </table>
+
+      - title      : 附著
+        description: 表格可以與另一個表格或是元件附著在一起。
+        code       : |
+          <table class="ts [[top attached]] table">
+              <tbody>
+                  <tr>
+                      <td>Sciuridae Li</td>
+                      <td>Mac Taylor</td>
+                      <td>李政皇</td>
+                  </tr>
+              </tbody>
+          </table>
+          <table class="ts celled [[attached]] table">
+              <tbody>
+                  <tr>
+                      <td>Yan-K</td>
+                      <td>Fan Kangtai</td>
+                      <td>SpaceTimeHalf</td>
+                  </tr>
+                  <tr>
+                      <td>Sean Wei</td>
+                      <td>Hiram Huang</td>
+                      <td>Tsundere Chen</td>
+                  </tr>
+                  <tr>
+                      <td>Sciuridae</td>
+                      <td>Jasper Yu</td>
+                      <td>Chris</td>
+                  </tr>
+              </tbody>
+          </table>
+          <table class="ts [[bottom attached]] table">
+              <tbody>
+                  <tr>
+                      <td>Choukai</td>
+                      <td>Henry Wu</td>
+                      <td>Allen Chou</td>
                   </tr>
               </tbody>
           </table>
