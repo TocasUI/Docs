@@ -1,0 +1,43 @@
+slate:
+  title      : 分頁籤
+  description: 不換網頁卻能在多個內容之間作切換的好選擇。
+
+styles:
+  - category   : 種類
+    description: 分頁籤有不同種類。
+    items      :
+      - title      : 基本
+        description: 一個最基本的分頁籤組，但在沒有啟用之前頁籤內容會被隱藏。
+        code       : |
+          <div class="ts top attached tabbed menu">
+              <a class="item">分頁</a>
+          </div>
+          <div class="ts bottom attached tab segment">
+              這是分頁內容。
+          </div>
+
+  - category   : 狀態
+    description: 分頁籤有不同的呈現狀態。
+    items      :
+
+      - title      : 已啟用
+        description: 一個已啟用的分頁籤會顯示在頁面上。
+        code       : |
+          <div class="ts top attached tabbed menu">
+              <a class="active item">分頁</a>
+          </div>
+          <div class="ts [[active]] bottom attached tab segment">
+              這是分頁內容。
+          </div>
+
+      - title      : 讀取中
+        description: 一個分頁籤可以呈現正在讀取的狀態。
+        code       : |
+          <div class="ts top attached tabbed menu">
+              <a class="active item">分頁</a>
+          </div>
+          <div class="ts active [[loading]] bottom attached tab segment">
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+          </div>
