@@ -20,4 +20,4 @@ styles:
               滑鼠移至此查看範例
           </button>
         javascript: |
-          ts('[data-tooltip]').popup()
+          ts('[data-tooltip]').popup();
