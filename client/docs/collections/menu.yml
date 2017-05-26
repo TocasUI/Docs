@@ -63,6 +63,22 @@ styles:
               <a class="item">音樂</a>
           </div>
 
+      - title      : 文字
+        description: 選單可以很適合單純的文字用途。
+        code       : |
+          <div class="ts [[text]] menu">
+              <div class="header item">排序優先</div>
+              <a class="active item">
+                  最新的
+              </a>
+              <a class="item">
+                  最多留言
+              </a>
+              <a class="item">
+                  最熱門
+              </a>
+          </div>
+
       - title      : 反色語意
         description: 選單也可以是反色且具有不同語意。
         code       : |
@@ -102,7 +118,7 @@ styles:
               <a class="item">文件</a>
           </div>
 
-      - subtitle   : 垂直
+      - title      : 垂直
         description: 一個垂直的選單。
         code       : |
           <div class="ts [[vertical]] menu">
@@ -388,6 +404,22 @@ styles:
                   <i class="user {{icon}}"></i>
                   使用者
               </a>
+          </div>
+
+      - title      : 圖片
+        description: 選單內的項目也可以擺放單張圖片。
+        code       : |
+          <div class="ts vertical compact menu">
+              <a class="[[image]] item">
+                <img class="ts small {{image}}" src="!-user-!">
+              </a>
+              <div class="item">
+                  個人檔案
+                  <div class="menu">
+                      <a class="item">編輯</a>
+                      <a class="item">隱私</a>
+                  </div>
+              </div>
           </div>
 
       - title      : 流動
