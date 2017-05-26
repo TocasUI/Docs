@@ -44,12 +44,8 @@ styles:
                       <td>主要</td>
                       <td>核心檔案，除了開發者外不應由其他人修改。</td>
                   </tr>
-                  <tr>
-                      <td>service.go</td>
-                      <td>服務函式</td>
-                      <td>核心服務的主要功能。</td>
-                  </tr>
               </tbody>
           </table>
         javascript: |
-          ts('.ts.sortable.table').tablesort()
+          ts('.ts.sortable.table').tablesort();
+        autoExecute: true
