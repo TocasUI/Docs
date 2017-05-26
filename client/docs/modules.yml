@@ -80,3 +80,15 @@ items:
     link       : /modules/tab/
     description: 呈現多個分頁且可相互切換內容呈現的模塊。
     symbol     : clone
+
+  - title      : 右鍵選單
+    class      : .ts.contextmenu
+    link       : /modules/contextmenu/
+    description: 提供滑鼠呼叫額外功能的右鍵選單。
+    symbol     : mouse pointer
+
+  - title      : 捲動監聽
+    class      : .ts.scrollspy
+    link       : /modules/scrollspy/
+    description: 隨著捲軸的位置而啟用選單、清單內的特定項目。
+    symbol     : resize vertical
