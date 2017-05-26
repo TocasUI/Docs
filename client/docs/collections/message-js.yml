@@ -24,3 +24,4 @@ styles:
           </div>
         javascript: |
           ts('.dismissable.message').message()
+        autoExecute: true
