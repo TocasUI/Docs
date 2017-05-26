@@ -61,15 +61,25 @@ styles:
       - title      : 標題中的副標題
         description: 用來詮釋主標題的副標題。
         code       : |
-          <h4 class="ts header">大標題
+          <div class="ts header">
+              大標題
               <div class="[[sub header]]">然後我是子標題。</div>
-          </h4>
+          </div>
+
+      - subtitle   : 同行副標題
+        description: 標題內的副標題可以跟主標題同一行，而不是換到下一行。
+        code       : |
+          <div class="ts header">
+              大標題
+              <div class="[[inline]] sub header">我是同行子標題，會跟大標題在一起。</div>
+          </div>
+
 
       - title      : 圖片
         description: 標題中可以帶有圖片。
         code       : |
           <h3 class="ts header">
-              <img class="ts circular [[image]]" src="${imgPlaceholderUser}">
+              <img class="ts circular [[image]]" src="!-user-!">
               帳號設定
           </h3>
 
@@ -153,3 +163,14 @@ styles:
               頓時；一陣涼風吹過，而我——又射了。
           </div>
           <h5 class="ts [[bottom attached]] header">吸附於底部</h5>
+
+      - title      : 置上圖示
+        description: 標題裡的圖示可以是置上而不是置中，當有子標題的時候圖示會對齊大標題。
+        code       : |
+          <div class="ts large header">
+              <i class="announcement [[top aligned]] {{icon}}"></i>
+              <div class="content">
+                  官方公告
+                  <div class="sub header">叭啦叭叭批哩叭啦，有新公告啦！</div>
+              </div>
+          </div>
