@@ -115,13 +115,31 @@ styles:
           </div>
 
       - title      : 提醒
-        description: 欄位中可以透過 <span class="ts horizontal label">small</span> 標籤來新增一個提醒。
+        description: 欄位中可以新增提醒字串。
         code       : |
           <div class="ts form">
               <div class="field">
                   <label>帳號</label>
                   <input type="text">
                   <[[small]]>你未來將無法更改這項設定。</[[small]]>
+              </div>
+          </div>
+
+      - title      : 文字訊息
+        description: 但文字訊息會隨著欄位狀態而變更顏色。且比起提醒，文字訊息也稍微大了一點，可用做錯誤、警告提示。
+        code       : |
+          <div class="ts form">
+              <div class="error field">
+                  <label>帳號</label>
+                  <input type="text">
+                  <span class="[[message]]">不好了，這個帳號已經被搶先使用！</span>
+                  <small>你未來將無法更改這項設定。</small>
+              </div>
+              <div class="field">
+                  <label>暱稱</label>
+                  <input type="text">
+                  <span class="[[message]]">找個適合你且不與他人重複的暱稱吧！</span>
+                  <small>暱稱的長度需在 6 到 32 個字之間。</small>
               </div>
           </div>
 
@@ -151,13 +169,13 @@ styles:
           <div class="ts form">
               <div class="field">
                   <label>長篇文章</label>
-                  <textarea></textarea>
+                  <[[textarea]]></[[textarea]]>
               </div>
               <div class="field">
                   <label>指定五行高度</label>
                   <[[textarea]] rows="5"></[[textarea]]>
               </div>
-              <div class="[[resizable]] field">
+              <div class="resizable field">
                   <label>自由伸縮</label>
                   <[[textarea]]></[[textarea]]>
               </div>
@@ -242,7 +260,7 @@ styles:
               </div>
           </div>
 
-      - title      : 訊息
+      - title      : 訊息元件
         description: 別忘記，你還可以在表單中帶入訊息元件。
         code       : |
           <div class="ts form">
