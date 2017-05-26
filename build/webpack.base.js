@@ -26,7 +26,8 @@ module.exports = {
             components: path.resolve(__dirname, '../client/components'),
             views: path.resolve(__dirname, '../client/views'),
             docs: path.resolve(__dirname, '../client/docs'),
-            styles: path.resolve(__dirname, '../client/styles')
+            styles: path.resolve(__dirname, '../client/styles'),
+            assets: path.resolve(__dirname, '../client/assets')
         },
         extensions: ['.js', '.vue', '.css', '.json', '.yml'],
     },
