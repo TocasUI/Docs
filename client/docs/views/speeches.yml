@@ -76,7 +76,7 @@ styles:
           <div class="ts speeches">
               <div class="speech">
                   <div class="[[avatar]]">
-                    <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                    <img src="!-user-!">
                   </div>
                   <div class="content">早安！</div>
               </div>
@@ -104,7 +104,7 @@ styles:
               <div class="speech">
                   <div class="[[author]]">Yami Odymel</div>
                   <div class="avatar">
-                      <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                      <img src="!-user-!">
                   </div>
                   <div class="content">
                       <div class="description">大家好啊！</div>
@@ -118,7 +118,7 @@ styles:
           <div class="ts speeches">
               <div class="speech">
                   <div class="avatar">
-                      <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                      <img src="!-user-!">
                   </div>
                   <div class="content">
                       <div class="[[inline]] [[author]]">Yami Odymel</div>
@@ -127,7 +127,7 @@ styles:
               </div>
               <div class="speech">
                   <div class="avatar">
-                      <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                      <img src="!-user-!">
                   </div>
                   <div class="content">
                       <div class="author">Haneda Shirone</div>
@@ -144,7 +144,7 @@ styles:
                 <div class="content">
                     <div class="author">Yami Odymel</div>
                     <div class="[[image]]">
-                        <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                        <img src="!-16:9-!">
                     </div>
                     <div class="description">前天去夏威夷旅行，怎樣？拍得不錯吧！。</div>
                 </div>
@@ -157,7 +157,7 @@ styles:
           <div class="ts speeches">
               <div class="speech">
                   <div class="avatar">
-                      <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                      <img src="!-user-!">
                   </div>
                   <div class="content">
                       <div class="description">月月，搭拉安。</div>
@@ -175,7 +175,7 @@ styles:
           <div class="ts speeches">
               <div class="speech">
                   <div class="avatar">
-                      <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                      <img src="!-user-!">
                   </div>
                   <div class="content">這個訊息的中繼資料帶有子彈點。</div>
                   <div class="[[bulleted]] [[meta]]">
@@ -185,7 +185,7 @@ styles:
               </div>
               <div class="speech">
                     <div class="avatar">
-                        <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                        <img src="!-user-!">
                     </div>
                     <div class="content">這個則是中點的中繼資料。</div>
                     <div class="[[middoted]] [[meta]]">
@@ -220,7 +220,8 @@ styles:
                   <div class="content">
                       <div class="description">
                           <blockquote class="[[ts secondary quote]]">
-                              <p><strong>Yami Odymel</strong></p>
+                              Yami Odymel
+                              <br>
                               看看我，這是引用元件欸！
                           </blockquote>
                           Tocas UI 的聊天室元件支援引用欸，真是太 Telegram 了。
@@ -239,7 +240,7 @@ styles:
               <div class="[[group]]">
                   <div class="speech">
                       <div class="avatar">
-                          <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                          <img src="!-user-!">
                       </div>
                       <div class="content">
                           <div class="author">Yami Odymel</div>
@@ -248,7 +249,7 @@ styles:
                   </div>
                   <div class="speech">
                       <div class="avatar">
-                          <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                          <img src="!-user-!">
                       </div>
                       <div class="content">
                           <div class="author">Yami Odymel</div>
@@ -279,19 +280,19 @@ styles:
               <div class="[[circular]] group">
                   <div class="speech">
                       <div class="avatar">
-                          <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                          <img src="!-user-!">
                       </div>
                       <div class="content">這個對話氣泡除了是圓的以外，</div>
                   </div>
                   <div class="speech">
                       <div class="avatar">
-                          <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                          <img src="!-user-!">
                       </div>
                       <div class="content">看起來也不會太突兀。</div>
                   </div>
                   <div class="speech">
                       <div class="avatar">
-                          <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                          <img src="!-user-!">
                       </div>
                       <div class="content">就像 Facebook Messenger 那樣串連在一起。</div>
                   </div>
@@ -322,7 +323,7 @@ styles:
           <div class="ts speeches">
               <div class="[[borderless]] speech">
                   <div class="avatar">
-                      <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                      <img src="!-user-!">
                   </div>
                   <div class="content">
                       <div class="author">Yami Odymel</div>
@@ -331,7 +332,7 @@ styles:
               </div>
               <div class="[[borderless]] speech">
                   <div class="avatar">
-                      <img src="https://tocas-ui.com/assets/img/5e5e3a6.png">
+                      <img src="!-user-!">
                   </div>
                   <div class="content">
                       <div class="author">Haneda Shirone</div>
