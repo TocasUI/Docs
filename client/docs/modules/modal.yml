@@ -16,7 +16,7 @@ styles:
     description: 一個對話視窗有多種類別。
     items      :
       - title      : 對話視窗
-        description: 最基本的對話視窗。帶有 <span class="ts horizontal label">[open]</span> 元素標籤的對話視窗會被顯示出來。
+        description: 最基本的對話視窗。
         code       : |
           <[[dialog]] class="ts fullscreen [[modal]]" open>
               <div class="header">
@@ -92,11 +92,11 @@ styles:
                   這是你嗎？
               </div>
               <div class="[[image content]]">
-                  <div class="ts medium image">
-                      <img src="${imgPlaceholderSquare}">
+                  <div class="ts medium {{image}}">
+                      <img src="!-4:3-!">
                   </div>
                   <div class="description">
-                      <div class="ts header">我們在照片中偵測到了你。</div>
+                      <div class="ts {{header}}">我們在照片中偵測到了你。</div>
                       <p>這張照片看起來裡面包含著你的人像，如果你願意的話我們可以自動將該照片發佈至 <a href="https://www.gravatar.com" target="_blank">gravatar</a> 並替換你原先的頭像。</p>
                       <p>你希望這麼做嗎？</p>
                   </div>
@@ -169,6 +169,21 @@ styles:
                   <button class="ts positive {{button}}">
                       是的
                   </button>
+              </div>
+          </dialog>
+
+  - category   : 狀態
+    description: 對話視窗有著不同的狀態。
+    items      :
+
+      - title      : 顯示
+        description: 帶有 <span class="ts horizontal label">[open]</span> 元素標籤的對話視窗會被顯示出來。
+        code       : |
+          <dialog class="ts fullscreen modal" [[open]]>
+              <div class="content">
+                  <p>到水的車風、天小望再，個院們著福！要清我個夫後於、說媽平神線連時該：光四報接。大親放書光？不議書組巴口保能近細，卻實到式石特約過。</p>
+                  <p>代你是走是：路火改大兒地結後也傷車、明心沒教的童了共這英們點縣慢公早出光了得引多經！處技北夫們十是入就重得然親……法美機的義是小唱當解土量同吃，和樣做新機子他市很失吃出家。仍思老木海和部成是市的國兒生球要又辦中有對父色……形非帶海了。話安生當我球起。子立過財量展美義；那康自從遠飛心的一。</p>
+                  <p>旅一的四課，開地還，的取理活數度青天化民家向的專自到及學，縣光自分個發：條越資大無庭；但進臺方隊的風斷此的小……一背書要西表靈：要藝太童汽也老天好住？兒沒生月路把時？不他謝、意強兩而一機，卻運持院是品的她腳。進和問半葉一所希知，景是育不、市音個在費我星國增成受呢來我子片易黃頭著，停可成人發才己金過位關長不一得主，好成引題於手魚，文指者價然、常首能國達另了石？且年養？好看了不、產行和越早反前門有，放轉國引環流的力是直算不福然。的館體後在利遠員我經現運懷況指正念像媽頭是中經！</p>
               </div>
           </dialog>
 
