@@ -57,6 +57,18 @@ styles:
               <input type="text" placeholder="這個背景是透明的">
           </div>
 
+      - title      : 發音方式
+        description: 輸入欄位有不同的發音方式。
+        remove     : <br><br>
+        code       : |
+          <div class="ts [[secondary]] input">
+              <input type="text" placeholder="次要發音方式">
+          </div>
+          <br><br>
+          <div class="ts [[tertiary]] input">
+              <input type="text" placeholder="其次發音方式">
+          </div>
+
       - title      : 底線的
         description: 輸入欄位能夠僅有底線。
         code       : |
