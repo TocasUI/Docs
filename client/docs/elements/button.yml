@@ -243,6 +243,14 @@ styles:
           <button class="ts [[left floated]] button">向左浮動</button>
           <button class="ts [[right floated]] button">向右浮動</button>
 
+      - title      : 角落
+        description: 按鈕可以浮動在某個元素的角落中。
+        code       : |
+          <div class="ts tiny image">
+              <img src="!-1:1-!">
+              <button class="ts [[top right corner]] close button"></button>
+          </div>
+
       - title      : 垂直附著
         description: 按鈕可以單獨垂直附著在某個元素的上下端。
         code       : |
