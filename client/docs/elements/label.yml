@@ -22,13 +22,13 @@ styles:
         remove     : <br>
         code       : |
           <div class="ts [[image]] label">
-              <img src="${imgPlaceholderUser}">Yami Odymel
+              <img src="!-user-!">Yami Odymel
           </div>
           <div class="ts [[image]] label">
-              <img src="${imgPlaceholderUser2}">Xiaoan
+              <img src="!-user2-!">Xiaoan
           </div>
           <div class="ts [[image]] label">
-              <img src="${imgPlaceholderUser3}">卡莉絲
+              <img src="!-user3-!">卡莉絲
               <div class="detail">實況主</div>
           </div>
 
