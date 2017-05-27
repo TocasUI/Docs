@@ -16,6 +16,8 @@ import quote       from 'docs/elements/quote'
 import segment     from 'docs/elements/segment'
 import slate       from 'docs/elements/slate'
 import step        from 'docs/elements/step'
+import container   from 'docs/elements/container'
+import icon        from 'docs/elements/icon'
 import collections from 'docs/collections'
 import breadcrumb  from 'docs/collections/breadcrumb'
 import form        from 'docs/collections/form'
@@ -43,11 +45,15 @@ import embed       from 'docs/modules/embed'
 import sidebar     from 'docs/modules/sidebar'
 import snackbar    from 'docs/modules/snackbar'
 import tab         from 'docs/modules/tab'
+import contextmenu from 'docs/modules/contextmenu'
 import views       from 'docs/views'
 import speeches    from 'docs/views/speeches'
 import card        from 'docs/views/card'
 import items       from 'docs/views/items'
 import statistic   from 'docs/views/statistic'
+import comment     from 'docs/views/comment'
+import feed        from 'docs/views/feed'
+import responsive  from 'docs/responsive'
 
 const router = new Router({
     mode: 'history',
@@ -106,6 +112,14 @@ const router = new Router({
         path: '/elements/step',
         component: (resolve) => require(['views/single'], resolve),
         meta: step
+    }, {
+        path: '/elements/container',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: container
+    }, {
+        path: '/elements/icon',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: icon
     }, {
         path: '/collections',
         component: (resolve) => require(['views/list'], resolve),
@@ -215,6 +229,10 @@ const router = new Router({
         component: (resolve) => require(['views/single'], resolve),
         meta: tab
     }, {
+        path: '/modules/contextmenu',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: contextmenu
+    }, {
         path: '/views',
         component: (resolve) => require(['views/list'], resolve),
         meta: views
@@ -234,6 +252,18 @@ const router = new Router({
         path: '/views/statistic',
         component: (resolve) => require(['views/single'], resolve),
         meta: statistic
+    }, {
+        path: '/views/comment',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: comment
+    }, {
+        path: '/views/feed',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: feed
+    }, {
+        path: '/rwd',
+        component: (resolve) => require(['views/single'], resolve),
+        meta: responsive
     }, {
         path: '*',
         redirect: '/'
