@@ -98,7 +98,7 @@
         //- 元素卡片
         .ts.narrow.container.relaxed.stackable.grid(:class="$style.container")
             //- 左側欄位
-            .four.wide.column(:class="$style.listColumn")
+            .four.wide.column(:class="$style.listColumn", v-if="!$route.meta.singleColumn")
                 //- 左側清單
                 .ts.borderless.secondary.relaxed.vertical.menu(:class="$style.listMenu")
                     template(v-for="styles in $route.meta.styles", :class="$style.listCategory")
@@ -106,11 +106,11 @@
                         div.header(:class="$style.listHeader")
                             | {{ styles.category }}
                         //- 每個項目
-                        div.item(v-for="item in styles.items", :class="$style.listItem", v-if="item.title")
+                        a.item(v-for="item in styles.items", :class="$style.listItem", :href="'#'+item.title", v-if="item.title")
                             | {{ item.title }}
 
             //- 右側主要內容欄位
-            .twelve.wide.column
+            .column(:class="{'twelve wide': !$route.meta.singleColumn, 'sixteen wide': $route.meta.singleColumn}")
                 //- 主要說明
                 template(v-if="$route.meta.intro")
                     .ts.huge.dividing.header(:class="$style.introHeader") 說明
