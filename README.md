@@ -32,6 +32,20 @@ $ npm run dev
 
 接著參訪 `http://localhost:8080` 即可直接開啟本地教學文件頁面。
 
+## 結構
+
+```js
+Docs
+├── build                // 工作區域設置
+├── client
+│  ├── assets            // 靜態圖片、樣式
+│  ├── components        // 重複性元件
+│  ├── docs              // 文件內容
+│  ├── styles            // 部分文件樣式
+│  └── views             // 頁面元件
+└── images               // 網站圖示、螢幕截圖
+```
+
 ## 文件格式
 
 每單個元件的文件皆由 `.yml` 格式作為基礎。
