@@ -12,8 +12,7 @@ styles:
     items      :
       - title      : 基本
         description: 一個最基本的通知條會出現在螢幕左下角中。
-        bordered   : true
-        secondary  : true
+        type       : snackbar
         code       : |
           <div class="ts active [[snackbar]]">
               <div class="content">
@@ -28,8 +27,7 @@ styles:
 
       - title      : 已啟用
         description: 通知條預設並不會顯示，直到將其設置為已啟用。
-        bordered   : true
-        secondary  : true
+        type       : snackbar
         code       : |
           <div class="ts [[active]] snackbar">
               <div class="content">
@@ -43,8 +41,7 @@ styles:
 
       - title      : 內容
         description: 用以呈現通知的主要文字和訊息。
-        bordered   : true
-        secondary  : true
+        type       : snackbar
         code       : |
           <div class="ts active snackbar">
               <div class="[[content]]">
@@ -54,8 +51,7 @@ styles:
 
       - title      : 動作
         description: 針對通知所提供的動作按鈕。通知條上僅能有一個動作按鈕。
-        bordered   : true
-        secondary  : true
+        type       : snackbar
         code       : |
           <div class="ts active snackbar">
               <div class="content">
@@ -66,8 +62,7 @@ styles:
 
       - subtitle   : 動作語意
         description: 動作按鈕也能有不同的語意並以示其重要性。
-        bordered   : true
-        secondary  : true
+        type       : snackbar
         code       : |
           <div class="ts active snackbar">
               <a class="[[primary]] action">主要</a>
@@ -92,8 +87,7 @@ styles:
 
       - title      : 位置
         description: 通知條在螢幕角落的浮動位置是可以更改的。
-        bordered   : true
-        secondary  : true
+        type       : snackbar
         code       : |
           <div class="ts active [[top left]] snackbar">
               <div class="content">
