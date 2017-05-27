@@ -31,11 +31,7 @@ styles:
 
       - title      : 偏見
         description: 讓按鈕以背景顏色作為基礎，並以此產生深、暗差異的偏見。
-        remove     : <br>
         code       : |
-          <button class="ts [[opinion]] button">偏見</button>
-          <button class="ts [[secondary opinion]] button">次要偏見</button>
-          <br>
           <div class="ts inverted info {{segment}}">
               <button class="ts [[opinion]] button">偏見</button>
               <button class="ts [[secondary opinion]] button">次要偏見</button>
@@ -155,7 +151,7 @@ styles:
           <div class="ts fluid [[stackable]] buttons">
               <button class="ts info button">希豹</button>
               <button class="ts negative button">祈浪</button>
-              <button class="ts secondary button">余望</button>
+              <button class="ts inverted button">余望</button>
           </div>
 
       - title      : 垂直附著
