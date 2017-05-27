@@ -201,6 +201,24 @@ styles:
               </a>
           </div>
 
+      - title      : 文字
+        description: 選單項目內也可以擺放文字或是標題。
+        code       : |
+          <div class="ts vertical menu">
+              <a class="item">
+                  <div class="ts {{header}}">促銷活動</div>
+                  <p>查看我們最新的促銷商品！</p>
+              </a>
+              <a class="item">
+                  <div class="ts {{header}}">優惠券</div>
+                  <p>看看我們所販售的優惠券！</p>
+              </a>
+              <a class="item">
+                  <div class="ts {{header}}">退貨</div>
+                  <p>不滿意商品？查看我們的退貨機制是什麼！</p>
+              </a>
+          </div>
+
       - title      : 拉伸的
         description: 單個、或多個項目可以被拉伸到填滿整個選單，並將其他項目縮短至它們的內容寬度。這很適合用在排版上。
         code       : |
