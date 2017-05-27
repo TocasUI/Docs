@@ -1,0 +1,1150 @@
+# content: .*
+# ^\s*$
+# (\r?\n){2,}
+# \n-
+
+slate:
+  title      : 圖示
+  description: 省去使用圖片當圖案且還要自己改變顏色的困擾。
+
+intro: |
+  <p>Tocas UI 的圖示來自 <a href="http://fontawesome.io/">Font Awesome 4.7.0</a>，這是由 <a href="http://www.twitter.com/davegandy">Dave Gandy</a> 所設計的一系列免費字型圖示。</p>
+  <p>字型圖示比起傳統的圖片圖案優越之處在於你能夠直接透過 CSS 更改圖示的顏色，因為圖示就是文字。</p>
+
+styles:
+  - category   : 種類
+    description: 圖示有著不同的種類。
+    items      :
+
+      - title      : 基本
+        description: 一個最基本的圖示是由 <span class="ts horizontal label">&lt;i&gt;</span> 標籤所組成的。
+        code       : |
+          <i class="users [[icon]]"></i>
+          <i class="announcement [[icon]]"></i>
+          <i class="heart [[icon]]"></i>
+
+      - title      : 語意
+        description: 圖示有著不同的語意。
+        code       : |
+          <i class="home [[primary]] icon"></i>
+          <i class="home [[info]] icon"></i>
+          <i class="home [[warning]] icon"></i>
+
+      - title      : 肯定和否定
+        description: 圖示能夠帶有肯定或否定的意味。
+        code       : |
+          <i class="home [[positive]] icon"></i>
+          <i class="home [[negative]] icon"></i>
+
+  - category   : 狀態
+    description: 圖示可以有不同的狀態。
+    items      :
+
+      - title      : 已停用
+        description: 圖示可以呈現一個不可被使用的狀態。
+        code       : |
+          <i class="[[disabled]] users icon"></i>
+
+      - title      : 讀取中
+        description: 圖示能夠呈現一個正在讀取的狀態並持續轉圈，就像一個簡單的讀取進度指示器。
+        code       : |
+          <i class="spinner [[loading]] icon"></i>
+          <i class="notched circle [[loading]] icon"></i>
+          <i class="asterisk [[loading]] icon"></i>
+
+  - category   : 外觀
+    description: 圖示有著不同的外觀點綴。
+    items      :
+
+      - title      : 縮減的
+        description: 圖示可以沒有外距。
+        code       : |
+          這個圖示<i class="[[fitted]] user icon"></i>和文字之間不會有空白。
+
+      - title      : 尺寸
+        description: 圖示有不同的大小。
+        code       : |
+          <i class="[[mini]] home icon"></i>
+          <i class="[[tiny]] home icon"></i>
+          <i class="[[small]] home icon"></i>
+          <i class="home icon"></i>
+          <i class="[[large]] home icon"></i>
+          <i class="[[big]] home icon"></i>
+          <i class="[[huge]] home icon"></i>
+          <i class="[[massive]] home icon"></i>
+
+      - title      : 垂直翻轉
+        description: 圖示可以被垂直翻轉。
+        code       : |
+          <i class="[[horizontally flipped]] cloud icon"></i>
+          <i class="[[vertically flipped]] cloud icon"></i>
+
+      - title      : 水平旋轉
+        description: 圖示可以被水平旋轉。
+        code       : |
+          <i class="[[clockwise rotated]] cloud icon"></i>
+          <i class="[[counterclockwise rotated]] cloud icon"></i>
+
+      - title      : 圓形
+        description: 圖示可以是圓形且帶有背景顏色的。
+        code       : |
+          <i class="[[circular]] users icon"></i>
+          <i class="[[circular]] info users icon"></i>
+          <i class="[[circular]] inverted users icon"></i>
+          <i class="[[circular]] inverted info users icon"></i>
+
+      - title      : 邊框的
+        description: 圖示可以有邊框。
+        code       : |
+          <i class="[[bordered]] users icon"></i>
+          <i class="[[bordered]] info users icon"></i>
+          <i class="[[bordered]] inverted users icon"></i>
+          <i class="[[bordered]] inverted info users icon"></i>
+
+  - category   : 群組
+    description: 圖示能夠有一個群組。
+    items      :
+
+      - title      : 多個圖示
+        description: 不同的圖示可以成為一個群組並且組合在一起運用。
+        code       : |
+          <i class="huge [[icons]]">
+              <i class="big thin circle icon"></i>
+              <i class="user icon"></i>
+          </i>
+          <i class="huge [[icons]]">
+              <i class="big negative dont icon"></i>
+              <i class="user icon"></i>
+          </i>
+          <i class="huge [[icons]]">
+              <i class="big loading sun icon"></i>
+              <i class="user icon"></i>
+          </i>
+
+      - title      : 角落圖示
+        description: 圖示群組中可以有單個圖示浮動在另一個圖示的角落。
+        code       : |
+          <i class="huge icons">
+              <i class="puzzle icon"></i>
+              <i class="[[corner]] add icon"></i>
+          </i>
+          <div class="ts {{header}}">
+              <i class="large icons">
+                  <i class="twitter icon"></i>
+                  <i class="inverted [[corner]] add icon"></i>
+              </i>
+              Add on Twitter
+          </div>
+
+  - category   : 圖示組
+    description: |
+      <p>所有可供使用的圖示，我們建議你透過瀏覽器的搜尋功能找到你要的圖示。圖示命名方式很簡單，倘若一個圖示叫做 Horizontal Ellipsis，那麼其用法就是 <span class="ts horizontal label">.horizontal.ellipsis.icon</span>。</p>
+      <p>點擊圖示可以自動複製圖示樣式名稱。</p>
+    items      :
+
+      - title      : 網頁內容
+        description: 會出現在頁面上的通常圖示。
+        icons      :
+          - search
+          - mail outline
+          - signal
+          - setting
+          - home
+          - inbox
+          - browser
+          - tag
+          - tags
+          - image
+          - calendar
+          - comment
+          - shop
+          - comments
+          - external
+          - privacy
+          - settings
+          - comments
+          - external
+          - trophy
+          - payment
+          - feed
+          - alarm outline
+          - tasks
+          - cloud
+          - lab
+          - mail
+          - dashboard
+          - comment outline
+          - comments outline
+          - sitemap
+          - idea
+          - alarm
+          - terminal
+          - code
+          - protect
+          - calendar outline
+          - ticket
+          - external square
+          - bug
+          - mail square
+          - history
+          - options
+          - text telephone
+          - find
+          - alarm mute
+          - alarm mute outline
+          - copyright
+          - at
+          - eyedropper
+          - paint brush
+          - heartbeat
+          - mouse pointer
+          - hourglass empty
+          - hourglass start
+          - hourglass half
+          - hourglass end
+          - hourglass full
+          - hand pointer
+          - trademark
+          - registered
+          - creative commons
+          - add to calendar
+          - remove from calendar
+          - delete calendar
+          - checked calendar
+          - industry
+          - shopping bag
+          - shopping basket
+          - hashtag
+          - percent
+          - handshake
+          - open envelope
+          - open envelope outline
+          - address book
+          - address book outline
+          - address card
+          - address card outline
+          - id badge
+          - id card
+          - id card outline
+          - podcast
+          - window maximize
+          - window minimize
+          - window restore
+          - window close
+          - window close outline
+
+      - title      : 使用者動作
+        description: 呈現一個能讓使用者做出某種動作的圖示。
+        icons      :
+          - wait
+          - download
+          - repeat
+          - refresh
+          - lock
+          - bookmark
+          - print
+          - write
+          - adjust
+          - theme
+          - edit
+          - external share
+          - ban
+          - mail forward
+          - share
+          - expand
+          - compress
+          - unhide
+          - hide
+          - random
+          - retweet
+          - sign out
+          - pin
+          - sign in
+          - upload
+          - call
+          - remove bookmark
+          - call square
+          - unlock
+          - configure
+          - filter
+          - wizard
+          - undo
+          - exchange
+          - cloud download
+          - cloud upload
+          - reply
+          - reply all
+          - erase
+          - unlock alternate
+          - write square
+          - share square
+          - archive
+          - translate
+          - recycle
+          - send
+          - send outline
+          - share alternate
+          - share alternate square
+          - add to cart
+          - in cart
+          - add user
+          - remove user
+          - object group
+          - object ungroup
+          - clone
+          - talk
+          - talk outline
+
+      - title      : 訊息
+        description: 不同種類的訊息圖示。
+        icons      :
+          - help circle
+          - notice circle
+          - caution circle
+          - caution sign
+          - announcement
+          - help
+          - notice
+          - caution
+          - birthday
+          - help circle outline
+
+      - title      : 使用者種類
+        description: 能夠呈現出不同使用者類別的圖示。
+        icons      :
+          - user
+          - users
+          - doctor
+          - handicap
+          - student
+          - child
+          - spy
+          - user circle
+          - user circle outline
+          - user outline
+
+      - title      : 性別與性向
+        description: 可用以呈現出不同的性別和性向的圖示。
+        icons      :
+          - female
+          - male
+          - woman
+          - man
+          - non binary transgender
+          - intergender
+          - transgender
+          - lesbian
+          - gay
+          - heterosexual
+          - other gender
+          - other gender vertical
+          - other gender horizontal
+          - neuter
+          - genderless
+
+      - title      : 排版對齊
+        description: 圖示能夠看起來是告訴使用者要如何進行對齊的。
+        icons      :
+          - block layout
+          - grid layout
+          - list layout
+          - zoom
+          - zoom out
+          - resize vertical
+          - resize horizontal
+          - maximize
+          - crop
+
+      - title      : 殘障輔助
+        description: 圖示可以呈現與殘障輔助有關的事物。
+        icons      :
+          - universal access
+          - wheelchair
+          - blind
+          - audio description
+          - volume control phone
+          - braille
+          - asl
+          - assistive listening systems
+          - deafness
+          - sign language
+          - low vision
+
+      - title      : 物件
+        description: 與一般物體有關的圖示。
+        icons      :
+          - cocktail
+          - road
+          - flag
+          - book
+          - gift
+          - leaf
+          - fire
+          - plane
+          - magnet
+          - lemon
+          - world
+          - travel
+          - shipping
+          - money
+          - legal
+          - lightning
+          - umbrella
+          - treatment
+          - suitcase
+          - bar
+          - flag outline
+          - flag checkered
+          - puzzle
+          - fire extinguisher
+          - rocket
+          - anchor
+          - bullseye
+          - sun
+          - moon
+          - fax
+          - life ring
+          - bomb
+          - soccer
+          - calculator
+          - diamond
+          - sticky note
+          - sticky note outline
+          - law
+          - hand peace
+          - hand rock
+          - hand paper
+          - hand scissors
+          - hand lizard
+          - hand spock
+          - tv
+          - thermometer full
+          - thermometer three quarters
+          - thermometer half
+          - thermometer quarter
+          - thermometer empty
+          - shower
+          - bathtub
+          - snowflake
+
+      - title      : 形狀
+        description: 圖示能夠用以呈現不同形狀的東西。
+        icons      :
+          - crosshairs
+          - asterisk
+          - square outline
+          - certificate
+          - square
+          - quote left
+          - quote right
+          - spinner
+          - circle
+          - ellipsis horizontal
+          - ellipsis vertical
+          - cube
+          - cubes
+          - circle notched
+          - circle thin
+
+      - title      : 項目狀態
+        description: 透過圖示你可以項目呈現出是否被啟用、或是否於清單內的狀態。
+        icons      :
+          - checkmark
+          - remove
+          - checkmark box
+          - move
+          - add circle
+          - minus circle
+          - remove circle
+          - check circle
+          - remove circle outline
+          - check circle outline
+          - plus
+          - minus
+          - add square
+          - radio
+          - minus square
+          - minus square outline
+          - check square
+          - selected radio
+          - plus square outline
+          - toggle off
+          - toggle on
+
+      - title      : 多媒體
+        description: 圖示可以呈現出媒體的種類。
+        icons      :
+          - film
+          - sound
+          - photo
+          - bar chart
+          - camera retro
+          - newspaper
+          - area chart
+          - pie chart
+          - line chart
+
+      - title      : 指標
+        description: 指著特定方向的圖示。
+        icons      :
+          - arrow circle outline down
+          - arrow circle outline up
+          - chevron left
+          - chevron right
+          - arrow left
+          - arrow right
+          - arrow up
+          - arrow down
+          - chevron up
+          - chevron down
+          - pointing right
+          - pointing left
+          - pointing up
+          - pointing down
+          - arrow circle left
+          - arrow circle right
+          - arrow circle up
+          - arrow circle down
+          - caret down
+          - caret up
+          - caret left
+          - caret right
+          - angle double left
+          - angle double right
+          - angle double up
+          - angle double down
+          - angle left
+          - angle right
+          - angle up
+          - angle down
+          - chevron circle left
+          - chevron circle right
+          - chevron circle up
+          - chevron circle down
+          - toggle down
+          - toggle up
+          - toggle right
+          - long arrow down
+          - long arrow up
+          - long arrow left
+          - long arrow right
+          - arrow circle outline right
+          - arrow circle outline left
+          - toggle left
+
+      - title      : 行動裝置
+        description: 能夠呈現行動裝置、或者能在行動裝置上所發現的圖示。
+        icons      :
+          - tablet
+          - mobile
+          - battery full
+          - battery high
+          - battery medium
+          - battery low
+          - battery empty
+
+      - title      : 電腦
+        description: 能夠呈現電腦、或者能在電腦上所發現的圖示。
+        icons      :
+          - power
+          - trash outline
+          - disk outline
+          - desktop
+          - laptop
+          - game
+          - keyboard
+          - plug
+
+      - title      : 電腦與檔案系統
+        description: 圖示可以用以呈現和電腦檔案系統有關的事物。
+        icons      :
+          - trash
+          - file outline
+          - folder
+          - folder open
+          - file text outline
+          - folder outline
+          - folder open outline
+          - level up
+          - level down
+          - file
+          - file text
+          - file pdf outline
+          - file word outline
+          - file excel outline
+          - file powerpoint outline
+          - file image outline
+          - file archive outline
+          - file audio outline
+          - file video outline
+          - file code outline
+
+      - title      : 科技
+        description: 常見的科技事物能透過圖示表現出來。
+        icons      :
+          - qrcode
+          - barcode
+          - rss
+          - fork
+          - html5
+          - css3
+          - rss square
+          - openid
+          - database
+          - wifi
+          - server
+          - usb
+          - bluetooth
+          - bluetooth alternative
+          - microchip
+
+      - title      : 評分
+        description: 圖示可以用來呈現使用者對某件事物的態度。
+        icons      :
+          - heart
+          - star
+          - empty star
+          - thumbs outline up
+          - thumbs outline down
+          - star half
+          - empty heart
+          - smile
+          - frown
+          - meh
+          - star half empty
+          - thumbs up
+          - thumbs down
+
+      - title      : 聲音
+        description: 透過圖示可以呈現與聲音有所互動的動作指令。
+        icons      :
+          - music
+          - video play outline
+          - volume off
+          - volume down
+          - volume up
+          - record
+          - step backward
+          - fast backward
+          - backward
+          - play
+          - pause
+          - stop
+          - forward
+          - fast forward
+          - step forward
+          - eject
+          - unmute
+          - mute
+          - video play
+          - closed captioning
+          - pause circle
+          - pause circle outline
+          - stop circle
+          - stop circle outline
+
+      - title      : 地圖
+        description: 你能夠以圖示呈現一些會出現在地圖上的元素。
+        icons      :
+          - marker
+          - coffee
+          - food
+          - building outline
+          - hospital
+          - emergency
+          - first aid
+          - military
+          - h
+          - location arrow
+          - compass
+          - space shuttle
+          - university
+          - building
+          - paw
+          - spoon
+          - car
+          - taxi
+          - tree
+          - bicycle
+          - bus
+          - ship
+          - motorcycle
+          - street view
+          - hotel
+          - train
+          - subway
+          - map pin
+          - map signs
+          - map outline
+          - map
+
+      - title      : 表格
+        description: 圖示能夠呈現在表格系統中會用到的事物。
+        icons      :
+          - table
+          - columns
+          - sort
+          - sort descending
+          - sort ascending
+          - sort alphabet ascending
+          - sort alphabet descending
+          - sort content ascending
+          - sort content descending
+          - sort numeric ascending
+          - sort numeric descending
+
+      - title      : 文字編輯器
+        description: 編輯文字時可以透過圖示來表達其涵義與功能。
+        icons      :
+          - font
+          - bold
+          - italic
+          - text height
+          - text width
+          - align left
+          - align center
+          - align right
+          - align justify
+          - list
+          - outdent
+          - indent
+          - linkify
+          - cut
+          - copy
+          - attach
+          - save
+          - content
+          - unordered list
+          - ordered list
+          - strikethrough
+          - underline
+          - paste
+          - unlinkify
+          - superscript
+          - subscript
+          - header
+          - paragraph
+          - text cursor
+
+      - title      : 貨幣
+        description: 你能夠以圖示呈現貨幣的單位。
+        icons      :
+          - euro
+          - pound
+          - dollar
+          - rupee
+          - yen
+          - ruble
+          - won
+          - bitcoin
+          - lira
+          - shekel
+
+      - title      : 付款選項
+        description: 圖示可以表示不同的付款方式。
+        icons      :
+          - paypal
+          - google wallet
+          - visa
+          - mastercard
+          - discover
+          - american express
+          - paypal card
+          - stripe
+          - japan credit bureau
+          - diners club
+          - credit card alternative
+
+      - title      : 網路和商標
+        description: 你能夠透過圖示呈現一些企業公司和網路上常見的商標。
+        icons      :
+          - twitter square
+          - facebook square
+          - linkedin square
+          - github square
+          - twitter
+          - facebook f
+          - github
+          - pinterest
+          - pinterest square
+          - google plus square
+          - google plus
+          - linkedin
+          - github alternate
+          - maxcdn
+          - youtube square
+          - youtube
+          - xing
+          - xing square
+          - youtube play
+          - dropbox
+          - stack overflow
+          - instagram
+          - flickr
+          - adn
+          - bitbucket
+          - bitbucket square
+          - tumblr
+          - tumblr square
+          - apple
+          - windows
+          - android
+          - linux
+          - dribble
+          - skype
+          - foursquare
+          - trello
+          - gittip
+          - vk
+          - weibo
+          - renren
+          - pagelines
+          - stack exchange
+          - vimeo square
+          - slack
+          - wordpress
+          - yahoo
+          - google
+          - reddit
+          - reddit square
+          - stumbleupon circle
+          - stumbleupon
+          - delicious
+          - digg
+          - pied piper
+          - pied piper alternate
+          - drupal
+          - joomla
+          - behance
+          - behance square
+          - steam
+          - steam square
+          - spotify
+          - deviantart
+          - soundcloud
+          - vine
+          - codepen
+          - jsfiddle
+          - rebel
+          - empire
+          - git square
+          - git
+          - hacker news
+          - tencent weibo
+          - qq
+          - wechat
+          - slideshare
+          - twitch
+          - yelp
+          - lastfm
+          - lastfm square
+          - ioxhost
+          - angellist
+          - meanpath
+          - buysellads
+          - connectdevelop
+          - dashcube
+          - forumbee
+          - leanpub
+          - sellsy
+          - shirtsinbulk
+          - simplybuilt
+          - skyatlas
+          - facebook
+          - pinterest
+          - whatsapp
+          - viacoin
+          - medium
+          - y combinator
+          - optinmonster
+          - opencart
+          - expeditedssl
+          - gg
+          - gg circle
+          - tripadvisor
+          - odnoklassniki
+          - odnoklassniki square
+          - pocket
+          - wikipedia
+          - safari
+          - chrome
+          - firefox
+          - opera
+          - internet explorer
+          - contao
+          - 500px
+          - amazon
+          - houzz
+          - vimeo
+          - black tie
+          - fonticons
+          - reddit alien
+          - microsoft edge
+          - codiepie
+          - modx
+          - fort awesome
+          - product hunt
+          - mixcloud
+          - scribd
+          - gitlab
+          - wpbeginner
+          - wpforms
+          - envira gallery
+          - glide
+          - glide g
+          - viadeo
+          - viadeo square
+          - snapchat
+          - snapchat ghost
+          - snapchat square
+          - pied piper hat
+          - first order
+          - yoast
+          - themeisle
+          - google plus circle
+          - font awesome
+          - linode
+          - quora
+          - free code camp
+          - telegram
+          - bandcamp
+          - grav
+          - etsy
+          - imdb
+          - ravelry
+          - eercast
+          - superpowers
+          - wpexplorer
+          - meetup
+
+      - title      : 別名
+        description: 有些時候圖示名稱不能很好地符合你想做的事，這個時候你可以考慮使用他們的別名看是否更加貼切你所想表達的含義。
+        icons      :
+          - like
+          - favorite
+          - video
+          - check
+          - close
+          - cancel
+          - delete
+          - x
+          - zoom in
+          - magnify
+          - shutdown
+          - clock
+          - time
+          - play circle outline
+          - headphone
+          - camera
+          - video camera
+          - picture
+          - pencil
+          - compose
+          - point
+          - tint
+          - signup
+          - plus circle
+          - question circle
+          - dont
+          - minimize
+          - add
+          - exclamation circle
+          - attention
+          - eye
+          - exclamation triangle
+          - shuffle
+          - chat
+          - cart
+          - shopping cart
+          - bar graph
+          - key
+          - cogs
+          - discussions
+          - like outline
+          - dislike outline
+          - heart outline
+          - log out
+          - thumb tack
+          - winner
+          - phone
+          - bookmark outline
+          - phone square
+          - credit card
+          - hdd outline
+          - bullhorn
+          - bell outline
+          - hand outline right
+          - hand outline left
+          - hand outline up
+          - hand outline down
+          - globe
+          - wrench
+          - briefcase
+          - group
+          - linkify
+          - chain
+          - flask
+          - sidebar
+          - bars
+          - list ul
+          - list ol
+          - numbered list
+          - magic
+          - truck
+          - currency
+          - triangle down
+          - dropdown
+          - triangle up
+          - triangle left
+          - triangle right
+          - envelope
+          - conversation
+          - rain
+          - clipboard
+          - lightbulb
+          - bell
+          - ambulance
+          - medkit
+          - fighter jet
+          - beer
+          - plus square
+          - computer
+          - circle outline
+          - gamepad
+          - star half full
+          - broken chain
+          - question
+          - exclamation
+          - eraser
+          - microphone
+          - microphone slash
+          - shield
+          - target
+          - play circle
+          - pencil square
+          - eur
+          - gbp
+          - usd
+          - inr
+          - cny
+          - rmb
+          - jpy
+          - rouble
+          - rub
+          - krw
+          - btc
+          - gratipay
+          - zip
+          - dot circle outline
+          - try
+          - graduation
+          - circle outline
+          - sliders
+          - weixin
+          - tty
+          - teletype
+          - binoculars
+          - power cord
+          - wi-fi
+          - visa card
+          - mastercard card
+          - discover card
+          - amex
+          - american express card
+          - stripe card
+          - bell slash
+          - bell slash outline
+          - area graph
+          - pie graph
+          - line graph
+          - cc
+          - sheqel
+          - ils
+          - plus cart
+          - arrow down cart
+          - detective
+          - venus
+          - mars
+          - mercury
+          - intersex
+          - venus double
+          - female homosexual
+          - mars double
+          - male homosexual
+          - venus mars
+          - mars stroke
+          - mars alternate
+          - mars vertical
+          - mars stroke vertical
+          - mars horizontal
+          - mars stroke horizontal
+          - asexual
+          - facebook official
+          - user plus
+          - user times
+          - user close
+          - user cancel
+          - user delete
+          - user x
+          - bed
+          - yc
+          - ycombinator
+          - battery four
+          - battery three
+          - battery three quarters
+          - battery two
+          - battery half
+          - battery one
+          - battery quarter
+          - battery zero
+          - i cursor
+          - jcb
+          - japan credit bureau card
+          - diners club card
+          - balance
+          - hourglass outline
+          - hourglass zero
+          - hourglass one
+          - hourglass two
+          - hourglass three
+          - hourglass four
+          - grab
+          - hand victory
+          - tm
+          - r circle
+          - television
+          - five hundred pixels
+          - calendar plus
+          - calendar minus
+          - calendar times
+          - calendar check
+          - factory
+          - commenting
+          - commenting outline
+          - edge
+          - ms edge
+          - wordpress beginner
+          - wordpress forms
+          - envira
+          - question circle outline
+          - assistive listening devices
+          - als
+          - ald
+          - asl interpreting
+          - deaf
+          - american sign language interpreting
+          - hard of hearing
+          - signing
+          - new pied piper
+          - theme isle
+          - google plus official
+          - fa
+          - vcard
+          - vcard outline
+          - drivers license
+          - drivers license outline
+          - thermometer
+          - s15
+          - bath
+          - times rectangle
+          - times rectangle outline
