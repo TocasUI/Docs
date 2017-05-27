@@ -20,6 +20,14 @@ module.exports = {
         filename: '[name].js',
         publicPath: './assets'
     },
+    resolveLoader: {
+        modules: [
+            path.join(__dirname, '../node_modules')
+        ],
+        alias: {
+            'coffee-loader': path.join(__dirname, 'coffee2-loader.js'),
+        }
+    },
     resolve: {
         alias: {
             images: path.resolve(__dirname, '../client/assets/images'),
@@ -41,6 +49,9 @@ module.exports = {
                     camelCase: true
                 }
             }
+        }, {
+            test: /\.coffee$/,
+            use: 'coffee-loader'
         }, {
             test: /\.yml$/,
             loader: 'json-loader!yaml-loader',
