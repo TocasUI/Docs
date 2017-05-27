@@ -22,13 +22,11 @@ styles:
 
       - title      : 欄位
         description: |
-          <p>我們稱被劃分開來的區塊為「欄位」，而每個欄位的寬度都是可以自己決定的。</p>
-          <p>一個網格系統被劃分為<strong>十六格</strong>，這將使的你的網格系統更加地具有彈性，</p>
-          <br>
-          <p>這個範例的第一行有<strong>四個欄位</strong>，這意味著每一個欄位都是<strong>四格寬</strong>，</p>
-          <p>而四格寬的欄位共有<strong>四個</strong>，那就是 <span class="ts horizontal label">4 * 4 = 16 </span> 也就剛好符合了一行所能夠承受的<strong>最大格數（十六格）</strong>，</p>
-          <br>
-          而另一行是則是由<strong>兩格寬</strong>、<strong>八格寬</strong>還有<strong>六格寬</strong>的欄位所組成，這意味著 <span class="ts horizontal label">2 + 8 + 6 = 16 </span>，也就剛好達到了一行的最大格數。</p>
+          <p>我們稱被劃分開來的區塊為「欄位」，而每個欄位的寬度都是可以自己決定的。一個網格系統被劃分為<strong>十六格</strong>，這將使的你的網格系統更加地具有彈性。</p>
+
+          <p>這個範例的第一行有<strong>四個欄位</strong>，這意味著每一個欄位都是<strong>四格寬</strong>，而四格寬的欄位共有<strong>四個</strong>，那就是 <span class="ts horizontal label">4 * 4 = 16 </span> 也就剛好符合了一行所能夠承受的<strong>最大格數（十六格）</strong>。</p>
+
+          <p>另一行是則是由<strong>兩格寬</strong>、<strong>八格寬</strong>還有<strong>六格寬</strong>的欄位所組成，這意味著 <span class="ts horizontal label">2 + 8 + 6 = 16 </span>，也就剛好達到了一行的最大格數。</p>
         code       : |
           <div class="ts grid">
               <div class="four wide [[column]]"></div>
@@ -99,8 +97,7 @@ styles:
 
       - title      : 內容
         description: |
-          <p>欄位<strong>不應該被套用任何自訂的樣式</strong>，欄位只是一個容器，</p>
-          <p>你應該在裡面放入你要的元素和樣式，而<strong>不是直接在欄位上更改</strong>。</p>
+          <p>欄位<strong>不應該被套用任何自訂的樣式</strong>，欄位只是一個容器，你應該在裡面放入你要的元素和樣式，而<strong>不是直接在欄位上更改</strong>。</p>
         code       : |
           <div class="ts three column grid">
               <div class="[[column]]">
@@ -137,12 +134,9 @@ styles:
 
       - title      : 寬度細分
         description: |
-          <p>你可以在「列」裡面規劃這一列應該要有幾個欄位，</p>
-          <p>例如 <span class="ts horizontal label">two column</span> 就能夠指列有<strong>兩個欄位</strong>，也就是一格欄位有<strong>八格寬</strong>，
+          <p>你可以在「列」裡面規劃這一列應該要有幾個欄位，例如 <span class="ts horizontal label">two column</span> 就能夠指列有<strong>兩個欄位</strong>，也就是一格欄位有<strong>八格寬</strong>。</p>
           <p>因為一列最多允許十六格，為了達成一列中有兩個欄位，即是 <span class="horizontal label">16 / 2 = 8</span>。</p>
-          <br>
-          <p>當你了解如何善用寬度細分，你也能夠將一列切成三個欄位，甚至四個、五個，</p>
-          <p>而不會因為欄位寬度無法除盡十六而作罷。</p>
+          <p>當你了解如何善用寬度細分，你也能夠將一列切成三個欄位，甚至四個、五個，而不會因為欄位寬度無法除盡十六而作罷。</p>
         code       : |
           <div class="ts grid">
               <div class="[[two column]] row">
@@ -186,10 +180,8 @@ styles:
 
       - title      : 寬度細分
         description: |
-          <p>這和「列」的寬度細分相同，但你可以<strong>直接在網格上進行細分</strong>，</p>
-          <p>例如 <span class="ts horizontal label">four column</span> 就能夠指定網格系統的一行會有<strong>四個欄位</strong>，也就是一格欄位有<strong>四格寬</strong>，
+          <p>這和「列」的寬度細分相同，但你可以<strong>直接在網格上進行細分</strong>，例如 <span class="ts horizontal label">four column</span> 就能夠指定網格系統的一行會有<strong>四個欄位</strong>，也就是一格欄位有<strong>四格寬</strong>。</p>
           <p>因為一列最多允許十六格，為了達成一列中有四個欄位，即是 <span class="ts horizontal label">16 / 4 = 4</span>。</p>
-          <br>
           <p>透過這種方法不需要手動設定每一個欄位要有幾格寬，十分地方便。</p>
         code       : |
           <div class="ts [[four column]] grid">
@@ -212,11 +204,11 @@ styles:
 
       - title      : 內容對齊
         description: |
-          <p>網格系統內的欄位內容可以對齊左右，</p>
+          <p>網格系統內的欄位內容可以對齊左、右、甚至中間，</p>
           <p>這個設定可以配置於整個網格系統、單列、甚至單個欄位。</p>
         code       : |
-          <div class="ts [[right aligned]] four column grid">
-              <div class="column">置右的文字</div>
+          <div class="ts [[center aligned]] four column grid">
+              <div class="column">置中的文字</div>
               <div class="[[left aligned]] two column row">
                   <div class="column">置左的文字</div>
                   <div class="[[right aligned]] column">置右的文字</div>
