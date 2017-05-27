@@ -1,5 +1,6 @@
 <style lang="sass" module>
-.itemHeader, .itemSubHeader
+.itemHeader,
+.itemSubHeader
     font-size: 24px !important
     color: #606060 !important
     margin-top: 4.5em !important
@@ -58,61 +59,16 @@
 </style>
 
 <style lang="sass">
-[demo] > .ts.card
-    width: 285px !important
-
-[demo] > .sidebar
-    height: 400px !important
-    position: relative !important
-
-[demo] > .right.sidebar
-    position: absolute !important
-    top: 0
-
-[demo] > .active.snackbar:not(.inline)
-    position: relative !important
-    top: 0 !important
-    left: 0 !important
-    bottom: 0 !important
-    right: 0 !important
-    display: inline-flex !important
-    margin-top: 100px !important
-
-    &.top.left
-        position: absolute !important
-        top: -79px !important
-        bottom: auto !important
-        right: auto !important
-        left: 21px !important
-
-    &.top.right
-        position: absolute !important
-        top: -79px !important
-        bottom: auto !important
-        right: 21px !important
-        left: auto !important
-
-    &.bottom.right
-        position: absolute !important
-        top: auto !important
-        bottom: 21px !important
-        right: 21px !important
-        left: auto !important
-
-[demo][bordered]
-    border: 1px solid #e9e9e9 !important
-
-[demo][bordered] + .segment
-    border-top: 0 !important
+@import "~styles/demo.sass"
 </style>
 
 <template lang="pug">
     div
         //- 標題
-        .ts.header(:class="$style.itemHeader", v-if="item.title")
+        .ts.header(:id="item.title", v-if="item.title", :class="$style.itemHeader")
             | {{ item.title }}
             //- 檢視原始碼按鈕
-            button.ts.right.floated.icon.labeled.button(v-if="!item.codeOnly", :class="[showingCode ? 'active' : '', $style.itemSourceButton]", @click="toggleCode")
+            button.ts.right.floated.icon.labeled.button(v-if="hasSource", @click="toggle", :class="sourceButton")
                 i.code.icon
                 | 原始碼
         //- 副標題
@@ -120,12 +76,18 @@
         //- 詳細註釋
         div(v-html="item.description")
 
+        //- 圖示網格
+        .ts.six.column.relaxed.grid(v-if="item.icons", v-once)
+            .center.aligned.column(v-for="icon in item.icons", :key="icon", :data-clipboard-text="icon", @click="copied")
+                i.big.fitted.icon(:class="icon")
+                label(v-text="icon")
+
         //- Demo 區塊
-        .ts.segments(:class="$style.demo")
+        .ts.segments(v-if="item.code", :class="$style.demo")
             //- 實際範例
-            .ts.padded.clearing.segment(demo, v-if="!item.codeOnly", :bordered="item.bordered" v-html="cleanMark(item.code)", :class="{'fitted basic': !showingCode && !item.secondary, 'fitted': !showingCode && item.secondary, 'fitted': item.fitted, 'secondary': item.secondary}")
+            .ts.padded.clearing.segment(demo, v-if="item.type != 'code'", v-html="code", :class="demoSegment")
             //- 程式碼區塊
-            .ts.secondary.padded.segment(v-show="showingCode || item.codeOnly")
+            .ts.secondary.padded.segment(v-show="sourcing || item.type == 'code'")
                 pre(html-code, v-text="item.code", :class="$style.code")
 
         //- JavaScript 區塊
@@ -140,8 +102,7 @@
             pre(js-code, v-text="item.javascript", :class="$style.code")
 </template>
 
-<script>
-// Images
+<script lang="coffee">
 import placeholder169   from 'images/image_placeholder_16-9.png'
 import placeholder11    from 'images/image_placeholder_1-1.png'
 import placeholder43    from 'images/image_placeholder_4-3.png'
@@ -152,45 +113,87 @@ import placeholderKaren from 'images/videos/karen.png'
 import placeholderVimeo from 'images/videos/vimeo.jpg'
 import 'assets/tocas.dev.js'
 
-export default {
-    name : 'Item',
-    props: {
+export default
+    name : 'Item'
+    props:
         item: { }
-    },
-    data() {
-        return {
-            showingCode: false
-        }
-    },
-    mounted(){
-        ts('.ts.embed').embed()
-        ts('.ts.dropdown:not(.basic)').dropdown();
 
-        if(typeof this.item.autoExecute !== 'undefined' && this.item.autoExecute)
-            eval(this.item.javascript)
-    },
-    methods: {
-        cleanMark(code) {
-            // 將程式碼裡的 [[]] 和 {{}} 標籤去除掉。
-            code = code.replace(/\[\[(.*?)\]\]/g, "$1").replace(/{{(.*?)}}/g, "$1")
-            // 將程式碼裡的 !--! 圖片標籤換成真的圖片路徑。
-            code = code.replace(/!-(.*?)-!/g, (match, first) => {
-                switch(first) {
-                    case '16:9'       : return placeholder169
-                    case '1:1'        : return placeholder11
-                    case '4:3'        : return placeholder43
-                    case 'user'       : return placeholderUser
-                    case 'user2'      : return placeholderUser2
-                    case 'user3'      : return placeholderUser3
-                    case 'embed:karen': return placeholderKaren
-                    case 'embed:vimeo': return placeholderVimeo
-                }
-            })
-            return code
-        },
-        toggleCode() {
-            this.showingCode = !this.showingCode
+    data: ->
+        return {
+            sourceButton: ''
+            demoSegment : ''
+            code        : @clean @item.code
+            hasSource   : @item.type isnt 'code' and typeof @item.icons is 'undefined' and typeof @item.code isnt 'undefined'
+            sourcing    : false
         }
-    }
-}
+
+    created: ->
+        @sourceButton = @$style.itemSourceButton
+        @demoClass()
+
+    mounted: ->
+        ts('.ts.embed').embed()
+        ts('.ts.dropdown:not(.basic)').dropdown()
+
+        # 如果有元素需要剪貼功能，那麼就啟用剪貼板功能。
+        if document.querySelector('[data-clipboard-text]') isnt null
+            new Clipboard('[data-clipboard-text]')
+
+        # 自動執行 JavaScript 範例如果當項目要求自動執行。
+        if typeof @item.autoExecute isnt 'undefined' and @item.autoExecute
+            eval @item.javascript
+
+    methods:
+        # clean 會清理程式碼，並將指定標籤替換掉。
+        clean: (code) ->
+            return if typeof code is 'undefined'
+
+            # 將程式碼裡的 [[]] 和 {{}} 標籤去除掉。
+            code = code.replace(/\[\[(.*?)\]\]/g, "$1").replace(/{{(.*?)}}/g, "$1")
+            # 將程式碼裡的 !--! 圖片標籤換成真的圖片路徑。
+            code = code.replace /!-(.*?)-!/g, (match, first) ->
+                switch first
+                    when '16:9'        then return placeholder169
+                    when '1:1'         then return placeholder11
+                    when '4:3'         then return placeholder43
+                    when 'user'        then return placeholderUser
+                    when 'user2'       then return placeholderUser2
+                    when 'user3'       then return placeholderUser3
+                    when 'embed:karen' then return placeholderKaren
+                    when 'embed:vimeo' then return placeholderVimeo
+
+        # toggle 會切換程式碼的可見度。
+        toggle: ->
+            # 在 True 和 False 之間進行切換。
+            @sourcing = !@sourcing
+            # 當 `sourcing` 是 True 的時候則將原始碼按鈕設為啟用樣式。
+            @sourceButton = [@$style.itemSourceButton, if @sourcing then 'active']
+            #
+            @demoClass()
+
+        #
+        demoClass: ->
+            @demoSegment =
+                'fitted basic'            : !@sourcing and @item.type isnt 'sidebar' and @item.type isnt 'snackbar'
+                'bordered fitted tertiary': @item.type is 'sidebar'
+
+        # copied 會告訴使用者點擊的那個圖示已經被複製，並且在數秒後重設狀態。
+        copied: (event) ->
+            target = event.target
+            # 如果點擊的圖示是 Div 或 .icon，那麼就取得他的父容器。
+            column = if target.classList.contains('icon') or target.tagName is 'LABEL' then target.closest('.column') else target
+            # 取得圖示標籤元素。
+            label  = column.querySelector('label')
+            # 先取得圖示原本的名稱，稍後被修改時才能還原。
+            name   = label.innerText
+
+            # 標記成「已複製」的狀態。
+            column.classList.add 'copied'
+            label.innerText = '已複製'
+
+            # 在數秒後將其狀態恢復原狀。
+            setTimeout ->
+                column.classList.remove 'copied'
+                label.innerText = name
+            , 2500
 </script>
