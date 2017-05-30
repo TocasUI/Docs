@@ -60,6 +60,9 @@
 
 <style lang="sass">
 @import "~styles/demo.sass"
+
+.sixteen.wide.column > div > .ts.header:before
+    display: none !important
 </style>
 
 <template lang="pug">
@@ -72,7 +75,12 @@
                 i.code.icon
                 | 原始碼
         //- 副標題
-        .ts.header(:class="$style.itemSubHeader", v-if="item.subtitle") {{ item.subtitle }}
+        .ts.header(:class="$style.itemSubHeader", v-if="item.subtitle")
+            | {{ item.subtitle }}
+            //- 檢視原始碼按鈕
+            button.ts.right.floated.icon.labeled.button(v-if="hasSource", @click="toggle", :class="sourceButton")
+                i.code.icon
+                | 原始碼
         //- 詳細註釋
         div(v-html="item.description")
 
@@ -117,6 +125,8 @@ export default
     name : 'Item'
     props:
         item: { }
+        last:
+            default: false
 
     data: ->
         return {
@@ -142,6 +152,11 @@ export default
         # 自動執行 JavaScript 範例如果當項目要求自動執行。
         if typeof @item.autoExecute isnt 'undefined' and @item.autoExecute
             eval @item.javascript
+
+        if @last
+            @$store.dispatch 'CALCULATE_RENDER_TIME',
+                time       : new Date().getTime()
+                startedTime: window.RENDER_STARTED_TIME
 
     methods:
         # clean 會清理程式碼，並將指定標籤替換掉。
