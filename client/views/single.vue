@@ -235,9 +235,9 @@ export default
             when '/views/comment/'   then require ['docs/views/comment']  , replace
             when '/views/feed/'      then require ['docs/views/feed']     , replace
             # The Others
-            when '/rwd/'             then require ['docs/pages/responsive']     , replace
-            when '/about/'           then require ['docs/pages/about']          , replace
-            when '/components/'      then require ['docs/pages/components']     , replace
+            when '/rwd/'             then require ['docs/pages/responsive'], replace
+            when '/about/'           then require ['docs/pages/about']     , replace
+            when '/components/'      then require ['docs/pages/components'], replace
             when '/getting-started/' then require ['docs/pages/getting-started'], replace
             when '/about/'           then require ['docs/pages/about']          , replace
 
