@@ -30,6 +30,7 @@ module.exports = {
     },
     resolve: {
         alias: {
+            client: path.resolve(__dirname, '../client'),
             images: path.resolve(__dirname, '../client/assets/images'),
             components: path.resolve(__dirname, '../client/components'),
             views: path.resolve(__dirname, '../client/views'),
@@ -37,7 +38,7 @@ module.exports = {
             styles: path.resolve(__dirname, '../client/styles'),
             assets: path.resolve(__dirname, '../client/assets')
         },
-        extensions: ['.js', '.vue', '.css', '.json', '.yml'],
+        extensions: ['.js', '.vue', '.css', '.json', '.yml', '.coffee'],
     },
     module: {
         loaders: [{
@@ -51,7 +52,7 @@ module.exports = {
             }
         }, {
             test: /\.coffee$/,
-            use: 'coffee-loader'
+            loader: 'babel-loader!coffee-loader'
         }, {
             test: /\.yml$/,
             loader: 'json-loader!yaml-loader',
