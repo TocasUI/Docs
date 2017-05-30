@@ -26,7 +26,7 @@
         .ts.narrow.container
             //- 連結清單
             .ts.horizontal.link.list(:class="$style.list")
-                .item(:class="$style.item"): a(href="#!", :class="$style.toTop")
+                .item(:class="$style.item"): a(href="#!", :class="$style.toTop", @click="toTop")
                     i.arrow.up.icon
                     | 回到頂部
                 .item(:class="$style.item"): a(href="//github.com/TeaMeow/TocasUI/" target="_blank") GitHub
@@ -39,11 +39,17 @@
 
             //- 渲染時間
             p(:class="$style.time")
-                | 本頁渲染速度：219 ms
+                | 本頁渲染速度：{{ $store.state.renderTime }} 毫秒
 </template>
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    methods: {
+        toTop() {
+            window.scrollTo(0, 0)
+            document.querySelector('.pusher').scrollTop = 0
+        }
+    }
 }
 </script>
