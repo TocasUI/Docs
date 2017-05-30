@@ -1,0 +1,84 @@
+slate:
+  title      : 實際範例
+  description: 以 Tocas UI 所打造的企業級範例頁面。
+
+items:
+  - title      : 後台儀表板
+    link       : /examples/dashboard/
+    description: 一個擁有側邊欄並像企業網站的後台管理介面。
+    symbol     : dashboard
+
+  - title      : 部落格後台
+    link       : /examples/blog-editor/
+    description: 簡易型的個人部落格後台文章發佈頁面。
+    symbol     : align justify
+
+  - title      : 計算機
+    link       : /examples/calculator/
+    description: 由多個按鈕所組成的基本小型計算機。
+    symbol     : calculator
+
+  - title      : CMS 前台
+    link       : /examples/cms/
+    description: 常態型的小型商業 CMS 內容管理網站前台頁面，很適合用於團體、企業的公告或新聞網站。
+    symbol     : browser
+
+  - title      : 募資平台
+    link       : /examples/crowdfunding/
+    description: 透過卡片與網格系統實現類似募資平台的專案列表佈局。
+    symbol     : money
+
+  - title      : 網路硬碟
+    link       : /examples/network-disk/
+    description: 類似 FTP 等網路硬碟的目錄與檔案資訊範例。
+    symbol     : disk outline
+
+  - title      : 文字編輯器
+    link       : /examples/editor/
+    description: 與 Simple Markdown Editor 所搭配的基本文字編輯器。
+    symbol     : file text
+
+  - title      : 郵件模板
+    link       : /examples/mail-template/
+    description: 用於寄送給網站會員的郵件內容，並推銷網站產品於宣佈公告。
+    symbol     : mail
+
+  - title      : 個人相簿
+    link       : /examples/album/
+    description: 供單人所設計的小型相簿靜態網站。
+    symbol     : image
+
+  - title      : GitHub
+    link       : /examples/github/
+    description: 透過 Tocas UI 所打造與 GitHub 類似的網站範例。
+    symbol     : github
+
+  - title      : 發票與收據
+    link       : /examples/invoice/
+    description: 用於企業之間所開立的電子發票，或是出貨單。
+    symbol     : ordered list
+
+  - title      : 登入頁面
+    link       : /examples/login/
+    description: 基本的帳號與密碼登入頁面。
+    symbol     : sign in
+
+  - title      : 電子郵件信箱
+    link       : /examples/mailbox/
+    description: 網頁電子信箱的郵件檢視頁面，並夾帶數個檔案附件。
+    symbol     : inbox
+
+  - title      : 行動原生應用程式
+    link       : /examples/app-store/
+    description: 以 Tocas UI 做出類似 App Store 的原生應用市集，供行動裝置檢視。
+    symbol     : mobile
+
+  - title      : 信用卡付款
+    link       : /examples/payment/
+    description: 於商品結帳時所請求的信用卡資料頁面，並附帶商品資訊。
+    symbol     : credit card alternative
+
+  - title      : 註冊頁面
+    link       : /examples/registeration/
+    description: 基本的使用者註冊頁面，並要求性別、生日、暱稱⋯⋯等資訊。
+    symbol     : add user
