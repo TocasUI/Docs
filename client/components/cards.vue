@@ -19,12 +19,12 @@
 </style>
 
 <template lang="pug">
-    .ts.narrow.container
+    .ts.narrow.container(style="min-height: calc(100% - 483px)")
         .ts.doubling.four.link.cards
             router-link.ts.card(:to="item.link", v-for="item in items", :key="item.title")
                 .content
                     .header {{ item.title }}
-                    .meta: div {{ item.class }}
+                    .meta(v-if="item.class"): div {{ item.class }}
                     .description {{ item.description }}
                 .symbol
                     i.icon(:class="item.symbol")
