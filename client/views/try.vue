@@ -74,11 +74,11 @@
         docs-navbar
 
         div(:class="[!twoColumns ? $style.wrapper_oneColumn : '', $style.wrapper]")
-            div(:class="$style.code", v-show="!onlyPreview")
+            div(:class="$style.code", v-show="code")
                 label(:class="$style.label") HTML (Tocas UI)
                 #editor(:class="$style.editor") {{ html }}
 
-            div(:class="$style.preview_wrapper")
+            div(:class="$style.preview_wrapper", v-show="preview")
                 label(:class="$style.label") 即時預覽
                 div(:class="$style.preview")
                     div(v-html="html")
@@ -90,40 +90,34 @@
                         i.columns.icon
                         | 兩欄模式
                 .item
-                    button.ts.very.compact.small.icon.labeled.button(:class="{active: onlyPreview}", @click="togglePreview")
+                    button.ts.very.compact.small.icon.labeled.button(:class="{active: code}", @click="toggleCode")
+                        i.code.icon
+                        | 程式碼
+                .item
+                    button.ts.very.compact.small.icon.labeled.button(:class="{active: preview}", @click="togglePreview")
                         i.unhide.icon
-                        | 僅預覽
-
-        //- .ts.fluid.container.one.column.relaxed.grid(:class="$style.container")
-            .column
-                .ts.fitted.secondary.menu
+                        | 即時預覽
+                .right.menu
                     .item
-                        button.ts.small.icon.labeled.button(:class="{active: twoColumns}", @click="toggleColumns")
-                            i.columns.icon
-                            | 兩欄模式
+                        button.ts.very.compact.small.icon.labeled.button#share(@click="share", :class="{'disabled': copied}")
+                            i.share.icon
+                            template(v-if="!copied")
+                                | 分享
+                            template(v-if="copied")
+                                | 已複製！
                     .item
-                        button.ts.small.icon.labeled.button(:class="{active: onlyPreview}", @click="togglePreview")
-                            i.unhide.icon
-                            | 僅預覽
-                    .right.item
-                        button.ts.small.right.floated.icon.labeled.button
-                            i.cubes.icon
-                            | 範例集
-                .ts.segments(:class="{horizontal: twoColumns}")
-                    .ts.fitted.segment(:class="$style.editor_segment", v-show="!onlyPreview")
-                        #test(:class="$style.editor")
-                            | {{ html }}
-                    .ts.padded.flatted.segment(:class="$style.preview")
-                        //-span.ts.label 即時預覽
-                        div(v-html="html")
+                        button.ts.very.compact.small.icon.labeled.button(@click="create", v-if="hasHTML")
+                            i.plus.icon
+                            | 建立新的
 </template>
 
 <script lang="coffee">
-import DocsSlate   from 'components/slate'
-import DocsNavbar  from 'components/navbar'
-import DocsCards   from 'components/cards'
-import DocsItem    from 'components/item'
-import DocsFooter  from 'components/footer'
+import DocsSlate        from 'components/slate'
+import DocsNavbar       from 'components/navbar'
+import DocsCards        from 'components/cards'
+import DocsItem         from 'components/item'
+import DocsFooter       from 'components/footer'
+import placeholderKaren from 'images/videos/karen.png'
 
 export default
     name: 'Try'
@@ -140,54 +134,89 @@ export default
             <!-- / 標題 -->
 
             <!-- 說明 -->
-            <p>透過上方的 <a href="https://ace.c9.io/">Ace Editor</a> 你能夠編輯 HTML 標籤，並開始嚐鮮試用 Tocas UI！而且有趣的是你所編輯的 HTML 標籤都會立即呈現在頁面的即時預覽上！我們已經幫你讀取好最新的 Tocas UI 樣式庫了，接下來你要做的就是去文件中，抓幾個範例丟來這裡試試看。</p>
+            <p>透過上方的 <a href="https://ace.c9.io/">Ace Editor</a> 你能夠編輯 HTML 標籤，並開始嚐鮮試用 Tocas UI！而且有趣的是你所編輯的 HTML 標籤都會立即呈現在頁面的即時預覽上！</p>
             <!-- / 說明 -->
 
-            <!-- 片段 -->
-            <div class="ts segment">
-                <p>這是片段，然後你還能在裡面擺上引言元件。</p>
-                <!-- 引言 -->
-                <div class="ts quote">
-                    <p>天阿！這真是太夭壽讚了！</p>
-                    <cite>Tocas UI 作者如此說道</cite>
-                </div>
-                <!-- / 引言 -->
+            <!-- 圖片 -->
+            <img class="ts centered big image" src="#{placeholderKaren}">
+            <!-- / 圖片 -->
+
+            <p>我們已經幫你讀取好最新的 Tocas UI 樣式庫了，接下來你要做的就是去文件中，抓幾個範例丟來這裡試試看。</p>
+
+            <!-- 引言 -->
+            <div class="ts quote">
+                <p>天阿！這真是太夭壽讚了！這裡還能夠擺放引言元件！</p>
+                <cite>Tocas UI 作者如此說道</cite>
             </div>
-            <!-- / 片段 -->
+            <!-- / 引言 -->
         """
+        copied     : false
+        hasHTML    : false
         twoColumns : true
-        onlyPreview: false
-        editor: ''
+        preview    : true
+        code       : true
+        editor     : null
 
     mounted: ->
-        that   = @
+        that    = @
         @editor = ace.edit 'editor'
-        timer  = 0
-
         @editor.getSession().setMode 'ace/mode/html'
         @editor.getSession().setUseWrapMode true
         @editor.setShowPrintMargin false
+
+        timer  = 0
         @editor.getSession().on 'change', (e) ->
             clearTimeout timer
             timer = setTimeout () ->
-                that.html = that.toHTML that.editor.getValue()
+                that.html = that.editor.getValue()
             , 1
 
+        if typeof @$route.query.html isnt 'undefined'
+            @editor.setValue @$route.query.html.replace(/\\n/g, "\n")
+            @hasHTML = true
+
+        new Clipboard '#share', text: ->
+            content = encodeURI that.editor.getValue().replace(/(?:\r\n|\r|\n)/g, '\\n')
+            "https://#{location.host}#{location.pathname}?html=#{content}"
+
     methods:
-        toHTML: (code) ->
-            """
-                #{code}
-            """
-
+        # togglePreview 會切換預覽模式。
         togglePreview: ->
-            @onlyPreview = !@onlyPreview
+            if @code is false and !@preview is false
+                @code    = true
+                @preview = false
+                return
+            @preview = !@preview
 
+            setTimeout () ->
+                ace.edit('editor').resize()
+            , 1
+
+        # togglePreview 會切換預覽模式。
+        toggleCode: ->
+            if @preview is false and !@code is false
+                @preview = true
+                @code    = false
+                return
+            @code = !@code
+            setTimeout () ->
+                ace.edit('editor').resize()
+            , 1
+
+        # toggleColumns 會切換多欄與單欄模式。
         toggleColumns: ->
             @twoColumns = !@twoColumns
             setTimeout () ->
                 ace.edit('editor').resize()
             , 1
 
+        # share 會暫時地將 `copied` 狀態切換成 True 已表示複製成功。
+        share: (event) ->
+            that    = @
+            @copied = true
+            setTimeout () ->
+                that.copied = false
+            , 2000
 
     components: {
         DocsSlate,
