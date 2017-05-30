@@ -5,7 +5,7 @@ slate:
 items:
   - title      : 麵包屑
     class      : .ts.breadcrumb
-    link       : /collections/breadcrumb
+    link       : /collections/breadcrumb/
     description: 提供使用者一個網站導覽，或是瀏覽蹤跡。
     symbol     : angle right
 
