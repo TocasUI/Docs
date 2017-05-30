@@ -22,7 +22,7 @@ styles:
                       <div class="metadata">
                           <div>2 天前</div>
                           <div>
-                              <i class="star icon"></i>
+                              <i class="star {{icon}}"></i>
                               5 次收藏
                           </div>
                       </div>
@@ -216,7 +216,7 @@ styles:
                           <a class="reply">回應</a>
                           <a class="save">收藏</a>
                           <a>
-                              <i class="expand icon"></i>
+                              <i class="expand {{icon}}"></i>
                               全尺寸檢視
                           </a>
                       </div>
@@ -322,7 +322,7 @@ styles:
                           <a class="reply">回應</a>
                           <a class="save">收藏</a>
                           <a>
-                              <i class="expand icon"></i>
+                              <i class="expand {{icon}}"></i>
                               全尺寸檢視
                           </a>
                       </div>
@@ -343,7 +343,7 @@ styles:
                           <a class="reply">回應</a>
                           <a class="save">收藏</a>
                           <a>
-                              <i class="expand icon"></i>
+                              <i class="expand {{icon}}"></i>
                               全尺寸檢視
                           </a>
                       </div>
@@ -364,7 +364,7 @@ styles:
                           <a class="reply">回應</a>
                           <a class="save">收藏</a>
                           <a>
-                              <i class="expand icon"></i>
+                              <i class="expand {{icon}}"></i>
                               全尺寸檢視
                           </a>
                       </div>
@@ -385,7 +385,7 @@ styles:
                           <a class="reply">回應</a>
                           <a class="save">收藏</a>
                           <a>
-                              <i class="expand icon"></i>
+                              <i class="expand {{icon}}"></i>
                               全尺寸檢視
                           </a>
                       </div>
@@ -406,7 +406,7 @@ styles:
                           <a class="reply">回應</a>
                           <a class="save">收藏</a>
                           <a>
-                              <i class="expand icon"></i>
+                              <i class="expand {{icon}}"></i>
                               全尺寸檢視
                           </a>
                       </div>
@@ -427,7 +427,7 @@ styles:
                           <a class="reply">回應</a>
                           <a class="save">收藏</a>
                           <a>
-                              <i class="expand icon"></i>
+                              <i class="expand {{icon}}"></i>
                               全尺寸檢視
                           </a>
                       </div>
