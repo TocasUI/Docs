@@ -7,7 +7,7 @@ const merge = require('webpack-merge')
 const config = require('./webpack.base')
 const pkg = require('../package')
 
-config.output.publicPath = 'https://tocas-ui.com/assets/'
+config.output.publicPath = 'https://dev.tocas-ui.com/assets/'
 
 module.exports = merge(config, {
     output: {
@@ -22,13 +22,13 @@ module.exports = merge(config, {
         new webpack.LoaderOptionsPlugin({
             minimize: true
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress:{
-                warnings: false
-            },
-            sourceMap: false,
-            comments : false
-        }),
+        //new webpack.optimize.UglifyJsPlugin({
+        //    compress:{
+        //        warnings: false
+        //    },
+        //    sourceMap: false,
+        //    comments : false
+        //}),
 
         // extract vendor chunks
         new webpack.optimize.CommonsChunkPlugin({
@@ -43,7 +43,8 @@ module.exports = merge(config, {
                         use     : 'css-loader',
                         fallback: 'vue-style-loader'
                     }),
-                    scss: "vue-style-loader!css-loader!sass-loader"
+                    scss: "vue-style-loader!css-loader!sass-loader?indentedSyntax",
+                    sass: "vue-style-loader!css-loader!sass-loader?indentedSyntax"
                 }
             }
         })
