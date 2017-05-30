@@ -20,7 +20,7 @@ body, html
             .ts.segment
                 | 你可以像這樣在側邊欄放置很多不同的元件。
         .pusher
-            router-view
+            router-view(style="height: 100%")
 </template>
 
 <script>
