@@ -91,12 +91,12 @@
                 label(v-text="icon")
 
         //- Demo 區塊
-        .ts.segments(v-if="item.code", :class="$style.demo")
+        .ts.segments(v-if="item.code || item.css", :class="$style.demo")
             //- 實際範例
             .ts.padded.clearing.segment(demo, v-if="item.type != 'code'", v-html="code", :class="demoSegment")
             //- 程式碼區塊
             .ts.secondary.padded.segment(v-show="sourcing || item.type == 'code'")
-                pre(html-code, v-text="item.code", :class="$style.code")
+                pre(:html-code="item.code != null", :css-code="item.css != null", v-text="item.css ? item.css : item.code", :class="$style.code")
 
         //- JavaScript 區塊
         .ts.header(:class="$style.itemSubHeader", v-if="item.javascript")
@@ -125,8 +125,6 @@ export default
     name : 'Item'
     props:
         item: { }
-        last:
-            default: false
 
     data: ->
         return {
@@ -152,11 +150,6 @@ export default
         # 自動執行 JavaScript 範例如果當項目要求自動執行。
         if typeof @item.autoExecute isnt 'undefined' and @item.autoExecute
             eval @item.javascript
-
-        if @last
-            @$store.dispatch 'CALCULATE_RENDER_TIME',
-                time       : new Date().getTime()
-                startedTime: window.RENDER_STARTED_TIME
 
     methods:
         # clean 會清理程式碼，並將指定標籤替換掉。
