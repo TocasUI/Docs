@@ -6,14 +6,24 @@ import views       from 'docs/views'
 export default ->
     # 類似 Async 的概念，沒有 setTimeout 的話 HightlightJS 無法替元素上色。
     setTimeout () ->
-        document.querySelectorAll('[html-code], [js-code]').forEach (el) ->
-            isJS       = el.getAttribute('js-code') is 'js-code'
+        document.querySelectorAll('[html-code], [js-code], [css-code]').forEach (el) ->
+            isJS       = el.getAttribute('js-code')  isnt null
+            isCSS      = el.getAttribute('css-code') isnt null
             text       = el.innerHTML
             unescaped  = new DOMParser().parseFromString(text, 'text/html').documentElement.textContent
             code       = document.createElement 'code'
-            beautified = if isJS then js_beautify(unescaped) else html_beautify(unescaped)
 
-            code.className = if isJS then 'hljs javascript' else 'hljs html'
+            # 依照程式碼的種類決定如何清理、套用樣式。
+            if isJS
+                beautified     = js_beautify(unescaped)
+                code.className = 'hljs javascript'
+            else if isCSS
+                beautified     = css_beautify(unescaped)
+                code.className = 'hljs css'
+            else
+                beautified     = html_beautify(unescaped)
+                code.className = 'hljs html'
+
             code.innerText = beautified
 
             el.innerHTML = ''
@@ -24,7 +34,7 @@ export default ->
         hljs.initHighlighting()
 
         # 將 <code> 裡面的 [[]] 和 {{}} 與 !--! 標籤替換掉。
-        document.querySelectorAll('[html-code], [js-code]').forEach (el) ->
+        document.querySelectorAll('[html-code], [js-code], [css-code]').forEach (el) ->
             # 標記程式碼。 - [[segment]]
             el.innerHTML = el.innerHTML.replace /\[\[(.*?)\]\]/g, '<mark>$1</mark>'
 
