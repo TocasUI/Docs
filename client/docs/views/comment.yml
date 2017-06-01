@@ -26,7 +26,7 @@ styles:
                               5 次收藏
                           </div>
                       </div>
-                      <div class="text">
+                      <div class="description">
                           你的思想不應該只屬於現在這個時間。
                       </div>
                   </div>
@@ -40,7 +40,7 @@ styles:
                       <div class="metadata">
                           <div>42 分鐘前</div>
                       </div>
-                      <div class="text">
+                      <div class="description">
                           有反對的聲音，世界才能中立。
                       </div>
                   </div>
@@ -86,7 +86,7 @@ styles:
                   </div>
                   <div class="content">
                       <a class="author">Karisu</a>
-                      <div class="[[text]]">發現自己做不到是進步過程中的一環。</div>
+                      <div class="[[description]]">發現自己做不到是進步過程中的一環。</div>
                   </div>
               </div>
           </div>
@@ -151,7 +151,7 @@ styles:
                       <div class="metadata">
                           <div>42 分鐘前</div>
                       </div>
-                      <div class="text">
+                      <div class="description">
                           成功的開始不在於創意，而是現在。
                       </div>
                       <div class="[[actions]]">
@@ -172,7 +172,7 @@ styles:
                   </div>
                   <div class="content">
                       <a class="author">Yami Odymel</a>
-                      <div class="text">輸的時候失去最多的就是理智。</div>
+                      <div class="description">輸的時候失去最多的就是理智。</div>
                       <div class="[[bulleted actions]]">
                           <a>檢舉</a>
                           <a>編輯</a>
@@ -186,7 +186,7 @@ styles:
                   </div>
                   <div class="content">
                       <a class="author">Yami Odymel</a>
-                      <div class="text">對這個世界感到失望，是躍出舞台的第一步。</div>
+                      <div class="description">對這個世界感到失望，是躍出舞台的第一步。</div>
                       <div class="[[middoted actions]]">
                           <a>回覆</a>
                           <a>移除</a>
@@ -209,7 +209,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">橙希</a>
-                      <div class="[[inline]] text">
+                      <div class="[[inline]] description">
                           我的信仰是自己，你呢？
                       </div>
                       <div class="middoted actions">
@@ -234,7 +234,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">Yami Odymel</a>
-                      <div class="text">
+                      <div class="description">
                           準備向令一個平行世界的你道歉，因為你將在這個世界有所作為。
                       </div>
                   </div>
@@ -245,7 +245,7 @@ styles:
                           </div>
                           <div class="content">
                               <a class="author">橙希</a>
-                              <div class="text">
+                              <div class="description">
                                   早安！我的朋友！
                               </div>
                           </div>
@@ -255,7 +255,7 @@ styles:
                               </div>
                               <div class="content">
                                   <a class="author">吳雨藍</a>
-                                  <div class="text">
+                                  <div class="description">
                                       第一個覺得檸檬是食物的人一定是個被虐狂。
                                   </div>
                               </div>
@@ -275,7 +275,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">Mac Taylor</a>
-                      <div class="text">
+                      <div class="description">
                           你是一個漁夫。
                       </div>
                   </div>
@@ -286,7 +286,7 @@ styles:
                   </div>
                   <div class="content">
                       <a class="author">Mac Taylor</a>
-                      <div class="text">
+                      <div class="description">
                           如果你有去釣魚大賽，你可能會被禁止進入：<br>
                           「我們不歡迎職業選手」
                       </div>
@@ -298,7 +298,7 @@ styles:
                   </div>
                   <div class="content">
                       <a class="author">Yami Odymel</a>
-                      <div class="text">
+                      <div class="description">
                           你很機車人
                       </div>
                   </div>
@@ -315,7 +315,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">Mac Taylor</a>
-                      <div class="inline text">
+                      <div class="inline description">
                           你是一個漁夫。
                       </div>
                       <div class="middoted actions">
@@ -336,7 +336,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">Mac Taylor</a>
-                      <div class="inline text">
+                      <div class="inline description">
                           你是一個漁夫。
                       </div>
                       <div class="middoted actions">
@@ -357,7 +357,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">Mac Taylor</a>
-                      <div class="inline text">
+                      <div class="inline description">
                           你是一個漁夫。
                       </div>
                       <div class="middoted actions">
@@ -378,7 +378,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">Mac Taylor</a>
-                      <div class="inline text">
+                      <div class="inline description">
                           你是一個漁夫。
                       </div>
                       <div class="middoted actions">
@@ -399,7 +399,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">Mac Taylor</a>
-                      <div class="inline text">
+                      <div class="inline description">
                           你是一個漁夫。
                       </div>
                       <div class="middoted actions">
@@ -420,7 +420,7 @@ styles:
                   </a>
                   <div class="content">
                       <a class="author">Mac Taylor</a>
-                      <div class="inline text">
+                      <div class="inline description">
                           你是一個漁夫。
                       </div>
                       <div class="middoted actions">
