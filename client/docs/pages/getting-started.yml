@@ -49,6 +49,31 @@ styles:
         code       : |
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+      - title      : 動態字體大小
+        type       : code
+        description: |
+          Tocas UI 的所有元件字體大小是依賴著網頁基底而定。這意味著當你認為網頁字型太小時，你不需要變更每個元件的字型，你可以直接變更 <span class="ts horizontal label">&lt;html&gt;</span> 中的字型大小設定。就像下面這樣。
+        css        : |
+          html {
+              font-size: 32px;
+          }
+
+      - title      : 響應式字體大小
+        type       : code
+        description: |
+          Tocas UI 預設並不會自動幫你在不同裝置上變更字體大小，不過自從所有字型大小皆依賴網頁基底，那麼你就可以在不同尺寸的裝置上變更基底字體大小。令字體大小更加地符合多種尺寸的裝置。
+        css        : |
+          html {
+              font-size: 16px;
+          }
+
+          // 在行動裝置上將字體轉換成 `14px` 大小。
+          @media (max-width: 768px) {
+              html {
+                  font-size: 14px;
+              }
+          }
+
   - category   : 與其他框架比較
     description: 這裡解釋著為什麼 Tocas UI 比起其他框架還要些卓越的部分。
     items      :
