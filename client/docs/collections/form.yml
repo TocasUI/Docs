@@ -100,20 +100,6 @@ styles:
               </div>
           </div>
 
-      - title      : 靜態文字
-        description: 你可以在欄位中擺放靜態文字，用作不可改變的欄位。
-        code       : |
-          <div class="ts form">
-              <div class="field">
-                  <label>使用者名稱</label>
-                  <span class="[[text]]">YamiOdymel</span>
-              </div>
-              <div class="field">
-                  <label>密碼</label>
-                  <input type="password">
-              </div>
-          </div>
-
       - title      : 提醒
         description: 欄位中可以新增提醒字串。
         code       : |
@@ -266,7 +252,7 @@ styles:
           <div class="ts form">
               <div class="ts [[message]]">
                   <div class="header">不好了！</div>
-                  <ul class="list">
+                  <ul class="ts {{list}}">
                       <li>請輸入您的姓氏。</li>
                       <li>請輸入您的名字。</li>
                   </ul>
