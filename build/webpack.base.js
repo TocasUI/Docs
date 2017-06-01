@@ -52,7 +52,7 @@ module.exports = {
             }
         }, {
             test: /\.coffee$/,
-            loader: 'babel-loader!coffee-loader'
+            loader: 'coffee-loader'
         }, {
             test: /\.yml$/,
             loader: 'json-loader!yaml-loader',
