@@ -79,20 +79,6 @@ styles:
               </div>
           </div>
 
-      - title      : 統計群組
-        description: 一個統計數據群組。
-        code       : |
-          <div class="ts [[statistics]]">
-              <div class="statistic">
-                  <div class="value">724</div>
-                  <div class="label">下載次數</div>
-              </div>
-              <div class="statistic">
-                  <div class="value">916</div>
-                  <div class="label">檢視次數</div>
-              </div>
-          </div>
-
   - category   : 內容
     description: 統計數據中包有不同性質的內容。
     items      :
@@ -324,4 +310,52 @@ styles:
           <div class="ts [[massive]] statistic">
               <div class="value">42,689</div>
               <div class="label">重量級尺寸</div>
+          </div>
+
+  - category   : 群組
+    description: 你能夠將多個統計數據放入單個容器成為一個群組。
+    items      :
+
+      - title      : 統計群組
+        description: 一個最基本的統計數據群組。
+        code       : |
+          <div class="ts [[statistics]]">
+              <div class="statistic">
+                  <div class="value">724</div>
+                  <div class="label">下載次數</div>
+              </div>
+              <div class="statistic">
+                  <div class="value">916</div>
+                  <div class="label">檢視次數</div>
+              </div>
+          </div>
+
+      - title      : 反色群組
+        description: 你可以直接將統計群組設置為反色的，這樣就不需要替每個統計數據設置成反色。
+        code       : |
+          <div class="ts inverted {{segment}}">
+              <div class="ts [[inverted]] statistics">
+                  <div class="statistic">
+                      <div class="value">1,948</div>
+                      <div class="label">已收藏</div>
+                  </div>
+                  <div class="statistic">
+                      <div class="value">625</div>
+                      <div class="label">已分享</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 群組尺寸
+        description: 統計群組可以擁有一個尺寸，省去替每個統計數據設置尺寸的困擾。
+        code       : |
+          <div class="ts [[large]] statistics">
+              <div class="statistic">
+                  <div class="value">859</div>
+                  <div class="label">點擊次數</div>
+              </div>
+              <div class="statistic">
+                  <div class="value">8,182</div>
+                  <div class="label">已觸及</div>
+              </div>
           </div>
