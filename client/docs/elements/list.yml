@@ -229,21 +229,21 @@ styles:
                   <img class="ts avatar {{image}}" src="!-user-!">
                   <div class="content">
                       <div class="header">Yami Odymel</div>
-                      研發 2016 始春的人
+                      <div class="description">研發 2016 始春的人</div>
                   </div>
               </div>
               <div class="item">
                   <img class="ts avatar {{image}}" src="!-user2-!">
                   <div class="content">
                       <div class="header">Mac Taylor</div>
-                      好基友
+                      <div class="description">好基友</div>
                   </div>
               </div>
               <div class="item">
                   <img class="ts avatar {{image}}" src="!-user3-!">
                   <div class="content">
                       <div class="header">Val Pyen</div>
-                      OSU! 喜好者
+                      <div class="description">OSU! 喜好者</div>
                   </div>
               </div>
           </div>
