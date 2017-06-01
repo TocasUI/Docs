@@ -1,6 +1,6 @@
 import Vue     from 'vue'
 import {sync}  from 'vuex-router-sync'
-import App     from './application.vue'
+import App     from './application'
 import router  from './router'
 import store   from './store'
 
