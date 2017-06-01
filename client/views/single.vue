@@ -27,7 +27,6 @@
 
 .listCategory
 
-
 .listHeader
     padding-left: 0
     display: block
@@ -94,11 +93,11 @@
         //- 導航選單
         docs-navbar
 
+        //- 空白板岩
         docs-slate(v-if="!docs.slate")
-            //- ███████████████
-            template(slot="header") &nbsp;
+            template(slot="header")      &nbsp;
             template(slot="description") &nbsp;
-
+        //- 讀取指示器
         div(:class="$style.loader", v-if="!docs.slate")
             .ts.inline.big.loader.active
 
@@ -119,11 +118,9 @@
                     .ts.borderless.secondary.relaxed.vertical.menu(:class="$style.listMenu")
                         template(v-for="styles in docs.styles", :class="$style.listCategory")
                             //- 分類標題
-                            div.header(:class="$style.listHeader")
-                                | {{ styles.category }}
+                            div.header(:class="$style.listHeader", v-text="styles.category")
                             //- 每個項目
-                            a.item(v-for="item in styles.items", :class="$style.listItem", :href="'#'+item.title", v-if="item.title")
-                                | {{ item.title }}
+                            a.item(v-for="item in styles.items", :class="$style.listItem", :href="'#'+item.title", v-if="item.title", v-text="item.title")
 
                 //- 右側主要內容欄位
                 .column(:class="{'twelve wide': !docs.singleColumn, 'sixteen wide': docs.singleColumn}")
@@ -135,12 +132,12 @@
                     //- 元件樣式
                     template(v-for="(styles, styleIndex) in docs.styles")
                         //- 主要分類
-                        .ts.big.dividing.header(:class="$style.categoryHeader") {{ styles.category }}
+                        .ts.big.dividing.header(:class="$style.categoryHeader", v-text="styles.category")
                         //- 分類副標題
                         div(v-html="styles.description")
 
                         //- 此分類的所有樣式
-                        docs-item(v-for="(item, index) in styles.items" :key="item.title" :item="item", :last="isLast(styles.items, index, docs.styles, styleIndex)")
+                        docs-item(v-for="(item, index) in styles.items" :key="item.title" :item="item")
         //- 頁腳
         docs-footer
 </template>
@@ -152,95 +149,18 @@ import DocsCards   from 'components/cards'
 import DocsItem    from 'components/item'
 import DocsFooter  from 'components/footer'
 import highlight   from 'client/highlight'
+import store       from '../store'
 
 export default
-    name: 'Single'
-    props:
-        title:
-            default: ''
-    data: () ->
-        docs: false
-
-    methods:
-        isLast: (array, index, styleArray, styleIndex) -> index is array.length - 1 and styleIndex is styleArray.length - 1
-
-    created: () ->
-        that     = @
-        fullPath = @$route.fullPath
-        path     = if @$route.path.substr(-1) isnt '/' then @$route.path + '/' else @$route.path
-
-        replace = (content) ->
-            # 將元件的內容替換成剛才延遲讀取的文件。
-            that.docs = content
-            # 在文件讀取完之後執行上色。
-            highlight()
-            # 然後如果有錨點的話跳到該錨點。
-            if fullPath.indexOf('#') isnt -1
-                id = fullPath.substring(fullPath.indexOf('#') + 1)
-                setTimeout () ->
-                    document.querySelector('.pusher').scrollTop = document.querySelector("##{id}").getBoundingClientRect().top
-                , 1
-
-
-        # 依照路徑決定應該要讀取哪個文件資料。
-        switch path
-            # Element
-            when '/elements/button/'    then require ['docs/elements/button']   , replace
-            when '/elements/divider/'   then require ['docs/elements/divider']  , replace
-            when '/elements/header/'    then require ['docs/elements/header']   , replace
-            when '/elements/input/'     then require ['docs/elements/input']    , replace
-            when '/elements/image/'     then require ['docs/elements/image']    , replace
-            when '/elements/label/'     then require ['docs/elements/label']    , replace
-            when '/elements/list/'      then require ['docs/elements/list']     , replace
-            when '/elements/loader/'    then require ['docs/elements/loader']   , replace
-            when '/elements/quote/'     then require ['docs/elements/quote']    , replace
-            when '/elements/segment/'   then require ['docs/elements/segment']  , replace
-            when '/elements/slate/'     then require ['docs/elements/slate']    , replace
-            when '/elements/step/'      then require ['docs/elements/step']     , replace
-            when '/elements/container/' then require ['docs/elements/container'], replace
-            when '/elements/icon/'      then require ['docs/elements/icon']     , replace
-            # Collections
-            when '/collections/breadcrumb/'         then require ['docs/collections/breadcrumb'], replace
-            when '/collections/form/'               then require ['docs/collections/form']      , replace
-            when '/collections/grid/'               then require ['docs/collections/grid']      , replace
-            when '/collections/menu/'               then require ['docs/collections/menu']      , replace
-            when '/collections/message/'            then require ['docs/collections/message']   , replace
-            when '/collections/message/javascript/' then require ['docs/collections/message-js'], replace
-            when '/collections/table/'              then require ['docs/collections/table']     , replace
-            when '/collections/table/javascript/'   then require ['docs/collections/table-js']  , replace
-            # Modules
-            when '/modules/accordion/'           then require ['docs/modules/accordion']  , replace
-            when '/modules/calendar/'            then require ['docs/modules/calendar']   , replace
-            when '/modules/checkbox/'            then require ['docs/modules/checkbox']   , replace
-            when '/modules/checkbox/javascript/' then require ['docs/modules/checkbox-js'], replace
-            when '/modules/dimmer/'              then require ['docs/modules/dimmer']     , replace
-            when '/modules/dropdown/'            then require ['docs/modules/dropdown']   , replace
-            when '/modules/dropdown/javascript/' then require ['docs/modules/dropdown-js'], replace
-            when '/modules/modal/'               then require ['docs/modules/modal']      , replace
-            when '/modules/modal/javascript/'    then require ['docs/modules/modal-js']   , replace
-            when '/modules/popup/'               then require ['docs/modules/popup']      , replace
-            when '/modules/popup/javascript/'    then require ['docs/modules/popup-js']   , replace
-            when '/modules/progress/'            then require ['docs/modules/progress']   , replace
-            when '/modules/slider/'              then require ['docs/modules/slider']     , replace
-            when '/modules/sidebar/'             then require ['docs/modules/sidebar']    , replace
-            when '/modules/embed/'               then require ['docs/modules/embed']      , replace
-            when '/modules/snackbar/'            then require ['docs/modules/snackbar']   , replace
-            when '/modules/tab/'                 then require ['docs/modules/tab']        , replace
-            when '/modules/contextmenu/'         then require ['docs/modules/contextmenu'], replace
-            # Views
-            when '/views/speeches/'  then require ['docs/views/speeches'] , replace
-            when '/views/card/'      then require ['docs/views/card']     , replace
-            when '/views/items/'     then require ['docs/views/items']    , replace
-            when '/views/statistic/' then require ['docs/views/statistic'], replace
-            when '/views/comment/'   then require ['docs/views/comment']  , replace
-            when '/views/feed/'      then require ['docs/views/feed']     , replace
-            # The Others
-            when '/rwd/'             then require ['docs/pages/responsive'], replace
-            when '/about/'           then require ['docs/pages/about']     , replace
-            when '/components/'      then require ['docs/pages/components'], replace
-            when '/getting-started/' then require ['docs/pages/getting-started'], replace
-            when '/about/'           then require ['docs/pages/about']          , replace
-
+    name : 'Single'
+    data : ->
+        docs: {}
+    created: ->
+        that = @
+        store.watch (state) ->
+            state.docs
+        , (docs) ->
+            that.docs = docs
     components: {
         DocsSlate,
         DocsNavbar,
