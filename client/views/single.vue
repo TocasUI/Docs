@@ -64,6 +64,10 @@
             letter-spacing: .01em
             color: #6f6e6e
 
+.disqusHeader
+    margin-top: 3em !important
+    margin-bottom: .5em !important
+
 .categoryHeader
     font-size: 24px !important
     color: #606060 !important
@@ -103,11 +107,11 @@
 
         template(v-if="docs.slate")
             //- 文件板岩
-            docs-slate(:tab="docs.tabs")
+            docs-slate
                 template(slot="header")      {{ docs.slate.title       }}
                 template(slot="description") {{ docs.slate.description }}
-                template(slot="tab")
-                    router-link.item(:class="{active: tab.to == $route.path}", v-for="tab in docs.tabs", :to="tab.to", key="tab.to")
+                template(slot="tab", v-if="docs.tabs")
+                    router-link.item(:class="{active: isCurrentTab(tab.to)}", v-for="tab in docs.tabs", :to="tab.to", key="tab.to")
                         | {{ tab.type == 'styles' ? '基本樣式' : 'JavaScript 模塊' }}
 
             //- 元素卡片
@@ -138,6 +142,14 @@
 
                         //- 此分類的所有樣式
                         docs-item(v-for="(item, index) in styles.items" :key="item.title" :item="item")
+
+                //-
+                .sixteen.wide.column
+                    .ts.big.header(:class="$style.disqusHeader")
+                        | 本頁留言
+                        .sub.header 你現在可以在這裡留言啦！如果有功能建議或是發現錯誤，可以到<a href="https://github.com/TeaMeow/TocasUI">這裡提出 Issue</a>。
+
+                    #disqus_thread
         //- 頁腳
         docs-footer
 </template>
@@ -155,6 +167,21 @@ export default
     name : 'Single'
     data : ->
         docs: {}
+    mounted: ->
+        # 讀取 Disqus
+        do ->
+            d = document
+            s = d.createElement 'script'
+            s.src = '//tocas-ui.disqus.com/embed.js'
+            s.setAttribute 'data-timestamp', + new Date
+            (d.head or d.body).appendChild s
+    methods:
+        isCurrentTab: (tabRoute) ->
+            routerPath = if @$route.path.substr(-1) isnt '/' then "#{@$route.path}/" else @$route.path
+            tabRoute   = if tabRoute.substr(-1) isnt '/' then "#{tabRoute}/" else tabRoute
+            
+            return routerPath is tabRoute
+
     created: ->
         that = @
         store.watch (state) ->
