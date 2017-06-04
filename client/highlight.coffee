@@ -29,12 +29,6 @@ export default ->
             el.innerHTML = ''
             el.appendChild code
 
-        # 呼叫 HightlightJS 來將剛才脫逸的 <code> 區塊全部上色。
-        hljs.initHighlighting.called = false
-        hljs.initHighlighting()
-
-        # 將 <code> 裡面的 [[]] 和 {{}} 與 !--! 標籤替換掉。
-        document.querySelectorAll('[html-code], [js-code], [css-code]').forEach (el) ->
             # 標記程式碼。 - [[segment]]
             el.innerHTML = el.innerHTML.replace /\[\[(.*?)\]\]/g, '<mark>$1</mark>'
 
@@ -72,4 +66,8 @@ export default ->
                     when 'user3'       then 'user.png'
                     when 'embed:karen' then 'youtube.png'
                     when 'embed:vimeo' then 'vimeo.png'
+
+        # 呼叫 HightlightJS 來將剛才脫逸的 <code> 區塊全部上色。
+        hljs.initHighlighting.called = false
+        hljs.initHighlighting()
     , 1
