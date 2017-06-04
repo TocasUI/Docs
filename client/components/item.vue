@@ -39,11 +39,14 @@
 .code
     margin: 0 !important
     white-space: pre-wrap !important
+    //overflow: scroll
+    font-size: 14px !important
 
     mark
-        background-color: #52c6ca
-        padding: 3px 6px
-        border-radius: 4px
+        background-color: #52c6ca !important
+        padding: 0px 6px !important
+        display: inline-block
+        border-radius: 4px !important
         color: #fff !important
 
     a
@@ -63,6 +66,11 @@
 
 .sixteen.wide.column > div > .ts.header:before
     display: none !important
+
+mark > .hljs-tag > .hljs-attr,
+mark > .hljs-tag > .hljs-string,
+mark > .hljs-tag > .hljs-name
+    color: #fff !important
 </style>
 
 <template lang="pug">
@@ -86,7 +94,7 @@
 
         //- 圖示網格
         .ts.six.column.relaxed.grid(v-if="item.icons", v-once)
-            .center.aligned.column(v-for="icon in item.icons", :key="icon", :data-clipboard-text="icon", @click="copied")
+            .center.aligned.column(v-for="icon in item.icons", v-once, :key="icon", :data-clipboard-text="icon", @click="copied")
                 i.big.fitted.icon(:class="icon")
                 label(v-text="icon")
 
@@ -102,7 +110,7 @@
         .ts.header(:class="$style.itemSubHeader", v-if="item.javascript")
             | JavaScript
             //- 執行按鈕
-            button.ts.inverted.right.floated.icon.labeled.button(v-if="!item.autoExecute", :class="$style.itemSourceButton")
+            button.ts.inverted.right.floated.icon.labeled.button(v-if="!item.autoExecute", :class="$style.itemSourceButton", @click="execute")
                 i.bug.icon
                 | 執行
         //- 程式碼區塊
@@ -110,7 +118,7 @@
             pre(js-code, v-text="item.javascript", :class="$style.code")
 </template>
 
-<script lang="coffee">
+<script lang="babel-loader!coffee">
 import placeholder169   from 'images/image_placeholder_16-9.png'
 import placeholder11    from 'images/image_placeholder_1-1.png'
 import placeholder43    from 'images/image_placeholder_4-3.png'
@@ -184,6 +192,10 @@ export default
             @demoSegment =
                 'fitted basic'            : !@sourcing and @item.type isnt 'sidebar' and @item.type isnt 'snackbar'
                 'bordered fitted tertiary': @item.type is 'sidebar'
+
+        #
+        execute: ->
+            eval(@item.javascript)
 
         # copied 會告訴使用者點擊的那個圖示已經被複製，並且在數秒後重設狀態。
         copied: (event) ->
