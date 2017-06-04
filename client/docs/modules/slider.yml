@@ -4,9 +4,9 @@ slate:
 
 tabs:
   - type  : styles
-    to    : /modules/progress
+    to    : /modules/slider/
   - type  : javascript
-    to    : /modules/progress/javascript
+    to    : /modules/slider/javascript
 
 styles:
   - category   : 種類
