@@ -9,6 +9,9 @@ body, html
 
 <template lang="pug">
     div
+        .ts.snackbar
+            .content
+            .action
         .ts.left.sidebar.inverted.vertical.menu
             a.item(href="#!") 首頁
             a.item(href="#!") 文件
