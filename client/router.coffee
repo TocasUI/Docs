@@ -53,9 +53,13 @@ router = new Router
             '/modules/progress'
             '/modules/slider'
             '/modules/sidebar'
+            '/modules/sidebar/javascript'
             '/modules/embed'
+            '/modules/embed/javascript'
             '/modules/snackbar'
+            '/modules/snackbar/javascript'
             '/modules/tab'
+            '/modules/tab/javascript'
             '/modules/contextmenu'
 
             # 視圖型。

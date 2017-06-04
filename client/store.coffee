@@ -15,10 +15,13 @@ mutations =
         state.docs = docs
 
         # 在文件讀取完之後執行上色。
+        if typeof fullPath is 'undefined'
+            return
+
         highlight()
 
         # 如果有錨點的話跳到該錨點。
-        if typeof fullPath isnt 'undefined' and fullPath.indexOf('#') isnt -1
+        if fullPath.indexOf('#') isnt -1
             setTimeout () ->
                 id = fullPath.substring(fullPath.indexOf('#') + 1)
                 document.querySelector('.pusher').scrollTop = document.querySelector("##{id}").getBoundingClientRect().top
@@ -30,7 +33,7 @@ actions =
         # 如果目標網址和現在網址一樣，則離開避免重複渲染和讀取。
         if fromPath is path
             return
-            
+
         #  r 會將目前的文件內容替換成最新讀取的內容。
         r = (docs) -> commit 'SET_DOCS', {docs, fullPath}
 
@@ -113,12 +116,20 @@ actions =
                 require ['docs/modules/slider'], r
             when '/modules/sidebar/'
                 require ['docs/modules/sidebar'], r
+            when '/modules/sidebar/javascript/'
+                require ['docs/modules/sidebar-js'], r
             when '/modules/embed/'
                 require ['docs/modules/embed'], r
+            when '/modules/embed/javascript/'
+                require ['docs/modules/embed-js'], r
             when '/modules/snackbar/'
                 require ['docs/modules/snackbar'], r
+            when '/modules/snackbar/javascript/'
+                require ['docs/modules/snackbar-js'], r
             when '/modules/tab/'
                 require ['docs/modules/tab'], r
+            when '/modules/tab/javascript/'
+                require ['docs/modules/tab-js'], r
             when '/modules/contextmenu/'
                 require ['docs/modules/contextmenu'], r
 
@@ -158,6 +169,9 @@ actions =
                 require ['docs/examples'], r
             when '/elements/'
                 require ['docs/elements'], r
+
+            else
+                alert '路徑錯誤，請確定有在 Store 中新增路徑且結尾是「/」。'
 
 store = new Vuex.Store {
     state
