@@ -50,12 +50,12 @@ styles:
               <div class="[[bar]]"></div>
           </div>
 
-      - title      : 註釋
-        description: 可以在進度列上顯示文字註釋的元素，例如擺放進度百分比。
+      - title      : 文字
+        description: 可以在進度列上顯示文字的元素，例如擺放進度百分比。
         code       : |
           <div class="ts progress">
               <div class="bar" style="width: 32%">
-                  <span class="[[description]]">32%</span>
+                  <span class="[[text]]">32%</span>
               </div>
           </div>
 
@@ -108,13 +108,13 @@ styles:
         code       : |
           <div class="ts progress">
               <div class="[[bar]]" style="width: 20%; background: lightskyblue">
-                  <label class="description">檔案</label>
+                  <label class="text">檔案</label>
               </div>
               <div class="[[bar]]" style="width: 50%; background: orange">
-                  <label class="description">音樂</label>
+                  <label class="text">音樂</label>
               </div>
               <div class="[[bar]]" style="width: 30%; background: green">
-                  <label class="description">圖片</label>
+                  <label class="text">圖片</label>
               </div>
           </div>
 
@@ -164,11 +164,11 @@ styles:
               <div class="bar" style="width: 50%"></div>
           </div>
           <div class="ts [[medium]] progress">
-              <div class="bar" style="width: 60%"><span class="description">60%</span></div>
+              <div class="bar" style="width: 60%"><span class="text">60%</span></div>
           </div>
           <div class="ts [[large]] progress">
-              <div class="bar" style="width: 70%"><span class="description">70%</span></div>
+              <div class="bar" style="width: 70%"><span class="text">70%</span></div>
           </div>
           <div class="ts [[big]] progress">
-              <div class="bar" style="width: 80%"><span class="description">80%</span></div>
+              <div class="bar" style="width: 80%"><span class="text">80%</span></div>
           </div>

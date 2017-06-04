@@ -82,7 +82,7 @@ styles:
               </div>
           </div>
 
-      - title      : 註釋
+      - title      : 文字
         description: 用來呈現對話的主要文字內容，如果對話僅有文字而沒有別的元素，可以省略。
         code       : |
           <div class="ts speeches">
@@ -92,7 +92,7 @@ styles:
               <div class="speech">
                   <div class="content">
                     <div class="author">Yami Odymel</div>
-                    <div class="[[description]]">這個對話內容結構較複雜，所以需要用註釋包起來。</div>
+                    <div class="[[text]]">這個對話內容結構較複雜，所以需要用註釋包起來。</div>
                   </div>
               </div>
           </div>
@@ -107,7 +107,7 @@ styles:
                       <img src="!-user-!">
                   </div>
                   <div class="content">
-                      <div class="description">大家好啊！</div>
+                      <div class="text">大家好啊！</div>
                   </div>
               </div>
           </div>
@@ -122,7 +122,7 @@ styles:
                   </div>
                   <div class="content">
                       <div class="[[inline]] [[author]]">Yami Odymel</div>
-                      <div class="description">：嗨！早安。</div>
+                      <div class="text">：嗨！早安。</div>
                   </div>
               </div>
               <div class="speech">
@@ -131,7 +131,7 @@ styles:
                   </div>
                   <div class="content">
                       <div class="author">Haneda Shirone</div>
-                      <div class="description">囉哈！</div>
+                      <div class="text">囉哈！</div>
                   </div>
               </div>
           </div>
@@ -146,7 +146,7 @@ styles:
                     <div class="[[image]]">
                         <img src="!-16:9-!">
                     </div>
-                    <div class="description">前天去夏威夷旅行，怎樣？拍得不錯吧！。</div>
+                    <div class="text">前天去夏威夷旅行，怎樣？拍得不錯吧！。</div>
                 </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ styles:
                       <img src="!-user-!">
                   </div>
                   <div class="content">
-                      <div class="description">月月，搭拉安。</div>
+                      <div class="text">月月，搭拉安。</div>
                       <div class="[[meta]]">
                           <div class="item">12:33 PM</div>
                           <div class="item">已讀</div>
@@ -218,7 +218,7 @@ styles:
           <div class="ts speeches">
               <div class="speech">
                   <div class="content">
-                      <div class="description">
+                      <div class="text">
                           <blockquote class="[[ts secondary quote]]">
                               Yami Odymel
                               <br>
@@ -244,7 +244,7 @@ styles:
                       </div>
                       <div class="content">
                           <div class="author">Yami Odymel</div>
-                          <div class="description">這些對話氣泡組成了一個群組。</div>
+                          <div class="text">這些對話氣泡組成了一個群組。</div>
                       </div>
                   </div>
                   <div class="speech">
@@ -253,7 +253,7 @@ styles:
                       </div>
                       <div class="content">
                           <div class="author">Yami Odymel</div>
-                          <div class="description">有些重複的內容會被隱藏，像是頭像、作者名稱、中繼資料。</div>
+                          <div class="text">有些重複的內容會被隱藏，像是頭像、作者名稱、中繼資料。</div>
                       </div>
                   </div>
               </div>
@@ -327,7 +327,7 @@ styles:
                   </div>
                   <div class="content">
                       <div class="author">Yami Odymel</div>
-                      <div class="description">這個對話氣泡沒有框線，不覺得看起來好像有點寬敞了嗎？</div>
+                      <div class="text">這個對話氣泡沒有框線，不覺得看起來好像有點寬敞了嗎？</div>
                   </div>
               </div>
               <div class="[[borderless]] speech">
@@ -336,7 +336,7 @@ styles:
                   </div>
                   <div class="content">
                       <div class="author">Haneda Shirone</div>
-                      <div class="description">嗯⋯⋯。</div>
+                      <div class="text">嗯⋯⋯。</div>
                   </div>
               </div>
           </div>

@@ -4,9 +4,9 @@ slate:
 
 tabs:
   - type  : styles
-    to    : /modules/dropdown
+    to    : /modules/dropdown/
   - type  : javascript
-    to    : /modules/dropdown/javascript
+    to    : /modules/dropdown/javascript/
 
 styles:
   - category   : JavaScript
