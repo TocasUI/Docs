@@ -69,7 +69,7 @@ items:
     description: 一個呈現於螢幕測部的多功能選單。
     symbol     : content
 
-  - title      : 通知條
+  - title      : 點心條
     class      : .ts.snackbar
     link       : /modules/snackbar/
     description: 呈現於螢幕角落、底部的通知訊息列。
