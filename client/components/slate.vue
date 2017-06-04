@@ -31,12 +31,11 @@
                 slot(name="header")
             .description(:class="$style.description")
                 slot(name="description")
-        .ts.narrow.container(v-if="this.$slots.tab")
-            .ts.relaxed.grid(:class="$style.tabGird")
-                .four.wide.column
-                .twelve.wide.column
-                    .ts.bottom.attached.tabbed.menu(:class="$style.tab")
-                        slot(name="tab")
+        .ts.narrow.container.relaxed.grid(:class="$style.tabGird", v-if="this.$slots.tab")
+            .four.wide.column
+            .twelve.wide.column
+                .ts.bottom.attached.tabbed.menu(:class="$style.tab")
+                    slot(name="tab")
 </template>
 
 <script>
