@@ -1,17 +1,23 @@
 slate:
-  title      : 通知條
-  description: 附著在螢幕角落且帶有通知文字的巧克力棒。
+  title      : 點心條
+  description: 附著在螢幕角落且帶有通知文字的點心棒。
+
+tabs:
+  - type  : styles
+    to    : /modules/snackbar/
+  - type  : javascript
+    to    : /modules/snackbar/javascript/
 
 intro: |
-  <p>通知條和訊息不一樣的地方在於通知條是浮動在頁面角落、且較單調的。同時當多個通知發生時，通知條只會顯示最後一個通知且無法重疊。</p>
+  <p>點心條和訊息不一樣的地方在於點心條是浮動在頁面角落、且較單調的。同時當多個通知發生時，點心條只會顯示最後一個通知且無法重疊。</p>
   <p>倘若出現多個通知是你期望的目標，試著使用清單元件，且謹記避免過度遮蔽螢幕畫面。</p>
 
 styles:
   - category   : 種類
-    description: 通知條有不同種類。
+    description: 點心條有不同種類。
     items      :
       - title      : 基本
-        description: 一個最基本的通知條會出現在螢幕左下角中。
+        description: 一個最基本的點心條會出現在螢幕左下角中。
         type       : snackbar
         code       : |
           <div class="ts active [[snackbar]]">
@@ -22,11 +28,11 @@ styles:
           </div>
 
   - category   : 狀態
-    description: 通知條有不同的呈現狀態。
+    description: 點心條有不同的呈現狀態。
     items      :
 
       - title      : 已啟用
-        description: 通知條預設並不會顯示，直到將其設置為已啟用。
+        description: 點心條預設並不會顯示，直到將其設置為已啟用。
         type       : snackbar
         code       : |
           <div class="ts [[active]] snackbar">
@@ -36,7 +42,7 @@ styles:
           </div>
 
   - category   : 內容
-    description: 你能在通知條中放置不同的內容。
+    description: 你能在點心條中放置不同的內容。
     items      :
 
       - title      : 內容
@@ -50,7 +56,7 @@ styles:
           </div>
 
       - title      : 動作
-        description: 針對通知所提供的動作按鈕。通知條上僅能有一個動作按鈕。
+        description: 針對通知所提供的動作按鈕。點心條上僅能有一個動作按鈕。
         type       : snackbar
         code       : |
           <div class="ts active snackbar">
@@ -73,11 +79,11 @@ styles:
           </div>
 
   - category   : 外觀
-    description: 通知條的外觀有所不同。
+    description: 點心條的外觀有所不同。
     items      :
 
       - title      : 同行
-        description: 通知條預設是浮動在螢幕上的，但能夠使其成為同行通知條，和其他元素擺置在一塊。
+        description: 點心條預設是浮動在螢幕上的，但能夠使其成為同行點心條，和其他元素擺置在一塊。
         code       : |
           <div class="ts active [[inline]] snackbar">
               <div class="content">
@@ -86,7 +92,7 @@ styles:
           </div>
 
       - title      : 位置
-        description: 通知條在螢幕角落的浮動位置是可以更改的。
+        description: 點心條在螢幕角落的浮動位置是可以更改的。
         type       : snackbar
         code       : |
           <div class="ts active [[top left]] snackbar">
