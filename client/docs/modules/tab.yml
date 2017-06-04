@@ -2,6 +2,12 @@ slate:
   title      : 分頁籤
   description: 不換網頁卻能在多個內容之間作切換的好選擇。
 
+tabs:
+  - type  : styles
+    to    : /modules/tab/
+  - type  : javascript
+    to    : /modules/tab/javascript/
+
 styles:
   - category   : 種類
     description: 分頁籤有不同種類。
