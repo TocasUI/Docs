@@ -4,9 +4,9 @@ slate:
 
 tabs:
   - type  : styles
-    to    : /collections/table
+    to    : /collections/table/
   - type  : javascript
-    to    : /collections/table/javascript
+    to    : /collections/table/javascript/
 
 styles:
   - category   : JavaScript

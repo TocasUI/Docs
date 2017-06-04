@@ -4,9 +4,9 @@ slate:
 
 tabs:
   - type  : styles
-    to    : /collections/table
+    to    : /collections/table/
   - type  : javascript
-    to    : /collections/table/javascript
+    to    : /collections/table/javascript/
 
 intro: |
   <p>表格不應用來當作網頁架構，而是用來呈現資料，如果你想要用類似的架構設計網頁，請參考格線系統。</p>
@@ -503,7 +503,6 @@ styles:
                       <td>Apr 04, 2017</td>
                   </tr>
               </tbody>
-              <tbody></tbody>
           </table>
 
   - category   : 外觀
