@@ -4,9 +4,9 @@ slate:
 
 tabs:
   - type  : styles
-    to    : /modules/popup
+    to    : /modules/popup/
   - type  : javascript
-    to    : /modules/popup/javascript
+    to    : /modules/popup/javascript/
 
 intro: |
   <p>用上彈出式訊息通常是個不好的設計。此元件會在滑鼠移過某處時顯示一個氣泡訊息，這個訊息偏向提示，尚不打算增加過多豐富的功能。</p>

@@ -4,9 +4,9 @@ slate:
 
 tabs:
   - type  : styles
-    to    : /modules/popup
+    to    : /modules/popup/
   - type  : javascript
-    to    : /modules/popup/javascript
+    to    : /modules/popup/javascript/
 
 styles:
   - category   : JavaScript
@@ -17,7 +17,8 @@ styles:
         code       : |
           <button class="ts info labeled icon button" data-tooltip="早安！我的朋友！你欠錢沒還！">
               <i class="mouse pointer icon"></i>
-              滑鼠移至此查看範例
+              行動裝置上點擊此按鈕不會有彈出式訊息
           </button>
         javascript: |
           ts('[data-tooltip]').popup();
+        autoExecute: true
