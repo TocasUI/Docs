@@ -132,6 +132,8 @@ actions =
                 require ['docs/modules/tab-js'], r
             when '/modules/contextmenu/'
                 require ['docs/modules/contextmenu'], r
+            when '/modules/contextmenu/javascript/'
+                require ['docs/modules/contextmenu-js'], r
 
             when '/views/speeches/'
                 require ['docs/views/speeches'], r
@@ -171,7 +173,7 @@ actions =
                 require ['docs/elements'], r
 
             else
-                alert '路徑錯誤，請確定有在 Store 中新增路徑且結尾是「/」。'
+                console.log '路徑錯誤，請確定有在 Store 中新增路徑且結尾是「/」。'
 
 store = new Vuex.Store {
     state

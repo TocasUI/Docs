@@ -61,6 +61,7 @@ router = new Router
             '/modules/tab'
             '/modules/tab/javascript'
             '/modules/contextmenu'
+            '/modules/contextmenu/javascript'
 
             # 視圖型。
             '/views/speeches'
