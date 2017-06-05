@@ -134,9 +134,9 @@ styles:
     items      :
 
       - title      : 移除樣式
-        description: 如果你不希望原生標籤有著 Tocas UI 的樣式，那麼你可以加上 <span class="ts horizontal label">[data-ts-unstyled]</span> 標籤移除樣式。
+        description: 如果你不希望原生標籤有著 Tocas UI 的樣式，你可以考慮移除該樣式。
         code       : |
-          <ol [[data-ts-unstyled]]>
+          <ol class="[[unstyled]]">
               <li>悠木美弥花</li>
               <li>有村詩音</li>
               <li>柊つむぎ</li>
