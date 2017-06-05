@@ -3,6 +3,10 @@
     margin-top   : 4em !important
     margin-bottom: 4em !important
 
+    @media (max-width: 767px)
+        margin-top   : 1.5em !important
+        margin-bottom: 1.5em !important
+
 .loader
     height: calc(100vh - 45px - 212px)
     display: flex
@@ -22,8 +26,17 @@
         border-right: 2px solid rgba(0,0,0,.1)
         pointer-events: none
 
+    @media (max-width: 767px)
+        padding-right: .4rem !important
+
+        &:after
+            display: none !important
+
 .listMenu
     margin: 0 !important
+
+    @media (max-width: 767px)
+        margin-bottom: 3em !important
 
 .listCategory
 
@@ -64,9 +77,33 @@
             letter-spacing: .01em
             color: #6f6e6e
 
+        @media (max-width: 767px)
+            table
+                tr
+                    padding: 0 !important
+                td:empty:empty:empty:empty:empty:empty:empty
+                    display: none !important
+
 .disqusHeader
     margin-top: 3em !important
     margin-bottom: .5em !important
+    color: #606060 !important
+    font-size: 28px !important
+
+    > div
+        margin-top: .6em !important
+        clear: both !important
+        position: relative !important
+        font-size: 16px !important
+        line-height: 28px !important
+        letter-spacing: .08px !important
+        color: #6f6e6e !important
+
+.disqus
+    margin-bottom: 3em !important
+
+    @media (max-width: 767px)
+        margin-bottom: 1em !important
 
 .categoryHeader
     font-size: 24px !important
@@ -117,7 +154,7 @@
             //- 元素卡片
             .ts.narrow.container.relaxed.stackable.grid(:class="$style.container")
                 //- 左側欄位
-                .four.wide.column(:class="$style.listColumn", v-if="!docs.singleColumn")
+                .sixteen.wide.mobile.four.wide.computer.column(:class="$style.listColumn", v-if="!docs.singleColumn")
                     //- 左側清單
                     .ts.borderless.secondary.relaxed.vertical.menu(:class="$style.listMenu")
                         template(v-for="styles in docs.styles", :class="$style.listCategory")
@@ -127,7 +164,7 @@
                             a.item(v-for="item in styles.items", :class="$style.listItem", :href="'#'+item.title", v-if="item.title", v-text="item.title")
 
                 //- 右側主要內容欄位
-                .column(:class="{'twelve wide': !docs.singleColumn, 'sixteen wide': docs.singleColumn}")
+                .sixteen.wide.mobile.column(:class="{'twelve wide computer': !docs.singleColumn, 'sixteen wide computer': docs.singleColumn}")
                     //- 主要說明
                     template(v-if="docs.intro")
                         .ts.huge.dividing.header(:class="$style.introHeader") 說明
@@ -143,13 +180,14 @@
                         //- 此分類的所有樣式
                         docs-item(v-for="(item, index) in styles.items" :key="item.title" :item="item")
 
-                //-
-                .sixteen.wide.column
-                    .ts.big.header(:class="$style.disqusHeader")
-                        | 本頁留言
-                        .sub.header 你現在可以在這裡留言啦！如果有功能建議或是發現錯誤，可以到<a href="https://github.com/TeaMeow/TocasUI">這裡提出 Issue</a>。
+        //-
+        .ts.narrow.container
+            .ts.big.header(:class="$style.disqusHeader")
+                | 本頁留言
+                .sub.header 你現在可以在這裡留言啦！如果有功能建議或是發現錯誤，可以到<a href="https://github.com/TeaMeow/TocasUI">這裡提出 Issue</a>。
 
-                    #disqus_thread
+            #disqus_thread(:class="$style.disqus")
+
         //- 頁腳
         docs-footer
 </template>
@@ -178,8 +216,8 @@ export default
     methods:
         isCurrentTab: (tabRoute) ->
             routerPath = if @$route.path.substr(-1) isnt '/' then "#{@$route.path}/" else @$route.path
-            tabRoute   = if tabRoute.substr(-1) isnt '/' then "#{tabRoute}/" else tabRoute
-            
+            tabRoute   = if tabRoute.substr(-1)     isnt '/' then "#{tabRoute}/"     else tabRoute
+
             return routerPath is tabRoute
 
     created: ->
