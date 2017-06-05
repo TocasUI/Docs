@@ -22,10 +22,10 @@
         //- 文件板岩
         docs-slate(v-if="docs.slate")
             template(slot="header")      {{ docs.slate.title }}
-            template(slot="description") {{ docs.slate.description }}
+            template(slot="description"): span(v-html="docs.slate.description")
 
         //- 元素卡片
-        docs-cards(:items="docs.items")
+        docs-cards(:items="docs.items", :columns="docs.columns")
 
         //- 頁腳
         docs-footer
