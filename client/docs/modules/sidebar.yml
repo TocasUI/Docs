@@ -33,6 +33,14 @@ styles:
               <!-- / 頁面推動器 -->
           </body>
 
+      - title      : 擠壓的推動器
+        description: 通常來說側邊欄出現時，會將頁面往某個方向推。但你能讓頁面呈現被擠壓而不是被推出螢幕外。如果你有一個常態的功能側邊欄就很適合使用這種推動器。
+        type       : code
+        code       : |
+          <div class="[[squeezable]] pusher">
+              <!-- 網頁內容擺置於此 -->
+          </div>
+
   - category   : 種類
     description: 側邊欄具有不同的種類。
     items      :
