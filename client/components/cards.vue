@@ -20,8 +20,10 @@
 
 <template lang="pug">
     .ts.narrow.container(style="min-height: calc(100% - 483px)")
-        .ts.doubling.four.link.cards
+        .ts.doubling.link.cards(:class="columns")
             router-link.ts.card(:to="item.link", v-for="item in items", :key="item.title")
+                .image(v-if="item.image")
+                    img(:src="item.image")
                 .content
                     .header {{ item.title }}
                     .meta(v-if="item.class"): div {{ item.class }}
@@ -34,7 +36,8 @@
 export default {
     name: 'Cards',
     props: {
-        items: { default: null }
+        columns: { default: 'four' },
+        items  : { default: null }
     }
 }
 </script>
