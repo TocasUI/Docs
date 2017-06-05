@@ -16,7 +16,7 @@ styles:
         description: 訊息中的關閉按鈕預設並沒有動作，僅是裝飾而已。但是你可以透過 JavaScript 將該按鈕套上一個關閉訊息的動作。
         code       : |
           <div class="ts [[dismissable]] message">
-              <i class="close {{icon}}"></i>
+              <button class="ts close {{button}}"></button>
               <div class="header">
                   不喜歡我？
               </div>

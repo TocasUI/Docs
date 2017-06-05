@@ -152,10 +152,10 @@ styles:
           </div>
 
       - title      : 可關閉的
-        description: 一個可以關閉的訊息。
+        description: 你能夠在訊息內擺放一個關閉按鈕，令訊息看起來像可關閉一樣。若真要執行關閉動作，請參考 JavaScript 模塊章節。
         code       : |
           <div class="ts [[dismissable]] message">
-              <i class="close {{icon}}"></i>
+              <button class="ts close {{button}}"></button>
               <div class="header">
                   不喜歡我？
               </div>
