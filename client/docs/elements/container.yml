@@ -20,11 +20,11 @@ intro: |
       <tbody>
           <tr>
               <td>樣式名稱</td>
-              <td><span class="ts horizontal label">container</span></td>
-              <td><span class="ts horizontal label">fluid container</span></td>
-              <td><span class="ts horizontal label">text container</span></td>
-              <td><span class="ts horizontal label">narrow container</span></td>
-              <td><span class="ts horizontal label">very narrow container</span></td>
+              <td><span class="ts label">container</span></td>
+              <td><span class="ts label">fluid container</span></td>
+              <td><span class="ts label">text container</span></td>
+              <td><span class="ts label">narrow container</span></td>
+              <td><span class="ts label">very narrow container</span></td>
           </tr>
           <tr>
               <td>裝置稱呼</td>
