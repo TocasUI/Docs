@@ -132,10 +132,10 @@ styles:
                   <div class="[[item]]">
                       新增
                   </div>
-                  <div class="item">
+                  <div class="[[item]]">
                       重新命名
                   </div>
-                  <div class="item">
+                  <div class="[[item]]">
                       下載並壓縮
                   </div>
               </div>
