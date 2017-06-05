@@ -30,6 +30,13 @@
     &:before
         background: #c1c1c1
 
+.itemDescription > table
+    @media (max-width: 767px)
+        tr
+            padding: 0 !important
+        td:empty:empty:empty:empty:empty:empty:empty
+            display: none !important
+
 .itemSourceButton
     font-size: .8rem !important
 
@@ -90,7 +97,7 @@ mark > .hljs-tag > .hljs-name
                 i.code.icon
                 | 原始碼
         //- 詳細註釋
-        div(v-html="item.description")
+        div(v-html="item.description", :class="$style.itemDescription")
 
         //- 圖示網格
         .ts.six.column.relaxed.grid(v-if="item.icons", v-once)
