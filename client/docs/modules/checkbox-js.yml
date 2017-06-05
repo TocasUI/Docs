@@ -4,9 +4,9 @@ slate:
 
 tabs:
   - type  : styles
-    to    : /modules/checkbox
+    to    : /modules/checkbox/
   - type  : javascript
-    to    : /modules/checkbox/javascript
+    to    : /modules/checkbox/javascript/
 
 styles:
   - category   : JavaScript
