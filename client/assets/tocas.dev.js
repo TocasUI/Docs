@@ -1349,13 +1349,13 @@ ts.fn.contextmenu = function(option) {
       h = window.innerHeight / 2;
       ts(menu).removeClass('downward upward rightward leftward');
       if (e.clientX < w && e.clientY < h) {
-        ts(menu).addClass('downward rightward').css('left', e.clientX).css('top', e.clientY);
+        ts(menu).addClass('downward rightward').css('left', e.clientX + 'px').css('top', e.clientY + 'px');
       } else if (e.clientX < w && e.clientY > h) {
-        ts(menu).addClass('upward rightward').css('left', e.clientX).css('top', e.clientY - r.height);
+        ts(menu).addClass('upward rightward').css('left', e.clientX + 'px').css('top', e.clientY - r.height + 'px');
       } else if (e.clientX > w && e.clientY > h) {
-        ts(menu).addClass('upward leftward').css('left', e.clientX - r.width).css('top', e.clientY - r.height);
+        ts(menu).addClass('upward leftward').css('left', e.clientX - r.width + 'px').css('top', e.clientY - r.height + 'px');
       } else if (e.clientX > w && e.clientY < h) {
-        ts(menu).addClass('downward leftward').css('left', e.clientX - r.width).css('top', e.clientY);
+        ts(menu).addClass('downward leftward').css('left', e.clientX - r.width + 'px').css('top', e.clientY + 'px');
       }
       return ts(menu).removeClass('hidden').addClass('visible animating').one(animationEnd, function() {
         return ts(this).removeClass('animating');
