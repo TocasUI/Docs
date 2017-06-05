@@ -7,7 +7,7 @@
 </style>
 
 <template lang="pug">
-    .ts.fluid.top.attached.link.basic.menu(:class='[isHomepage?"inverted":"", $style.menu]', :is-homepage="isHomepage")
+    .ts.fluid.top.attached.horizontally.scrollable.link.basic.menu(:class='[isHomepage?"inverted":"", $style.menu]', :is-homepage="isHomepage")
         .ts.narrow.container
             router-link.item(to='/') Tocas UI
             router-link.item(to='/starts') 從這開始
