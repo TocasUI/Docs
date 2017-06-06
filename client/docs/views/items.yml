@@ -50,9 +50,44 @@ styles:
               </div>
           </div>
 
+  - category   : 狀態
+    description: 項目能夠有不同的狀態。
+    items      :
+
+      - title      : 已啟用
+        description: 項目能夠呈現正在使用、已經啟用的狀態。
+        code       : |
+          <div class="ts segmented items">
+              <div class="item">
+                  以西結
+              </div>
+              <div class="[[active]] item">
+                  伊波咲
+              </div>
+              <div class="item">
+                  栗宮希實
+              </div>
+          </div>
+
+      - title      : 已選擇
+        description: 項目可以看起來像是被選擇、圈選的樣子。
+        code       : |
+          <div class="ts segmented items">
+              <div class="item">
+                  The Walking Dead
+              </div>
+              <div class="[[selected]] item">
+                  Breaking Bad
+              </div>
+              <div class="item">
+                  Love Actually
+              </div>
+          </div>
+
   - category   : 內容
     description: 項目由多種不同構造的內容組成。
     items      :
+
       - title      : 圖片
         description: 項目可以包含圖片。
         code       : |
