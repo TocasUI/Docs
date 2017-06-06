@@ -1,6 +1,6 @@
-import Vue  from 'vue'
-import Vuex from 'vuex'
-import highlight   from 'client/highlight'
+import Vue       from 'vue'
+import Vuex      from 'vuex'
+import highlight from 'client/highlight'
 
 Vue.use(Vuex)
 
@@ -23,7 +23,7 @@ mutations =
         # 如果有錨點的話跳到該錨點。
         if fullPath.indexOf('#') isnt -1
             setTimeout () ->
-                id = fullPath.substring(fullPath.indexOf('#') + 1)
+                id = decodeURIComponent fullPath.substring(fullPath.indexOf('#') + 1)
                 document.querySelector('.pusher').scrollTop = document.querySelector("##{id}").getBoundingClientRect().top
             , 1
 
@@ -68,6 +68,8 @@ actions =
                 require ['docs/elements/step'], r
             when '/elements/container/'
                 require ['docs/elements/container'], r
+            when '/elements/divider/'
+                require ['docs/elements/divider'], r
             when '/elements/icon/'
                 require ['docs/elements/icon'], r
 
@@ -114,6 +116,8 @@ actions =
                 require ['docs/modules/progress'], r
             when '/modules/slider/'
                 require ['docs/modules/slider'], r
+            when '/modules/slider/javascript'
+                require ['docs/modules/slider-js'], r
             when '/modules/sidebar/'
                 require ['docs/modules/sidebar'], r
             when '/modules/sidebar/javascript/'
@@ -134,6 +138,8 @@ actions =
                 require ['docs/modules/contextmenu'], r
             when '/modules/contextmenu/javascript/'
                 require ['docs/modules/contextmenu-js'], r
+            when '/modules/scrollspy/javascript/'
+                require ['docs/modules/scrollspy-js'], r
 
             when '/views/speeches/'
                 require ['docs/views/speeches'], r
