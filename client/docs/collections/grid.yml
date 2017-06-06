@@ -128,6 +128,21 @@ styles:
               <div class="[[sixteen wide]] column"></div>
           </div>
 
+      - title      : 拉伸的
+        description: |
+          <p>不指定欄位寬度的時候，單個、或多個欄位可以被拉伸到填滿整個網格系統，並將其他欄位縮短至它們的內容寬度。這很適合用在兩欄式的排版，或是輸入欄位與按鈕。</p>
+        code       : |
+          <div class="ts grid">
+              <div class="[[stretched]] column">
+                  <div class="ts fluid input">
+                      <input type="text" placeholder="在此輸入您想找的資料⋯⋯">
+                  </div>
+              </div>
+              <div class="column">
+                  <button class="ts button">搜尋</button>
+              </div>
+          </div>
+
   - category   : 列
     description: 「列」用來整合、包覆欄位，甚至可以再細分寬度。
     items      :
