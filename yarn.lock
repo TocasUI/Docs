@@ -4137,14 +4137,7 @@ type-is@~1.6.15:
     media-typer "0.3.0"
     mime-types "~2.1.15"
 
-"uglify-es@git://github.com/mishoo/UglifyJS2.git#harmony":
-  version "3.0.15"
-  resolved "git://github.com/mishoo/UglifyJS2.git#1edbd6556f312bcb4061a2adc6f8f433285bdeda"
-  dependencies:
-    commander "~2.9.0"
-    source-map "~0.5.1"
-
-uglify-js@3.0.x, uglify-js@^3.0.15:
+uglify-js@3, uglify-js@3.0.x:
   version "3.0.15"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.15.tgz#aacb323a846b234602270dead8a32441a8806f42"
   dependencies:
@@ -4160,25 +4153,9 @@ uglify-js@^2.6.1, uglify-js@^2.8.27:
   optionalDependencies:
     uglify-to-browserify "~1.0.0"
 
-"uglify-js@git://github.com/mishoo/UglifyJS2#harmony-v3.0.0":
-  version "3.0.0"
-  resolved "git://github.com/mishoo/UglifyJS2#3fac29a01787b07ce9e43fb87a17bde33123509d"
-  dependencies:
-    commander "~2.9.0"
-    source-map "~0.5.1"
-  optionalDependencies:
-    uglify-to-browserify "~1.0.0"
-
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
-
-uglifyjs-webpack-plugin@0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-0.4.3.tgz#a672a7d6655f94dfa7e09670d48030f37cc93267"
-  dependencies:
-    source-map "^0.5.6"
-    webpack-sources "^0.2.3"
 
 uid-number@^0.0.6:
   version "0.0.6"

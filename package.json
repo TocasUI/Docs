@@ -5,7 +5,7 @@
   "main": "client/bootstrap.js",
   "scripts": {
     "test": "echo wow, such TeaMeow, very Spring!",
-    "build": "rm -rf assets && rm -f index.html && rm -f 404.html && rm -f 200.html && webpack --config build/webpack.prod.js",
+    "build": "rm -rf assets && rm -f index.html && rm -f 404.html && rm -f 200.html && webpack --config build/webpack.prod.js && node build/uglify.js",
     "dev": "node build/server.js"
   },
   "repository": {
@@ -33,6 +33,8 @@
     "vuex-router-sync": "^4.1.2"
   },
   "devDependencies": {
+    "commander": "^2.9.0",
+    "uglify-js": "3",
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
