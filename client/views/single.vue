@@ -1,11 +1,13 @@
 <style lang="sass" module>
 .container
-    margin-top   : 4em !important
-    margin-bottom: 4em !important
+    margin-top: 4em !important
+
+    padding-bottom: 4em !important
+    overflow-x    : hidden !important
 
     @media (max-width: 767px)
-        margin-top   : 1.5em !important
-        margin-bottom: 1.5em !important
+        margin-top    : 1.5em !important
+        padding-bottom: 1.5em !important
 
 .loader
     height: calc(100vh - 45px - 212px)
@@ -83,6 +85,9 @@
                     padding: 0 !important
                 td:empty:empty:empty:empty:empty:empty:empty
                     display: none !important
+
+.mainColumn
+    //overflow-x: hidden
 
 .disqusHeader
     margin-top: 3em !important
@@ -164,7 +169,7 @@
                             a.item(v-for="item in styles.items", :class="$style.listItem", :href="'#'+item.title", v-if="item.title", v-text="item.title")
 
                 //- 右側主要內容欄位
-                .sixteen.wide.mobile.column(:class="{'twelve wide computer': !docs.singleColumn, 'sixteen wide computer': docs.singleColumn}")
+                .sixteen.wide.mobile.column(:class="[{'twelve wide computer': !docs.singleColumn, 'sixteen wide computer': docs.singleColumn}, $style.mainColumn]")
                     //- 主要說明
                     template(v-if="docs.intro")
                         .ts.huge.dividing.header(:class="$style.introHeader") 說明
