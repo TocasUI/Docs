@@ -24,7 +24,7 @@ $ npm install
 ```bash
 $ npm run dev
 
-> tocasui-docs@2.3.0 dev /Users/YamiOdymel/Docs
+> tocasui-docs@2.3.1 dev /Users/YamiOdymel/Docs
 > node build/server.js
 
 【正位於 http://localhost:8080 監聽中】

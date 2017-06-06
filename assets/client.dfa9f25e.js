@@ -7690,7 +7690,7 @@ module.exports = {
 		{
 			"title": "捲動監聽",
 			"class": ".ts.scrollspy",
-			"link": "/modules/scrollspy/",
+			"link": "/modules/scrollspy/javascript/",
 			"description": "隨著捲軸的位置而啟用選單、清單內的特定項目。",
 			"symbol": "resize vertical"
 		}

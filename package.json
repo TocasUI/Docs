@@ -1,6 +1,6 @@
 {
   "name": "tocasui-docs",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "The Documentation for Tocas UI.",
   "main": "client/bootstrap.js",
   "scripts": {

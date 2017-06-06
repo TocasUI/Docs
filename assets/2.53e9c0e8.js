@@ -39,7 +39,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function() {
     return {
       backgroundPattern: `url(${__WEBPACK_IMPORTED_MODULE_2_images_backgrounds_pattern_png___default.a})`,
-      importCode: "<!-- Tocas UI：CSS 與元件 -->\n<link rel=\"stylesheet\" href=\"//cdn.rawgit.com/TeaMeow/TocasUI/2.3.0/dist/tocas.css\">\n<!-- Tocas JS：模塊與 JavaScript 函式 -->\n<script src=\"//cdn.rawgit.com/TeaMeow/TocasUI/2.3.0/dist/tocas.js\"><\/script>",
+      importCode: "<!-- Tocas UI：CSS 與元件 -->\n<link rel=\"stylesheet\" href=\"//cdn.rawgit.com/TeaMeow/TocasUI/2.3.1/dist/tocas.css\">\n<!-- Tocas JS：模塊與 JavaScript 函式 -->\n<script src=\"//cdn.rawgit.com/TeaMeow/TocasUI/2.3.1/dist/tocas.js\"><\/script>",
       buttonExample: "<div class=\"ts fluid buttons\">\n    <button class=\"ts button\">卡莉絲</button>\n    <button class=\"ts button\">亞凡芽</button>\n    <button class=\"ts warning button\">橙希</button>\n</div>",
       navExample: "<nav class=\"ts menu\">\n    <a class=\"header item\">商標</a>\n    <a class=\"active item\">首頁</a>\n    <a class=\"item\">特色</a>\n    <a class=\"item\">價格</a>\n    <a class=\"item\">關於</a>\n</nav>",
       navExampleBs: "<nav class=\"navbar navbar-light bg-faded\">\n    <a class=\"navbar-brand\">商標</a>\n    <ul class=\"nav navbar-nav\">\n        <li class=\"nav-item active\">\n            <a class=\"nav-link\">首頁</a>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\">特色</a>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\">價格</a>\n        </li>\n        <li class=\"nav-item\">\n            <a class=\"nav-link\">關於</a>\n        </li>\n    </ul>\n</nav>"
