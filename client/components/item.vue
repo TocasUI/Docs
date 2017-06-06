@@ -5,7 +5,7 @@
     color: #606060 !important
     margin-top: 4.5em !important
 
-    &:before
+    &:after
         content: ''
         position: absolute
         left: -45px
@@ -27,10 +27,13 @@
     font-size: 19px !important
     margin-top: 3em !important
 
-    &:before
+    &:after
         background: #c1c1c1
 
 .itemDescription > table
+    thead th
+        white-space: nowrap
+
     @media (max-width: 767px)
         tr
             padding: 0 !important
