@@ -76,6 +76,19 @@ styles:
               <li>紬木沙羅</li>
           </[[ul]]>
 
+  - category   : 狀態
+    description: 清單能夠有不同的狀態。
+    items      :
+
+      - title      : 已啟用
+        description: 清單的項目能夠呈現正在使用、已經啟用的狀態。
+        code       : |
+          <div class="ts segmented list">
+              <div class="item">以西結</div>
+              <div class="[[selected]] item">伊波咲</div>
+              <div class="item">栗宮希實</div>
+          </div>
+
   - category   : 內容
     description: 清單包含了各式各樣的內容。
     items      :
