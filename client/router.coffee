@@ -52,6 +52,7 @@ router = new Router
             '/modules/popup/javascript'
             '/modules/progress'
             '/modules/slider'
+            '/modules/slider/javascript'
             '/modules/sidebar'
             '/modules/sidebar/javascript'
             '/modules/embed'
@@ -62,6 +63,7 @@ router = new Router
             '/modules/tab/javascript'
             '/modules/contextmenu'
             '/modules/contextmenu/javascript'
+            '/modules/scrollspy/javascript'
 
             # 視圖型。
             '/views/speeches'
