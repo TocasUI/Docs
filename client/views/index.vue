@@ -9,7 +9,7 @@
 
         //- 主要板岩
         .ts.fluid.vertically.very.padded.slate(:class='$style.slate')
-            div(:class="$style.slate_background")
+            div(:class="$style.slate_background", :style="{background: backgroundPattern}")
 
             .ts.inverted.center.aligned.header(:class='$style.slate_header')
                 | Tocas UI 2.3
@@ -18,18 +18,15 @@
             //- 快速使用
             .ts.mini.top.attached.message(:class="$style.slate_importMessage")
                 | 現在開始試用！將下列程式碼複製並貼上於 HTML 中。
-            pre.ts.bottom.attached.padded.segment(:class="$style.slate_import")
-                code.html.hljs.escaped#import.
-                    &lt;!-- Tocas UI：CSS 與元件 --&gt;
-                    &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.rawgit.com/TeaMeow/TocasUI/latest/dist/tocas.css&quot;&gt;
-                    &lt;!-- Tocas JS：模塊與 JavaScript 函式 --&gt;
-                    &lt;script src=&quot;//cdn.rawgit.com/TeaMeow/TocasUI/latest/dist/tocas.js&quot;&gt;&lt;/script&gt;
+            div(:class="$style.slate_importWrapper")
+                pre.ts.attached.padded.segment(:class="$style.slate_import", html-code)
+                    code.html.hljs#import {{ importCode }}
                 button.ts.mini.circular.basic.inverted.positive.button(data-clipboard-target="#import")
                     i.copy.icon
                     | 複製
 
         //- 友情贊助
-        div(:class="$style.donators")
+        div.tablet.or.large.device.only(:class="$style.donators")
             .ts.center.aligned.narrow.container
                 strong 本網站由以下贊助者提供
                 .ts.relaxed.three.column.stackable.grid(:class="$style.donators_grid")
@@ -59,7 +56,7 @@
 
         //- 簡介大綱
         .ts.narrow.container(:class="$style.description")
-            .ts.relaxed.grid
+            .ts.stackable.relaxed.grid
                 //- 更有意義
                 .eight.wide.column
                     .ts.header(:class="$style.description_header") 更有意義
@@ -69,12 +66,8 @@
 
                 .eight.wide.column
                     .ts.header(:class="$style.description_demoHeader") HTML
-                    pre.ts.padded.segment(html-code).
-                        <div class="ts fluid buttons">
-                            <button class="ts button">卡莉絲</button>
-                            <button class="ts button">亞凡芽</button>
-                            <button class="ts warning button">橙希</button>
-                        </div>
+                    pre.ts.padded.segment(html-code)
+                        code.html.hljs#import {{ buttonExample }}
                     .ts.fluid.buttons
                         button.ts.button 卡莉絲
                         button.ts.button 亞凡芽
@@ -93,35 +86,13 @@
 
                 .eight.wide.column
                     .ts.header(:class="$style.description_compareHeader") Tocas UI
-                    pre.ts.padded.segment(html-code).
-                        <nav class="ts menu">
-                            <a class="header item">商標</a>
-                            <a class="active item">首頁</a>
-                            <a class="item">特色</a>
-                            <a class="item">價格</a>
-                            <a class="item">關於</a>
-                        </nav>
+                    pre.ts.padded.segment(html-code)
+                        code.html.hljs#import {{ navExample }}
 
                 .eight.wide.column
                     .ts.header(:class="$style.description_compareHeader") Bootstrap 4
                     pre.ts.padded.segment(html-code)
-                        <nav class="navbar navbar-light bg-faded">
-                            <a class="navbar-brand">商標</a>
-                            <ul class="nav navbar-nav">
-                                <li class="nav-item active">
-                                    <a class="nav-link">首頁</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">特色</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">價格</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">關於</a>
-                                </li>
-                            </ul>
-                        </nav>
+                        code.html.hljs#import {{ navExampleBs }}
 
         div(:class="$style.components")
             .ts.narrow.container
@@ -338,27 +309,75 @@
         docs-footer
 </template>
 
-<script>
+<script lang="coffee">
 import DocsFooter from 'components/footer'
 import DocsNavbar from 'components/navbar'
+import pattern    from 'images/backgrounds/pattern.png'
+import highlight  from 'client/highlight'
 
-export default {
-    name: 'Homepage',
-    mounted() {
-        var clipboard = new Clipboard('[data-clipboard-target="#import"]')
+export default
+    name   : 'Homepage'
+    data   : ->
+        backgroundPattern: "url(#{pattern})"
+        importCode:
+            """
+            <!-- Tocas UI：CSS 與元件 -->
+            <link rel="stylesheet" href="//cdn.rawgit.com/TeaMeow/TocasUI/2.3/dist/tocas.css">
+            <!-- Tocas JS：模塊與 JavaScript 函式 -->
+            <script src="//cdn.rawgit.com/TeaMeow/TocasUI/2.3/dist/tocas.js"><\/script>
+            """
+        buttonExample:
+            """
+            <div class="ts fluid buttons">
+                <button class="ts button">卡莉絲</button>
+                <button class="ts button">亞凡芽</button>
+                <button class="ts warning button">橙希</button>
+            </div>
+            """
+        navExample:
+            """
+            <nav class="ts menu">
+                <a class="header item">商標</a>
+                <a class="active item">首頁</a>
+                <a class="item">特色</a>
+                <a class="item">價格</a>
+                <a class="item">關於</a>
+            </nav>
+            """
+        navExampleBs:
+            """
+            <nav class="navbar navbar-light bg-faded">
+                <a class="navbar-brand">商標</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">特色</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">價格</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">關於</a>
+                    </li>
+                </ul>
+            </nav>
+            """
+    mounted: ->
+        clipboard = new Clipboard '[data-clipboard-target="#import"]'
 
-        clipboard.on('success', function(e) {
-            document.querySelectorAll('[data-clipboard-target="#import"]').forEach((el) => {
-                el.innerText = '已成功複製！'
+        clipboard.on 'success', (e) ->
+            document.querySelectorAll('[data-clipboard-target="#import"]').forEach (el) ->
+                el.innerText  = '已成功複製！'
                 el.className += ' disabled'
-            })
 
             e.clearSelection()
-        })
-    },
+
+        highlight()
+
     components: {
         DocsFooter,
         DocsNavbar
     }
-}
 </script>

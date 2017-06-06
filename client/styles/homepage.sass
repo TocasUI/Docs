@@ -7,20 +7,30 @@
     background: linear-gradient(180deg, #5fafe8 5%, #cde5f7) !important
     overflow: hidden
 
+    @media (max-width: 767px)
+        padding-left: 0 !important
+        padding-right: 0 !important
+        padding-top: 2em !important
+
 .slate_background
     position: absolute
     top: 0
     right: 0
     bottom: 0
     left: 0
-    background: url(http://i.imgur.com/Fk1Nsw1.png)
     opacity: 0.5
 
 .slate_header
     font-size: 5rem !important
 
+    @media (max-width: 767px)
+        font-size: 3rem !important
+
 .slate_subHeader
     font-size: 2rem !important
+
+    @media (max-width: 767px)
+        font-size: 1.5rem !important
 
 .slate_description
     display: block
@@ -37,6 +47,14 @@
     font-size: .9em !important
     z-index: 2
 
+    @media (max-width: 767px)
+        border-radius: 0 !important
+        margin-top: 2em !important
+
+.slate_importWrapper
+    width: 100%
+    max-width: 692px
+
 .slate_import
     width: 100%
     max-width: 692px
@@ -48,10 +66,17 @@
     padding-bottom: 6em !important
     z-index: 1
 
+    @media (max-width: 767px)
+        padding-bottom: 3em !important
+
 [data-clipboard-target="#import"]
     position: absolute !important
     right: 20px
     bottom: 20px
+    z-index: 1
+
+    @media (max-width: 767px)
+        display: none !important
 
 //
 // Donators
@@ -109,6 +134,9 @@
 .description
     padding-bottom: 6em
 
+    @media (max-width: 767px)
+        margin-top: 3rem !important
+
 .description_header
     color: #646464
     font-size: 2.143rem !important
@@ -122,6 +150,9 @@
 .description_compareHeader
     font-size: 1.815rem !important
     color: #646464
+
+    @media (max-width: 767px)
+        margin-top: 2rem !important
 
 .description_compareHeader
     margin-top: 1.2em !important
