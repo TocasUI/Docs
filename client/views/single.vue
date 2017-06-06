@@ -213,6 +213,14 @@ export default
     mounted: ->
         # 讀取 Disqus
         do ->
+            if document.querySelector('script[src="//tocas-ui.disqus.com/embed.js"]') isnt null
+                DISQUS.reset
+                    reload: true
+                    config: ->
+                        @page.identifier = location.pathname
+                        @page.url        = "#{location.origin}#{location.pathname}"
+                return
+
             d = document
             s = d.createElement 'script'
             s.src = '//tocas-ui.disqus.com/embed.js'

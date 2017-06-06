@@ -24,8 +24,7 @@ body, html
             router-view(style="height: 100%")
 </template>
 
-<script>
-export default {
-    name: 'Application'
-}
+<script lang="coffee">
+export default
+    name   : 'Application'
 </script>
