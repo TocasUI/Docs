@@ -18,13 +18,13 @@ module.exports = {
 					"title": "透過線上 CDN",
 					"type": "code",
 					"description": "這是項免費服務並且提供夠快的服務速度，這使你不需要下載 Tocas UI，只需要將下列標籤放置於 HTML 中的 <span class=\"ts horizontal label\">&lt;head&gt; .. &lt;/head&gt;</span> 處即可，\n      缺點是我們並不保證該伺服器會 100% 處於上線狀態。\n",
-					"code": "<link rel=\"stylesheet\" href=\"https://cdn.rawgit.com/TeaMeow/TocasUI/2.3/dist/tocas.min.css\">\n"
+					"code": "<link rel=\"stylesheet\" href=\"https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.0/dist/tocas.css\">\n"
 				},
 				{
 					"title": "自行下載 Tocas UI",
 					"type": "code",
 					"description": "你需要到 <a href=\"//github.com/TeaMeow/TocasUI\">我們的 Github 下載 Tocas UI</a>，然後取出其中的 <span class=\"ts horizontal label\">/dist</span> 資料夾，並像下面這樣引用 Tocas UI 檔案，如此的好處是你可以確保樣式不會因為遠端的伺服器離線而遺失。\n",
-					"code": "<link rel=\"stylesheet\" href=\"tocas-2.3.css\">\n"
+					"code": "<link rel=\"stylesheet\" href=\"tocas.css\">\n"
 				}
 			]
 		},
