@@ -527,6 +527,44 @@ styles:
               <a class="item">家具</a>
           </div>
 
+      - title      : 固定
+        description: 選單能夠固定在頁面的某一邊，這會固定在頁面而不是父容器。
+        code       : |
+          <div class="ts [[top fixed]] menu">
+              <a class="header item">首頁</a>
+              <a class="item">關於</a>
+              <a class="item">文件</a>
+          </div>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>「你相信有另一個世界嗎？」要是我當初沒有以為白音是在開玩笑就好了。警鈴響起，眼前的風景已不再，回過神來只聽見有人喊著我的名字。到底發生了什麼？她帶著我突破一道一道的門。以為終於能夠逃離這個地方，誰知道最後一扇卻是死亡之門。我真的很後悔。</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <div class="ts [[bottom fixed]] menu">
+              <a class="header item">首頁</a>
+              <a class="item">關於</a>
+              <a class="item">文件</a>
+          </div>
+
+      - subtitle   : 水平固定
+        description: 選單除了可以固定在螢幕的上下方外，還可以固定在左右邊。但我們建議你將選單設置為垂直選單才能夠得到最好的固定選單效果。
+        code       : |
+          <div class="ts [[left fixed]] vertical menu">
+              <a class="header item">首頁</a>
+              <a class="item">關於</a>
+              <a class="item">文件</a>
+          </div>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>但客戶端渲染不這麼做，取而代之的是詢問 index.html 來得知如果網址是 /hello/ 應該做什麼動作，這在 Github Pages 和 Surge 上遇到了一些小問題，那就是他們預設不吃這種方式，他們會直接告訴你 404 網頁找不到，因為他們會直接去尋找伺服器內有沒有這個檔案。</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <div class="ts [[right fixed]] vertical menu">
+              <a class="header item">首頁</a>
+              <a class="item">關於</a>
+              <a class="item">文件</a>
+          </div>
+
       - title      : 減少框線
         description: 選單也可以選擇不要有內部框線。
         code       : |
