@@ -137,7 +137,6 @@ import placeholderUser2 from 'images/image_placeholder_user2.png'
 import placeholderUser3 from 'images/image_placeholder_user3.png'
 import placeholderKaren from 'images/videos/karen.png'
 import placeholderVimeo from 'images/videos/vimeo.jpg'
-import 'assets/tocas.dev.js'
 
 export default
     name : 'Item'
