@@ -48,16 +48,35 @@
         bottom: 0.4rem
         left: 0.37rem
 
+    .ts.relaxed.grid:not(.three):not([class*="mobile reversed"]):not([class*="tablet reversed"]):not([class*="computer reversed"])  .column:not(.row):not(.grid):after
+        right: 0.8rem
+        left: 0.81rem
+
     .ts.relaxed.grid:not(.three)  .column:not(.row):not(.grid):after
         right: 0.75rem
         left: 0.8rem
 
+    .ts.grid
+        .stretched.column
+            justify-content: center
+            align-items: center
+        .stretched.column + .column
+            justify-content: center
+            align-items: center
 
     .ts.grid.two
         > .column:not(.row):not(.grid):first-child
             height: 5em
             background: transparent
             background-clip: content-box
+
+    //
+    // Menu
+    //
+
+    .ts.fixed.menu
+        position: absolute !important
+
 
     //
     // Contextmenu
