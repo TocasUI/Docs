@@ -42,7 +42,7 @@
         .ts.narrow.container.relaxed.grid(:class="$style.tabGird", v-if="this.$slots.tab")
             .large.device.only.four.wide.column
             .sixteen.wide.mobile.twelve.wide.computer.column
-                .ts.bottom.attached.tabbed.menu(:class="$style.tab")
+                .ts.bottom.attached.two.item.tabbed.menu(:class="$style.tab")
                     slot(name="tab")
 </template>
 
