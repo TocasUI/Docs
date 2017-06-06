@@ -25,7 +25,7 @@
             template(slot="description"): span(v-html="docs.slate.description")
 
         //- 元素卡片
-        docs-cards(:items="docs.items", :columns="docs.columns")
+        docs-cards(:items="docs.items", :columns="docs.columns", :isStackable="docs.isStackable")
 
         //- 頁腳
         docs-footer
