@@ -70,7 +70,7 @@ module.exports = {
 		{
 			"title": "註冊頁面",
 			"image": "https://examples.tocas-ui.com/screenshots/registration.png",
-			"link": "https://examples.tocas-ui.com/pages/registeration.html",
+			"link": "https://examples.tocas-ui.com/pages/registration.html",
 			"description": "基本的使用者註冊頁面，並要求性別、生日、暱稱⋯⋯等資訊。",
 			"symbol": "add user"
 		},
