@@ -120,36 +120,40 @@ import DocsFooter       from 'components/footer'
 import placeholderKaren from 'images/videos/karen.png'
 
 export default
-    name: 'Try'
-    data: ->
-        html: """
-            <!-- 標題 -->
-            <div class="ts large header">
-                <i class="top aligned smile icon"></i>
-                <div class="content">
-                    歡迎來到遊樂場！
-                    <div class="sub header">你可以編輯這裡的所有文字。</div>
+    name : 'Try'
+    props:
+        defaultHTML:
+            default:
+                """
+                <!-- 標題 -->
+                <div class="ts large header">
+                    <i class="top aligned smile icon"></i>
+                    <div class="content">
+                        歡迎來到遊樂場！
+                        <div class="sub header">你可以編輯這裡的所有文字。</div>
+                    </div>
                 </div>
-            </div>
-            <!-- / 標題 -->
+                <!-- / 標題 -->
 
-            <!-- 說明 -->
-            <p>透過上方的 <a href="https://ace.c9.io/">Ace Editor</a> 你能夠編輯 HTML 標籤，並開始嚐鮮試用 Tocas UI！而且有趣的是你所編輯的 HTML 標籤都會立即呈現在頁面的即時預覽上！</p>
-            <!-- / 說明 -->
+                <!-- 說明 -->
+                <p>透過上方的 <a href="https://ace.c9.io/">Ace Editor</a> 你能夠編輯 HTML 標籤，並開始嚐鮮試用 Tocas UI！而且有趣的是你所編輯的 HTML 標籤都會立即呈現在頁面的即時預覽上！</p>
+                <!-- / 說明 -->
 
-            <!-- 圖片 -->
-            <img class="ts centered big image" src="#{placeholderKaren}">
-            <!-- / 圖片 -->
+                <!-- 圖片 -->
+                <img class="ts centered big image" src="#{placeholderKaren}">
+                <!-- / 圖片 -->
 
-            <p>我們已經幫你讀取好最新的 Tocas UI 樣式庫了，接下來你要做的就是去文件中，抓幾個範例丟來這裡試試看。</p>
+                <p>我們已經幫你讀取好最新的 Tocas UI 樣式庫了，接下來你要做的就是去文件中，抓幾個範例丟來這裡試試看。</p>
 
-            <!-- 引言 -->
-            <div class="ts quote">
-                <p>天阿！這真是太夭壽讚了！這裡還能夠擺放引言元件！</p>
-                <cite>Tocas UI 作者如此說道</cite>
-            </div>
-            <!-- / 引言 -->
-        """
+                <!-- 引言 -->
+                <div class="ts quote">
+                    <p>天阿！這真是太夭壽讚了！這裡還能夠擺放引言元件！</p>
+                    <cite>Tocas UI 作者如此說道</cite>
+                </div>
+                <!-- / 引言 -->
+            """
+    data : ->
+        html       : @defaultHTML
         copied     : false
         hasHTML    : false
         twoColumns : true
@@ -177,9 +181,15 @@ export default
 
         new Clipboard '#share', text: ->
             content = encodeURI that.editor.getValue().replace(/(?:\r\n|\r|\n)/g, '\\n')
-            "https://#{location.host}#{location.pathname}?html=#{content}"
+            "#{location.protocol}//#{location.host}#{location.pathname}?html=#{content}"
 
     methods:
+        #
+        create: ->
+            @editor.setValue @defaultHTML
+            @html = @defaultHTML
+            window.history.pushState null, null, "#{location.protocol}//#{location.host}#{location.pathname}"
+
         # togglePreview 會切換預覽模式。
         togglePreview: ->
             if @code is false and !@preview is false
