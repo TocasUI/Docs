@@ -19,9 +19,9 @@
             .ts.mini.top.attached.message(:class="$style.slate_importMessage")
                 | 現在開始試用！將下列程式碼複製並貼上於 HTML 中。
             div(:class="$style.slate_importWrapper")
-                pre.ts.attached.padded.segment(:class="$style.slate_import", html-code)
-                    code.html.hljs#import {{ importCode }}
-                button.ts.mini.circular.basic.inverted.positive.button(data-clipboard-target="#import")
+                pre.ts.attached.padded.segment#import(:class="$style.slate_import", html-code)
+                    code.html.hljs {{ importCode }}
+                button.ts.mini.circular.basic.inverted.positive.button(data-clipboard-target="#import code")
                     i.copy.icon
                     | 複製
 
@@ -174,7 +174,7 @@
 
                         //- 按鈕群組
                         .ts.header 按鈕群組
-                        .ts.fluid.buttons
+                        .ts.fluid.separated.buttons
                             button.ts.button 預設
                             button.ts.warning.button 警告
                             button.ts.negative.button 錯誤
@@ -365,10 +365,10 @@ export default
             </nav>
             """
     mounted: ->
-        clipboard = new Clipboard '[data-clipboard-target="#import"]'
+        clipboard = new Clipboard '[data-clipboard-target="#import code"]'
 
         clipboard.on 'success', (e) ->
-            document.querySelectorAll('[data-clipboard-target="#import"]').forEach (el) ->
+            document.querySelectorAll('[data-clipboard-target="#import code"]').forEach (el) ->
                 el.innerText  = '已成功複製！'
                 el.className += ' disabled'
 
