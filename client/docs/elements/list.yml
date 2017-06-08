@@ -56,10 +56,9 @@ styles:
         description: 清單也可以是存放許多連結的地方。
         code       : |
           <div class="ts [[link]] list">
-              <div class="active item">首頁</div>
+              <a class="item">首頁</a>
               <a class="item">關於</a>
               <a class="item">工作</a>
-              <a class="item">團隊</a>
           </div>
 
       - title      : 簡化
@@ -80,8 +79,8 @@ styles:
     description: 清單能夠有不同的狀態。
     items      :
 
-      - title      : 已啟用
-        description: 清單的項目能夠呈現正在使用、已經啟用的狀態。
+      - title      : 已選擇
+        description: 清單的項目能夠呈現被選擇的樣子。
         code       : |
           <div class="ts segmented list">
               <div class="item">以西結</div>
