@@ -29,6 +29,11 @@ styles:
           <button class="ts [[positive]] button">肯定</button>
           <button class="ts [[negative]] button">否定</button>
 
+      - title      : 次等的
+        description: 一個次等的按鈕的背景預設是白色的，令其較不顯眼。
+        code       : |
+          <button class="ts [[secondary]] button">次等</button>
+
       - title      : 偏見
         description: 讓按鈕以背景顏色作為基礎，並以此產生深、暗差異的偏見。
         code       : |
