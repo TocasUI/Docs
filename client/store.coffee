@@ -116,7 +116,7 @@ actions =
                 require ['docs/modules/progress'], r
             when '/modules/slider/'
                 require ['docs/modules/slider'], r
-            when '/modules/slider/javascript'
+            when '/modules/slider/javascript/'
                 require ['docs/modules/slider-js'], r
             when '/modules/sidebar/'
                 require ['docs/modules/sidebar'], r
