@@ -112,15 +112,21 @@ mark > .hljs-tag > .hljs-name
         .ts.segments(v-if="item.code || item.css", :class="$style.demo")
             //- 實際範例
             .ts.padded.clearing.segment(demo, v-if="item.type != 'code'", v-html="code", :class="demoSegment")
-            //- 程式碼區塊
-            .ts.secondary.padded.segment(v-show="sourcing || item.type == 'code'")
+            //- HTML 固定區塊
+            .ts.secondary.padded.segment(v-show="item.type == 'code' && item.code != null", v-if="item.code != null")
+                pre(:html-code="item.code != null", v-text="item.code", :class="$style.code")
+            //- CSS 固定區塊
+            .ts.secondary.padded.segment(v-show="item.type == 'code' && item.css != null", v-if="item.css != null")
+                pre(:css-code="item.css != null", v-text="item.css", :class="$style.code")
+            //- 預設程式碼區塊
+            .ts.secondary.padded.segment(v-show="sourcing", v-if="item.type != 'code'")
                 pre(:html-code="item.code != null", :css-code="item.css != null", v-text="item.css ? item.css : item.code", :class="$style.code")
 
         //- JavaScript 區塊
         .ts.header(:class="$style.itemSubHeader", v-if="item.javascript")
             | JavaScript
             //- 執行按鈕
-            button.ts.inverted.right.floated.icon.labeled.button(v-if="!item.autoExecute", :class="$style.itemSourceButton", @click="execute")
+            button.ts.inverted.right.floated.icon.labeled.button(v-if="!item.autoExecute && !item.notExecutable", :class="$style.itemSourceButton", @click="execute")
                 i.bug.icon
                 | 執行
         //- 程式碼區塊
