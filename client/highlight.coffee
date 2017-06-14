@@ -18,7 +18,7 @@ export default ->
                 beautified     = js_beautify(unescaped)
                 code.className = 'hljs javascript'
             else if isCSS
-                beautified     = css_beautify(unescaped)
+                beautified     = css_beautify(unescaped, {newline_between_rules: false, selector_separator_newline: false})
                 code.className = 'hljs css'
             else
                 beautified     = html_beautify(unescaped)
