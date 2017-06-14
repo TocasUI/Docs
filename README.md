@@ -89,17 +89,17 @@ styles:
       <img src="!-user-!">
 ```
 
-## Translation Note
+## Translating Note
 
-The translation files are under the `client/docs/langages/` directory, find your own language and translate it :D. Here're the things that you sure care about while translating the files.
+The translation files are under the `client/docs/langages/` directory, find your own language and translate it :D. Here're the things that you should care about while translating the files.
 
 1. Replace it with bullshit when it's bullshit.
 
    (When the words are not telling a story, replace it with your own bullshit.)
 
-2. Translate when the words has meaning.
+2. Translate it when the word has meaning.
 
-   (Translate it when the words are telling something meaningful, or a tutorial.)
+   (Translate them when the words are telling something meaningful, or a tutorial.)
 
 3. Don't hard-translate it when it's a "meme".
 
