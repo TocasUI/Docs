@@ -104,3 +104,6 @@ The translation files are under the `client/docs/langages/` directory, find your
 3. Don't hard-translate it when it's a "meme".
 
    (Try to replace the joke with the jokes which were borned in your country.)
+
+4. The file format is based on YAML, be careful about the indents.
+   (2 spaces for YAML, 4 spaces for the CSS, HTML, JavaScript in the YAML.)
