@@ -34,7 +34,7 @@
 
             //- 右側選單
             .right.menu
-                a.item
+                //-a.item
                     span(:class="$style.languageDefault")
                         i.globe.icon
                         | Languages
@@ -48,12 +48,12 @@ export default
         isHomepage:
             default: false
     mounted: ->
-        that = @
-        setTimeout ->
-            document.querySelector(".#{that.$style.languageDefault}").setAttribute("disabled", "disabled")
-            setTimeout ->
-                document.querySelector(".#{that.$style.languageDefault}").innerHTML = "<i class='globe icon'></i> 正體中文（台灣）"
-                document.querySelector(".#{that.$style.languageDefault}").removeAttribute("disabled")
-            , 600
-        , 1000
+        #that = @
+        #setTimeout ->
+        #    document.querySelector(".#{that.$style.languageDefault}").setAttribute("disabled", "disabled")
+        #    setTimeout ->
+        #        document.querySelector(".#{that.$style.languageDefault}").innerHTML = "<i class='globe icon'></i> 正體中文（台灣）"
+        #        document.querySelector(".#{that.$style.languageDefault}").removeAttribute("disabled")
+        #    , 600
+        #, 1000
 </script>
