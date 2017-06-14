@@ -88,3 +88,19 @@ styles:
       </button>
       <img src="!-user-!">
 ```
+
+## Translation Note
+
+The translation files are under the `client/docs/langages/` directory, find your own language and translate it :D. Here're the things that you sure care about while translating the files.
+
+1. Replace it with bullshit when it's bullshit.
+
+   (When the words are not telling a story, replace it with your own bullshit.)
+
+2. Translate when the words has meaning.
+
+   (Translate it when the words are telling something meaningful, or a tutorial.)
+
+3. Don't hard-translate it when it's a "meme".
+
+   (Try to replace the joke with the jokes which were borned in your country.)
