@@ -225,6 +225,12 @@ styles:
               <button class="ts {{button}}">搜尋</button>
           </div>
           <br><br>
+          <div class="ts labeled [[action]] input">
+              <div class="ts basic label">@</div>
+              <input type="text">
+              <button class="ts button">送出</button>
+          </div>
+          <br><br>
           <div class="ts [[left action]] input">
               <button class="ts primary labeled icon {{button}}">
                   <i class="cart icon"></i>
