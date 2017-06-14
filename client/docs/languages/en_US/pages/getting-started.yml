@@ -12,10 +12,9 @@ styles:
       - title      : 透過線上 CDN
         type       : code
         description: |
-          這是項免費服務並且提供夠快的服務速度，這使你不需要下載 Tocas UI，只需要將下列標籤放置於 HTML 中的 <span class="ts horizontal label">&lt;head&gt; .. &lt;/head&gt;</span> 處即可，
-                缺點是我們並不保證該伺服器會 100% 處於上線狀態。
+          這是由一家知名 CDN 公司 <a href="https://www.cloudflare.com">CloudFlare</a> 所提供的免費服務並且提供夠快的服務速度，這使你不需要下載 Tocas UI，只需要將下列標籤放置於 HTML 中的 <span class="ts horizontal label">&lt;head&gt; .. &lt;/head&gt;</span> 處即可，且該公司提供可靠的上線時間令你毋須擔心。
         code       : |
-          <link rel="stylesheet" href="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.1/dist/tocas.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.2/tocas.css">
 
       - title      : 自行下載 Tocas UI
         type       : code
@@ -109,3 +108,137 @@ styles:
       - title      : Tachyons
         description: |
           Tachyons 並沒有「元件觀念」，這意味著你將需要透過 Tachyons 內建的輔助樣式自行建立需要的元件，Tachyons 在樣式命名上有著與 Bootstrap 一樣厭垢並且更難以令人捉摸的問題，如 <span class="ts horizontal label">mr3</span> 但其實是 <span class="ts horizontal label">margin-right: 1rem;</span>，並且在元素上使用過多的樣式如：<span class="ts horizontal label">fw6 f3 f2-ns lh-title mt0 mb3</span>，這些都將導致未來整合有所困難，同時也意味著當你需要重複使用元件時，你的原始碼大小也會急劇地增加。
+
+  - category   : 撰寫與命名規範
+    description: |
+      除了你不曉得怎麼實踐的程式外，其次最難的不外乎就是「命名」。通常使用其他的介面框架都不會有如此的規範。但我們在這裡希望你能夠遵循 Tocas UI 的命名精神，來讓頁面上的樣式名稱不再那麼混亂。
+    items      :
+
+      - title      : 名稱
+        description: 元素的名稱不可帶有底線或減號，以<a href="https://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB" target="_blank">小駝峰式命名法</a>為主，就像是命名程式變數，這令元素名稱能夠良好地符合普遍 JavaScript 程式。
+        type       : code
+        code       : |
+          <!-- ✖ 別這樣 -->
+          <div id="large-jumbotron"></div>
+
+          <!-- ✓ 請這麼做 -->
+          <div id="largeJumbotron"></div>
+
+        css: |
+          #largeJumbotron {}
+
+      - title      : 區塊／容器
+        description: 區塊的樣式名稱不應有任何符號，或者是大小寫，在這裡僅用空白區隔，就像是你直接稱呼元素那樣地輕切，透過這種用法還能令你更加地彈性化設計樣式。
+        type       : code
+        code       : |
+          <!-- ✖ 別這樣 -->
+          <div class="blk-container"></div>
+
+          <!-- ✓ 請這麼做 -->
+          <div class="block container"></div>
+
+        css: |
+          .container {}
+          .block.container {}
+
+      - title      : 元素
+        type       : code
+        description: 元素的樣式名稱和區塊的命名方式相同。
+        code       : |
+          <!-- ✖ 別這樣 -->
+          <div class="blk-container">
+              <div class="single-blk"></div>
+          </div>
+
+          <!-- ✓ 請這麼做 -->
+          <div class="block container">
+              <div class="single block"></div>
+          </div>
+        css: |
+          .block.container .single.block {}
+
+      - title      : 子項目
+        type       : code
+        description: 當元素是某個合集（如：清單、選單、導航列）的項目時，沒有必要重新聲明這個項目屬於誰，這能夠大幅度減少 HTML 的重複與混濁度。
+        code       : |
+          <!-- ✖ 別這樣 -->
+          <div class="menu menu-lg">
+              <div class="menu-item menu-active"></div>
+              <div class="menu-item"></div>
+              <div class="menu-item"></div>
+          </div>
+
+          <!-- ✓ 請這麼做 -->
+          <div class="large menu">
+              <div class="active item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+          </div>
+        css: |
+          .menu {}
+          .menu .item {}
+          .menu .item.active {}
+
+      - title      : 語意而不是顏色
+        description: |
+          <p>頁面上不應該充滿一堆顏色，請記住一點：「當所有事情都被凸顯，所有事情都將顯得不重要。」，為此 Tocas UI 中也沒有顏色樣式，因為語意才是最重要的，將顏色以語意命名，能夠限制你所使用的方式、避免濫用且導向正軌。</p>
+          <p>透過「負面的」、「警告的」來命名顏色，而不是「紅色」、「黃色」，這令你能夠替換樣式佈景的時候而不會因為改了顏色卻繼續使用像「黃色」這種制式名稱而有所不符。</p>
+        type       : code
+        code       : |
+          <!-- ✖ 別這樣 -->
+          <button class="red button"></button>
+          <button class="yellow button"></button>
+
+          <!-- ✓ 請這麼做 -->
+          <button class="negative button"></button>
+          <button class="warning button"></button>
+
+        css: |
+          .negative.button {}
+          .warning.button {}
+
+      - title      : 修飾詞
+        type       : code
+        description: <p>以樣式修飾一個元素的顏色、大小、外觀時和先前的區塊與元素命名方式皆相同且不可是縮寫，以避免你在忘記過往是如何縮寫的。</p><p>簡單來說：小的（small）不可以被縮寫成（sm）；如果有兩個單字仍以空白隔開，例如：向左浮動（left floated）。</p>
+        code       : |
+          <!-- ✖ 別這樣 -->
+          <div class="continer continer-lg">
+              <div class="picture picture-sm"></div>
+              <button class="btn btn-lf"></button>
+          </div>
+
+          <!-- ✓ 請這麼做 -->
+          <div class="large container">
+              <div class="small picutre"></div>
+              <button class="left floated button"></button>
+          </div>
+        css: |
+          .large.container {}
+          .large.container .small.picture {}
+          .large.container [class*="left floated"].button {}
+
+      - title      : 其他用途
+        type       : code
+        description: |
+          有時候你會為了專門給 jQuery 或者 JavaScript 而另外命名了像是 <span class="ts label">js-reply-btn</span>，這通常是設計不良所導致的，但如果你真的沒辦法的話，在這裡我們則是建議和先前的命名方式一樣，但最前方加上減號。
+        code       : |
+          <!-- ✖ 別這樣 -->
+          <div class="cts">
+              <div class="single-ct">
+                  <button class="btn btn-lg js-main-reply-btn"></button>
+              </div>
+          </div>
+
+          <!-- ✓ 請這麼做 -->
+          <div class="comments">
+              <div class="single comment">
+                  <button class="large -main -reply button"></button>
+              </div>
+          </div>
+        css: |
+          .comments {}
+          .comments .single.comment {}
+          .comments .single.comment .large.button {}
+        javascript: |
+          $("-main.-reply.button").show()
+        notExecutable: true

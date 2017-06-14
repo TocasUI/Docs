@@ -1,12 +1,12 @@
 slate:
-  title      : Breadcrumb
+  title      : 麵包屑
   description: 留下導覽的痕跡。
 
 styles:
-  - category   : Types
+  - category   : 種類
     description: 在這裡瀏覽麵包屑的種類。
     items      :
-      - title      : Breadcrumb
+      - title      : 麵包屑
         description: 最基本的麵包屑。
         code       : |
           <div class="ts [[breadcrumb]]">
@@ -17,7 +17,7 @@ styles:
               <div class="active section">T-Shirt</div>
           </div>
 
-      - title      : Icon Divided
+      - title      : 圖示分隔
         description: 麵包屑也能夠由圖示來當做分隔線。
         code       : |
           <div class="ts [[breadcrumb]]">
@@ -28,11 +28,11 @@ styles:
               <div class="active section">T-Shirt</div>
           </div>
 
-  - category   : Contents
+  - category   : 內容
     description: 麵包屑由不同的內容所組成。
     items      :
 
-      - title      : Divider
+      - title      : 分隔線
         description: 麵包屑可以帶有分隔線來表示其中的關係，這個分隔線可以是文字或是圖示。
         remove     : <br><br>
         code       : |
@@ -52,7 +52,7 @@ styles:
               <div class="active section">個人資料</div>
           </div>
 
-      - title      : Section
+      - title      : 區塊
         description: 麵包屑可以包含區塊，能夠是連結或是純文字。
         code       : |
           <div class="ts breadcrumb">
@@ -61,7 +61,7 @@ styles:
               <div class="active [[section]]">搜尋</div>
           </div>
 
-      - title      : Link
+      - title      : 連結
         description: 區塊可以是連結，或者帶有連結文字。
         code       : |
           <div class="ts breadcrumb">
@@ -70,11 +70,11 @@ styles:
               <div class="active section">搜尋：<a href="#">衛生紙</a></div>
           </div>
 
-  - category   : Status
+  - category   : 狀態
     description: 麵包屑有不同的狀態。
     items      :
 
-      - title   : Active
+      - title   : 已啟用
         description: 區塊可以表現出一個已被啟用的狀態。
         code       : |
           <div class="ts breadcrumb">
@@ -83,11 +83,11 @@ styles:
               <div class="[[active]] section">衛生紙</div>
           </div>
 
-  - category   : Variations
+  - category   : 外觀
     description: 麵包屑有著不同的外觀點綴。
     items      :
 
-      - title      : Sizes
+      - title      : 尺寸
         description: 麵包屑有不同的尺寸可供選擇。
         code       : |
           <div class="ts [[mini]] breadcrumb">
