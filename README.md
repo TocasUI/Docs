@@ -106,4 +106,9 @@ The translation files are under the `client/docs/langages/` directory, find your
    (Try to replace the joke with the jokes which were borned in your country.)
 
 4. The file format is based on YAML, be careful about the indents.
+
    (2 spaces for YAML, 4 spaces for the CSS, HTML, JavaScript in the YAML.)
+
+5. Send the Pull Request when you're done with a chapter.
+
+   (You don't have to finish it all to send the Pull Request, just send it whenever you want.)
