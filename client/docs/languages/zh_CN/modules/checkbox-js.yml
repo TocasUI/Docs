@@ -1,0 +1,24 @@
+slate:
+  title      : 复选框
+  description: 好的。
+
+tabs:
+  - type  : styles
+    to    : /modules/checkbox/
+  - type  : javascript
+    to    : /modules/checkbox/javascript/
+
+styles:
+  - category   : JavaScript
+    description: 复选框有提供可用的 JavaScript 模块。
+    items      :
+      - title      : 简单
+        description: 你可以使用 JavaScript 来省去撰写 <span class="ts horizontal label">[id=""]</span> 和 <span class="ts horizontal label">[for=""]</span> 的困扰。
+        code       : |
+          <div class="ts checkbox">
+              <input type="checkbox">
+              <label>第三性</label>
+          </div>
+        javascript: |
+          ts('.ts.checkbox').checkbox();
+        autoExecute: true

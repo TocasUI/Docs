@@ -1,0 +1,651 @@
+slate:
+  title      : 窗体
+  description: 以最有条理的方式送出数据。
+
+intro: |
+  <p>窗体也具有网格系统，对于这部分并不熟悉的使用者还请参阅网格系统的教学。</p>
+  <p>这个组件的设计很自由化，因此使用方式可能对初心者来说过度复杂，可以参考实际范例中的注册页面。</p>
+
+styles:
+  - category   : 种类
+    description: 窗体有不同的种类。
+    items      :
+      - title      : 基本
+        description: 最普通的窗体。
+        remove     : <br><br>
+        code       : |
+          <form class="ts [[form]]">
+              <div class="field">
+                  <label>姓氏</label>
+                  <input type="text">
+              </div>
+              <div class="field">
+                  <label>名字</label>
+                  <input type="text">
+              </div>
+              <div class="field">
+                  <div class="ts {{checkbox}}">
+                      <input id="agree" type="checkbox">
+                      <label for="agree">我同意伊繁星最高协议。</label>
+                  </div>
+              </div>
+              <button class="ts {{button}}">送出</button>
+          </form>
+          <br><br>
+          <form class="ts [[form]]">
+              <div class="ts dividing {{header}}">结账信息</div>
+              <div class="field">
+                  <label>真实姓名</label>
+                  <div class="two fields">
+                      <div class="field">
+                          <input type="text" placeholder="姓氏">
+                      </div>
+                      <div class="field">
+                          <input type="text" placeholder="名字">
+                      </div>
+                  </div>
+              </div>
+              <div class="field">
+                  <label>账单地址</label>
+                  <div class="fields">
+                      <div class="twelve wide field">
+                          <input type="text" placeholder="道路地址">
+                      </div>
+                      <div class="four wide field">
+                          <input type="text" placeholder="县市名称">
+                      </div>
+                  </div>
+              </div>
+              <button class="ts {{button}}">送出</button>
+          </form>
+
+      - title      : 水平窗体
+        description: 窗体可以切分成两栏并且水平排列每个字段。
+        code       : |
+          <div class="ts [[horizontal]] form">
+              <div class="field">
+                  <label>真实姓名</label>
+                  <input type="text">
+              </div>
+              <div class="field">
+                  <label>自我介绍</label>
+                  <textarea rows="4"></textarea>
+              </div>
+              <div class="field">
+                  <label>性别</label>
+                  <div class="ts checkboxes">
+                      <div class="ts radio checkbox">
+                          <input id="firstMale" type="radio" name="firstGender">
+                          <label for="firstMale">男性</label>
+                      </div>
+                      <div class="ts radio checkbox">
+                          <input id="firstFemale" type="radio" name="firstGender">
+                          <label for="firstFemale">女性</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 窗体内可以有许多不同种类的内容、字段。
+    items      :
+
+      - title      : 字段
+        description: 字段是组成窗体的最基本元素，而其中可以带有标签用以命名该字段。
+        code       : |
+          <div class="ts form">
+              <div class="[[field]]">
+                  <label>使用者输入字段</label>
+                  <input type="text">
+              </div>
+          </div>
+
+      - title      : 提醒
+        description: 字段中可以新增提醒字符串。
+        code       : |
+          <div class="ts form">
+              <div class="field">
+                  <label>账号</label>
+                  <input type="text">
+                  <[[small]]>你未来将无法更改这项设定。</[[small]]>
+              </div>
+          </div>
+
+      - title      : 文字讯息
+        description: 但文字讯息会随着字段状态而变更颜色。且比起提醒，文字讯息也稍微大了一点，可用做错误、警告提示。
+        code       : |
+          <div class="ts form">
+              <div class="error field">
+                  <label>账号</label>
+                  <input type="text">
+                  <span class="[[message]]">不好了，这个账号已经被抢先使用！</span>
+                  <small>你未来将无法更改这项设定。</small>
+              </div>
+              <div class="field">
+                  <label>昵称</label>
+                  <input type="text">
+                  <span class="[[message]]">找个适合你且不与他人重复的昵称吧！</span>
+                  <small>昵称的长度需在 6 到 32 个字之间。</small>
+              </div>
+          </div>
+
+      - title      : 字段群组
+        description: 多个字段可以被规划成群组，并自动均分宽度，在行动装置上将会缩成一行。
+        code       : |
+          <div class="ts form">
+              <div class="[[fields]]">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>中间名</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 文本块
+        description: 你可以在窗体内放入文本块的字段，搭配 HTML5 原生的 <span class="ts horizontal label">rows</span> 可以指定文本块的预设高度。
+        code       : |
+          <div class="ts form">
+              <div class="field">
+                  <label>长篇文章</label>
+                  <[[textarea]]></[[textarea]]>
+              </div>
+              <div class="field">
+                  <label>指定五行高度</label>
+                  <[[textarea]] rows="5"></[[textarea]]>
+              </div>
+              <div class="resizable field">
+                  <label>自由伸缩</label>
+                  <[[textarea]]></[[textarea]]>
+              </div>
+          </div>
+
+      - title      : 复选框
+        description: 你也可以将复选框做成一个字段来使用。如果你希望省去 <span class="ts horizontal label">[id=""]</span> 和 <span class="ts horizontal label">[for=""]</span> 的困扰，
+            那么你可以参考<a href="/modules/checkbox">复选框章节</a>。
+        code       : |
+          <div class="ts form">
+              <div class="field">
+                  <div class="ts [[checkbox]]">
+                      <input id="adult" type="checkbox">
+                      <label for="adult">我已满 18 岁。</label>
+                  </div>
+              </div>
+              <div class="field">
+                  <div class="ts [[checkbox]]">
+                      <input id="thirty" type="checkbox">
+                      <label for="thirty">我有 30 公分。</label>
+                  </div>
+              </div>
+              <div class="field">
+                  <div class="ts [[toggle]] [[checkbox]]">
+                      <input id="fastCharging" type="checkbox">
+                      <label for="fastCharging" >开启快速充电。</label>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 单选复选框
+        description: 理所当然地，单选复选框也能够是字段。
+        code       : |
+          <div class="ts form">
+              <div class="field">
+                  <label>您最喜爱的食物？</label>
+                  <div class="ts compact horizontal [[checkboxes]]">
+                      <div class="ts [[radio]] checkbox">
+                          <input id="mango" type="radio" name="fruits">
+                          <label for="mango">芒果</label>
+                      </div>
+                      <div class="ts [[radio]] checkbox">
+                          <input id="apple" type="radio" name="fruits">
+                          <label for="apple">苹果</label>
+                      </div>
+                      <div class="ts [[radio]] checkbox">
+                          <input id="guava" type="radio" name="fruits">
+                          <label for="guava">番石榴</label>
+                      </div>
+                  </div>
+              </div>
+              <div class="field">
+                  <label>您最常搭乘的交通工具？</label>
+                  <div class="ts [[checkboxes]]">
+                      <div class="ts [[radio]] checkbox">
+                          <input id="bus" type="radio" name="traffic">
+                          <label for="bus">公交车</label>
+                      </div>
+                      <div class="ts [[radio]] checkbox">
+                          <input id="motor" type="radio" name="traffic">
+                          <label for="motor">机车</label>
+                      </div>
+                      <div class="ts [[radio]] checkbox">
+                          <input id="walk" type="radio" name="traffic">
+                          <label for="walk">步行</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 下拉式选单
+        description: 你也能够在字段中放入下拉式选单。
+        code       : |
+          <div class="ts form">
+              <div class="field">
+                  <label>您所使用的系统版本为何？</label>
+                  <[[select]]>
+                      <option>macOS</option>
+                      <option>Windows</option>
+                      <option>Linux</option>
+                  </[[select]]>
+              </div>
+          </div>
+
+      - title      : 讯息组件
+        description: 别忘记，你还可以在窗体中带入讯息组件。
+        code       : |
+          <div class="ts form">
+              <div class="ts [[message]]">
+                  <div class="header">不好了！</div>
+                  <ul class="ts {{list}}">
+                      <li>请输入您的姓氏。</li>
+                      <li>请输入您的名字。</li>
+                  </ul>
+              </div>
+          </div>
+
+  - category   : 状态
+    description: 窗体具有不同性质的状态。
+    items      :
+
+      - title      : 读取中
+        description: 窗体可以出现一个读取指示器告诉使用者正在进行读取。
+        code       : |
+          <div class="ts [[loading]] form">
+              <div class="field">
+                  <label>电子邮件地址</label>
+                  <input type="email">
+              </div>
+              <div class="ts submit {{button}}">送出</div>
+          </div>
+
+      - title      : 字段错误
+        description: 窗体中的字段可以呈现为一个错误状态。
+        code       : |
+          <div class="ts form">
+              <div class="two fields">
+                  <div class="field [[error]]">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+              <div class="field [[error]]">
+                <label>性别</label>
+                <select>
+                      <option>男性</option>
+                      <option>女性</option>
+                      <option>第三性</option>
+                </select>
+              </div>
+              <div class="inline field [[error]]">
+                  <div class="ts {{checkbox}}">
+                      <input id="agree2" type="checkbox">
+                      <label for="agree2">我同意伊繁星最高协议。</label>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 字段成功
+        description: 字段也可以呈现为一个成功状态。
+        code       : |
+          <div class="ts form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field [[success]]">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 字段警告
+        description: 你也可以让字段呈现一个警告的状态。
+        code       : |
+          <div class="ts form">
+              <div class="two fields">
+                  <div class="field [[warning]]">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 基本字段语意
+        description: 字段的状态表现方式可以更加的简洁、基本化。
+        code       : |
+          <div class="ts form">
+              <div class="field [[basic]] success">
+                  <label>姓氏</label>
+                  <input type="text">
+              </div>
+              <div class="field [[basic]] warning">
+                  <label>名字</label>
+                  <input type="text">
+              </div>
+              <div class="field [[basic]] error">
+                  <label>电子邮件地址</label>
+                  <input type="text">
+              </div>
+          </div>
+
+      - title      : 停用字段
+        description: 字段可以呈现一个已经被停用、不可用的状态。
+        code       : |
+          <div class="ts form">
+              <div class="two fields">
+                  <div class="[[disabled]] field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="[[disabled]] field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+
+  - category   : 窗体外观
+    description: 你可以点缀窗体的外观。
+    items      :
+
+      - title      : 尺寸
+        description: 窗体可以有不同的尺寸。
+        code       : |
+          <div class="ts [[mini]] form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[tiny]] form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[small]] form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[medium]] form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[large]] form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[big]] form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[huge]] form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[massive]] form">
+              <div class="two fields">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+
+  - category   : 字段外观
+    description: 字段也具有不同的外观。
+    items      :
+
+      - title      : 同行字段
+        description: 字段和标签可以是同一行的。
+        code       : |
+          <div class="ts form">
+              <div class="[[inline]] field">
+                <label>名字</label>
+                <input type="text" placeholder="全名">
+              </div>
+          </div>
+
+      - title      : 网格宽度
+        description: 字段的宽度也可以用网格系统来划分。
+        code       : |
+          <div class="ts form">
+              <div class="fields">
+                  <div class="[[seven wide]] field">
+                      <label>电子信箱地址</label>
+                      <input type="text">
+                  </div>
+                  <div class="[[four wide]] field">
+                      <label>真实姓名</label>
+                      <input type="text">
+                  </div>
+                  <div class="[[five wide]] field">
+                      <label>昵称</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 必填
+        description: 字段可以显示一个必填的样式。
+        code       : |
+          <div class="ts form">
+              <div class="[[required]] field">
+                  <label>使用者输入字段</label>
+                  <input type="text">
+              </div>
+              <div class="[[required]] field">
+                  <div class="ts {{checkbox}}">
+                      <input id="agree3" type="checkbox">
+                      <label for="agree3">我同意伊繁星最高协议。</label>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 群组组织
+    description: 透过 <span class="ts horizontal label">&lt;fieldset&gt;</span> 标签你可以包覆一个字段群组，并凸显、说明其群组的用意。
+    items      :
+
+      - title      : 基本组织
+        description: 一个最基本的群组组织。
+        code       : |
+          <div class="ts form">
+              <div class="fields">
+                  <div class="field">
+                      <label>申办人姓名</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>监护人姓名</label>
+                      <input type="text">
+                  </div>
+              </div>
+              <[[fieldset]]>
+                <[[legend]]>机密资料</[[legend]]>
+                <div class="fields">
+                    <div class="field">
+                        <label>信用卡卡号</label>
+                        <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx">
+                    </div>
+                    <div class="field">
+                        <label>到期日</label>
+                        <input type="text" placeholder="月月/年年">
+                    </div>
+                    <div class="field">
+                        <label>安全码</label>
+                        <input type="text">
+                    </div>
+                </div>
+              </[[fieldset]]>
+          </div>
+
+      - title      : 组织语气
+        description: 不同的发音语气也可以用在字段组织上，用以呈现需注意的地方。
+        code       : |
+          <div class="ts form">
+              <fieldset class="[[secondary]]">
+                <div class="fields">
+                    <div class="field">
+                        <label>昵称</label>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <label>账号</label>
+                        <input type="text">
+                    </div>
+                </div>
+              </fieldset>
+              <fieldset class="[[tertiary]]">
+                <legend>选填资料</legend>
+                <div class="fields">
+                    <div class="field">
+                        <input type="text" placeholder="住址">
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="兴趣">
+                    </div>
+                </div>
+              </fieldset>
+          </div>
+
+  - category   : 群组外观
+    description: 群组也具有不同的外观。
+    items      :
+
+      - title      : 平均划分
+        description: 群组中的字段宽度可以被平均划分，从 <span class="ts horizontal label">one</span> 至 <span class="ts horizontal label">ten</span>。
+        code       : |
+          <div class="ts form">
+              <div class="[[four fields]]">
+                  <div class="field">
+                      <label>姓氏</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>中间名</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>名字</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>昵称</label>
+                      <input type="text">
+                  </div>
+              </div>
+              <div class="[[three fields]]">
+                  <div class="field">
+                      <label>账号</label>
+                      <input type="text">
+                  </div>
+                  <div class="field">
+                      <label>密码</label>
+                      <input type="password">
+                  </div>
+                  <div class="field">
+                      <label>电子邮件地址</label>
+                      <input type="text">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 同行字段
+        description: 群组中的字段和标签可以是同一行的。
+        code       : |
+          <div class="ts form">
+              <div class="[[inline]] fields">
+                  <div class="eight wide field">
+                      <label>名字</label>
+                      <input type="text" placeholder="姓氏">
+                  </div>
+                  <div class="three wide field">
+                      <input type="text" placeholder="中间名">
+                  </div>
+                  <div class="five wide field">
+                      <input type="text" placeholder="名字">
+                  </div>
+              </div>
+          </div>

@@ -1,0 +1,27 @@
+slate:
+  title      : 讯息
+  description: 传递讯息至远方。
+
+tabs:
+  - type  : styles
+    to    : /collections/message
+  - type  : javascript
+    to    : /collections/message/javascript
+
+styles:
+  - category   : JavaScript
+    description: 讯息有提供可用的 JavaScript 模块。
+    items      :
+      - title      : 可关闭的
+        description: 讯息中的关闭按钮默认并没有动作，仅是装饰而已。但是你可以透过 JavaScript 将该按钮套上一个关闭讯息的动作。
+        code       : |
+          <div class="ts [[dismissable]] message">
+              <button class="ts close {{button}}"></button>
+              <div class="header">
+                  不喜欢我？
+              </div>
+              <p>那就关闭我吧。</p>
+          </div>
+        javascript: |
+          ts('.dismissable.message').message()
+        autoExecute: true

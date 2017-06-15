@@ -1,0 +1,491 @@
+slate:
+  title      : 步骤
+  description: 告诉别人下一步会是什么。
+
+styles:
+  - category   : 种类
+    description: 步骤具有不同的种类。
+    items      :
+      - title      : 步骤
+        description: 一个最基本的步骤。
+        code       : |
+          <div class="ts steps">
+              <div class="[[step]]">
+                运送
+              </div>
+          </div>
+
+  - category   : 群组
+    description: 步骤可以是一个群组。
+    items      :
+
+      - title      : 步骤群组
+        description: 一个最基本的步骤群组。
+        code       : |
+          <div class="ts [[steps]]">
+              <div class="[[step]]">
+                  <i class="truck icon"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="description">选择你的运送方式</div>
+                  </div>
+              </div>
+              <div class="active [[step]]">
+                  <i class="payment icon"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+              <div class="disabled [[step]]">
+                  <i class="info icon"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 排序
+        description: 步骤群组可以有号码排序。
+        code       : |
+          <div class="ts [[ordered]] steps">
+              <div class="completed step">
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="description">选择你的运送方式</div>
+                  </div>
+              </div>
+              <div class="completed step">
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                      <div class="description">认证订单信息</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 垂直
+        description: 步骤群组可以是垂直摆放的。
+        code       : |
+          <div class="ts [[vertical]] steps">
+              <div class="completed step">
+                  <i class="truck icon"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="description">选择你的运送方式</div>
+                  </div>
+              </div>
+              <div class="completed step">
+                  <i class="payment icon"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="notice icon"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                      <div class="description">认证订单信息</div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 步骤的内容是各式各样的。
+    items      :
+
+      - title      : 标题
+        description: 步骤里面可以有标题。
+        code       : |
+          <div class="ts steps">
+              <div class="step">
+                  <div class="content">
+                      <div class="[[title]]">运送</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 注释
+        description: 步骤里面可以包含注释。
+        code       : |
+          <div class="ts steps">
+              <div class="step">
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="[[description]]">选择你的运送方式</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 图示
+        description: 步骤也能够拥有图示。
+        code       : |
+          <div class="ts steps">
+              <div class="step">
+                  <i class="truck [[icon]]"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="description">选择你的运送方式</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 连结
+        description: 步骤本身可以是连结。
+        code       : |
+          <div class="ts steps">
+              <[[a]] class="active step" href="#!">
+                  <i class="truck icon"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="description">选择你的运送方式</div>
+                  </div>
+              </[[a]]>
+              <[[a]] class="step" href="#!">
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </[[a]]>
+          </div>
+
+      - subtitle   : 非传统的连结
+        description: 步骤的链接样式也可以出现在非传统链接标签上。
+        code       : |
+          <div class="ts steps">
+              <div class="[[link]] step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="description">选择你的运送方式</div>
+                  </div>
+              </div>
+              <div class="[[link]] step">
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 状态
+    description: 步骤有许多不同的状态。
+    items      :
+
+      - title      : 行进中
+        description: 显示一个步骤是目前正在行进中的。
+        code       : |
+          <div class="ts steps">
+              <div class="[[active]] step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 完成
+        description: 显示一个已经完成的步骤。
+        code       : |
+          <div class="ts steps">
+              <div class="[[completed]] step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 已停用
+        description: 用来显示一个不能被选择的步骤。
+        code       : |
+          <div class="ts steps">
+              <div class="[[disabled]] step">
+                  结账
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 步骤的外观有所不同。
+    items      :
+
+      - title      : 可层迭的
+        description: 在屏幕缩小时，步骤可以被层迭起来。
+        code       : |
+          <div class="ts [[stackable]] steps">
+              <div class="completed step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                      <div class="description">认证订单信息</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 流动
+        description: 步骤的宽度可以是填满容器宽度的。
+        code       : |
+          <div class="ts vertical [[fluid]] steps">
+              <div class="completed step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                      <div class="description">认证订单信息</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[fluid]] steps">
+              <div class="completed step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                      <div class="description">认证订单信息</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 附着
+        description: 步骤可以附着在其他组件上。
+        code       : |
+          <div class="ts three [[top attached]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="description">选择你的运送方式</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="info {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts flatted attached {{segment}}">
+              <p>月月，搭拉安！</p>
+              <p>月月，搭拉安！</p>
+              <p>月月，搭拉安！</p>
+          </div>
+          <div class="ts three [[bottom attached]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                      <div class="description">选择你的运送方式</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                      <div class="description">输入结账信息</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="info {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 尺寸
+        description: 步骤具有不同尺寸。
+        code       : |
+          <div class="ts [[mini]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[tiny]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[small]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[medium]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[large]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[big]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[huge]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment icon"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[massive]] steps">
+              <div class="step">
+                  <i class="truck {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">运送</div>
+                  </div>
+              </div>
+              <div class="active step">
+                  <i class="payment {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">结账</div>
+                  </div>
+              </div>
+              <div class="disabled step">
+                  <i class="notice {{icon}}"></i>
+                  <div class="content">
+                      <div class="title">确认订单</div>
+                  </div>
+              </div>
+          </div>

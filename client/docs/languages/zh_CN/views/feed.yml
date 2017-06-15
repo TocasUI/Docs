@@ -1,0 +1,414 @@
+slate:
+  title      : 动态
+  description: 你朋友刚到你家拜访，五分钟前，对了，他还把你的 PS4 干走了。
+
+styles:
+  - category   : 种类
+    description: 动态的种类有所不同。
+    items      :
+      - title      : 基本
+        description: 最基本的动态。
+        code       : |
+          <div class="ts [[feed]]">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a>Yami Odymel</a> 和你成为了朋友。
+                          <div class="date">
+                              1 小时前
+                          </div>
+                      </div>
+                      <div class="meta">
+                          <a><i class="like {{icon}}"></i> 4 个赞</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a>羽田白音</a> 在他墙上分享了这则贴文。
+                          <div class="date">
+                              3 小时前
+                          </div>
+                      </div>
+                      <div class="extra images">
+                          <a><img src="!-4:3-!"></a>
+                          <a><img src="!-4:3-!"></a>
+                      </div>
+                      <div class="meta">
+                          <a><i class="like {{icon}}"></i> 1 个赞</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a class="user">
+                              Yami Odymel
+                          </a>
+                          在他墙上分享了这则贴文
+                          <div class="date">
+                              1 天前
+                          </div>
+                      </div>
+                      <div class="extra description">
+                          准备向令一个平行世界的你道歉，因为你将在这个世界有所作为。
+                      </div>
+                      <div class="meta">
+                          <a><i class="like {{icon}}"></i> 成为第一个赞的人</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 动态内可安插多个不同性质的内容。
+    items      :
+
+      - title      : 事件
+        description: 一个事件是组成动态的基本组件。
+        code       : |
+          <div class="ts feed">
+              <div class="[[event]]">
+                  <div class="content">
+                      今天什么事情也都没有发生。
+                  </div>
+              </div>
+          </div>
+
+      - title      : 概要
+        description: 概要用以加强诠释事件的经过。
+        code       : |
+          <div class="ts feed">
+              <div class="event">
+                  <div class="content">
+                      <div class="[[summary]]">
+                          <a>Yami Odymel</a> 追踪了 <a>吴雨蓝</a>。
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="content">
+                      <div class="[[summary]]">
+                          <a>吴雨蓝</a> 和 <a>Yami Odymel</a> 目前是朋友了。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 标签
+        description: 一个事件可以带有图片或是图标。
+        code       : |
+          <div class="ts feed">
+              <div class="event">
+                  <div class="[[label]]">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          你将 Yami Odymel 加入了 <a>员工</a> 群组。
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="[[label]]">
+                      <i class="pencil {{icon}}"></i>
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          你将该贴文发布至 <a>Yami Odymel</a> 的墙上。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 试试其他点缀方式
+        description: 别忘记搭配其他 Tocas UI 样式你还可以做出下面这样的效果。
+        code       : |
+          <div class="ts feed">
+              <div class="event">
+                  <div class="label">
+                      <img class="ts circular {{image}}" src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <div class="date">
+                          1 天前
+                      </div>
+                      <div class="summary">
+                          我的头像是圆的。
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="label">
+                      <i class="inverted info circular comment {{icon}}"></i>
+                  </div>
+                  <div class="content">
+                      <div class="date">
+                          51 分钟前
+                      </div>
+                      <div class="summary">
+                          这是一个圆形的图示。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 日期
+        description: 事件或者是其概要中可以带有日期。
+        code       : |
+          <div class="ts feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <div class="[[date]]">
+                          51 分钟前
+                      </div>
+                      <div class="summary">
+                          你追踪了 <a>橙希</a>。
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          你和 <a>卡莉丝</a> 成为朋友了。
+                          <div class="[[date]]">今天</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 额外信息
+        description: 事件中可以插入额外的信息，像是附带图片或是额外文字。
+        code       : |
+          <div class="ts feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <div class="date">
+                          3 小时前
+                      </div>
+                      <div class="summary">
+                          <a>Yami Odymel</a> 分享了两张照片。
+                      </div>
+                      <div class="[[extra images]]">
+                          <a><img src="!-4:3-!"></a>
+                          <a><img src="!-4:3-!"></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="date">
+                          1 天前
+                      </div>
+                      <div class="summary">
+                          <a>Yami Odymel</a> 在他墙上分享了这则贴文。
+                      </div>
+                      <div class="[[extra description]]">
+                          准备向令一个平行世界的你道歉，因为你将在这个世界有所作为。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 元数据
+        description: 事件可以带有元数据。
+        code       : |
+          <div class="ts feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a>Yami Odymel</a> 戳了你一下
+                      </div>
+                      <div class="[[meta]]">
+                          <a><i class="like {{icon}}"></i> 4 个赞</a>
+                          <a><i class="comment {{icon}}"></i> 32 个回应</a>
+                          <a>清除</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 带点元数据
+        description: 元数据可以有「子弹点」或是「中点」来做区隔。
+        code       : |
+          <div class="ts feed">
+              <div class="event">
+                  <div class="label">
+                      <i class="circular trash {{icon}}"></i>
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          你移除了 <a>洨安万万岁</a> 文件。
+                      </div>
+                      <div class="[[bulleted meta]]">
+                          <a>保存</a>
+                          <a>检视</a>
+                          <a>还原</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="label">
+                      <i class="circular comment {{icon}}"></i>
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          你收到了一则讯息，这来自 <a>境界的彼方</a>。
+                      </div>
+                      <div class="[[middoted meta]]">
+                          <a>保存</a>
+                          <a>检视</a>
+                          <a>还原</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 动态的外观可供点缀。
+    items      :
+
+      - title      : 分隔的
+        description: 动态可以有分隔线区分。
+        code       : |
+          <div class="ts [[divided]] feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          你将 Yami Odymel 加入了 <a>员工</a> 群组。
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="label">
+                      <i class="pencil {{icon}}"></i>
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          你将该贴文发布至 <a>Yami Odymel</a> 的墙上。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 较宽松
+        description: 动态事件之间的空隙可以更加宽松。
+        code       : |
+          <div class="ts [[relaxed]] feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="date">
+                          51 分钟前
+                      </div>
+                      <div class="summary">
+                          你追踪了 <a>吴雨蓝</a>。
+                      </div>
+                  </div>
+              </div>
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          你和 <a>吴雨蓝</a> 成为朋友了。
+                          <div class="date">今天</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 尺寸
+        description: 动态有提供不同的尺寸。
+        code       : |
+          <div class="ts [[tiny]] feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a>Yami Odymel</a> 戳了你一下
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[small]] feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a>Yami Odymel</a> 戳了你一下
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[medium]] feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a>Yami Odymel</a> 戳了你一下
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[large]] feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a>Yami Odymel</a> 戳了你一下
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[big]] feed">
+              <div class="event">
+                  <div class="label">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <div class="summary">
+                          <a>Yami Odymel</a> 戳了你一下
+                      </div>
+                  </div>
+              </div>
+          </div>

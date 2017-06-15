@@ -1,0 +1,100 @@
+slate:
+  title      : 嵌入物件
+  description: 把东西搬进来啰。译者：本章节载入了许多墙外的东西，记得先翻墙再来看范例❤️
+
+tabs:
+  - type  : styles
+    to    : /modules/embed/
+  - type  : javascript
+    to    : /modules/embed/javascript/
+
+intro: |
+  <p>透过嵌入对象组件，你可以很简单地将 HTML5 影片、Google Map、YouTube 等影片嵌入至自己的网站内。你亦可透过此组件保持对象的长宽比，如 16:9 或 4:3 甚至 1:1⋯⋯等多种比例。</p>
+
+styles:
+  - category   : 种类
+    description: 嵌入对象有不同的种类可供使用。
+    items      :
+      - title      : YouTube
+        description: 你可以嵌入一则来自 YouTube 的影片。
+        code       : |
+          <div class="ts embed" [[data-source]]="youtube" data-id="I6hHkf9mIcU" data-query="autoplay=true" data-placeholder="!-embed:karen-!"></div>
+
+      - title      : Vimeo
+        description: 或者是 Vimeo 上的影片。
+        code       : |
+          <div class="ts embed" [[data-source]]="vimeo" data-id="125292332" data-placeholder="!-embed:vimeo-!"></div>
+
+      - title      : 自定义影片
+        description: 你可以手动指定影片的来源网址，当来源影片是 <span class="ts horizontal label">mov</span>、<span class="ts horizontal label">mp4</span>、<span class="ts horizontal label">ogg</span>、<span class="ts horizontal label">webm</span> 格式的时候，会由 HTML5 影片播放器播放。
+        code       : |
+          <div class="ts embed" [[data-url]]="http://html5demos.com/assets/dizzy.mp4" data-placeholder="!-16:9-!" data-icon="right circle arrow" data-options="controls, autoplay"></div>
+
+      - title      : 外部内容
+        description: 来源网址也可以是一个网站的内容，而不一定是则影片。所以你也可以像这样嵌入一个 Google Map 地图，试着点击图示以读取地图。
+        code       : |
+          <div class="ts embed" [[data-url]]="https://goo.gl/GKpzom" data-icon="map"></div>
+
+      - title      : 图片
+        description: 嵌入对象里面可以放置图片，并善用长宽比设定调整比例。
+        code       : |
+          <div class="ts 21:9 embed">
+              <[[img]] src="!-1:1-!">
+          </div>
+
+  - category   : 状态
+    description: 嵌入对象有不同的状态。
+    items      :
+
+      - title      : 已停用
+        description: 显示这个嵌入对象已经不可使用了。
+        code       : |
+          <div class="ts [[disabled]] embed">
+            <iframe src="https://goo.gl/GKpzom"></iframe>
+          </div>
+
+      - title      : 只读
+        description: 让嵌入对象仅可检视，无法与其做出任何反应与变动。
+        code       : |
+          <div class="ts [[read only]] embed">
+            <iframe src="https://goo.gl/GKpzom"></iframe>
+          </div>
+
+  - category   : 外观
+    description: 嵌入对象可以有不同的外观呈现。
+    items      :
+
+      - title      : 长宽比
+        description: |
+          你可以很简单的透过像是 <span class="ts horizontal label">4:3</span>、<span class="ts horizontal label">16:9</span> 更改嵌入对象的长宽比，并且保持他们一定的比例。这个表格列出了你所能使用的长宽比。
+          <br>
+          <table class="ts small stackable definition table">
+              <tbody>
+                  <tr>
+                      <td>宽型</td>
+                      <td><span class="ts">21:9</span></td>
+                      <td><span class="ts">18:9</span></td>
+                      <td><span class="ts">16:9</span></td>
+                      <td><span class="ts">5:2</span></td>
+                      <td><span class="ts">9:18</span></td>
+                  </tr>
+                  <tr>
+                      <td>方型</td>
+                      <td><span class="ts">1:1</span></td>
+                      <td><span class="ts">4:3</span></td>
+                      <td><span class="ts">3:2</span></td>
+                      <td></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td>长型</td>
+                      <td><span class="ts">9:16</span></td>
+                      <td><span class="ts">3:4</span></td>
+                      <td><span class="ts">2:3</span></td>
+                      <td></td>
+                      <td></td>
+                  </tr>
+              </tbody>
+          </table>
+        code       : |
+          <div class="ts [[5:2]] embed" data-source="youtube" data-id="I6hHkf9mIcU" data-placeholder="!-embed:karen-!"></div>

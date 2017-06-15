@@ -1,0 +1,70 @@
+slate:
+  title      : 组件理念
+  description: 一个重要的按钮，我们将它视为核弹按钮般，精心设计和呵护。
+
+styles:
+  - category   : 基本语意
+    description: Tocas UI 以更有意义的方式来命名类别名称，就像是你直接称呼这个元素一样地亲切。
+    items      :
+      - title      : 语气渲染
+        description: |
+          在 Tocas UI 中我们并不以「颜色」称呼我们对组件的着色，我们以「语气」来表示这个组件的外观，例如「正面的」、「负面的」、「主要的」等。
+          <br><br>
+          这么做的好处是在更改主题颜色时，可以直接更换「正面的」颜色，设想一下你将一个按钮命名成「绿色」，当你要统一更改绿色按钮为红色时，不就要将所有页面上的「绿色」重新打成「红色」吗？
+        code       : |
+          <p><strong>主流语气</strong></p>
+          <button class="ts {{button}}">预设语气</button>
+          <button class="ts [[primary]] {{button}}">主要语气</button>
+          <button class="ts [[info]] {{button}}">提示语气</button>
+          <button class="ts [[warning]] {{button}}">警告语气</button>
+          <br><br>
+          <p><strong>抉择语气</strong></p>
+          <button class="ts [[positive]] {{button}}">肯定语气</button>
+          <button class="ts [[negative]] {{button}}">否定语气</button>
+          <br><br>
+          <p><strong>副语气</strong></p>
+          <button class="ts [[inverted]] {{button}}">相反语气</button>
+
+      - title      : 发音方式
+        description: 在部分的组件上你可以有不同的「发音方式」，实际上就是像「次要」，「较不重要」这样的感觉。
+        code       : |
+          <div class="ts {{segment}}">一般发音方式</div>
+          <div class="ts [[secondary]] {{segment}}">次要发音方式</div>
+          <div class="ts [[tertiary]] {{segment}}">其次发音方式</div>
+
+  - category   : 外观调教
+    description: 在 Tocas UI 有许多方式来变更组件的外观。
+    items      :
+
+      - title      : 尺寸大小
+        description: 除了语气外，还支持八个尺寸，这比起其他的常见框架还要来得更多！也能够让你在设计外观上更加地灵活。
+        code       : |
+          <button class="ts [[mini]] {{button}}">迷你</button>
+          <button class="ts [[tiny]] {{button}}">微小</button>
+          <button class="ts [[small]] {{button}}">小型</button>
+          <button class="ts [[medium]] {{button}}">中型</button>
+          <button class="ts [[large]] {{button}}">大型</button>
+          <button class="ts [[big]] {{button}}">稍大</button>
+          <button class="ts [[huge]] {{button}}">巨大</button>
+          <button class="ts [[massive]] {{button}}">重量级</button>
+
+      - title      : 组件附着
+        description: 你能够让不同的组件附着在一起，就像拼装一样地令不同的组件看起来像单个组件。
+        code       : |
+          <div class="ts [[top attached]] {{header}}">
+            顶部附着
+          </div>
+          <div class="ts [[attached]] {{segment}}">
+            中间附着
+          </div>
+          <div class="ts [[bottom attached]] {{header}}">
+            底部附着
+          </div>
+
+      - title      : 流动宽度
+        description: 有些组件宽度是基于内容而定，但你可以让他变成宽到符合父容器的宽度。
+        code       : |
+          <button class="ts [[fluid]] {{button}}">流动按钮</button>
+          <div class="ts [[fluid]] {{input}}">
+            <input type="text" placeholder="流动输入字段">
+          </div>

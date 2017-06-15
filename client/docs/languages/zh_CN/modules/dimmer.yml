@@ -1,0 +1,55 @@
+slate:
+  title      : 淡化幕
+  description: 国防布。
+
+styles:
+  - category   : 种类
+    description: 复选框有不同的种类可供选择。
+    items      :
+      - title      : 基本
+        description: 最基本的淡化幕。
+        code       : |
+          <div class="ts {{segment}}">
+              <div class="ts active [[dimmer]]"></div>
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+          </div>
+
+  - category   : 状态
+    description: 淡化幕有不同的状态。
+    items      :
+
+      - title      : 已启用
+        description: 淡化幕只有在启用时才会出现。
+        code       : |
+          <div class="ts {{segment}}">
+              <div class="ts [[active]] dimmer"></div>
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+          </div>
+
+      - title      : 已停用
+        description: 淡化幕可以被停用，如此一来就不会遮蔽或是淡化任何对象。
+        code       : |
+          <div class="ts {{segment}}">
+              <div class="ts [[disabled]] dimmer"></div>
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+          </div>
+
+  - category   : 外观
+    description: 淡化幕有不同的外观样式可供点缀。
+    items      :
+
+      - title      : 反色
+        description: 淡化幕可以是反色的。
+        code       : |
+          <div class="ts {{segment}}">
+              <div class="ts [[inverted]] active dimmer"></div>
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+          </div>

@@ -1,0 +1,244 @@
+slate:
+  title      : 开始使用
+  description: 人生已经很无聊了，别让你的网页也再无聊下去。
+
+intro: |
+  <p>Tocas UI 是一个基于 Semantic UI 的衍生分支，其传承特色包括了独具语意的写法，同时也支持更弹性、多样化的使用方式，并支持自动和手动响应式设计。</p>
+
+styles:
+  - category   : 引用档案
+    description: 你需要引用 Tocas UI 的档案才能够开始使用，这里提供两种方式让你使用。
+    items      :
+      - title      : 透过在线 CDN
+        type       : code
+        description: |
+          这是由一家知名 CDN 公司 <a href="https://www.cloudflare.com">CloudFlare</a> 所提供的免费服务并且提供够快的服务速度，这使你不需要下载 Tocas UI，只需要将下列标签放置于 HTML 中的 <span class="ts horizontal label">&lt;head&gt; .. &lt;/head&gt;</span> 处即可，且该公司提供可靠的上线时间令你毋须担心。
+        code       : |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.2/tocas.css">
+
+      - title      : 自行下载 Tocas UI
+        type       : code
+        description: |
+          你需要到 <a href="//github.com/TeaMeow/TocasUI">我们的 Github 下载 Tocas UI</a>，然后取出其中的 <span class="ts horizontal label">/dist</span> 文件夹，并像下面这样引用 Tocas UI 档案，如此的好处是你可以确保样式不会因为远程的服务器脱机而遗失。
+        code       : |
+          <link rel="stylesheet" href="tocas.css">
+
+  - category   : 全局注意事项
+    description: 你需要注意你的 HTML 和设计上是否有达到这些要求。
+    items      :
+
+      - title      : 网页字型
+        description: Tocas UI 2.2 之后的版本不再统一使用 Noto Sans CJK，因为其档案量过大读取费时。目前 Tocas UI 使用下列字型在各个系统（如：Ubuntu、macOS、Windows）上取得最相近且美观的结果。
+        type       : code
+        code       : |
+          "SF Pro TC", "SF Pro Text", "SF Pro Icons", "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", "Microsoft JhengHei", wf_SegoeUI, "Segoe UI", Segoe, "Segoe WP", Tahoma, Verdana, Ubuntu, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, 微軟正黑體, "LiHei Pro", "WenQuanYi Micro Hei", "Droid Sans Fallback", "AR PL UMing TW", Roboto, "Helvetica Neue", "Hiragino Maru Gothic ProN", メイリオ, "ヒラギノ丸ゴ ProN W4", Meiryo, "Droid Sans", sans-serif
+
+      - title      : HTML 5 宣告
+        type       : code
+        description: 请确定你有透过 <span class="ts horizontal label">&lt;!DOCTYPE HTML&gt;</span> 将网页宣告成 HTML5。
+        code       : |
+          <!DOCTYPE HTML>
+          <html>
+          ...
+          </html>
+
+      - title      : 响应式设计标签
+        type       : code
+        description: Tocas UI 支持响应式设计，为此你需要新增下列一段的标签在你的 HTML 来告诉行动装置你的网页支持响应式设计，利用这个标签还可以降低并解决行动装置对于网页的点击延迟，请将这段放置于 HTML 中的 <span class="ts horizontal label">&lt;head&gt; .. &lt;/head&gt;</span> 处。
+        code       : |
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      - title      : 动态字体大小
+        type       : code
+        description: |
+          Tocas UI 的所有组件字体大小是依赖着网页基底而定。这意味着当你认为网页字型太小时，你不需要变更每个组件的字型，你可以直接变更 <span class="ts horizontal label">&lt;html&gt;</span> 中的字号设定。就像下面这样。
+        css        : |
+          html {
+              font-size: 32px;
+          }
+
+      - title      : 响应式字体大小
+        type       : code
+        description: |
+          Tocas UI 默认并不会自动帮你在不同装置上变更字体大小，不过自从所有字号皆依赖网页基底，那么你就可以在不同尺寸的装置上变更基底字体大小。令字体大小更加地符合多种尺寸的装置。
+        css        : |
+          html {
+              font-size: 16px;
+          }
+
+          // 在行动装置上将字体转换成 `14px` 大小。
+          @media (max-width: 768px) {
+              html {
+                  font-size: 14px;
+              }
+          }
+
+  - category   : 与其他框架比较
+    description: 这里解释着为什么 Tocas UI 比起其他框架还要些卓越的部分。
+    items      :
+
+      - title      : Bootstrap v4
+        description: |
+          Bootstrap 是一个十分常见的框架，但却有个最为严重的问题，也是与 Tocas UI 所背驰的理念，就是太多杂乱的样式名称，并且不具有意义，
+          像是这样：<span class="ts horizontal label">m-l-1</span>、<span class="ts horizontal label">m-t-0</span>、<span class="ts horizontal label">p-x-2</span>、<span class="ts horizontal label">m-x-auto</span>、等，
+          并不能够一眼就看出这些样式所具备的意义，相较之下 Tocas UI 的 <span class="ts horizontal label">small</span>、<span class="ts horizontal label">centered</span> 更具有意义。
+          <br><br>
+          此外，在 HTML 结构的部分 Bootstrap 常为了要补足某些缺陷或排列而新增过多不必要的结构，而 Tocas UI 则没有这方面的问题。在组件的部分 Tocas UI 也较多元化并更具弹性。
+
+      - title      : Semantic UI
+        description: |
+          Semantic UI 即是 Tocas UI 的衍生来源，虽然 Semantic UI 具备自定义主题功能，但要改变主题你必须自行手动编译，会这样做的人少之又少，
+          默认的 Semantic UI 主题看起来十分地沉重并仰赖过多地白色和黑色，这个问Tocas UI 则有所改善。
+          <br><br>
+          在组件的部分 Semantic UI 过度依赖非原生组件（如下拉式输入字段），TocasUI这部分则保留并美化了原生的组件，而不是另外做一个。
+          Tocas UI 还胜过 Semantic UI 一个优点，那就是组件更具有自定义性，举例来说可具有阴影的卡片「扁平化」，或是其他更多外观上的变动。
+
+      - title      : Amaze UI
+        description: |
+          Amaze UI 在外观上较为生硬，和 Bootstrap 一样不具有语意并拥有 <span class="ts horizontal label">am-</span> 的类别前辍，样式和组件也过于死板不具弹性，还有一些非直觉的动画，例如「按钮」按下时的缓慢感，Tocas UI 让按钮和回馈充满动感，不会让使用者感到迟钝，并让组件多样化，外观上也看起来更为简约。
+
+      - title      : Kule Lazy
+        description: |
+          Kule Lazy 在一些结构上使用的是旧型的样式，Tocas UI 则采用最新并具弹性的 Flexbox，在外观的配色和阴影也比起 Kule Lazy 还要更加地轻盈，不会令人感到沉重，除此之外 Kule Lazy 的命名方式也和 Bootstrap 有着一样的问题，且还不只如此， Kule Lazy 在用词上也较为独特使人不容易区分和上手，Tocas UI 在这方面则以直觉的方式称呼组件让人不感到困惑。
+
+      - title      : Foundation
+        description: |
+          Foundation 在外观上较为生硬，过多的方形设计，按钮也不具有回馈力，令人按下时感到钝感，并且在组件样式上过度依赖卷标选择器，这将使得你在自定义部分组件时会有所冲突，上述的所有问题都有在 Tocas UI 获得改善。
+
+      - title      : Tachyons
+        description: |
+          Tachyons 并没有「组件观念」，这意味着你将需要透过 Tachyons 内建的辅助样式自行建立需要的组件，Tachyons 在样式命名上有着与 Bootstrap 一样厌垢并且更难以令人捉摸的问题，如 <span class="ts horizontal label">mr3</span> 但其实是 <span class="ts horizontal label">margin-right: 1rem;</span>，并且在元素上使用过多的样式如：<span class="ts horizontal label">fw6 f3 f2-ns lh-title mt0 mb3</span>，这些都将导致未来整合有所困难，同时也意味着当你需要重复使用组件时，你的原始码大小也会急剧地增加。
+
+  - category   : 撰写与命名规范
+    description: |
+      除了你不晓得怎么实践的程序外，其次最难的不外乎就是「命名」。通常使用其他的接口框架都不会有如此的规范。但我们在这里希望你能够遵循 Tocas UI 的命名精神，来让页面上的样式名称不再那么混乱。
+    items      :
+
+      - title      : 名称
+        description: 元素的名称不可带有底线或减号，以<a href="http://baike.baidu.com/item/%E9%A9%BC%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%86%99" target="_blank">小驼峰式命名法</a>为主，就像是命名程序变量，这令元素名称能够良好地符合普遍 JavaScript 程序。
+        type       : code
+        code       : |
+          <!-- ✖ 别这样 -->
+          <div id="large-jumbotron"></div>
+
+          <!-- ✓ 请这么做 -->
+          <div id="largeJumbotron"></div>
+
+        css: |
+          #largeJumbotron {}
+
+      - title      : 区块／容器
+        description: 区块的样式名称不应有任何符号，或者是大小写，在这里仅用空白区隔，就像是你直接称呼元素那样地轻切，透过这种用法还能令你更加地弹性化设计样式。
+        type       : code
+        code       : |
+          <!-- ✖ 别这样 -->
+          <div class="blk-container"></div>
+
+          <!-- ✓ 请这么做 -->
+          <div class="block container"></div>
+
+        css: |
+          .container {}
+          .block.container {}
+
+      - title      : 元素
+        type       : code
+        description: 元素的样式名称和区块的命名方式相同。
+        code       : |
+          <!-- ✖ 别这样 -->
+          <div class="blk-container">
+              <div class="single-blk"></div>
+          </div>
+
+          <!-- ✓ 请这么做 -->
+          <div class="block container">
+              <div class="single block"></div>
+          </div>
+        css: |
+          .block.container .single.block {}
+
+      - title      : 子项目
+        type       : code
+        description: 当元素是某个合集（如：列表、选单、导航列）的项目时，没有必要重新声明这个项目属于谁，这能够大幅度减少 HTML 的重复与混浊度。
+        code       : |
+          <!-- ✖ 别这样 -->
+          <div class="menu menu-lg">
+              <div class="menu-item menu-active"></div>
+              <div class="menu-item"></div>
+              <div class="menu-item"></div>
+          </div>
+
+          <!-- ✓ 请这么做 -->
+          <div class="large menu">
+              <div class="active item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+          </div>
+        css: |
+          .menu {}
+          .menu .item {}
+          .menu .item.active {}
+
+      - title      : 语意而不是颜色
+        description: |
+          <p>页面上不应该充满一堆颜色，请记住一点：「当所有事情都被凸显，所有事情都将显得不重要。」，为此 Tocas UI 中也没有颜色样式，因为语意才是最重要的，将颜色以语意命名，能够限制你所使用的方式、避免滥用且导向正轨。</p>
+          <p>透过「负面的」、「警告的」来命名颜色，而不是「红色」、「黄色」，这令你能够替换样式布景的时候而不会因为改了颜色却继续使用像「黄色」这种制式名称而有所不符。</p>
+        type       : code
+        code       : |
+          <!-- ✖ 别这样 -->
+          <button class="red button"></button>
+          <button class="yellow button"></button>
+
+          <!-- ✓ 请这么做 -->
+          <button class="negative button"></button>
+          <button class="warning button"></button>
+
+        css: |
+          .negative.button {}
+          .warning.button {}
+
+      - title      : 修饰词
+        type       : code
+        description: <p>以样式修饰一个元素的颜色、大小、外观时和先前的区块与元素命名方式皆相同且不可是缩写，以避免你在忘记过往是如何缩写的。</p><p>简单来说：小的（small）不可以被缩写成（sm）；如果有两个单字仍以空白隔开，例如：向左浮动（left floated）。</p>
+        code       : |
+          <!-- ✖ 别这样 -->
+          <div class="container container-lg">
+              <div class="picture picture-sm"></div>
+              <button class="btn btn-lf"></button>
+          </div>
+
+          <!-- ✓ 请这么做 -->
+          <div class="large container">
+              <div class="small picutre"></div>
+              <button class="left floated button"></button>
+          </div>
+        css: |
+          .large.container {}
+          .large.container .small.picture {}
+          .large.container [class*="left floated"].button {}
+
+      - title      : 其他用途
+        type       : code
+        description: |
+          有时候你会为了专门给 jQuery 或者 JavaScript 而另外命名了像是 <span class="ts label">js-reply-btn</span>，这通常是设计不良所导致的，但如果你真的没办法的话，在这里我们则是建议和先前的命名方式一样，但最前方加上减号。
+        code       : |
+          <!-- ✖ 别这样 -->
+          <div class="cts">
+              <div class="single-ct">
+                  <button class="btn btn-lg js-main-reply-btn"></button>
+              </div>
+          </div>
+
+          <!-- ✓ 请这么做 -->
+          <div class="comments">
+              <div class="single comment">
+                  <button class="large -main -reply button"></button>
+              </div>
+          </div>
+        css: |
+          .comments {}
+          .comments .single.comment {}
+          .comments .single.comment .large.button {}
+        javascript: |
+          $("-main.-reply.button").show()
+        notExecutable: true

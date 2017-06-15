@@ -1,0 +1,121 @@
+slate:
+  title      : 实际范例
+  description: 以 Tocas UI 所打造的企业级范例页面，你能够<a target="_blank" href="https://github.com/TocasUI/Examples">在此检视并下载</a>范例原始码。
+
+isStackable: true
+columns    : three
+
+items:
+  - title      : 后台仪表板
+    image      : https://examples.tocas-ui.com/screenshots/dashboard.png
+    link       : https://examples.tocas-ui.com/pages/dashboard.html
+    description: 一个拥有侧边栏并像企业网站的后台管理接口。
+    symbol     : dashboard
+
+  - title      : GitHub
+    image      : https://examples.tocas-ui.com/screenshots/github.png
+    link       : https://examples.tocas-ui.com/pages/github.html
+    description: 透过 Tocas UI 所打造与 GitHub 类似的网站范例。
+    symbol     : github
+
+  - title      : CMS 前台
+    image      : https://examples.tocas-ui.com/screenshots/cms.png
+    link       : https://examples.tocas-ui.com/pages/cms.html
+    description: 常态型的小型商业 CMS 内容管理网站前台页面，很适合用于团体、企业的公告或新闻网站。
+    symbol     : suitcase
+
+  - title      : 电子邮件信箱
+    image      : https://examples.tocas-ui.com/screenshots/mailbox.png
+    link       : https://examples.tocas-ui.com/pages/mailbox.html
+    description: 网页电子信箱的邮件检视页面，并夹带数个档案附件。
+    symbol     : inbox
+
+  - title      : 募资平台
+    image      : https://examples.tocas-ui.com/screenshots/crowdfunding.png
+    link       : https://examples.tocas-ui.com/pages/crowdfunding.html
+    description: 透过卡片与网格系统实现类似募资平台的项目列表布局。
+    symbol     : money
+
+  - title      : 网盘
+    image      : https://examples.tocas-ui.com/screenshots/network-disk.png
+    link       : https://examples.tocas-ui.com/pages/network-disk.html
+    description: 类似 FTP 等网盘的目录与档案信息范例。
+    symbol     : disk outline
+
+  - title      : 发票与收据
+    image      : https://examples.tocas-ui.com/screenshots/invoice.png
+    link       : https://examples.tocas-ui.com/pages/invoice.html
+    description: 用于企业之间所开立的电子发票，或是出货单。
+    symbol     : ordered list
+
+  - title      : 信用卡付款
+    image      : https://examples.tocas-ui.com/screenshots/payment.png
+    link       : https://examples.tocas-ui.com/pages/payment.html
+    description: 于商品结账时所请求的信用卡数据页面，并附带商品信息。
+    symbol     : credit card alternative
+
+  - title      : 注册页面
+    image      : https://examples.tocas-ui.com/screenshots/registration.png
+    link       : https://examples.tocas-ui.com/pages/registration.html
+    description: 基本的使用者注册页面，并要求性别、生日、昵称⋯⋯等信息。
+    symbol     : add user
+
+  - title      : 便利贴
+    image      : https://examples.tocas-ui.com/screenshots/notes.png
+    link       : https://examples.tocas-ui.com/pages/notes.html
+    description: 以卡片瀑布流实现类似 Google Keep 那样的网络便利贴服务。
+    symbol     : sticky note
+
+  - title      : 部落格后台
+    image      : https://examples.tocas-ui.com/screenshots/blog-editor.png
+    link       : https://examples.tocas-ui.com/pages/blog-editor.html
+    description: 简易型的个人部落格后台文章发布页面。
+    symbol     : align justify
+
+  - title      : 邮件模板
+    image      : https://examples.tocas-ui.com/screenshots/mail-template.png
+    link       : https://examples.tocas-ui.com/pages/mail-template.html
+    description: 用于寄送给网站会员的邮件内容，并推销网站产品于宣布公告。
+    symbol     : mail
+
+  - title      : 部落格
+    image      : https://examples.tocas-ui.com/screenshots/blog.png
+    link       : https://examples.tocas-ui.com/pages/blog.html
+    description: 以基本的文字元素还有简易的网格系统与选单所组成的个人部落格网站。
+    symbol     : browser
+
+  - title      : 个人相簿
+    image      : https://examples.tocas-ui.com/screenshots/gallery.png
+    link       : https://examples.tocas-ui.com/pages/gallery.html
+    description: 供单人所设计的小型相簿静态网站。
+    symbol     : image
+
+  - title      : 聊天室
+    image      : https://examples.tocas-ui.com/screenshots/chatroom.png
+    link       : https://examples.tocas-ui.com/pages/chatroom.html
+    description: 透过对话气泡还有项目与片段时做一个简易的小型聊天室接口。
+    symbol     : comments
+
+  - title      : 文本编辑器
+    image      : https://examples.tocas-ui.com/screenshots/editor.png
+    link       : https://examples.tocas-ui.com/pages/editor.html
+    description: 与 Simple Markdown Editor 所搭配的基本文本编辑器。
+    symbol     : file text
+
+  - title      : 计算器
+    image      : https://examples.tocas-ui.com/screenshots/calculator.png
+    link       : https://examples.tocas-ui.com/pages/calculator.html
+    description: 由多个按钮所组成的基本小型计算器。
+    symbol     : calculator
+
+  - title      : 登入页面
+    image      : https://examples.tocas-ui.com/screenshots/login.png
+    link       : https://examples.tocas-ui.com/pages/login.html
+    description: 基本的账号与密码登入页面。
+    symbol     : sign in
+
+  - title      : 行动原生应用程序
+    image      : https://examples.tocas-ui.com/screenshots/native.png
+    link       : https://examples.tocas-ui.com/pages/native.html
+    description: 以 Tocas UI 做出类似 App Store 的原生应用市集，供行动装置检视。
+    symbol     : mobile

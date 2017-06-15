@@ -1,0 +1,55 @@
+slate:
+  title      : 滑杆
+  description: 省去手动输入数值的麻烦。
+
+tabs:
+  - type  : styles
+    to    : /modules/slider/
+  - type  : javascript
+    to    : /modules/slider/javascript
+
+styles:
+  - category   : 种类
+    description: 这里是滑杆的种类。
+    items      :
+      - title      : 基本
+        description: 最基本的滑杆。
+        code       : |
+          <div class="ts [[slider]]">
+              <input type="range">
+          </div>
+
+  - category   : 状态
+    description: 滑杆有不同的状态。
+    items      :
+
+      - title      : 已停用
+        description: 一个滑杆可以呈现出无法使用、已停用的状态。
+        code       : |
+          <div class="ts [[disabled]] slider">
+              <input type="range">
+          </div>
+
+  - category   : 内容
+    description: 滑杆里可以摆放不同的内容。
+    items      :
+
+      - title      : 标签
+        description: 滑杆的侧边可以摆放标签用以标示与滑杆有关的数值。
+        code       : |
+          <div class="ts slider">
+              <div class="ts basic right pointing [[label]]">32</div>
+              <input type="range">
+              <div class="ts basic left pointing [[label]]">96</div>
+          </div>
+
+  - category   : 外观
+    description: 滑杆的外观有所不同。
+    items      :
+
+      - title      : 流动
+        description: 滑杆可以是流动且填满整个容器的宽度。
+        code       : |
+          <div class="ts [[fluid]] slider">
+              <input type="range">
+          </div>

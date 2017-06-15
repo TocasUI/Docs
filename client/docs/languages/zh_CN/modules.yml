@@ -1,0 +1,94 @@
+slate:
+  title      : 模块
+  description: 具功能性、较独立的组件。
+
+items:
+  - title      : 手风琴
+    class      : .ts.accordion
+    link       : /modules/accordion
+    description: 一个可供伸展的内容区块。
+    symbol     : resize vertical
+
+  - title      : 日历
+    class      : .ts.calendar
+    link       : /modules/calendar/
+    description: 用以表示日期的组件。
+    symbol     : calendar
+
+  - title      : 复选框
+    class      : .ts.checkbox
+    link       : /modules/checkbox
+    description: 让使用者进行勾取、选取动作的复选框。
+    symbol     : checkmark box
+
+  - title      : 淡化幕
+    class      : .ts.dimmer
+    link       : /modules/dimmer/
+    description: 新增一层暗幕用以遮蔽特定元素。
+    symbol     : hide
+
+  - title      : 下拉式选单
+    class      : .ts.dropdown
+    link       : /modules/dropdown/
+    description: 下拉式的窗体输入字段和功能选单。
+    symbol     : caret down
+
+  - title      : 进度列
+    class      : .ts.progress
+    link       : /modules/progress/
+    description: 用以呈现进度或者是一个总体配额。
+    symbol     : tasks
+
+  - title      : 滑杆
+    class      : .ts.slider
+    link       : /modules/slider/
+    description: 以滑杆来取代输入字段设定数值。
+    symbol     : sliders
+
+  - title      : 弹出式讯息
+    class      : .ts.popup
+    link       : /modules/popup/
+    description: 鼠标移过时会弹出一个讯息。
+    symbol     : talk outline
+
+  - title      : 对话窗口
+    class      : .ts.modal
+    link       : /modules/modal/
+    description: 跳出一个对话、窗体窗口并阻挡背后的其他行为，令使用者专注在跳出的窗口。
+    symbol     : external
+
+  - title      : 嵌入物件
+    class      : .ts.embed
+    link       : /modules/embed/
+    description: 嵌入外部影片、图片到网站中并保持一定长宽比。
+    symbol     : film
+
+  - title      : 侧边栏
+    class      : .ts.sidebar
+    link       : /modules/sidebar/
+    description: 一个呈现于屏幕测部的多功能选单。
+    symbol     : content
+
+  - title      : 点心条
+    class      : .ts.snackbar
+    link       : /modules/snackbar/
+    description: 呈现于屏幕角落、底部的通知讯息列。
+    symbol     : notice circle
+
+  - title      : 分页签
+    class      : .ts.tab
+    link       : /modules/tab/
+    description: 呈现多个分页且可相互切换内容呈现的模块。
+    symbol     : clone
+
+  - title      : 复合功能选单
+    class      : .ts.contextmenu
+    link       : /modules/contextmenu/
+    description: 提供鼠标、长按屏幕呼叫额外功能的选单。
+    symbol     : mouse pointer
+
+  - title      : 卷动监听
+    class      : .ts.scrollspy
+    link       : /modules/scrollspy/javascript/
+    description: 随着滚动条的位置而启用选单、列表内的特定项目。
+    symbol     : resize vertical

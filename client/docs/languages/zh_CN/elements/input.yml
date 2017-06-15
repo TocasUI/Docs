@@ -1,0 +1,323 @@
+slate:
+  title      : 输入字段
+  description: 再键入几个字就是新的开始。
+
+styles:
+  - category   : 种类
+    description: 输入字段具有多个不同的种类。
+    items      :
+      - title      : 输入字段
+        description: 一个普通的基本字段可以是正常的 <span class="ts horizontal label">input</span> 或 <span class="ts horizontal label">textarea</span> 甚至是任何 <span class="ts horizontal label">[contenteditable]</span> 的元素。
+        remove     : <br>
+        code       : |
+          <div class="ts [[input]]">
+              <input type="text" placeholder="文字字段">
+          </div>
+          <br><br>
+          <div class="ts [[input]]">
+              <textarea placeholder="多行文字字段"></textarea>
+          </div>
+          <br><br>
+          <div class="ts [[input]]">
+              <div contenteditable>在这里输入一些文字</div>
+          </div>
+
+      - title      : 反色语意
+        description: 输入字段具有多种语意并将其呈现于背景。
+        remove     : <br>
+        code       : |
+          <div class="ts [[inverted primary]] input">
+              <input type="text" placeholder="反色主要语气">
+          </div>
+          <br><br>
+          <div class="ts [[inverted info]] input">
+              <input type="text" placeholder="反色提示语气">
+          </div>
+          <br><br>
+          <div class="ts [[inverted warning]] input">
+              <input type="text" placeholder="反色警告语气">
+          </div>
+          <br><br>
+          <div class="ts [[inverted positive]] input">
+              <input type="text" placeholder="反色正面语气">
+          </div>
+          <br><br>
+          <div class="ts [[inverted negative]] input">
+              <input type="text" placeholder="反色否定语气">
+          </div>
+          <br><br>
+          <div class="ts [[inverted]] input">
+              <input type="text" placeholder="反色语气">
+          </div>
+
+      - title      : 基本
+        description: 输入字段可以只拥有基本的结构、背景透明。
+        code       : |
+          <div class="ts [[basic]] input">
+              <input type="text" placeholder="这个背景是透明的">
+          </div>
+
+      - title      : 发音方式
+        description: 输入字段有不同的发音方式。
+        remove     : <br><br>
+        code       : |
+          <div class="ts [[secondary]] input">
+              <input type="text" placeholder="次要发音方式">
+          </div>
+          <br><br>
+          <div class="ts [[tertiary]] input">
+              <input type="text" placeholder="其次发音方式">
+          </div>
+
+      - title      : 底线的
+        description: 输入字段能够仅有底线。
+        code       : |
+          <div class="ts [[underlined]] input">
+              <input type="text" placeholder="仅有底线的输入字段">
+          </div>
+
+  - category   : 群组
+    description: 输入字段也具有群组。
+    items      :
+
+      - title      : 垂直群组
+        description: 输入字段的群组摆放可以是垂直的。
+        code       : |
+          <div class="ts [[vertical]] [[inputs]]">
+              <div class="ts input">
+                  <input type="text" placeholder="账号">
+              </div>
+              <div class="ts input">
+                  <input type="text" placeholder="电子邮件地址">
+              </div>
+              <div class="ts input">
+                  <input type="password" placeholder="密码">
+              </div>
+          </div>
+
+  - category   : 状态
+    description: 输入字段具有不同的状态。
+    items      :
+
+      - title      : 聚焦中
+        description: 输入字段可以看起来是正在被聚焦的。
+        code       : |
+          <div class="ts [[focus]] input">
+              <input type="text" placeholder="聚焦中的输入字段">
+          </div>
+
+      - title      : 读取中
+        description: 输入字段可以显示正在读取的图标。
+        remove     : <br>
+        code       : |
+          <div class="ts [[left icon]] [[loading]] input">
+              <input type="text" placeholder="在此搜寻人、事、物">
+              <i class="search {{icon}}"></i>
+          </div>
+          <br><br>
+          <div class="ts [[icon]] [[loading]] input">
+              <input type="text" placeholder="在此搜寻人、事、物">
+              <i class="search {{icon}}"></i>
+          </div>
+
+      - title      : 已停用
+        description: 可以让输入字段呈现一个被停用的状态。
+        code       : |
+          <div class="ts [[disabled]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+
+      - title      : 错误
+        description: 输入字段能够显示一个发生错误的状态。
+        remove     : <br>
+        code       : |
+          <div class="ts [[error]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+          <br><br>
+          <div class="ts basic [[error]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+
+      - title      : 警告
+        description: 输入字段能够处于一个警告或提示的状态。
+        remove     : <br>
+        code       : |
+          <div class="ts [[warning]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+          <br><br>
+          <div class="ts basic [[warning]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+
+      - title      : 成功
+        description: 输入字段能够处于成功的状态。
+        remove     : <br>
+        code       : |
+          <div class="ts [[success]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+          <br><br>
+          <div class="ts basic [[success]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+
+  - category   : 外观
+    description: 输入字段可以有着不同的外观点缀。
+    items      :
+
+      - title      : 图示
+        description: 你可以将图示放入输入字段中。
+        remove     : <br>
+        code       : |
+          <div class="ts [[icon]] input">
+              <input type="text" placeholder="搜寻...">
+              <i class="search {{icon}}"></i>
+          </div>
+          <br><br>
+          <div class="ts [[left icon]] input">
+              <input type="text" placeholder="搜寻使用者...">
+              <i class="users {{icon}}"></i>
+          </div>
+
+      - title      : 链接图示
+        description: 输入字段中的图示也能是一种连结，或可供按下的。
+        remove     : <br>
+        code       : |
+          <div class="ts [[icon]] input">
+              <input type="text" placeholder="搜寻...">
+              <i class="circular search [[link icon]]"></i>
+          </div>
+          <br><br>
+          <div class="ts [[icon]] input">
+              <input type="text" placeholder="搜寻...">
+              <i class="inverted circular search [[link icon]]"></i>
+          </div>
+
+      - title      : 带标签
+        description: 输入字段可以带有卷标元素。
+        remove     : <br>
+        code       : |
+          <div class="ts [[labeled]] input">
+              <div class="ts {{label}}">
+                  http://
+              </div>
+              <input type="text" placeholder="您的网址">
+          </div>
+          <br><br>
+          <div class="ts [[right labeled]] input">
+              <div class="ts {{label}}">
+                  $
+              </div>
+              <input type="text" placeholder="价格">
+              <div class="ts basic {{label}}">
+                  .00
+              </div>
+          </div>
+
+      - title      : 动作
+        description: 输入字段旁可以附带具有动作性质的元素。
+        remove     : <br>
+        code       : |
+          <div class="ts [[action]] input">
+              <input type="text" placeholder="在这搜寻人、事、物">
+              <button class="ts {{button}}">搜寻</button>
+          </div>
+          <br><br>
+          <div class="ts labeled [[action]] input">
+              <div class="ts basic label">@</div>
+              <input type="text">
+              <button class="ts button">送出</button>
+          </div>
+          <br><br>
+          <div class="ts [[left action]] input">
+              <button class="ts primary labeled icon {{button}}">
+                  <i class="cart icon"></i>
+                  结账
+              </button>
+              <input type="text" value="$52.03">
+          </div>
+          <br><br>
+          <div class="ts [[action]] input">
+              <input type="text" placeholder="搜寻域名">
+              <select class="ts basic {{dropdown}}">
+                  <option>.com</option>
+                  <option>.org</option>
+                  <option>.xxx</option>
+              </select>
+          </div>
+          <br><br>
+          <div class="ts [[action]] input">
+              <input type="text" placeholder="书籍名称">
+              <select class="ts basic {{dropdown}}">
+                  <option>教育</option>
+                  <option>娱乐休闲</option>
+                  <option>经济</option>
+              </select>
+              <button class="ts {{button}}">搜寻</button>
+          </div>
+
+      - title      : 无边框
+        description: 输入字段可以没有边框，有时可以和基本样式 <span class="ts horizontal label">.basic</span> 一同搭配。
+        code       : |
+          <div class="ts [[borderless]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+
+      - title      : 流动
+        description: 输入字段的宽度可以是流动的。
+        code       : |
+          <div class="ts [[fluid]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+
+      - title      : 圆形的
+        description: 输入字段的圆角可以更圆。
+        code       : |
+          <div class="ts [[circular]] input">
+              <input type="text" placeholder="文字字段">
+          </div>
+
+      - title      : 可伸缩的
+        description: 输入字段可供使用者自由缩放。
+        code       : |
+          <div class="ts [[resizable]] input">
+              <textarea placeholder="文章内容..."></textarea>
+          </div>
+
+      - title      : 尺寸
+        description: 输入字段的的尺寸有所不同。
+        remove     : <br>
+        code       : |
+          <div class="ts [[mini]] input">
+              <input type="text" placeholder="迷你">
+          </div>
+          <br><br>
+          <div class="ts [[tiny]] input">
+              <input type="text" placeholder="微小">
+          </div>
+          <br><br>
+          <div class="ts [[small]] input">
+              <input type="text" placeholder="小的">
+          </div>
+          <br><br>
+          <div class="ts [[medium]] input">
+              <input type="text" placeholder="适中">
+          </div>
+          <br><br>
+          <div class="ts [[large]] input">
+              <input type="text" placeholder="大的">
+          </div>
+          <br><br>
+          <div class="ts [[big]] input">
+              <input type="text" placeholder="更大">
+          </div>
+          <br><br>
+          <div class="ts [[huge]] input">
+              <input type="text" placeholder="巨大">
+          </div>
+          <br><br>
+          <div class="ts [[massive]] input">
+              <input type="text" placeholder="重量级">
+          </div>

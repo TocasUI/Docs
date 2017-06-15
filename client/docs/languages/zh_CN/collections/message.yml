@@ -1,0 +1,384 @@
+slate:
+  title      : 讯息
+  description: 传递讯息至远方。
+
+tabs:
+  - type  : styles
+    to    : /collections/message
+  - type  : javascript
+    to    : /collections/message/javascript
+
+styles:
+  - category   : 种类
+    description: 讯息有不同的种类。
+    items      :
+      - title      : 讯息
+        description: 一个最基本的讯息。
+        code       : |
+          <div class="ts [[message]]">
+              <div class="header">静思语</div>
+              <p>输的时候失去最多的就是理智。</p>
+          </div>
+
+      - title      : 基本
+        description: 讯息可以只留下基本结构。
+        code       : |
+          <div class="ts [[basic]] message">
+              直到你成功之前，人们都是瞎子。
+          </div>
+
+      - title      : 外框线
+        description: 讯息可以只有外框线。
+        code       : |
+          <div class="ts [[outlined]] message">
+              直到你成功之前，人们都是瞎子。
+          </div>
+
+      - title      : 结构化
+        description: 讯息能够看起来更具有结构，并带有更多附加动作。
+        code       : |
+          <div class="ts [[structured]] message">
+              <div class="avatar">
+                  <img src="!-user-!">
+              </div>
+              <div class="content">
+                  <div class="description">
+                      <p>有位使用者跑到了你的小屋并向你道声早安，</p>
+                      <p>但就在你卸下心防的同时，你意识到有什么东西从身边消失了。</p>
+                  </div>
+                  <div class="actions">
+                      <a class="primary" href="#!">检查道具栏</a>
+                      <a href="#!">叫住对方</a>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 语气
+        description: 讯息也可以带有不同的语气。
+        code       : |
+          <div class="ts [[primary]] message">
+              <div class="header">现已开始</div>
+              <p>目前「osu! World Cup 2015」已开始进行直播。</p>
+          </div>
+          <div class="ts [[warning]] message">
+              <div class="header">您需要先登入！</div>
+              <p>不好意思，您需要先登入才能够执行这项动作。</p>
+          </div>
+          <div class="ts [[info]] message">
+              <div class="header">需要一些时间</div>
+              <p>你所上传的影片会在稍后开始进行转档动作。</p>
+          </div>
+
+      - title      : 肯定和否定
+        description: 讯息可以有肯定或是否定的语气。
+        code       : |
+          <div class="ts [[positive]] message">
+              <div class="header">恭喜！</div>
+              <p>你已经注册成功。</p>
+          </div>
+          <div class="ts [[negative]] message">
+              <div class="header">此文章已被删除</div>
+              <p>你欲拜访的文章因违反规定而遭到删除。</p>
+          </div>
+
+      - title      : 反色
+        description: 反色语气可以用在讯息上。
+        code       : |
+          <div class="ts [[inverted]] message">
+              <div class="header">系统升级中</div>
+              <p>搭啦啦！系统正在升级！</p>
+          </div>
+          <div class="ts [[inverted]] primary message">
+              <div class="header">现已开始</div>
+              <p>目前「osu! World Cup 2015」已开始进行直播。</p>
+          </div>
+          <div class="ts [[inverted]] warning message">
+              <div class="header">您需要先登入！</div>
+              <p>不好意思，您需要先登入才能够执行这项动作。</p>
+          </div>
+          <div class="ts [[inverted]] info message">
+              <div class="header">需要一些时间</div>
+              <p>你所上传的影片会在稍后开始进行转档动作。</p>
+          </div>
+          <div class="ts [[inverted]] positive message">
+              <div class="header">恭喜！</div>
+              <p>你已经注册成功。</p>
+          </div>
+          <div class="ts [[inverted]] negative message">
+              <div class="header">此文章已被删除</div>
+              <p>你欲拜访的文章因违反规定而遭到删除。</p>
+          </div>
+
+      - title      : 次要
+        description: 讯息的重要程度可以是次要的。
+        code       : |
+          <div class="ts [[secondary]] message">
+              <div class="header">系统升级中</div>
+              <p>搭啦啦！系统正在升级！</p>
+          </div>
+          <div class="ts [[secondary]] primary message">
+              <div class="header">现已开始</div>
+              <p>目前「osu! World Cup 2015」已开始进行直播。</p>
+          </div>
+          <div class="ts [[secondary]] inverted positive message">
+              <div class="header">恭喜！</div>
+              <p>你已经注册成功。</p>
+          </div>
+          <div class="ts [[secondary]] inverted negative message">
+              <div class="header">此文章已被删除</div>
+              <p>你欲拜访的文章因违反规定而遭到删除。</p>
+          </div>
+
+      - title      : 清单
+        description: 一个带有列表的讯息。
+        code       : |
+          <div class="ts message">
+              <div class="header">现已推出</div>
+              <div class="[[list]]">
+                  <li>虚拟现实扩充</li>
+                  <li>肥宅仿真器 2016</li>
+              </div>
+          </div>
+
+      - title      : 图示
+        description: 一个带有图标的讯息。
+        code       : |
+          <div class="ts [[icon]] message">
+              <i class="gift {{icon}}"></i>
+              <div class="content">
+                  <div class="header">最新礼物</div>
+                  <p>你收到了来自 ThisAV 的礼物。</p>
+              </div>
+          </div>
+
+      - title      : 可关闭的
+        description: 你能够在讯息内摆放一个关闭按钮，令讯息看起来像可关闭一样。若真要执行关闭动作，请参考 JavaScript 模块章节。
+        code       : |
+          <div class="ts [[dismissable]] message">
+              <button class="ts close {{button}}"></button>
+              <div class="header">
+                  不喜欢我？
+              </div>
+              <p>那就关闭我吧。</p>
+          </div>
+
+  - category   : 状态
+    description: 讯息带有一些不同的状态。
+    items      :
+
+      - title      : 隐藏
+        description: 用来隐藏讯息。
+        code       : |
+          <div class="ts [[hidden]] message">
+              你看不见我。
+          </div>
+
+  - category   : 内容
+    description: 讯息里面可以带有不同的内容。
+    items      :
+
+      - title      : 注释
+        description: 讯息里可以摆放基本的文字注释，这只用于结构较复杂的讯息，通常你不需要这么做。
+        code       : |
+          <div class="ts message">
+              <div class="content">
+                  <div class="[[description]]">
+                      虽然开始是一样的，但经历令我们成为了不同人。
+                  </div>
+              </div>
+          </div>
+
+      - title      : 额外注释
+        description: 一个与这个讯息有关连的额外内容。
+        code       : |
+          <div class="ts structured message">
+              <div class="content">
+                  <div class="description">
+                      您已获得 iPhone 9S 抽奖机会！但是你永远都不会中奖，我们很期待您的参与。
+                  </div>
+                  <div class="[[extra description]]">
+                      注意，你只有三十秒的选择机会！
+                  </div>
+              </div>
+          </div>
+
+      - title      : 动作
+        description: 你能够在讯息的右侧安插一些动作按钮。
+        code       : |
+          <div class="ts message">
+              <div class="content">
+                  <div class="description">
+                      我们已接获版权警告并将此影片进行消音处理，这可能导致你的影片观看次数下降。
+                  </div>
+                  <div class="[[actions]]">
+                      <button class="ts small inverted basic negative {{button}}">重新上诉</button>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 图示
+        description: 结构化的讯息内可以摆放图标。
+        code       : |
+          <div class="ts structured message">
+              <div class="[[icon]]">
+                  <i class="trash {{icon}}"></i>
+              </div>
+              <div class="content">
+                  <div class="description">
+                      你已成功地将文章移动至垃圾桶了。
+                  </div>
+                  <div class="actions">
+                      <a href="#!">还原文章</a>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 头像
+        description: 讯息里也能够摆置一个使用者头像。
+        code       : |
+          <div class="ts structured message">
+              <div class="[[avatar]]">
+                  <img src="!-user-!">
+              </div>
+              <div class="content">
+                  <div class="description">
+                      你的朋友刚才在你的文章中留言。
+                  </div>
+                  <div class="actions">
+                      <a class="primary" href="#!">查看</a>
+                      <a href="#!">下次别提醒我</a>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 讯息有不同的外观。
+    items      :
+
+      - title      : 缩减版
+        description: 让讯息透过文字长度来决定宽度。
+        code       : |
+          <div class="ts [[compact]] message">
+              可恶，好想知道她的名字啊！
+          </div>
+
+      - title      : 淡化
+        description: 讯息可以被淡化。
+        code       : |
+          <div class="ts [[faded]] message">
+              当你接受了现况，就等于接受了死亡。
+          </div>
+
+      - title      : 缩减
+        description: 讯息的内距可以省去。
+        code       : |
+          <div class="ts [[fitted]] message">
+              这个讯息没有内距。
+          </div>
+          <div class="ts [[horizontally fitted]] message">
+              移除水平内距。
+          </div>
+          <div class="ts [[vertically fitted]] message">
+              这个讯息没有垂直内距。
+          </div>
+
+      - title      : 无边框
+        description: 讯息可以没有边框。
+        code       : |
+          <div class="ts [[borderless]] message">
+              这个讯息没有边框。
+          </div>
+
+      - title      : 附着
+        description: 讯息可以附着在其他元素上下。
+        remove     : <br><br>
+        code       : |
+          <div class="ts padded [[top attached]] message">
+              <div class="header">
+                  正在编辑：关于我
+              </div>
+              <p>请检查以下「关于我」是否正确。</p>
+          </div>
+          <div class="ts attached {{segment}}">
+              始春到底是什么？始春，绝不向日历妥协始春，绝不向预告低头只要 CM3D2 在手，就能够永远地始春始春是一种精神，一种态度一种革命，一种叛逆。于是我了解「跳票、延期、三屏幕，这就是始春。」
+          </div>
+          <div class="ts positive [[attached]] message">
+              以下是已核准内容。
+          </div>
+          <div class="ts bottom attached {{segment}}">
+              夏希是一个基于 PHP 的时间类别， 用以取得现在的时间，或者是数天后的现在时刻。
+          </div>
+          <br><br>
+          <div class="ts fluid top attached {{input}}">
+              <input type="text" placeholder="监护人姓名">
+          </div>
+          <div class="ts warning [[bottom attached]] message">
+              当有监护人时请填写此字段。
+          </div>
+
+      - title      : 附着增加内距
+        description: 讯息在附着的情况下会缩减内距以避免过大，这个时候你能够增加内距来令讯息大于他们所附着的元素。
+        code       : |
+          <div class="ts top attached message">
+              基本内距
+          </div>
+          <div class="ts attached {{segment}}">
+              文字。
+          </div>
+          <div class="ts [[padded]] attached message">
+              增加内距
+          </div>
+          <div class="ts attached {{segment}}">
+              文字。
+          </div>
+          <div class="ts [[very padded]] bottom attached message">
+              超级内距
+          </div>
+
+      - title      : 水平对齐
+        description: 你可以改变讯息中的文字水平对齐，例如置左、置右、或置中。
+        code       : |
+          <div class="ts [[left aligned]] message">
+              我置左对齐。
+          </div>
+          <div class="ts [[center aligned]] message">
+              我置中对齐。
+          </div>
+          <div class="ts [[right aligned]] message">
+              我置右对齐。
+          </div>
+
+      - title      : 漂浮
+        description: 讯息可以看起来是被举起、漂浮的。
+        code       : |
+          <div class="ts [[floating]] message">
+              我好像被举起来了。
+          </div>
+
+      - title      : 尺寸
+        description: 讯息有提供多种尺寸。
+        code       : |
+          <div class="ts [[mini]] message">
+              迷你
+          </div>
+          <div class="ts [[tiny]] message">
+              微小
+          </div>
+          <div class="ts [[small]] message">
+              小的
+          </div>
+          <div class="ts [[medium]] message">
+              适中
+          </div>
+          <div class="ts [[large]] message">
+              大的
+          </div>
+          <div class="ts [[big]] message">
+              大型
+          </div>
+          <div class="ts [[huge]] message">
+              巨大
+          </div>
+          <div class="ts [[massive]] message">
+              重量级
+          </div>

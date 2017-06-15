@@ -1,0 +1,92 @@
+slate:
+  title      : 分页签
+  description: 不换网页却能在多个内容之间作切换的好选择。
+
+tabs:
+  - type  : styles
+    to    : /modules/tab/
+  - type  : javascript
+    to    : /modules/tab/javascript/
+
+styles:
+  - category   : JavaScript
+    description: 分页签有提供可用的 JavaScript 模块。
+    items      :
+      - title      : 初始化
+        description: |
+          <p>你需要透过 JavaScript 初始化分页签功能，初始化时有这些参数选项可供使用。透过 <span class="ts horizontal label">[data-tab]</span> 替每个分页命名，并记得在选单的项目中也加上相同的名称，这样才能够令项目点击时切换到指定分页。</p>
+          <p>有趣的是分页名称不一定要是英文，这让你能够使用自己国家的语言进行命名且更易于近人。</p>
+          <table class="ts small celled stackable definition table">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>参数</th>
+                      <th>注释</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>onSwitch</td>
+                      <td>tabName[<em>string</em>], groupName[<em>string|null</em>]</td>
+                      <td>当分页签切换时所会呼叫的函式，函式会传入两个参数，分别是欲切换至的分页与组名。</td>
+                  </tr>
+              </tbody>
+          </table>
+        code       : |
+          <div id="first" class="ts top attached tabbed menu">
+              <a class="active item" [[data-tab]]="首要分页">首要</a>
+              <a class="item" [[data-tab]]="次要分页">次要</a>
+          </div>
+          <div [[data-tab]]="首要分页" class="ts active bottom attached tab segment">
+              第一个分页内容！
+          </div>
+          <div [[data-tab]]="次要分页" class="ts bottom attached tab segment">
+              然后这是第二个。
+          </div>
+        javascript: |
+          ts('#first.tabbed.menu .item').tab({
+              onSwitch: (tabName, groupName) => {
+                  alert("你切换到了「" + tabName + "」分页，而群组是「" + groupName + "」。");
+              }
+          });
+        autoExecute: true
+
+      - title      : 分页群组
+        description: |
+          <p>你能够在网页中放入多层分页，透过 <span class="ts horizontal label">[data-tab-group]</span> 将有关连的分页牵连起来成为群组并为其命名，一但依照群组区分之后，分页的名称可以和另一个群组的分页相互重复而不起冲突。</p>
+          <p>而分页群组的名称不一定要是英文，甚至也可以带有符号。</p>
+        code       : |
+          <div class="ts secondary menu">
+              <a class="active item" data-tab="首要" [[data-tab-group]]="群组">首要</a>
+              <a class="item" data-tab="次要" [[data-tab-group]]="群组">次要</a>
+          </div>
+          <div data-tab="首要" [[data-tab-group]]="群组" class="ts active tab segment">
+              <p>第一个分页。</p>
+              <div class="ts top attached tabbed menu">
+                  <a class="active item" data-tab="首要" [[data-tab-group]]="群组/分页1">首要</a>
+                  <a class="item" data-tab="次要" [[data-tab-group]]="群组/分页1">次要</a>
+              </div>
+              <div data-tab="首要" [[data-tab-group]]="群组/分页1" class="ts active bottom attached tab segment">
+                  第一个分页群组的第一个分页。
+              </div>
+              <div data-tab="次要" [[data-tab-group]]="群组/分页1" class="ts bottom attached tab segment">
+                  第一个分页群组的第二个分页。
+              </div>
+          </div>
+          <div data-tab="次要" [[data-tab-group]]="群组" class="ts tab segment">
+              <p>第二个分页。</p>
+              <div class="ts top attached tabbed menu">
+                  <a class="active item" data-tab="首要" [[data-tab-group]]="群组/分页2">首要</a>
+                  <a class="item" data-tab="次要" [[data-tab-group]]="群组/分页2">次要</a>
+              </div>
+              <div data-tab="首要" [[data-tab-group]]="群组/分页2" class="ts active bottom attached tab segment">
+                  第二个分页群组的第一个分页。
+              </div>
+              <div data-tab="次要" [[data-tab-group]]="群组/分页2" class="ts bottom attached tab segment">
+                  第二个分页群组的第二个分页。
+              </div>
+          </div>
+        javascript: |
+          ts('.secondary.menu .item').tab();
+          ts('.tabbed.menu .item').tab();
+        autoExecute: true

@@ -1,0 +1,49 @@
+slate:
+  title      : 复合功能选单
+  description: 像原生应用程序那样地将多项功能纳入右键、长按选单。
+
+tabs:
+  - type  : styles
+    to    : /modules/contextmenu/
+  - type  : javascript
+    to    : /modules/contextmenu/javascript/
+
+styles:
+  - category   : JavaScript
+    description: 复合功能选单有提供可用的 JavaScript 模块。
+    items      :
+
+      - title      : 初始化
+        description: 你需要透过 JavaScript 初始化一个复合功能选单，同时需指定会触发复合功能选单的容器，还有触发的选单为何。
+        code       : |
+          <div class="ts basic padded dashed slate">
+              <i class="mouse pointer icon"></i>
+              <span class="header">在此点击右键</span>
+              <span class="description">在这个板岩上点击右键可以呼叫出 Tocas UI 自定义的复合功能选单。</span>
+          </div>
+          <div class="ts [[contextmenu]]">
+              <div class="item">
+                  新增
+              </div>
+              <div class="item">
+                  重新命名
+                  <span class="description">Ctrl + R</span>
+              </div>
+              <div class="item">
+                  <i class="folder icon"></i>
+                  移动至
+              </div>
+              <div class="item">
+                  <i class="trash icon"></i>
+                  移至垃圾桶
+              </div>
+              <div class="divider"></div>
+              <div class="item">
+                  下载为 ...
+              </div>
+          </div>
+        javascript: |
+          ts('.basic.dashed.slate').contextmenu({
+              menu: '.ts.contextmenu'
+          });
+        autoExecute: true

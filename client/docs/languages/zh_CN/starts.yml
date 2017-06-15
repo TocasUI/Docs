@@ -1,0 +1,29 @@
+slate:
+  title      : 从这开始
+  description: 欢迎使用 Tocas UI。
+
+items:
+  - title      : 开始使用
+    link       : /getting-started/
+    description: 学习如何使用 Tocas UI，并理解与其他 CSS 框架（如：Bootstrap）的差异。
+    symbol     : flag
+
+  - title      : 基本元素
+    link       : /typography/
+    description: 我们修改了一些基本元素的样式，令其更加美观。
+    symbol     : cube
+
+  #- title      : 组件理念
+  #  link       : /components/
+  #  description: 理解 Tocas UI 的组件理念并学习如何将组件组合在一起。
+  #  symbol     : comments outline
+
+  - title      : 实际范例
+    link       : /examples/
+    description: 透过 Tocas UI 所做出的企业级范例网站，且开放原始码并供自由下载与修改。
+    symbol     : cubes
+
+  - title      : 游乐场
+    link       : /try/
+    description: 直接在线测试并编辑 Tocas UI，还能与他人一同分享相关结构。
+    symbol     : code

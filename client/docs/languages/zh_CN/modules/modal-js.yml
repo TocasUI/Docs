@@ -1,0 +1,145 @@
+slate:
+  title      : 对话窗口
+  description: 请问大家知道你只有一公分吗？「知道」、「不知道」。
+
+tabs:
+  - type  : styles
+    to    : /modules/modal
+  - type  : javascript
+    to    : /modules/modal/javascript
+
+styles:
+  - category   : JavaScript
+    description: 对话窗口有提供可用的 JavaScript 模块。
+    items      :
+      - title      : 显示与隐藏
+        description: |
+          如果你希望这个对话窗口能够弹出并且遮蔽背景，那么你就需要将其包含在一个 <span class="ts horizontal label">.ts.modals.dimmer</span> 的淡化幕中。在淡化幕中的对话窗口默认是隐藏的，除非透过 JavaScript 呼叫该对话窗口才会显示。
+          <br>
+          <table class="ts small stackable definition table">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>注释</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>show</td>
+                      <td>显示对话窗口。</td>
+                  </tr>
+                  <tr>
+                      <td>hide</td>
+                      <td>隐藏对话窗口。</td>
+                  </tr>
+              </tbody>
+          </table>
+        code       : |
+          <div class="[[ts modals dimmer]]">
+              <dialog id="modal" class="ts basic modal" open>
+                  <i class="close {{icon}}"></i>
+                  <div class="ts icon {{header}}">
+                      <i class="smile {{icon}}"></i>
+                      您同意「合理使用条约」吗
+                  </div>
+                  <div class="content">
+                      <p>保障任何人的著作权，其中包括二次创作，二次创作仅可在原作者未声明否决下进行发布和创作，在未经原作允许下衍生任何具有原作之内容，基于衍生理念与内容为判决要点，
+              原作必须基于合理使用之理念提出移除、上诉任何非符合合理使用概念的衍生内容，合理使用的理念如下：使用目的及性质其着重点在于内容是否有所转化，如衍生创作另有新意，非仅复制原作内容。版权作品性质以真实、事实所阐述之作品较虚构作品来的能够符合合理使用。使用版权作品的多寡引用少量的原创著作比起引用大量来要的符合合理使用，但倘若原创著作成为衍生著作之核心内容，即使少量的原创著作被引用，也较不可能符合合理使用之原则。使用行为对于版权作品的市场或价值之影响透过原创著作的内容而进行获利并造成原创著作部分损害，较不符合合理使用之原则。</p>
+                  </div>
+                  <div class="actions">
+                      <button class="ts inverted basic deny {{button}}">
+                          不
+                      </button>
+                      <button class="ts inverted basic positive {{button}}">
+                          是的
+                      </button>
+                  </div>
+              </dialog>
+          </div>
+        javascript: |
+          ts('#modal').modal("show")
+
+      - title      : 可关闭的
+        description: 你可以让使用者点击周边的淡化幕就关闭对话窗口。
+        code       : |
+          <div class="ts modals dimmer">
+              <dialog id="closableModal" class="ts [[closable]] tiny modal">
+                  <div class="content">
+                      <p>点击淡化幕也能够关闭这个窗口，因为这是个 <span class="ts horizontal label">closable</span> 对话窗口。</p>
+                  </div>
+                  <div class="actions">
+                      <button class="ts deny {{button}}">
+                          不
+                      </button>
+                      <button class="ts positive {{button}}">
+                          是的
+                      </button>
+                  </div>
+              </dialog>
+          </div>
+        javascript: |
+          ts('#closableModal').modal("show")
+
+      - title      : 设置选项
+        description: |
+          在默认对话窗口行为中只要是类别名称为 <span class="ts horizontal label">.deny</span>、<span class="ts horizontal label">.negative</span>、<span class="ts horizontal label">.cancel</span> 的元素被按下都会呼叫<strong>取消回调函式</strong>，而 <span class="ts horizontal label">.approve</span>、<span class="ts horizontal label">.positive</span>、<span class="ts horizontal label">.ok</span> 则会呼叫<strong>成功回调函式</strong>，你能够在选项中自行改变这一点。
+          <br>
+          <table class="ts small stackable definition table">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>注释</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>approve</td>
+                      <td>会呼叫同意回调函式的元素选择器（默认：<span class="ts horizontal label">.approve, .positive, .ok</span>）</td>
+                  </tr>
+                  <tr>
+                      <td>deny</td>
+                      <td>会呼叫拒绝回调函式的元素选择器（默认：<span class="ts horizontal label">.deny, .negative, .cancel</span>）</td>
+                  </tr>
+                  <tr>
+                      <td>onApprove</td>
+                      <td>同意时所被呼叫的函式，如果这个函式回传 <span class="ts horizontal label">false</span> 的话将不会关闭对话窗口。</td>
+                  </tr>
+                  <tr>
+                      <td>onDeny</td>
+                      <td>拒绝时所被呼叫的函式，如果这个函式回传 <span class="ts horizontal label">false</span> 的话将不会关闭对话窗口。</td>
+                  </tr>
+              </tbody>
+          </table>
+        code       : |
+          <div class="ts modals dimmer">
+              <dialog id="optionModal" class="ts modal">
+                  <div class="header">
+                      逼啪拉毕叭啦霹拉吧
+                  </div>
+                  <div class="content">
+                      <p>到水的车风、天小望再，个院们着福！要清我个夫后于、说妈平神线连时该：光四报接。大亲放书光？不议书组巴口保能近细，却实到式石特约过。</p>
+                      <p>代你是走是：路火改大儿地结后也伤车、明心没教的童了共这英们点县慢公早出光了得引多经！处技北夫们十是入就重得然亲……法美机的义是小唱当解土量同吃，和样做新机子他市很失吃出家。仍思老木海和部成是市的国儿生球要又办中有对父色……形非带海了。话安生当我球起。子立过财量展美义；那康自从远飞心的一。</p>
+                      <p>旅一的四课，开地还，的取理活数度青天化民家向的专自到及学，县光自分个发：条越资大无庭；但进台方队的风断此的小……一背书要西表灵：要艺太童汽也老天好住？儿没生月路把时？不他谢、意强两而一机，却运持院是品的她脚。进和问半叶一所希知，景是育不、市音个在费我星国增成受呢来我子片易黄头着，停可成人发才己金过位关长不一得主，好成引题于手鱼，文指者价然、常首能国达另了石？且年养？好看了不、产行和越早反前门有，放转国引环流的力是直算不福然。的馆体后在利远员我经现运怀况指正念像妈头是中经！</p>
+                  </div>
+                  <div class="actions">
+                      <button class="ts deny {{button}}">
+                          不
+                      </button>
+                      <button class="ts positive {{button}}">
+                          是的
+                      </button>
+                  </div>
+              </dialog>
+          </div>
+        javascript: |
+          ts('#optionModal').modal({
+              approve: '.positive, .approve, .ok',
+              deny  : '.negative, .deny, .cancel',
+              onDeny: function() {
+                  alert("你一定要同意才行！")
+                  return false
+              },
+              onApprove: function() {
+                  alert("太好了！")
+              }
+          }).modal("show")

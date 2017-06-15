@@ -1,0 +1,67 @@
+slate:
+  title      : 分隔线
+  description: 这里开启了另一个话题。
+
+styles:
+  - category   : 种类
+    description: 分隔线具有不同的种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的分隔线。
+        code       : |
+          <p>我是微笑小安安，欢迎来到小安网站。</p>
+          <div class="ts [[divider]]"></div>
+          <p>你将会在这里看见一个魔法师的日常生活，</p>
+          <p>没错，只要你能够单身三十年，你也可以跟我一样成为魔法师。</p>
+
+      - title      : 段落
+        description: 分隔线可以增加间距用以区分大型段落。
+        code       : |
+          这里是一个区段，然后下一行会是新世界。
+          <div class="ts [[section]] divider"></div>
+          哈啰！世界！
+
+      - title      : 水平分隔线
+        description: 这种分隔线可以让你在中间插入文字。
+        code       : |
+          <p>哔哔哔。</p>
+          <div class="ts [[horizontal]] divider">我是分隔线</div>
+          <p>没错，你可以在分隔线中间插入一小段文字，</p>
+          <p>而且只需要一个元素。</p>
+
+  - category   : 外观
+    description: 分隔线的外观可以有所不同。
+    items      :
+
+      - title      : 隐藏
+        description: 不可见的分隔线，但仍带有分隔效果。
+        code       : |
+          <p>哔哔哔。</p>
+          <div class="ts [[hidden]] divider">我是分隔线</div>
+          <p>你有看见中间的分隔线吗？。</p>
+          <p>很多人看不见。</p>
+          <p>但是很多人不说。</p>
+
+      - title      : 缩减
+        description: 分隔线可以没有间距。
+        code       : |
+          这个分隔线会没有间距，字看起来会跟分隔线黏在一起。
+          <div class="ts [[fitted]] divider"></div>
+          当然这一行也不例外。
+
+      - title      : 反色
+        description: 分隔线的颜色是相反色。
+        code       : |
+          <div class="ts inverted {{segment}}">
+              下面的分隔线会和一般的分隔线颜色有所不同。
+              <div class="ts [[inverted]] divider"></div>
+              看见了吗！奇迹啊！
+          </div>
+
+      - title      : 清理浮动
+        description: |
+          分隔线可以透过 <span class="ts label">clear: both;</span> 清理上一个元素的浮动状态。
+        code       : |
+          月月，搭拉安！
+          <div class="ts [[clearing]] divider"></div>
+          月月，搭拉安！

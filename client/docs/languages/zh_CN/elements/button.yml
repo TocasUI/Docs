@@ -1,0 +1,278 @@
+slate:
+  title      : 按钮
+  description: 一个重要的按钮，我们将它视为核弹按钮般，精心设计和呵护。
+
+intro: |
+  <p>按钮具有多种样式和语意，请注意的是，语意和颜色不同，请不要为了要新增红色按钮，就建立一个「负面」按钮。</p>
+  <p>请务必遵循 CSS 样式中的含意。</p>
+
+styles:
+  - category   : 种类
+    description: 一个按钮具有多个不同的种类。
+    items      :
+      - title      : 按钮
+        description: 一个正常的按钮。
+        code       : |
+          <button class="ts [[button]]">按钮</button>
+
+      - title      : 基本语气
+        description: 用来让一个按钮拥有不同的意思，但却不带有肯定或否定语气。
+        code       : |
+          <button class="ts [[primary]] button">主要</button>
+          <button class="ts [[warning]] button">警告</button>
+          <button class="ts [[info]] button">信息</button>
+          <button class="ts [[inverted]] button">相反色</button>
+
+      - title      : 肯定和否定
+        description: 让按钮带有肯定或否定的意思。
+        code       : |
+          <button class="ts [[positive]] button">肯定</button>
+          <button class="ts [[negative]] button">否定</button>
+
+      - title      : 次等的
+        description: 一个次等的按钮的背景默认是白色的，令其较不显眼。
+        code       : |
+          <button class="ts [[secondary]] button">次等</button>
+
+      - title      : 偏见
+        description: 让按钮以背景颜色作为基础，并以此产生深、暗差异的偏见。
+        code       : |
+          <div class="ts inverted info {{segment}}">
+              <button class="ts [[opinion]] button">偏见</button>
+              <button class="ts [[secondary opinion]] button">次要偏见</button>
+          </div>
+          <div class="ts inverted warning {{segment}}">
+              <button class="ts [[opinion]] button">偏见</button>
+              <button class="ts [[secondary opinion]] button">次要偏见</button>
+          </div>
+
+      - title      : 图案
+        description: 只显示图案的按钮。
+        code       : |
+          <button class="ts [[icon]] button">
+              <i class="heart {{icon}}"></i>
+          </button>
+
+      - title      : 连结
+        description: 按钮可以看起来像纯文本连结。
+        code       : |
+          这是个<button class="ts [[link]] button">链接按钮</button>喔！
+
+      - title      : 关闭
+        description: 按钮可以呈现一个用于关闭其他组件的样式。
+        code       : |
+          <button class="ts mini [[close]] button"></button>
+          <button class="ts tiny [[close]] button"></button>
+          <button class="ts small [[close]] button"></button>
+          <button class="ts [[close]] button"></button>
+          <button class="ts large [[close]] button"></button>
+          <button class="ts big [[close]] button"></button>
+          <button class="ts huge [[close]] button"></button>
+          <button class="ts massive [[close]] button"></button>
+
+      - title      : 基本
+        description: 让按钮只带有基本的架构。
+        code       : |
+          <button class="ts positive [[basic]] button">确定</button>
+          <button class="ts negative [[basic]] button">拒绝</button>
+          <button class="ts [[basic]] button">知道</button>
+          <button class="ts secondary [[basic]] button">取消</button>
+
+      - title      : 标签
+        description: 带有卷标的按钮。
+        code       : |
+          <div class="ts [[left labeled]] button">
+              <div class="ts basic {{label}}">689</div>
+              <button class="ts button">加入募集</button>
+          </div>
+          <div class="ts [[labeled]] button">
+              <button class="ts button">加入募集</button>
+              <div class="ts basic {{label}}">689</div>
+          </div>
+
+      - title      : 卷标图标
+        description: 带有卷标和图标的按钮。
+        code       : |
+          <button class="ts [[labeled icon]] button">
+              <i class="star {{icon}}"></i>
+              星号
+          </button>
+          <button class="ts [[right labeled icon]] button">
+              加入最爱
+              <i class="heart {{icon}}"></i>
+          </button>
+
+  - category   : 群组
+    description: 将多个按钮组成一列，或是拥有同样性质。
+    items      :
+
+      - title      : 按钮群组
+        description: 按钮可以组合成一个群组。
+        remove     : <br><br>
+        code       : |
+          <div class="ts [[buttons]]">
+              <button class="ts warning button">橙希</button>
+              <button class="ts primary button">雨蓝</button>
+              <button class="ts inverted button">卡莉丝</button>
+          </div>
+          <br><br>
+          <div class="ts icon [[buttons]]">
+            <button class="ts button"><i class="align left {{icon}}"></i></button>
+            <button class="ts button"><i class="align center {{icon}}"></i></button>
+            <button class="ts button active"><i class="align right {{icon}}"></i></button>
+            <button class="ts button"><i class="align justify {{icon}}"></i></button>
+          </div>
+
+      - title      : 垂直群组
+        description: 群组也可以是垂直摆放的。
+        code       : |
+          <div class="ts fluid [[vertical]] [[buttons]]">
+              <button class="ts warning button">橙希</button>
+              <button class="ts primary button">雨蓝</button>
+              <button class="ts inverted button">卡莉丝</button>
+          </div>
+
+      - title      : 分开的
+        description: 按钮群组也可以分开、有间距。
+        code       : |
+          <div class="ts [[separated]] [[buttons]]">
+              <button class="ts warning button">橙希</button>
+              <button class="ts primary button">雨蓝</button>
+              <button class="ts inverted button">卡莉丝</button>
+          </div>
+
+      - title      : 较宽松的
+        description: 按钮群组之间的间距可以更大、看起来更宽松。
+        code       : |
+          <div class="ts [[relaxed]] separated buttons">
+              <button class="ts warning button">橙希</button>
+              <button class="ts primary button">雨蓝</button>
+              <button class="ts inverted button">卡莉丝</button>
+          </div>
+
+      - title      : 自动层迭
+        description: 按钮群组可以在手机版上自动层迭，而不是保持水平排列。欲观看此效果你需要使用手机来查看此范例。
+        code       : |
+          <div class="ts fluid [[stackable]] buttons">
+              <button class="ts info button">希豹</button>
+              <button class="ts negative button">祈浪</button>
+              <button class="ts inverted button">余望</button>
+          </div>
+
+      - title      : 垂直附着
+        description: 按钮群组可以垂直附着在某个元素的上下端。
+        mark       : top attached, bottom attached
+        code       : |
+          <div class="ts fluid [[top attached]] buttons">
+              <div class="ts primary button">按钮一</div>
+              <div class="ts positive button">按钮二</div>
+          </div>
+          <div class="ts attached {{segment}}">
+              <p>猫耳就是量子力学</p>
+              <p>△×￥○＠％＆＄＃☆□！</p>
+              <p>「冷静一点、把咖啡欧蕾喝下去」</p>
+          </div>
+          <div class="ts fluid [[bottom attached]] buttons">
+              <div class="ts inverted button">按钮三</div>
+              <div class="ts negative button">按钮四</div>
+          </div>
+
+  - category   : 内容
+    description: 按钮内部可以有不同的内容。
+    items      :
+
+      - title      : 条件
+        description: 你能够在按钮群组的间隙中间安插像是条件式的文字让用户择其一。
+        code       : |
+          <div class="ts buttons">
+              <button class="ts button">取消</button>
+              <div class="[[or]]"></div>
+              <button class="ts positive button">储存</button>
+              <div class="[[or]]"></div>
+              <button class="ts primary button">送出</button>
+          </div>
+
+      - subtitle   : 自定义条件文字
+        description: 你也能够透过 <span class="ts horizontal label">[data-text]</span> 来变动条件文字，但注意文字字数不可超过圆圈大小。
+        code       : |
+          <div class="ts buttons">
+              <button class="ts button">Cancel</button>
+              <div class="or" [[data-text]]="Or"></div>
+              <button class="ts positive button">Save</button>
+          </div>
+
+  - category   : 状态
+    description: 你可以随时透过样式类别切换一个按钮的状态。
+    items      :
+
+      - title      : 已启用
+        description: 用以显示这个按钮已经被启用、触发。
+        code       : <button class="ts [[active]] button">按钮</button>
+
+      - title      : 已停用
+        description: 用以显示这个按钮已经被禁止按下。
+        code       : <button class="ts [[disabled]] button">按钮</button>
+
+      - title      : 读取中
+        description: 按钮也可以变成读取状态。
+        code       : <button class="ts [[loading]] button">按钮</button>
+
+      - title      : 脉动中
+        description: 按钮能够看起来正在脉动，令人注意。
+        code       : <button class="ts [[pulsing]] button">按钮</button>
+
+  - category   : 外观
+    description: 你可以更改按钮的位置、大小、或者形状。
+    items      :
+
+      - title      : 尺寸
+        description: 按钮可以有不同的大小尺寸。
+        code       : |
+          <button class="ts [[mini]] button">迷你</button>
+          <button class="ts [[tiny]] button">微小</button>
+          <button class="ts [[small]] button">小型</button>
+          <button class="ts [[button]]">预设</button>
+          <button class="ts [[medium]] button">适中</button>
+          <button class="ts [[large]] button">大型</button>
+          <button class="ts [[big]] button">巨大</button>
+          <button class="ts [[huge]] button">超大</button>
+          <button class="ts [[massive]] button">重量级</button>
+
+      - title      : 浮动
+        description: 按钮可以向左或向右浮动对齐。
+        code       : |
+          <button class="ts [[left floated]] button">向左浮动</button>
+          <button class="ts [[right floated]] button">向右浮动</button>
+
+      - title      : 角落
+        description: 按钮可以浮动在某个元素的角落中。
+        code       : |
+          <div class="ts tiny image">
+              <img src="!-1:1-!">
+              <button class="ts [[top right corner]] close button"></button>
+          </div>
+
+      - title      : 垂直附着
+        description: 按钮可以单独垂直附着在某个元素的上下端。
+        code       : |
+          <button class="ts fluid [[top attached]] button">附着于上</button>
+          <div class="ts flatted attached {{segment}}">
+              <p>TeaMeow 是一个社群网站，就像是你正在使用的 Facebook 或是 Twitter，</p>
+              <p>不过我们强调的是「自由」和「日常」，我们不会整天删你文章。</p>
+          </div>
+          <button class="ts fluid [[bottom attached]] button">附着于下</button>
+
+      - title      : 轻巧版
+        description: 缩小按钮的内距。
+        code       : |
+          <button class="ts mini [[very compact]] button">非常轻巧</button>
+          <button class="ts mini [[compact]] button">迷你轻巧</button>
+          <button class="ts [[compact]] button">轻巧按钮</button>
+
+      - title      : 圆形
+        description: 按钮可以是圆形的。
+        code       : |
+          <button class="ts [[circular]] large icon button">
+              <i class="gift {{icon}}"></i>
+          </button>
+          <button class="ts [[circular]] positive button">知道了！</button>

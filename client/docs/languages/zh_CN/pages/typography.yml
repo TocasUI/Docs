@@ -1,0 +1,142 @@
+slate:
+  title      : 基本元素
+  description: 将默认 HTML 样式所覆盖的元素。
+
+styles:
+  - category   : 文字
+    description: 针对一般文字做出外观变动且带有语意化的 HTML5 标签。
+    items      :
+      - title      : 删除
+        description: 显示一段文字已经被删去、不再可供使用或参考。
+        code       : |
+          <[[del]]>这段文字已经不再具有参考价值。</[[del]]>
+
+      - title      : 插入
+        description: 文字可以展现出是额外插入到某个段落中的样子。
+        code       : |
+          野格炸弹，<[[ins]]>我的最爱</[[ins]]>。
+
+      - title      : 标记
+        description: 你能够让文字看起来就像被荧光笔标记一样。
+        code       : |
+          当我闭上眼，我，什么都 <[[mark]]>看不见</[[mark]]>。
+
+      - title      : 缩写
+        description: 文字可以是缩写，且在鼠标滑过时出现完整文字。
+        code       : |
+          <[[abbr]] title="HyperText Markup Language" class="initialism">HTML</[[abbr]]> 是卷标语言，而不是一种程序语言。
+
+      - title      : 上标与下标
+        description: 将指定文字偏上或偏下。
+        code       : |
+          <p>朋友买了一件衣料，绿色的底子带白色方格，当她拿给我们看时<[[sup]]>[8]</[[sup]]>：</p>
+          <p>「关我屁事？」我说。</p>
+          <p>我们不禁哄堂大笑，同样的一件衣料<[[sub]]>[9]</[[sub]]>，关其他人屁事。</p>
+
+      - title      : 分隔线
+        description: 将段落做为区隔。
+        code       : |
+          <p>那不是社会亦或教育问题。至今我们十分感慨，因为他生而如此却没被发现。</p>
+          <[[hr]]/>
+          <p>我们从不怀疑自己是不是没杀人的杀人犯。</p>
+
+      - title      : 引言
+        description: 从别处所引用的文字与段落。
+        code       : |
+          <[[blockquote]]>
+              <p>台湾是位于亚洲东部、太平洋西北侧的岛屿，地处琉球群岛与菲律宾群岛之间，西隔台湾海峡与欧亚大陆相望；面积约3.6万平方公里， 为世界第38大岛屿，其中7成为山地与丘陵，平原则主要集中于西部沿海，地形海拔变化大。由于地处热带及亚热带气候区之交界，自然景观与生态系资源相当丰富而多元。</p>
+              <cite>维基百科</cite>
+          </[[blockquote]]>
+
+  - category   : 清单
+    description: 基于 HTML5 基本卷标的列表元素。
+    items      :
+
+      - title      : 无序
+        description: 一个基本且没有顺序的列表，且能够巢状式堆栈。
+        code       : |
+          <[[ul]]>
+              <li>
+                  トリノライン
+                  <[[ul]]>
+                      <li>七波白音</li>
+                      <li>宫风夕梨</li>
+                      <li>紬木沙罗</li>
+                  </[[ul]]>
+              </li>
+          </[[ul]]>
+
+      - title      : 有序
+        description: 一个带有数字顺序的基本列表，且能够巢状式堆栈。
+        code       : |
+          <[[ol]]>
+              <li>
+                  オルタナティブガールズ
+                  <[[ol]]>
+                      <li>悠木美弥花</li>
+                      <li>柊つむぎ</li>
+                      <li>朝比奈乃々</li>
+                  </[[ol]]>
+              </li>
+          </[[ol]]>
+
+      - title      : 描述
+        description: 用以描述部份内容且带有标题的清单。
+        code       : |
+          <[[dl]]>
+              <dt>自然地理</dt>
+              <dd>台湾西与西北临台湾海峡，距欧亚大陆（主要距福建）海岸平均距离约200公里，台湾海峡最窄之处为台湾新竹县到中国福建省平潭岛，直线距离约130公里。</dd>
+              <dt>人文地理</dt>
+              <dd>包括台湾与附属的22座小岛，以及台湾海峡中澎湖群岛的90座岛屿。目前台湾约占中华民国实际行政区域面积98%，其约位于东经120度至122度、北纬22度至25度之间，北回归线经过嘉义县水上乡与花莲县瑞穗乡、丰滨乡等地 。</dd>
+          </[[dl]]>
+
+  - category   : 特殊标记
+    description: HTML5 中所内建的标记型卷标。
+    items      :
+
+      - title      : 同行程序代码
+        description: 让文字以类似程序代码的方式标记，并与其他一般文字出现在同行。
+        code       : |
+          透过 <[[code]]>.ts.button</[[code]]> 能够让你的按钮看起来特别像按钮，蒸蚌！
+
+      - title      : 键盘按键
+        description: 类似程序代码标记，但这是用来标记键盘快捷键的。
+        code       : |
+          按下 <[[kbd]]>command + s</[[kbd]]> 能够储存档案。
+
+      - title      : 变数
+        description: 用以标记程序内的变量名称。
+        code       : |
+          <[[var]]>div</[[var]]> = <[[var]]>document.documentElement</[[var]]>;
+
+      - title      : 输出范例
+        description: 标注程序代码、最终所输出的内容文字。例如程序执行之后所回传的内容。
+        code       : |
+          <[[samp]]>Hello, playground! Program exited.</[[samp]]>
+
+  - category   : 信息区块
+    description: 基于 HTML5 的信息区块卷标。
+    items      :
+
+      - title      : 地址
+        description: 用来叙述一个事物的联络方式与地址。
+        code       : |
+          <[[address]]>
+              <strong>卡莉斯</strong>
+              795 玹立市, 600 巷<br />
+              可露区, 邮政编码 94107<br />
+              市话：(555) 539-1037
+          </[[address]]>
+
+  - category   : 辅助样式
+    description: Tocas UI 所建立的辅助样式。
+    items      :
+
+      - title      : 移除样式
+        description: 如果你不希望原生标签有着 Tocas UI 的样式，你可以考虑移除该样式。
+        code       : |
+          <ol class="[[unstyled]]">
+              <li>悠木美弥花</li>
+              <li>有村诗音</li>
+              <li>柊つむぎ</li>
+          </ol>

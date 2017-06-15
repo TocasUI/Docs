@@ -1,0 +1,21 @@
+slate:
+  title      : 关于
+  description: 一些和 Tocas UI 相关的开发历程，还有其中琐碎的事物。
+
+singleColumn: true
+
+styles:
+  - category   : 历史
+    description: |
+      <p>Tocas UI 是因为 TeaMeow 的需求所出现的产物，起初还是像 Bootstrap 那样的命名方式而且组件都带有沉重的阴影，撰写的方式也是用传统的 CSS 而不是 SASS，后期发现了 Semantic UI 之后也就开始将 Tocas UI 带上正轨，这个时候出现了 Tocas UI 1，所有的原始码都是自己手动撰写的，这也造就了后来的问题。 </p>
+      <p>Tocas UI 1 正式地在 TeaMeow 开发过程中使用，但逐渐发现单位不准确（Tocas UI 1 将 <span class="ts horizontal label">px</span>、<span class="ts horizontal label">em</span>、<span chorizontal label">rem</span> 混搭着用），所以让多个组件看起来不稳定，因此也只好暂时搁置 TeaMeow 转而重新建立 Tocas UI 2。</p>
+      <p>而在 Tocas UI 2 开始效仿 Semantic UI 的原始码分配方式，并且有部分的程序代码是从 Semantic UI 的 LESS 直接转为 SASS，然后做了合并动作，这让 Tocas UI 2 解决了先前第一代所拥有的问题（如单位问题，组件配合问题）。</p>
+
+  - category   : 为什么不直接用 Semantic UI？
+    description: |
+      <p>Semantic UI 的命名精神真的很赞，不过部分组件并没有像 Tocas UI 一样有那么多的点缀样式（虽然他们的组件比较多），而且 Semantic UI 的文件中文并不友善，曾经尝试着去翻译但他们有太多无法翻译的词汇（被写死的，不能编辑），这一点也会增加对其他人上手的难度，</p>
+      <p>而且在预设情况下 Semantic UI 用了太多的全黑和全白，让对比太过于明显，Tocas UI 则是希望能够像 Flat UI 一样地明亮却又不会太过于轻浮。</p>
+
+  - category   : 月月，搭拉安
+    description: |
+      <p>搭啦！</p>

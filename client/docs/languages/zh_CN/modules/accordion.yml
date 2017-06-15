@@ -1,0 +1,69 @@
+slate:
+  title      : 手风琴
+  description: 叭啦叭叭叭叭，喔不好意思那是小喇叭。
+
+intro: |
+  <p>手风琴采用的是 HTML5 原生的标签而不是 jQuery 或 TocasJS，样式已经在所有浏览器上统一化了。手风琴内的下拉图示会依照展开与否更换成不同的形态。</p>
+
+styles:
+  - category   : 种类
+    description: 在这里浏览手风琴的种类。
+    items      :
+      - title      : 表格
+        description: 最基本的手风琴。
+        code       : |
+          <details class="ts [[accordion]]" open>
+              <summary>
+                  <i class="dropdown {{icon}}"></i>
+                  什么是夏希？
+              </summary>
+              <div class="content">
+                  <p>夏希是一个基于 PHP 的时间类别，用以取得现在的时间，或者是数天后的现在时刻。</p>
+              </div>
+          </details>
+
+  - category   : 内容
+    description: 手风琴的内部构造不仅一种。
+    items      :
+
+      - title      : 标题
+        description: 手风琴的标题，作为欲展开内容的大钢。
+        code       : |
+          <details class="ts accordion">
+              <[[summary]]>
+                  <i class="dropdown {{icon}}"></i>
+                  我是标题，我永远不会被收缩。
+              </[[summary]]>
+          </details>
+
+      - title      : 内容
+        description: 摆放欲收缩和展开的内容容器。
+        code       : |
+          <details class="ts accordion" open>
+              <summary>
+                  <i class="dropdown {{icon}}"></i>
+                  我是手风琴标题
+              </summary>
+              <div class="[[content]]">
+                  <p>按下标题可以收缩或是展开我。</p>
+              </div>
+          </details>
+
+  - category   : 外观
+    description: 手风琴的外观可以有所不同。
+    items      :
+
+      - title      : 反色
+        description: 手风琴可以是反色的。
+        code       : |
+          <div class="ts inverted {{segment}}">
+              <details class="ts [[inverted]] accordion" open>
+                  <summary>
+                      <i class="dropdown {{icon}}"></i>
+                      什么是风纪委员？
+                  </summary>
+                  <div class="content">
+                      <p>Jajjimento（ジャッジメント）中文涵意是风纪委员，这是用来验证表單的 PHP 类别。</p>
+                  </div>
+              </details>
+          </div>

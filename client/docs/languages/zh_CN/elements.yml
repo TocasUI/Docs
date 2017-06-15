@@ -1,0 +1,88 @@
+slate:
+  title      : 一般元素
+  description: 没有特别分类的元素。
+
+items:
+  - title      : 按钮
+    class      : .ts.button
+    link       : /elements/button/
+    description: 供用户点击和做相关回馈的组件。
+    symbol     : hand pointer
+
+  - title      : 容器
+    class      : .ts.container
+    link       : /elements/container/
+    description: 将文字内容、集中在网页中部，避免屏幕过宽文字导致过宽。
+    symbol     : resize horizontal
+
+  - title      : 分隔线
+    class      : .ts.divider
+    link       : /elements/divider/
+    description: 切分两个话题或是组件用的分隔线。
+    symbol     : minus
+
+  - title      : 标题
+    class      : .ts.header
+    link       : /elements/header/
+    description: 用以分隔文字内容、或带有图标的标题。
+    symbol     : header
+
+  - title      : 图示
+    class      : .ts.icon
+    link       : /elements/icon/
+    description: 用来丰富你的网页，不会只有纯文本而已。
+    symbol     : smile
+
+  - title      : 图片
+    class      : .ts.image
+    link       : /elements/image/
+    description: 显示图片、大头贴、置入于文章的图片元素。
+    symbol     : picture
+
+  - title      : 输入字段
+    class      : .ts.input
+    link       : /elements/input/
+    description: 提供用户输入数据的字段。
+    symbol     : text cursor
+
+  - title      : 板岩
+    class      : .ts.slate
+    link       : /elements/slate/
+    description: 多功能的区块，可作为标题容器、预置方块、上传区域等。
+    symbol     : square
+
+  - title      : 标签
+    class      : .ts.label
+    link       : /elements/label/
+    description: 特别标注文字用的卷标，也可用做计数徽章，或是特别图示。
+    symbol     : tag
+
+  - title      : 清单
+    class      : .ts.list
+    link       : /elements/list/
+    description: 水平或是垂直的清单，可以是一个链接清单，例如摆放于页脚等。
+    symbol     : list
+
+  - title      : 读取指示器
+    class      : .ts.loader
+    link       : /elements/loader/
+    description: 读取、上传时的读取指示器。
+    symbol     : spinner
+
+  - title      : 引言
+    class      : .ts.quote
+    link       : /elements/quote/
+    description: 引述他人的话语。
+    symbol     : quote right
+
+  - title      : 片段
+    class      : .ts.segment
+    link       : /elements/segment/
+    description: 包含短篇文章的片段容器，适合用来包覆文字。
+    symbol     : content
+
+  - title      : 步骤
+    class      : .ts.step
+    link       : /elements/step/
+    description: 展示目前的步骤和相关进度。
+    symbol     : arrow right

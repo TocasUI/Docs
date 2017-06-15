@@ -1,0 +1,155 @@
+slate:
+  title      : 面包屑
+  description: 留下导览的痕迹。
+
+styles:
+  - category   : 种类
+    description: 在这里浏览面包屑的种类。
+    items      :
+      - title      : 面包屑
+        description: 最基本的面包屑。
+        code       : |
+          <div class="ts [[breadcrumb]]">
+              <a class="section">首页</a>
+              <div class="divider"> / </div>
+              <a class="section">商店</a>
+              <div class="divider"> / </div>
+              <div class="active section">T-Shirt</div>
+          </div>
+
+      - title      : 图示分隔
+        description: 面包屑也能够由图示来当做分隔线。
+        code       : |
+          <div class="ts [[breadcrumb]]">
+              <a class="section">首页</a>
+              <i class="right angle [[icon divider]]"></i>
+              <a class="section">商店</a>
+              <i class="right angle [[icon divider]]"></i>
+              <div class="active section">T-Shirt</div>
+          </div>
+
+  - category   : 内容
+    description: 面包屑由不同的内容所组成。
+    items      :
+
+      - title      : 分隔线
+        description: 面包屑可以带有分隔线来表示其中的关系，这个分隔线可以是文字或是图标。
+        remove     : <br><br>
+        code       : |
+          <div class="ts breadcrumb">
+              <a class="section">首页</a>
+              <span class="[[divider]]">/</span>
+              <a class="section">注册程序</a>
+              <span class="[[divider]]">/</span>
+              <div class="active section">个人资料</div>
+          </div>
+          <br><br>
+          <div class="ts breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon [[divider]]"></i>
+              <a class="section">注册程序</a>
+              <i class="right chevron icon [[divider]]"></i>
+              <div class="active section">个人资料</div>
+          </div>
+
+      - title      : 区块
+        description: 面包屑可以包含区块，能够是连结或是纯文本。
+        code       : |
+          <div class="ts breadcrumb">
+              <div class="[[section]]">首页</div>
+              <div class="divider"> / </div>
+              <div class="active [[section]]">搜寻</div>
+          </div>
+
+      - title      : 连结
+        description: 区块可以是链接，或者带有链接文字。
+        code       : |
+          <div class="ts breadcrumb">
+              <[[a]] class="section">首页</[[a]]>
+              <div class="divider"> / </div>
+              <div class="active section">搜寻：<a href="#">卫生纸</a></div>
+          </div>
+
+  - category   : 状态
+    description: 面包屑有不同的状态。
+    items      :
+
+      - title   : 已启用
+        description: 区块可以表现出一个已被启用的状态。
+        code       : |
+          <div class="ts breadcrumb">
+              <a class="section">商品</a>
+              <div class="divider"> / </div>
+              <div class="[[active]] section">卫生纸</div>
+          </div>
+
+  - category   : 外观
+    description: 面包屑有着不同的外观点缀。
+    items      :
+
+      - title      : 尺寸
+        description: 面包屑有不同的尺寸可供选择。
+        code       : |
+          <div class="ts [[mini]] breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon divider"></i>
+              <a class="section">注册手续</a>
+              <i class="right chevron icon divider"></i>
+              <div class="active section">个人资料</div>
+          </div>
+          <br>
+          <div class="ts [[tiny]] breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon divider"></i>
+              <a class="section">注册手续</a>
+              <i class="right chevron icon divider"></i>
+              <div class="active section">个人资料</div>
+          </div>
+          <br>
+          <div class="ts [[small]] breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon divider"></i>
+              <a class="section">注册手续</a>
+              <i class="right chevron icon divider"></i>
+              <div class="active section">个人资料</div>
+          </div>
+          <br>
+          <div class="ts [[medium]] breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon divider"></i>
+              <a class="section">注册手续</a>
+              <i class="right chevron icon divider"></i>
+              <div class="active section">个人资料</div>
+          </div>
+          <br>
+          <div class="ts [[large]] breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon divider"></i>
+              <a class="section">注册手续</a>
+              <i class="right chevron icon divider"></i>
+              <div class="active section">个人资料</div>
+          </div>
+          <br>
+          <div class="ts [[big]] breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon divider"></i>
+              <a class="section">注册手续</a>
+              <i class="right chevron icon divider"></i>
+              <div class="active section">个人资料</div>
+          </div>
+          <br>
+          <div class="ts [[huge]] breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon divider"></i>
+              <a class="section">注册手续</a>
+              <i class="right chevron icon divider"></i>
+              <div class="active section">个人资料</div>
+          </div>
+          <br>
+          <div class="ts [[massive]] breadcrumb">
+              <a class="section">首页</a>
+              <i class="right chevron icon divider"></i>
+              <a class="section">注册手续</a>
+              <i class="right chevron icon divider"></i>
+              <div class="active section">个人资料</div>
+          </div>

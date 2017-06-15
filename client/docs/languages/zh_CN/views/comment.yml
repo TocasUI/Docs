@@ -1,0 +1,436 @@
+slate:
+  title      : 留言
+  description: 如何引发网络喷子？一，留言；二，等待。
+
+intro: |
+  <p>你可以变换留言中时间和文字的位置，这些在下面都有范例可供参考。</p>
+
+styles:
+  - category   : 种类
+    description: 留言具有不同的种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的留言。
+        code       : |
+          <div class="ts [[comments]]">
+              <div class="[[comment]]">
+                  <a class="avatar">
+                      <img src="!-user-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Yami Odymel</a>
+                      <div class="metadata">
+                          <div>2 天前</div>
+                          <div>
+                              <i class="star {{icon}}"></i>
+                              5 次收藏
+                          </div>
+                      </div>
+                      <div class="description">
+                          你的思想不应该只属于现在这个时间。
+                      </div>
+                  </div>
+              </div>
+              <div class="[[comment]]">
+                  <a class="avatar">
+                      <img src="!-user2-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Karisu</a>
+                      <div class="metadata">
+                          <div>42 分钟前</div>
+                      </div>
+                      <div class="description">
+                          有反对的声音，世界才能中立。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 留言包含了许多不同的内容。
+    items      :
+
+      - title      : 头像
+        description: 用以显示发言者、图片的一个内容区块。
+        code       : |
+          <div class="ts comments">
+              <div class="comment">
+                  <div class="[[avatar]]">
+                      <img src="!-user3-!">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 作者
+        description: 显示发言者的名称。
+        code       : |
+          <div class="ts comments">
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="[[author]]">Yami Odymel</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 内容
+        description: 摆放留言内容的区块。
+        code       : |
+          <div class="ts comments">
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">Karisu</a>
+                      <div class="[[description]]">发现自己做不到是进步过程中的一环。</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 元数据
+        description: 用以摆放时间、一些有关连的小型数据。
+        code       : |
+          <div class="ts comments">
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">亚凡芽</a>
+                      <div class="[[metadata]]">
+                          <div> 42 分钟前 </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 带点元数据
+        description: 元数据可以有「子弹点」或是「中点」来做区隔。
+        code       : |
+          <div class="ts comments">
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">Yami Odymel</a>
+                      <div class="[[bulleted metadata]]">
+                          <div>3 天前</div>
+                          <div>5 个赞</div>
+                      </div>
+                  </div>
+              </div><br>
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">比尔盖饭</a>
+                      <div class="[[middoted metadata]]">
+                          <div>1 月前</div>
+                          <div>已收藏</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 动作
+        description: 一个可以摆放这个留言所可以执行动作的区块。
+        code       : |
+          <div class="ts comments">
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">吴雨蓝</a>
+                      <div class="metadata">
+                          <div>42 分钟前</div>
+                      </div>
+                      <div class="description">
+                          成功的开始不在于创意，而是现在。
+                      </div>
+                      <div class="[[actions]]">
+                          <a>回复</a>
+                          <a>移除</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 带点动作
+        description: 动作可以有「子弹点」或是「中点」来做区隔。
+        code       : |
+          <div class="ts comments">
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">Yami Odymel</a>
+                      <div class="description">输的时候失去最多的就是理智。</div>
+                      <div class="[[bulleted actions]]">
+                          <a>检举</a>
+                          <a>编辑</a>
+                          <a>移除</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">Yami Odymel</a>
+                      <div class="description">对这个世界感到失望，是跃出舞台的第一步。</div>
+                      <div class="[[middoted actions]]">
+                          <a>回复</a>
+                          <a>移除</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 留言拥有一些不同的外观。
+    items      :
+
+      - title      : 同列文字
+        description: 留言的文字可以与作者名称同列。
+        code       : |
+          <div class="ts comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user3-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">橙希</a>
+                      <div class="[[inline]] description">
+                          我的信仰是自己，你呢？
+                      </div>
+                      <div class="middoted actions">
+                          <a class="reply">回应</a>
+                          <a class="save">收藏</a>
+                          <a>
+                              <i class="expand {{icon}}"></i>
+                              全尺寸检视
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 主题性质
+        description: 留言可以是一个主题性质，这将允许你的留言带有层级制度，留言中可带有子留言。
+        code       : |
+          <div class="ts [[threaded]] comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Yami Odymel</a>
+                      <div class="description">
+                          准备向令一个平行世界的你道歉，因为你将在这个世界有所作为。
+                      </div>
+                  </div>
+                  <div class="comments">
+                      <div class="comment">
+                          <div class="avatar">
+                              <img src="!-user2-!">
+                          </div>
+                          <div class="content">
+                              <a class="author">橙希</a>
+                              <div class="description">
+                                  早安！我的朋友！
+                              </div>
+                          </div>
+                          <div class="comment">
+                              <div class="avatar">
+                                  <img src="!-user3-!">
+                              </div>
+                              <div class="content">
+                                  <a class="author">吴雨蓝</a>
+                                  <div class="description">
+                                      第一个觉得柠檬是食物的人一定是个被虐狂。
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 分隔的
+        description: 留言可以带有分隔线区分来和下一个留言做区分。
+        code       : |
+          <div class="ts [[divided]] comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Mac Taylor</a>
+                      <div class="description">
+                          你是一个渔夫。
+                      </div>
+                  </div>
+              </div>
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">Mac Taylor</a>
+                      <div class="description">
+                          如果你有去钓鱼大赛，你可能会被禁止进入：<br>
+                          「我们不欢迎职业选手」
+                      </div>
+                  </div>
+              </div>
+              <div class="comment">
+                  <div class="avatar">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <a class="author">Yami Odymel</a>
+                      <div class="description">
+                          你很机车人
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 尺寸
+        description: 留言可以有不同的尺寸。
+        code       : |
+          <div class="ts [[tiny]] comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Mac Taylor</a>
+                      <div class="inline description">
+                          你是一个渔夫。
+                      </div>
+                      <div class="middoted actions">
+                          <a class="reply">回应</a>
+                          <a class="save">收藏</a>
+                          <a>
+                              <i class="expand {{icon}}"></i>
+                              全尺寸检视
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[small]] comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user2-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Mac Taylor</a>
+                      <div class="inline description">
+                          你是一个渔夫。
+                      </div>
+                      <div class="middoted actions">
+                          <a class="reply">回应</a>
+                          <a class="save">收藏</a>
+                          <a>
+                              <i class="expand {{icon}}"></i>
+                              全尺寸检视
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[medium]] comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user3-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Mac Taylor</a>
+                      <div class="inline description">
+                          你是一个渔夫。
+                      </div>
+                      <div class="middoted actions">
+                          <a class="reply">回应</a>
+                          <a class="save">收藏</a>
+                          <a>
+                              <i class="expand {{icon}}"></i>
+                              全尺寸检视
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[large]] comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Mac Taylor</a>
+                      <div class="inline description">
+                          你是一个渔夫。
+                      </div>
+                      <div class="middoted actions">
+                          <a class="reply">回应</a>
+                          <a class="save">收藏</a>
+                          <a>
+                              <i class="expand {{icon}}"></i>
+                              全尺寸检视
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[big]] comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user2-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Mac Taylor</a>
+                      <div class="inline description">
+                          你是一个渔夫。
+                      </div>
+                      <div class="middoted actions">
+                          <a class="reply">回应</a>
+                          <a class="save">收藏</a>
+                          <a>
+                              <i class="expand {{icon}}"></i>
+                              全尺寸检视
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[huge]] comments">
+              <div class="comment">
+                  <a class="avatar">
+                      <img src="!-user3-!">
+                  </a>
+                  <div class="content">
+                      <a class="author">Mac Taylor</a>
+                      <div class="inline description">
+                          你是一个渔夫。
+                      </div>
+                      <div class="middoted actions">
+                          <a class="reply">回应</a>
+                          <a class="save">收藏</a>
+                          <a>
+                              <i class="expand {{icon}}"></i>
+                              全尺寸检视
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>

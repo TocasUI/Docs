@@ -1,0 +1,23 @@
+slate:
+  title      : 滑杆
+  description: 省去手动输入数值的麻烦。
+
+tabs:
+  - type  : styles
+    to    : /modules/slider/
+  - type  : javascript
+    to    : /modules/slider/javascript/
+
+styles:
+  - category   : JavaScript
+    description: 滑杆有提供可用的 JavaScript 模块。
+    items      :
+      - title      : 基本
+        description: 套用基本的 JavaScript 能够使你的滑杆左侧拥有指示条颜色。
+        code       : |
+          <div class="ts [[slider]]">
+              <input type="range">
+          </div>
+        javascript:
+          ts('.ts.slider').slider();
+        autoExecute: true

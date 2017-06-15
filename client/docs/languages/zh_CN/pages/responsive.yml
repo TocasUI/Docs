@@ -1,0 +1,123 @@
+slate:
+  title      : 响应式
+  description: 协助你能够在不同装置上更加地得心应手。
+
+intro: |
+  <p>Tocas UI 内建数个响应式辅助样式，这可以协助你在指定装置上显示或是隐藏一些元素。</p>
+
+styles:
+  - category   : 说明和工具
+    description: 你可以在这个段落看见一些详细的判断基准和侦测工具来检测你的屏幕符合何种样式。
+    items      :
+      - title      : 样式列表
+        description: |
+          <p>这里是辅助样式的屏幕尺寸判断基准表格。</p>
+          <table class="ts small stackable table">
+              <thead>
+                  <tr>
+                      <th>样式名称</th>
+                      <th>装置称呼</th>
+                      <th>当屏幕尺寸 .. 出现</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><span class="ts horizontal label">mobile only</span></td>
+                      <td>仅行动装置</td>
+                      <td>&lt; 768px</td>
+                  </tr>
+                  <tr>
+                      <td><span class="ts horizontal label">mobile or tablet only</span></td>
+                      <td>行动装置或平板</td>
+                      <td>&lt; 992px</td>
+                  </tr>
+                  <tr>
+                      <td><span class="ts horizontal label">tablet only</span></td>
+                      <td>仅平板装置</td>
+                      <td>&gt; 767px && &lt; 992px</td>
+                  </tr>
+                  <tr>
+                      <td><span class="ts horizontal label">computer only</span></td>
+                      <td>仅小型计算机屏幕</td>
+                      <td>&gt; 992 && &lt; 1200px</td>
+                  </tr>
+                  <tr>
+                      <td><span class="ts horizontal label">tablet or large device only</span></td>
+                      <td>平板或大型装置</td>
+                      <td>&gt; 767px</td>
+                  </tr>
+                  <tr>
+                      <td><span class="ts horizontal label">large device only</span></td>
+                      <td>仅大型装置</td>
+                      <td>&gt; 992px</td>
+                  </tr>
+                  <tr>
+                      <td><span class="ts horizontal label">large screen only</span></td>
+                      <td>仅大型屏幕</td>
+                      <td>&gt; 1200px</td>
+                  </tr>
+              </tbody>
+          </table>
+
+      - title      : 目前装置侦测
+        description: |
+          <p>下方会显示你目前屏幕正符合哪种辅助样式。</p>
+          <span class="mobile only"><span class="ts large info label" style="color: #FFF !important">行动装置</span></span>
+          <span class="mobile or tablet only"><span class="ts large info label" style="color: #FFF !important">行动装置或平板装置</span></span>
+          <span class="tablet only"><span class="ts large info label" style="color: #FFF !important">平板装置</span></span>
+          <span class="computer only"><span class="ts large info label" style="color: #FFF !important">仅小型计算机屏幕</span></span>
+          <span class="tablet or large device only"><span class="ts large info label" style="color: #FFF !important">平板或大型装置</span></span>
+          <span class="large device only"><span class="ts large info label" style="color: #FFF !important">大型装置</span></span>
+          <span class="large screen only"><span class="ts large info label" style="color: #FFF !important">大型屏幕</span></span>
+
+  - category   : 样式用法
+    description: 这里会逐一解释各个辅助样式的用法。
+    items      :
+
+      - title      : 仅行动装置
+        description: 套用了这个样式的容器仅会出现在<strong>行动装置</strong>（手机、掌上型游戏机）的横和直立画面。
+        type       : code
+        code       : |
+          <div class="[[mobile only]]">我只会出现在行动装置。</div>
+
+      - title      : 行动装置或平板
+        type       : code
+        description: |
+          这将会使你的容器出现在<strong>行动装置</strong>或是<strong>平板屏幕</strong>（如 Nexus 7、iPad）上，
+                在其他装置时则会隐藏容器。
+        code       : |
+          <div class="[[mobile or tablet only]]">我只会出现在行动或者是平板装置。</div>
+
+      - title      : 仅平板装置
+        type       : code
+        description: 套用此样式后容器、元素仅会出现在平板屏幕上。
+        code       : |
+          <div class="[[tablet only]]">我只会出现在平板上。</div>
+
+      - title      : 仅小型计算机屏幕
+        type       : code
+        description: |
+          套用后仅会在小型计算机屏幕上看见该元素、容器，所谓的小型计算机屏幕即是<strong>比传统笔记本电脑还要小的屏幕</strong>，
+                而<strong>非</strong>家用桌机的 21～24 寸或电视屏幕。
+        code       : |
+          <div class="[[computer only]]">你只能在小型计算机屏幕上看见我。</div>
+
+      - title      : 平板或大型装置
+        type       : code
+        description: |
+          这个样式将会让你的元素、容器仅出现在<strong>平板屏幕</strong>或者是<strong>大型装置</strong>中，
+                大型装置为<strong>计算机屏幕和大于计算机屏幕以上宽度的显示设备</strong>（如电视）。
+        code       : |
+          <div class="[[tablet or large device only]]">只要不是行动装置通常都看得见我。</div>
+
+      - title      : 仅大型装置
+        type       : code
+        description: 套用此样式将会让你的元素或是容器仅出现在大型装置（如：计算机屏幕、电视）中。
+        code       : |
+          <div class="[[large device only]]">我不会出现在平板，但会出现在计算机或是电视中！</div>
+
+      - title      : 仅大型屏幕
+        type       : code
+        description: 「大型屏幕」和「大型装置」<strong>有所不同</strong>，大型屏幕更为严谨（要求的屏幕尺寸更大），不过现今的笔记本电脑几乎都被概括在内。
+        code       : |
+          <div class="[[large screen only]]">我会出现在大型屏幕中（如果你的笔电不小的话也会 :D）！</div>

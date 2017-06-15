@@ -1,0 +1,117 @@
+slate:
+  title      : 读取指示器
+  description: 让使用者能够稍微在等待你一下。
+
+intro: |
+  <p>读取指示器有两个种类，一个是读取中，另一个则是未知。未知通常用在还在准备的状态，例如档案读取中，一旦档案读取完毕开始上传，就可以改用读取中的状态。</p>
+
+styles:
+  - category   : 种类
+    description: 读取指示器具有不同的种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的读取指示器，读取指示器通常都是隐藏的，直至给予 <span class="ts horizontal label">active</span> 或放置于一个 <span class="ts horizontal label">active dimmer</span> 的容器中才会显示。
+        code       : |
+          <div class="ts {{segment}}">
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+              <div class="ts [[active]] {{dimmer}}">
+                  <div class="ts [[loader]]"></div>
+              </div>
+          </div>
+
+      - title      : 文字读取指示器
+        description: 读取指示器可以带有文字。
+        remove     : <br>
+        code       : |
+          <div class="ts {{segment}}">
+              <div class="ts active {{dimmer}}">
+                  <div class="ts [[text loader]]">读取中</div>
+              </div>
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+          </div>
+          <br>
+          <div class="ts {{segment}}">
+              <div class="ts active inverted {{dimmer}}">
+                  <div class="ts [[text loader]]">读取中</div>
+              </div>
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+          </div>
+
+  - category   : 状态
+    description: 读取指示器带有不同的状态。
+    items      :
+
+      - title      : 未知
+        description: 用以显示未知、或是准备中的状态。
+        code       : |
+          <div class="ts {{segment}}">
+              <div class="ts active {{dimmer}}">
+                  <div class="ts [[indeterminate]] text loader">准备档案中</div>
+              </div>
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+          </div>
+
+      - title      : 启用中
+        description: 正在启用中的读取指示器，没有 <span class="ts horizontal label">dimmer</span> 的话可能会让你的读取指示器不清不楚。
+        code       : |
+          <div class="ts {{segment}}">
+              <div class="ts [[active]] loader"></div>
+              <p>看似最重要的东西却没能被妥善利用，</p>
+              <p>没有人能发现这一点，因为他们早已活在过去，</p>
+              <p>才刚开始的序章却被放在页尾。</p>
+          </div>
+
+      - title      : 已停用
+        description: 读取指示器可以呈现被停用，或是隐藏状态。
+        code       : |
+          <div class="ts {{segment}}">
+              <div class="ts [[disabled]] loader"></div>
+              <p></p>
+          </div>
+
+  - category   : 外观
+    description: 读取指示器有不同的外观、尺寸。
+    items      :
+
+      - title      : 同列区块
+        description: 将读取指示器从浮动改为一个区块。
+        code       : |
+          <div class="ts active [[inline]] loader"></div>
+          <div class="ts active [[inline]] large loader"></div>
+          <div class="ts active [[inline]] big loader"></div>
+
+      - title      : 同列置中
+        description: 读取指示器就算是区块也可以置中。
+        code       : |
+          <div class="ts active [[centered]] inline loader"></div>
+
+      - title      : 尺寸
+        description: 读取指示器具有许多不同的尺寸。
+        code       : |
+          <div class="ts active inline [[mini]] loader"></div>
+          <div class="ts active inline [[tiny]] loader"></div>
+          <div class="ts active inline [[small]] loader"></div>
+          <div class="ts active inline [[medium]] loader"></div>
+          <div class="ts active inline [[large]] loader"></div>
+          <div class="ts active inline [[big]] loader"></div>
+          <div class="ts active inline [[huge]] loader"></div>
+          <div class="ts active inline [[massive]] loader"></div>
+
+      - title      : 反色
+        description: 读取指示器的颜色可以是相反地。
+        code       : |
+          <div class="ts inverted {{segment}}">
+              <div class="ts active [[inverted]] loader"></div>
+              <br>
+              <br>
+              <br>
+              <br>
+          </div>

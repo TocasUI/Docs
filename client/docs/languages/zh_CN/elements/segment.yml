@@ -1,0 +1,224 @@
+slate:
+  title      : 片段
+  description: 碎片化的文字聚集地。
+
+intro: |
+  <p>片段通常可以拿来包装文章内容，但并不适合独立当作一个卡片使用。</p>
+
+styles:
+  - category   : 种类
+    description: 片段具有不同的种类。
+    items      :
+      - title      : 片段
+        description: 一个最基本的片段。
+        code       : |
+          <div class="ts [[segment]]">
+              <p>烈日高照，前方的道路什么都看不见，</p>
+              <p>「很高兴能和你见面。」一个细微的声音好似那边传来，</p>
+              <p>明明不清楚前方的事物，却感觉自己正在迈向的是一个新世界。</p>
+          </div>
+
+      - title      : 抬举
+        description: 片段可以加深阴影，看起来像被抬举，或是浮在空中。
+        code       : |
+          <div class="ts [[raised]] segment">
+              <p>在最糟糕的事情发生之前，</p>
+              <p>我尽可能地想找出原因，</p>
+              <p>原来是 — 自己。</p>
+          </div>
+
+      - title      : 语意
+        description: 片段也具有语意。
+        code       : |
+          <div class="ts [[primary]] segment">
+              <p>主要语意。</p>
+          </div>
+          <div class="ts [[info]] segment">
+              <p>提醒语意。</p>
+          </div>
+          <div class="ts [[warning]] segment">
+              <p>警告语意。</p>
+          </div>
+
+      - title      : 肯定和否定
+        description: 片段也可以带有肯定或否定的语气。
+        code       : |
+          <div class="ts [[positive]] segment">
+              <p>正面语意。</p>
+          </div>
+          <div class="ts [[negative]] segment">
+              <p>否定语意。</p>
+          </div>
+
+      - title      : 反色和语意
+        description: 片段的语意可以更为明显，甚至是反色地。
+        code       : |
+          <div class="ts [[inverted primary]] segment">
+              <p>主要语意。</p>
+          </div>
+          <div class="ts [[inverted info]] segment">
+              <p>提醒语意。</p>
+          </div>
+          <div class="ts [[inverted warning]] segment">
+              <p>警告语意。</p>
+          </div>
+          <div class="ts [[inverted positive]] segment">
+              <p>正面语意。</p>
+          </div>
+          <div class="ts [[inverted negative]] segment">
+              <p>否定语意。</p>
+          </div>
+          <div class="ts [[inverted]] segment">
+              <p>反色语意。</p>
+          </div>
+
+      - title      : 发音方式
+        description: 片段可以有不同的发音方式来强调或是以清淡地方式来描绘。
+        code       : |
+          <div class="ts segment">
+              <p>我是一般的片段。</p>
+          </div>
+          <div class="ts [[secondary]] segment">
+              <p>我是次要发音方式的片段。</p>
+          </div>
+          <div class="ts [[tertiary]] segment">
+              <p>我是其次发音方式的片段。</p>
+          </div>
+
+  - category   : 群组
+    description: 可以聚集多个片段为一体。
+    items      :
+
+      - title      : 片段群组
+        description: 片段可以组合成一个群组。
+        code       : |
+          <div class="ts [[segments]]">
+              <div class="ts segment">任何人皆自由且平等。</div>
+              <div class="ts segment">莫忘初衷。</div>
+              <div class="ts segment">永远不放弃。</div>
+              <div class="ts segment">为全民、大众所设计、运作并倾听。</div>
+          </div>
+
+      - subtitle   : 群组和语意
+        description: 群组中的片段也可以具有语意。
+        code       : |
+          <div class="ts segments">
+              <div class="ts [[primary]] segment">任何人皆自由且平等。</div>
+              <div class="ts [[info]] segment">莫忘初衷。</div>
+              <div class="ts [[warning]] segment">永远不放弃。</div>
+              <div class="ts [[positive]] segment">为全民、大众所设计、运作并倾听。</div>
+          </div>
+
+      - subtitle   : 不同地发音语气
+        description: 群组中的片段也可以用不同的语气发音。
+        code       : |
+          <div class="ts segments">
+              <div class="ts segment">任何人皆自由且平等。</div>
+              <div class="ts [[secondary]] segment">莫忘初衷。</div>
+              <div class="ts [[tertiary]] segment">永远不放弃。</div>
+          </div>
+
+  - category   : 状态
+    description: 片段可以处于不同的状态。
+    items      :
+
+      - title   : 已停用
+        description: 淡化片段，用以显示这个片段不再可用。
+        code       : |
+          <div class="ts [[disabled]] segment">
+              <p>那家伙不常说话，但是从她的言行举止中，</p>
+              <p>好像有什么是能被发现的。</p>
+          </div>
+
+      - title      : 读取中
+        description: 片段可以显示一个正在读取的图示。
+        code       : |
+          <div class="ts [[loading]] segment">
+              <p>月月，搭拉安！。</p>
+              <p>月月，搭拉安！。</p>
+              <p>月月，搭拉安！。</p>
+          </div>
+
+  - category   : 外观
+    description: 片段可以有不同的外观点缀。
+    items      :
+
+      - title      : 增加内距
+        description: 片段的内距可以更大。
+        code       : |
+          <div class="ts segment">一般片段。</div>
+          <div class="ts [[padded]] segment">增加内距的片段。</div>
+          <div class="ts [[very padded]] segment">非常内距的片段。</div>
+
+      - title      : 缩减内距
+        description: 你可以移除所有内距、或水平和垂直内距。
+        code       : |
+          <div class="ts [[vertically fitted]] segment">这个片段没有垂直内距。</div>
+          <div class="ts [[fitted]] segment">这个片段没有内距。</div>
+          <div class="ts [[horizontally fitted]] segment">这个片段没有水平内距。</div>
+
+      - title      : 轻巧版
+        description: 片段的宽度以内容为主。
+        code       : |
+          <div class="ts [[compact]] segment">
+              月月，搭拉安！
+          </div>
+
+      - title      : 浮动清理
+        description: |
+          片段可以带有 <span class="ts horizontal label">clear: both;</span> 的样式用来整理内部的浮动元素。
+        code       : |
+          <div class="ts [[clearing]] segment">
+              <button class="ts right floated {{button}}">浮动按钮</button>
+          </div>
+
+      - title      : 流动
+        description: 片段可以是流动宽度并移除相关圆角用以贴齐屏幕左右。
+        code       : |
+          <div class="ts [[fluid]] segment">
+              这个片段适合用来贴齐容器左右边。
+          </div>
+
+      - title      : 文字对齐
+        description: 片段的文字对齐可以改变。
+        code       : |
+          <div class="ts [[left aligned]] segment">
+              这段文字是置左对齐。
+          </div>
+          <div class="ts [[center aligned]] segment">
+              这段文字是置中对齐。
+          </div>
+          <div class="ts [[right aligned]] segment">
+              这段文字是置右对齐。
+          </div>
+
+      - title      : 平面化
+        description: 片段可以是平面化，不具有阴影的。
+        code       : |
+          <div class="ts [[flatted]] segment">
+              这个片段是平的。
+          </div>
+
+      - title      : 无框线
+        description: 片段可以没有框线。
+        code       : |
+          <div class="ts [[borderless]] segment">
+              这个片段没有框线。
+          </div>
+
+      - title      : 浮动
+        description: 片段可以向左或向右浮动。
+        code       : |
+          <div class="ts [[left floated]] segment">
+              <p>我向左浮动。</p>
+          </div>
+          <div class="ts [[right floated]] segment">
+              <p>我向右浮动。</p>
+          </div>
+
+      - title      : 基本
+        description: 片段可以是只有基本结构的。
+        code       : |
+          <div class="ts [[basic]] segment">
+              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>

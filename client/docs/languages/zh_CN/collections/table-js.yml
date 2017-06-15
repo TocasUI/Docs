@@ -1,0 +1,51 @@
+slate:
+  title      : 表格
+  description: 呈现统计资料的好方法。
+
+tabs:
+  - type  : styles
+    to    : /collections/table/
+  - type  : javascript
+    to    : /collections/table/javascript/
+
+styles:
+  - category   : JavaScript
+    description: 表格有提供可用的 JavaScript 模块。
+    items      :
+      - title      : 可排序
+        description: 使用者可以透过点击字段标头来重新排序表格。排序的方式以系统语系设定为主，英文会以 A-Z 与 Z-A 作为排列，中文则是笔画顺序，俄文则是字母排序。
+        code       : |
+          <table class="ts [[sortable]] table">
+              <thead>
+                  <tr>
+                      <th>文件名</th>
+                      <th>中文分类</th>
+                      <th>说明</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>endpoints.go</td>
+                      <td>终端点</td>
+                      <td>转继站会将收到的信息转换成终端点并进行下一个操作。</td>
+                  </tr>
+                  <tr>
+                      <td>instrumenting.go</td>
+                      <td>度量</td>
+                      <td>将微服务中的函式处理时间整理成一定的格式并且传送给 Prometheus 服务器做统计可视化整理。</td>
+                  </tr>
+                  <tr>
+                      <td>logging.go</td>
+                      <td>纪录</td>
+                      <td>观察并且记录微服务中所有函式的呼叫与流向。</td>
+                  </tr>
+                  <tr>
+                      <td>main.go</td>
+                      <td>主要</td>
+                      <td>核心档案，除了开发者外不应由其他人修改。</td>
+                  </tr>
+              </tbody>
+          </table>
+        javascript: |
+          ts('.ts.sortable.table').tablesort();
+        autoExecute: true
