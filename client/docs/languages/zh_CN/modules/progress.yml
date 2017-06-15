@@ -1,0 +1,174 @@
+slate:
+  title      : 进度列
+  description: 让使用者知道他还要等多久，前提是不会卡在 99%。
+
+styles:
+  - category   : 种类
+    description: 进度列具有多个不同的种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的进度列架构。
+        code       : |
+          <div class="ts [[progress]]">
+              <div class="bar" style="width: 30%"></div>
+          </div>
+
+      - title      : 语意
+        description: 进度列有着不同的语意。
+        code       : |
+          <div class="ts [[primary]] progress">
+              <div class="bar" style="width: 30%"></div>
+          </div>
+          <div class="ts [[info]] progress">
+              <div class="bar" style="width: 45%"></div>
+          </div>
+          <div class="ts [[warning]] progress">
+              <div class="bar" style="width: 65%"></div>
+          </div>
+          <div class="ts [[inverted]] progress">
+              <div class="bar" style="width: 30%"></div>
+          </div>
+
+      - title      : 肯定和否定
+        description: 进度列也可以带有肯定或否定的语气。
+        code       : |
+          <div class="ts [[positive]] progress">
+              <div class="bar" style="width: 60%"></div>
+          </div>
+          <div class="ts [[negative]] progress">
+              <div class="bar" style="width: 35%"></div>
+          </div>
+
+  - category   : 内容
+    description: 进度列的内容有一些不一样的元素。
+    items      :
+
+      - title      : 进度列
+        description: 一个显示进度最基本的「列」。
+        code       : |
+          <div class="ts progress">
+              <div class="[[bar]]"></div>
+          </div>
+
+      - title      : 文字
+        description: 可以在进度列上显示文字的元素，例如摆放进度百分比。
+        code       : |
+          <div class="ts progress">
+              <div class="bar" style="width: 32%">
+                  <span class="[[text]]">32%</span>
+              </div>
+          </div>
+
+  - category   : 状态
+    description: 进度列的有不同的状态。
+    items      :
+
+      - title      : 活动中
+        description: 显示一个进度列正在进行中。
+        code       : |
+          <div class="ts [[active]] progress">
+              <div class="bar" style="width: 60%"></div>
+          </div>
+
+      - title      : 准备中
+        description: 显示一个可能位于准备中的进度列。
+        code       : |
+          <div class="ts [[preparing]] progress">
+              <div class="bar"></div>
+          </div>
+
+      - title      : 未知
+        description: 显示一个尚未取得状态的进度列。
+        code       : |
+          <div class="ts [[indeterminate]] progress">
+              <div class="bar"></div>
+          </div>
+
+      - title      : 已询问未知
+        description: 一个已经向服务器发送请求，但状态仍处于未知的进度列。
+        code       : |
+          <div class="ts [[queried indeterminate]] progress">
+              <div class="bar"></div>
+          </div>
+
+      - title      : 缓冲中
+        description: 一个正在缓冲，并带有缓冲条的进度列。
+        code       : |
+          <div class="ts [[buffering]] progress">
+              <div class="bar" style="width: 30%"></div>
+              <div class="[[buffer]] bar" style="width: 50%"></div>
+          </div>
+
+  - category   : 群组
+    description: 进度列可以是一个群组。
+    items      :
+
+      - title      : 进度列堆栈
+        description: 进度列可以由多个列来进行堆栈排列。
+        code       : |
+          <div class="ts progress">
+              <div class="[[bar]]" style="width: 20%; background: lightskyblue">
+                  <label class="text">档案</label>
+              </div>
+              <div class="[[bar]]" style="width: 50%; background: orange">
+                  <label class="text">音乐</label>
+              </div>
+              <div class="[[bar]]" style="width: 30%; background: green">
+                  <label class="text">图片</label>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 进度列有多种外观型态。
+    items      :
+
+      - title      : 流动
+        description: 进度列可以是流动宽度并适合用来贴齐容器的左右边，因为没有圆角。
+        code       : |
+          <div class="ts [[fluid]] progress">
+              <div class="bar" style="width: 60%"></div>
+          </div>
+
+      - title      : 吸附
+        description: 进度列可以吸附在某些组件内。
+        code       : |
+          <div class="ts {{card}}">
+              <div class="ts positive [[top attached]] progress">
+                  <div class="bar" style="width: 25%"></div>
+              </div>
+              <div class="content">
+                  这个卡片的上下方都各有一个独立的吸附式进度条。
+              </div>
+              <div class="ts [[bottom attached]] progress">
+                  <div class="bar" style="width: 70%"></div>
+              </div>
+          </div>
+          <br><br>
+          <div class="ts top attached {{segment}}">
+              将进度列摆放于片段中间。
+          </div>
+          <div class="ts [[attached]] progress">
+              <div class="bar" style="width: 35%"></div>
+          </div>
+          <div class="ts bottom attached {{segment}}">
+              就像你看到的ㄧ样，这个范例示范着你可以将进度列安插在多个片段之中。
+          </div>
+
+      - title      : 尺寸
+        description: 进度列提供多种尺寸。
+        code       : |
+          <div class="ts [[tiny]] progress">
+              <div class="bar" style="width: 40%"></div>
+          </div>
+          <div class="ts [[small]] progress">
+              <div class="bar" style="width: 50%"></div>
+          </div>
+          <div class="ts [[medium]] progress">
+              <div class="bar" style="width: 60%"><span class="text">60%</span></div>
+          </div>
+          <div class="ts [[large]] progress">
+              <div class="bar" style="width: 70%"><span class="text">70%</span></div>
+          </div>
+          <div class="ts [[big]] progress">
+              <div class="bar" style="width: 80%"><span class="text">80%</span></div>
+          </div>

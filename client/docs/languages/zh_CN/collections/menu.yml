@@ -1,0 +1,688 @@
+slate:
+  title      : 选单
+  description: 从这里到达任何地方。
+
+intro: |
+  <p>在 Tocas UI 中，选单并没有汉堡样式，你可以让他在行动装置上自动层迭，或者是水平卷动。如果类似 Bootstrap 那样的汉堡选单是你要的，请参考侧边栏模块。</p>
+
+styles:
+  - category   : 种类
+    description: 选单具有不同的种类。
+    items      :
+      - title      : 选单
+        description: 一个原生选单。
+        code       : |
+          <div class="ts [[menu]]">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 基本
+        description: 一个基本的选单。
+        code       : |
+          <div class="ts [[basic]] menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 连结
+        description: 一个摆放连结的选单，这种选单项目没有左右内距，因此很适合对齐其他组件。
+        code       : |
+          <div class="ts [[link]] menu">
+              <a class="item">恋爱</a>
+              <a class="item">选举</a>
+              <a class="item">巧克力</a>
+          </div>
+
+      - title      : 其次
+        description: 一个比较不重要的选单，这个选单没有背景颜色和框线。
+        code       : |
+          <div class="ts [[secondary]] menu">
+              <a class="item">动漫</a>
+              <a class="item">休闲</a>
+              <a class="item">音乐</a>
+          </div>
+
+      - title      : 带指标的其次
+        description: 一个带有指示标记却又比较不重要的选单。
+        code       : |
+          <div class="ts [[pointing]] [[secondary]] menu">
+              <a class="item">首页</a>
+              <a class="active item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 分页签
+        description: 选单可以看起来像分页签一样。
+        code       : |
+          <div class="ts [[tabbed]] menu">
+              <a class="item">动漫</a>
+              <a class="active item">休闲</a>
+              <a class="item">音乐</a>
+          </div>
+
+      - title      : 文字
+        description: 选单可以很适合单纯的文字用途。
+        code       : |
+          <div class="ts [[text]] menu">
+              <div class="header item">排序优先</div>
+              <a class="active item">
+                  最新的
+              </a>
+              <a class="item">
+                  最多留言
+              </a>
+              <a class="item">
+                  最热门
+              </a>
+          </div>
+
+      - title      : 反色语意
+        description: 选单也可以是反色且具有不同语意。
+        code       : |
+          <div class="ts [[inverted]] [[primary]] menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+          <div class="ts [[inverted]] [[info]] menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+          <div class="ts [[inverted]] [[warning]] menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+          </div>
+          <div class="ts [[inverted]] menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 反色肯定和否定
+        description: 选单也可以是反色且带有肯定或否定的语气。
+        code       : |
+          <div class="ts [[inverted]] [[positive]] menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+          <div class="ts [[inverted]] [[negative]] menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 垂直
+        description: 一个垂直的选单。
+        code       : |
+          <div class="ts [[vertical]] menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+  - category   : 状态
+    description: 一个选单带有些不同的状态。
+    items      :
+
+      - title      : 启用中
+        description: 显示这个项目正在使用、被启用。
+        code       : |
+          <div class="ts menu">
+              <a class="item">首页</a>
+              <a class="[[active]] item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 已停用
+        description: 显示一个项目已经被停用、不可使用。
+        code       : |
+          <div class="ts menu">
+              <a class="item">首页</a>
+              <a class="[[disabled]] item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+  - category   : 内容
+    description: 一个选单具有不同内容。
+    items      :
+
+      - title      : 标题
+        description: 项目也可以含有标志性文字。
+        code       : |
+          <div class="ts inverted info borderless menu">
+              <a class="[[header]] item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 未读标记
+        description: 项目可以有一个新通知、未读标记。
+        remove     : <br>
+        code       : |
+          <div class="ts borderless menu">
+              <a class="item">首页</a>
+              <a class="[[unread]] item">动态轴</a>
+              <a class="item">好友</a>
+              <a class="item">设定</a>
+          </div>
+          <br>
+          <div class="ts icon menu">
+              <a class="item"><i class="user {{icon}}"></i></a>
+              <a class="[[unread]] item"><i class="comment {{icon}}"></i></a>
+              <a class="item"><i class="star {{icon}}"></i></a>
+          </div>
+
+      - title      : 图示
+        description: 你可以将图标放置于选单的项目内。
+        code       : |
+          <div class="ts vertical compact menu">
+              <a class="item">
+                  <i class="search [[icon]]"></i>
+                  搜寻
+              </a>
+              <a class="active item">
+                  <i class="mail [[icon]]"></i>
+                  电子邮件
+              </a>
+              <a class="disabled item">
+                  <i class="user [[icon]]"></i>
+                  使用者
+              </a>
+              <a class="item">
+                  <i class="remove [[icon]]"></i>
+                  删除
+              </a>
+          </div>
+
+      - title      : 文字
+        description: 选单项目内也可以摆放文字或是标题。
+        code       : |
+          <div class="ts vertical menu">
+              <a class="item">
+                  <div class="ts {{header}}">促销活动</div>
+                  <p>查看我们最新的促销商品！</p>
+              </a>
+              <a class="item">
+                  <div class="ts {{header}}">优惠券</div>
+                  <p>看看我们所贩卖的优惠券！</p>
+              </a>
+              <a class="item">
+                  <div class="ts {{header}}">退货</div>
+                  <p>不满意商品？查看我们的退货机制是什么！</p>
+              </a>
+          </div>
+
+      - title      : 拉伸的
+        description: 单个、或多个项目可以被拉伸到填满整个选单，并将其他项目缩短至它们的内容宽度。这很适合用在排版上。
+        code       : |
+          <div class="ts menu">
+              <div class="[[stretched]] item">
+                  <div class="ts fluid input">
+                      <input type="text" placeholder="在此输入您想找的数据⋯⋯">
+                  </div>
+              </div>
+              <div class="item">
+                  <button class="ts button">搜寻</button>
+              </div>
+          </div>
+
+      - title      : 项目缩减
+        description: 项目可以不要有垂直或是水平内距。
+        code       : |
+          <div class="ts menu">
+              <a class="[[horizontally fitted]] item"> 水平缩减 </a>
+              <a class="[[vertically fitted]] item"> 垂直缩减 </a>
+              <a class="item"> 一般选项 </a>
+          </div>
+
+      - title      : 置右项目
+        description: 选单内的单个项目可以置右。
+        code       : |
+          <div class="ts menu">
+              <a class="item">仪表板</a>
+              <a class="item">汇整</a>
+              <a class="[[right]] item">注销</a>
+          </div>
+
+      - title      : 置右选单
+        description: 倘若你有多个项目要置右，请透过一个向右靠齐的选单。
+        code       : |
+          <div class="ts menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+              <div class="[[right]] menu">
+                  <a class="item">会员清单</a>
+                  <a class="item">档案</a>
+                  <a class="item">Github</a>
+              </div>
+          </div>
+
+      - title      : 带输入字段选单
+        description: 选单内也可以放置输入字段，例如这样。
+        remove     : <br>
+        code       : |
+          <div class="ts inverted primary borderless menu">
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+              <div class="right fitted item">
+                  <div class="ts borderless right icon inverted primary [[input]]">
+                      <input type="text" placeholder="文字字段">
+                      <i class="search {{icon}}"></i>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <div class="ts vertical compact inverted info borderless menu">
+              <div class="fitted item">
+                  <div class="ts fluid borderless basic icon inverted [[input]]">
+                      <input type="text" placeholder="搜寻 ...">
+                      <i class="search {{icon}}"></i>
+                  </div>
+              </div>
+              <a class="item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 标签
+        description: 选单内可以摆放计数标签。
+        code       : |
+          <div class="ts vertical compact inverted info menu">
+              <a class="item">
+                  <div class="ts [[label]]">99+</div>
+                  动态轴
+              </a>
+              <a class="active item">
+                  <div class="ts [[label]]">12</div>
+                  电子邮件
+              </a>
+              <a class="disabled item">
+                  <div class="ts [[label]]">3</div>
+                  讯息
+              </a>
+          </div>
+
+      - title      : 分隔线
+        description: 你可以在选单中放置分隔线用以区隔项目。
+        code       : |
+          <div class="ts vertical compact borderless menu">
+              <a class="item">
+                  <i class="picture {{icon}}"></i> 相簿
+              </a>
+              <a class="item">
+                  <i class="music {{icon}}"></i> 音乐
+              </a>
+              <div class="[[divider]] item"></div>
+              <a class="item">
+                  <i class="sign out {{icon}}"></i> 注销
+              </a>
+          </div>
+
+      - title      : 子选单
+        description: 选单的项目内还可以再有一层选单。
+        code       : |
+          <div class="ts vertical compact menu">
+              <div class="item">
+                  <div class="ts fluid right icon input">
+                      <input type="text" placeholder="搜寻">
+                      <i class="search icon"></i>
+                  </div>
+              </div>
+              <div class="item">
+                  首页功能
+                  <div class="[[menu]]">
+                      <a class="active item">搜寻</a>
+                      <a class="item">新增</a>
+                      <a class="item">移除</a>
+                  </div>
+              </div>
+              <div class="item">浏览</div>
+              <div class="item">讯息</div>
+              <div class="item">更多</div>
+          </div>
+
+      - title      : 下拉式功能选单
+        description: 你可以在选单内摆置几个下拉式功能选单，这部分请参考下拉式选单元件。
+        code       : |
+          <div class="ts menu">
+              <a class="item">首页</a>
+              <div class="[[ts item dropdown]]">
+                  <div class="text">
+                      组件
+                  </div>
+                  <i class="dropdown icon"></i>
+                  <div class="menu">
+                      <a class="item">按钮</a>
+                      <div class="divider"></div>
+                      <a class="item">窗体</a>
+                      <a class="item">导航列</a>
+                  </div>
+              </div>
+              <a class="item">文件</a>
+          </div>
+
+  - category   : 外观
+    description: 选单具有不同的外观。
+    items      :
+
+      - title      : 图示
+        description: 用来摆放图示的选单。
+        code       : |
+          <div class="ts [[icon]] menu">
+              <a class="item"><i class="search {{icon}}"></i></a>
+              <a class="item"><i class="download {{icon}}"></i></a>
+              <a class="item"><i class="upload {{icon}}"></i></a>
+          </div>
+          <div class="ts vertical [[icon]] menu">
+              <a class="item"><i class="search {{icon}}"></i></a>
+              <a class="item"><i class="download {{icon}}"></i></a>
+              <a class="item"><i class="upload {{icon}}"></i></a>
+          </div>
+
+      - title      : 图标卷标
+        description: 你还可以在图标选单中带有卷标文字。
+        code       : |
+          <div class="ts [[labeled icon]] menu">
+              <a class="item">
+                  <i class="search {{icon}}"></i>
+                  搜寻
+              </a>
+              <a class="active item">
+                  <i class="mail {{icon}}"></i>
+                  电子邮件
+              </a>
+              <a class="disabled item">
+                  <i class="user {{icon}}"></i>
+                  使用者
+              </a>
+              <a class="item">
+                  <i class="remove {{icon}}"></i>
+                  移除钮
+              </a>
+          </div>
+          <div class="ts vertical [[labeled icon]] menu">
+              <a class="item">
+                  <i class="search {{icon}}"></i>
+                  搜寻
+              </a>
+              <a class="active item">
+                  <i class="mail {{icon}}"></i>
+                  电子邮件
+              </a>
+              <a class="disabled item">
+                  <i class="user {{icon}}"></i>
+                  使用者
+              </a>
+          </div>
+
+      - title      : 图片
+        description: 选单内的项目也可以摆放单张图片。
+        code       : |
+          <div class="ts vertical compact menu">
+              <a class="[[image]] item">
+                <img class="ts small {{image}}" src="!-user-!">
+              </a>
+              <div class="item">
+                  个人档案
+                  <div class="menu">
+                      <a class="item">编辑</a>
+                      <a class="item">隐私</a>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 流动
+        description: 选单的宽度可以是流动的，用来贴齐容器左右边并且移除边角。
+        code       : |
+          <div class="ts vertical [[fluid]] menu">
+              <a class="item">亚凡芽</a>
+              <a class="item">卡莉丝</a>
+              <a class="item">夏希</a>
+          </div>
+
+      - title      : 轻巧版
+        description: 选单的宽度能够以选单的内容作为基准并自动延展。
+        code       : |
+          <div class="ts [[compact]] menu">
+              <a class="item">
+                  <i class="gamepad {{icon}}"></i>
+                  游戏
+              </a>
+              <a class="item">
+                  <i class="video camera {{icon}}"></i>
+                  频道
+              </a>
+              <a class="item">
+                  <i class="video play {{icon}}"></i>
+                  影片
+              </a>
+          </div>
+
+      - title      : 置中项目
+        description: 选单的项目可以从中间开始。
+        code       : |
+          <div class="ts [[centered]] menu">
+              <a class="item">首页</a>
+              <a class="item">贴文</a>
+              <a class="item">照片</a>
+          </div>
+
+      - title      : 平均划分
+        description: 项目宽度可以平均划分并填满整个选单。
+        code       : |
+          <div class="ts [[evenly divided]] menu">
+              <a class="item">
+                  <i class="gamepad {{icon}}"></i>
+                  游戏
+              </a>
+              <a class="item">
+                  <i class="video camera {{icon}}"></i>
+                  频道
+              </a>
+              <a class="item">
+                  <i class="video play {{icon}}"></i>
+                  影片
+              </a>
+          </div>
+
+      - title      : 附着
+        description: 选单可以附着在其他组件上。
+        code       : |
+          <div class="ts [[top attached]] menu">
+              <a class="item">资料</a>
+              <a class="item">隐私</a>
+              <a class="item">权限</a>
+          </div>
+          <div class="ts attached {{segment}}">
+              根据你眼睛所看到的，这是个被附着选单团团包围的片段。
+          </div>
+          <div class="ts [[attached]] menu">
+              <a class="item">首页</a>
+              <a class="item">影片</a>
+          </div>
+          <div class="ts attached {{segment}}">
+              这个片段⋯⋯十分地难过、悲伤、无奈，觉得被选单霸凌了。
+          </div>
+          <div class="ts [[bottom attached]] menu">
+              <a class="item">音乐</a>
+              <a class="item">程序</a>
+              <a class="item">运动</a>
+          </div>
+
+      - title      : 手动均分
+        description: 你可以自定义选单中应有几个项目，从 <span class="ts horizontal label">one</span> 到 <span class="ts horizontal label">ten</span>。
+        code       : |
+          <div class="ts [[four item]] menu">
+              <a class="item">钟表</a>
+              <a class="item">电子产品</a>
+              <a class="item">家具</a>
+          </div>
+
+      - title      : 固定
+        description: 选单能够固定在页面的某一边，这会固定在页面而不是父容器。
+        code       : |
+          <div class="ts [[top fixed]] menu">
+              <a class="header item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>界的机在；且比坡明非小明地不亚乐要水。都为如样气政别高朋卖，家好他一毒一在，线质黑时、全想及民人行妈！着来带静，消即作住常部得，时组在包爱响，年小先儿位开调子十子弟他行热的看其是所著快家……做发星发问你生笑书我里员美、大两求角因，行从说了戏名十，表觉力有在。</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <div class="ts [[bottom fixed]] menu">
+              <a class="header item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - subtitle   : 水平固定
+        description: 选单除了可以固定在屏幕的上下方外，还可以固定在左右边。但我们建议你将选单设置为垂直选单才能够得到最好的固定选单效果。
+        code       : |
+          <div class="ts [[left fixed]] vertical menu">
+              <a class="header item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>但客户端渲染不这么做，取而代之的是询问 index.html 来得知如果网址是 /hello/ 应该做什么动作，这在 Github Pages 和 Surge 上遇到了一些小问题，那就是他们预设不吃这种方式，他们会直接告诉你 404 网页找不到，因为他们会直接去寻找服务器内有没有这个档案。</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <div class="ts [[right fixed]] vertical menu">
+              <a class="header item">首页</a>
+              <a class="item">关于</a>
+              <a class="item">文件</a>
+          </div>
+
+      - title      : 减少框线
+        description: 选单也可以选择不要有内部框线。
+        code       : |
+          <div class="ts [[borderless]] menu">
+              <a class="item">亚凡芽</a>
+              <a class="item">卡莉丝</a>
+              <a class="item">夏希</a>
+          </div>
+
+      - title      : 缩减
+        description: 选单可以不要有垂直或是水平内距，这很适合当作网格系统以外的排版方式。
+        code       : |
+          <div class="ts secondary [[fitted]] menu">
+              <div class="item">
+                  <i class="user icon"></i>
+                  Yami Odymel
+              </div>
+              <a class="right item">注销</a>
+          </div>
+
+      - title      : 抬举
+        description: 选单可以看起来像被抬举一般加重阴影。
+        code       : |
+          <div class="ts [[raised]] menu">
+              <a class="item">档案</a>
+              <a class="item">编辑</a>
+              <a class="item">寻找</a>
+              <a class="item">检视</a>
+          </div>
+
+      - title      : 平面化
+        description: 选单可以看起来是扁平的。
+        code       : |
+          <div class="ts [[flatted]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>
+
+      - title      : 水平对齐
+        description: 你可以改变项目中的水平对齐，可以是置左、置右或者置中。
+        code       : |
+          <div class="ts vertical menu">
+              <a class="[[left aligned]] item">置左对齐</a>
+              <a class="[[center aligned]] item">置中对齐</a>
+              <a class="[[right aligned]] item">置右对齐</a>
+          </div>
+
+      - title      : 自动层迭
+        description: 选单可以在行动装置上自动层迭，而不是继续保持一排。
+        code       : |
+          <div class="ts [[stackable]] menu">
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+          </div>
+
+      - title      : 可水平卷动的
+        description: 当选单项目过多的时候你可以让选单支持水平卷动，避免项目溢出来。
+        code       : |
+          <div class="ts [[horizontally scrollable]] menu">
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+              <a class="item">项目</a>
+          </div>
+
+      - title      : 尺寸
+        description: 选单提供了多种尺寸。
+        code       : |
+          <div class="ts [[mini]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>
+          <div class="ts [[tiny]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>
+          <div class="ts [[small]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>
+          <div class="ts [[medium]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>
+          <div class="ts [[large]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>
+          <div class="ts [[big]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>
+          <div class="ts [[huge]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>
+          <div class="ts [[massive]] menu">
+              <a class="item">执行</a>
+              <a class="item">工具</a>
+              <a class="item">窗口</a>
+          </div>

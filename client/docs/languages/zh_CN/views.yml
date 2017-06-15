@@ -1,0 +1,40 @@
+slate:
+  title      : 视图型
+  description: 偏于外观类的组件。
+
+items:
+  - title      : 卡片
+    class      : .ts.card
+    link       : /views/card
+    description: 用来汇整短篇文字、或是以区块显示碎片式内容的元素。
+    symbol     : id card
+
+  - title      : 对话
+    class      : .ts.speeches
+    link       : /views/speeches/
+    description: 提供两人或多人的对话气泡。
+    symbol     : users
+
+  - title      : 留言
+    class      : .ts.comment
+    link       : /views/comment
+    description: 用以显示一篇文章的留言区块。
+    symbol     : comments outline
+
+  - title      : 动态消息
+    class      : .ts.feed
+    link       : /views/feed/
+    description: 显示所有人动态消息的组件。
+    symbol     : rss
+
+  - title      : 项目
+    class      : .ts.items
+    link       : /views/items/
+    description: 区隔项目并作为统整的组件。
+    symbol     : th list
+
+  - title      : 统计数据
+    class      : .ts.statistic
+    link       : /views/statistic/
+    description: 用来显示纯文本的统计数据、在数字下新增卷标阐述该数值含义。
+    symbol     : bar chart

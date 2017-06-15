@@ -1,0 +1,359 @@
+slate:
+  title      : 下拉式选单
+  description: 打开之后会颠覆你先前以为不能的想法。
+
+tabs:
+  - type  : styles
+    to    : /modules/dropdown/
+  - type  : javascript
+    to    : /modules/dropdown/javascript/
+
+styles:
+  - category   : 种类
+    description: 下拉式选单有多个种类。
+    items      :
+      - title      : 基本
+        description: 最基本的下拉式选单。
+        code       : |
+          <select class="ts [[basic]] dropdown">
+              <option>1998</option>
+              <option>1999</option>
+              <option>2000</option>
+          </select>
+
+      - title      : 语意
+        description: 基本的下拉式选单有着不同的语意。
+        code       : |
+          <select class="ts basic [[primary]] dropdown">
+              <option>1998</option>
+          </select>
+          <select class="ts basic [[info]] dropdown">
+              <option>1998</option>
+          </select>
+          <select class="ts basic [[warning]] dropdown">
+              <option>1998</option>
+          </select>
+          <select class="ts basic [[inverted]] dropdown">
+              <option>1998</option>
+          </select>
+
+      - title      : 肯定和否定
+        description: 肯定和否定的语气可以用在基本的下拉式选单。
+        code       : |
+          <select class="ts basic [[positive]] dropdown">
+              <option>1998</option>
+          </select>
+          <select class="ts basic [[negative]] dropdown">
+              <option>1998</option>
+          </select>
+
+      - title      : 多选项
+        description: 选单可以一次展现出多个选项。
+        code       : |
+          <select class="ts basic dropdown" [[size]]="3">
+              <option>1998</option>
+              <option>1999</option>
+              <option>2000</option>
+              <option>2001</option>
+              <option>2002</option>
+          </select>
+
+      - title      : 复选
+        description: 选单可以加上 <span class="ts horizontal label">multiple</span> 来允许复选。
+        code       : |
+          <select class="ts basic dropdown" size="3" [[multiple]]>
+              <option>苹果</option>
+              <option>西瓜</option>
+              <option>香蕉</option>
+              <option>菠萝</option>
+              <option>拔菠萝</option>
+          </select>
+
+  - category   : 群组
+    description: 下拉式选单可以是一个群组。
+    items      :
+
+      - title      : 下拉式选单群组
+        description: 一个最基本的下拉式选单群组。
+        code       : |
+          <div class="ts [[dropdowns]]">
+              <select class="ts basic dropdown">
+                  <option>1998</option>
+              </select>
+              <select class="ts basic dropdown">
+                  <option>07</option>
+              </select>
+              <select class="ts basic dropdown">
+                  <option>13</option>
+              </select>
+          </div>
+
+      - title      : 分开的
+        description: 下拉式选单群组里的选单可以是分开的。
+        code       : |
+          <div class="ts [[separated]] dropdowns">
+              <select class="ts basic dropdown">
+                  <option>1998</option>
+              </select>
+              <select class="ts basic dropdown">
+                  <option>07</option>
+              </select>
+              <select class="ts basic dropdown">
+                  <option>13</option>
+              </select>
+          </div>
+
+      - title      : 较宽松
+        description: 分开的下拉式选单群组间隙可以较为宽松。
+        code       : |
+          <div class="ts fluid separated [[relaxed]] dropdowns">
+              <select class="ts basic dropdown">
+                  <option>1998</option>
+              </select>
+              <select class="ts basic dropdown">
+                  <option>07</option>
+              </select>
+              <select class="ts basic dropdown">
+                  <option>13</option>
+              </select>
+          </div>
+
+  - category   : 内容
+    description: 下拉式选单的内容由多种不同的结构组成。
+    items      :
+
+      - title      : 项目
+        description: 项目是构成选单中最基本的一个部分。
+        code       : |
+          <div class="ts floating dropdown labeled icon {{button}}">
+              <i class="caret down {{icon}}"></i>
+              <span class="text">更多功能</span>
+              <div class="menu">
+                  <div class="[[item]]">
+                      新增
+                  </div>
+                  <div class="[[item]]">
+                      重新命名
+                  </div>
+                  <div class="[[item]]">
+                      下载并压缩
+                  </div>
+              </div>
+          </div>
+
+      - title      : 标题
+        description: 选单中可以有标题。
+        code       : |
+          <div class="ts floating dropdown labeled icon {{button}}">
+              <i class="filter {{icon}}"></i>
+              <span class="text">筛选</span>
+              <div class="menu">
+                  <div class="[[header]]">
+                      <i class="tags {{icon}}"></i>
+                      由下列标签筛选
+                  </div>
+                  <div class="item">
+                      已完成
+                  </div>
+                  <div class="item">
+                      进行中
+                  </div>
+              </div>
+          </div>
+
+      - title      : 分隔线
+        description: 选单中可以插入分隔线来划分两个区块。
+        code       : |
+          <div class="ts floating dropdown labeled icon {{button}}">
+              <i class="users {{icon}}"></i>
+              <span class="text">选择人物</span>
+              <div class="menu">
+                  <div class="item">
+                      橙希
+                  </div>
+                  <div class="item">
+                      吴雨蓝
+                  </div>
+                  <div class="[[divider]]"></div>
+                  <div class="item">
+                      羽田白音
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 区段分隔线
+        description: 分隔线的间距可以更大，用以加强分隔区段。
+        code       : |
+          <div class="ts floating dropdown labeled icon {{button}}">
+              <i class="users {{icon}}"></i>
+              <span class="text">选择人物</span>
+              <div class="menu">
+                  <div class="item">
+                      橙希
+                  </div>
+                  <div class="item">
+                      吴雨蓝
+                  </div>
+                  <div class="[[section divider]]"></div>
+                  <div class="item">
+                      羽田白音
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 群组分隔线
+        description: 下拉式选单群组也能在中间插入自定义分隔线。
+        code       : |
+          <div class="ts separated dropdowns">
+              <select class="ts basic dropdown">
+                  <option>1998</option>
+              </select>
+              <div class="[[divider]]">年</div>
+              <select class="ts basic dropdown">
+                  <option>07</option>
+              </select>
+              <div class="[[divider]]">月</div>
+              <select class="ts basic dropdown">
+                  <option>13</option>
+              </select>
+              <div class="[[divider]]">日</div>
+          </div>
+
+      - title      : 图示
+        description: 选单内可以有图示点缀。
+        code       : |
+          <div class="ts floating dropdown {{button}}">
+              <span class="text">您的心情？</span>
+              <div class="menu">
+                  <div class="item">
+                      <i class="frown [[icon]]"></i>
+                      难过
+                  </div>
+                  <div class="item">
+                      <i class="meh [[icon]]"></i>
+                      喔
+                  </div>
+                  <div class="item">
+                      <i class="smile [[icon]]"></i>
+                      开心
+                  </div>
+              </div>
+          </div>
+
+      - title      : 注释
+        description: 选单内的项目可以带有注释，用做诠释项目的概要。
+        code       : |
+          <div class="ts floating dropdown labeled icon {{button}}">
+              <i class="caret down {{icon}}"></i>
+              <span class="text">移至文件夹</span>
+              <div class="menu">
+                  <div class="item">
+                      <span class="text">图片</span>
+                      <span class="[[description]]">今天上午</span>
+                  </div>
+                  <div class="item">
+                      <span class="text">音乐</span>
+                      <span class="[[description]]">未曾变动</span>
+                  </div>
+                  <div class="item">
+                      <span class="text">备份</span>
+                      <span class="[[description]]">一年前</span>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 下拉式选单的外观有所不同。
+    items      :
+
+      - title      : 浮动
+        description: 下拉式功能选单可以看起来像是浮动的，离按钮更远，阴影更深。
+        code       : |
+          <div class="ts [[floating]] dropdown labeled icon {{button}}">
+              <i class="caret down {{icon}}"></i>
+              <span class="text">更多功能</span>
+              <div class="menu">
+                  <div class="item">
+                      新增
+                  </div>
+                  <div class="item">
+                      重新命名
+                  </div>
+                  <div class="item">
+                      下载并压缩
+                  </div>
+              </div>
+          </div>
+
+      - title      : 尺寸
+        description: 基本的下拉式选单有多种尺寸。
+        code       : |
+          <select class="ts basic [[mini]] dropdown">
+              <option>迷你</option>
+          </select>
+          <select class="ts basic [[tiny]] dropdown">
+              <option>微小</option>
+          </select>
+          <select class="ts basic [[small]] dropdown">
+              <option>小的</option>
+          </select>
+          <select class="ts basic [[medium]] dropdown">
+              <option>适中</option>
+          </select>
+          <select class="ts basic [[large]] dropdown">
+              <option>大的</option>
+          </select>
+          <select class="ts basic [[big]] dropdown">
+              <option>大型</option>
+          </select>
+          <select class="ts basic [[huge]] dropdown">
+              <option>巨大</option>
+          </select>
+          <select class="ts basic [[massive]] dropdown">
+              <option>重量级</option>
+          </select>
+
+      - title      : 动作
+        description: 下拉式选单的左右可以带有具动作性质的元素。
+        code       : |
+          <div class="ts [[action]] dropdown">
+              <select class="ts basic dropdown">
+                  <option>1 个</option>
+              </select>
+              <div class="ts button">
+                  购买
+              </div>
+          </div>
+
+      - title      : 流动
+        description: 下拉式选单可以是流动宽度，填满容器宽度。
+        code       : |
+          <select class="ts [[fluid]] basic dropdown">
+              <option>Kasendra</option>
+              <option>Larafel</option>
+              <option>Kake</option>
+          </select>
+
+      - title      : 自动层迭
+        description: 下拉式选单群组能够在手机上自动层迭，而不是保持水平排列。欲看见效果，你可能需要透过手机来查看这个范例。
+        code       : |
+          <div class="ts [[stackable]] dropdowns">
+              <select class="ts basic dropdown">
+                  <option>1998</option>
+              </select>
+              <select class="ts basic dropdown">
+                  <option>07</option>
+              </select>
+              <select class="ts basic dropdown">
+                  <option>13</option>
+              </select>
+          </div>
+
+      - title      : 无边框
+        description: 下拉式选单可以没有边框。
+        code       : |
+          <select class="ts [[borderless]] basic dropdown">
+              <option>1998</option>
+              <option>1999</option>
+              <option>2000</option>
+          </select>

@@ -1,0 +1,40 @@
+slate:
+  title      : 聚合型
+  description: 专门收藏、集合数据用的组件。
+
+items:
+  - title      : 面包屑
+    class      : .ts.breadcrumb
+    link       : /collections/breadcrumb/
+    description: 提供使用者一个网站导览，或是浏览踪迹。
+    symbol     : angle right
+
+  - title      : 表单
+    class      : .ts.form
+    link       : /collections/form/
+    description: 建立一个较美观的数据表单，用以送出数据。
+    symbol     : wpforms
+
+  - title      : 网格系统
+    class      : .ts.grid
+    link       : /collections/grid
+    description: 网页排版的基础结构。
+    symbol     : grid layout
+
+  - title      : 菜单
+    class      : .ts.menu
+    link       : /collections/menu/
+    description: 一个能够提供网页导览或是功能的菜单。
+    symbol     : ellipsis horizontal
+
+  - title      : 讯息
+    class      : .ts.message
+    link       : /collections/message/
+    description: 用来提示，或是显示简短的讯息。
+    symbol     : comment outline
+
+  - title      : 表格
+    class      : .ts.table
+    link       : /collections/table/
+    description: 展示或是统整一个结构性的数据。
+    symbol     : table

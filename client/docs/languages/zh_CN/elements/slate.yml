@@ -1,0 +1,309 @@
+slate:
+  title      : 板岩
+  description: 虽然仅有一块，但却有着多种用途。
+
+intro: |
+  <p>板岩除了拥有作为页面标题区块的功能外，现在还可以当作一个预置区块（Placeholder），例如一个空的购物车就可以用上板岩。此外，板岩现在也支持标题、注释、动作按钮。</p>
+
+styles:
+  - category   : 种类
+    description: 一个板岩具有多个不同的种类。
+    items      :
+      - title      : 板岩
+        description: 一个正常的板岩。
+        code       : |
+          <div class="ts [[slate]]">
+              这是一块普通的板岩，看起来十分无聊
+          </div>
+
+      - title      : 基本
+        description: 板岩可以仅有基本的结构。
+        code       : |
+          <div class="ts [[basic]] slate">
+              这是仅有基本结构的板岩。
+          </div>
+
+      - title      : 标题板岩
+        description: 板岩可以用来当作页面标题区块，这将使得文字默认向左对齐。
+        code       : |
+          <div class="ts [[heading]] slate">
+              <span class="header">使用者设定</span>
+              <span class="description">你可以在这里变更账号、密码与个人信息。</span>
+          </div>
+
+  - category   : 状态
+    description: 你可以随时透过样式类别切换一个板岩的状态。
+    items      :
+
+      - title      : 已停用
+        description: 显示这个板岩已经被停用了。
+        code       : |
+          <div class="ts [[disabled]] slate">
+              别看这里，我已经不重要了。
+          </div>
+
+  - category   : 内容
+    description: 一个板岩可以有许多不同性质的内容。
+    items      :
+
+      - title      : 标题
+        description: 板岩内可以有标题。
+        code       : |
+          <div class="ts slate">
+              <span class="[[header]]">使用者设定</span>
+          </div>
+
+      - title      : 注释
+        description: 板岩内也可含有注释用以详细解说。
+        code       : |
+          <div class="ts slate">
+              <span class="header">Tryment 计划</span>
+              <span class="[[description]]">模拟就学制度，协助在年者再次就职支持计划。</span>
+          </div>
+
+      - title      : 背景图片
+        description: 板岩内能够摆置图片当作背景。
+        code       : |
+          <div class="ts slate">
+              <div class="[[image]]">
+                  <img src="!-16:9-!">
+              </div>
+              <span class="header">Tryment 计划</span>
+              <span class="description">模拟就学制度，协助在年者再次就职支持计划。</span>
+          </div>
+
+      - title      : 图示
+        description: 图示可以被放置于板岩内。
+        code       : |
+          <div class="ts slate">
+              <i class="setting [[icon]]"></i>
+              <span class="header">偏好设定</span>
+              <span class="description">你可以在这里改变你想改变的，但你还是没女朋友。</span>
+          </div>
+
+      - title      : 代表性符号
+        description: 板岩内的图示可以被设置为此板岩的代表性符号。
+        code       : |
+          <div class="ts basic padded dashed slate">
+              <i class="upload [[symbol]] {{icon}}"></i>
+              <span class="header">上传图片或影音</span>
+              <span class="description">将图片拖拉至此处进行上传。</span>
+          </div>
+
+      - title      : 淡化图示
+        description: 如果图示不重要，也可以将其淡化。
+        code       : |
+          <div class="ts slate">
+              <i class="setting [[faded]] {{icon}}"></i>
+              <span class="header">偏好设定</span>
+              <span class="description">你可以在这里改变你想改变的，但你还是没女朋友。</span>
+          </div>
+
+      - title      : 图示群组
+        description: 你也能够将多个图示一次放入板岩中。
+        code       : |
+          <div class="ts slate">
+              <div class="[[icons]]">
+                  <i class="file audio outline {{icon}}"></i>
+                  <i class="file text outline {{icon}}"></i>
+                  <i class="file word outline {{icon}}"></i>
+              </div>
+              <span class="header">行动办公室</span>
+              <span class="description">MeowWork 让你到处都能够办公。</span>
+          </div>
+
+      - title      : 动作
+        description: 板岩中可以有动作区块，使人进行操作。
+        code       : |
+          <div class="ts padded slate">
+              <span class="header">尚无文件</span>
+              <span class="description">你目前没有任何文件，按下下方按钮建立新文件。</span>
+              <div class="[[action]]">
+                  <button class="ts primary button">现在开始</button>
+              </div>
+          </div>
+
+      - title      : 底部附着选单
+        description: 板岩内的底部可以附着一个选单。
+        code       : |
+          <div class="ts fluid slate">
+              <span class="header">已收藏项目</span>
+              <span class="description">这里存放着你已经收藏的项目。</span>
+              <div class="ts [[bottom attached]] tabbed {{menu}}">
+                  <a class="item" href="#!">图片</a>
+                  <a class="active item" href="#!">文章</a>
+                  <a class="item" href="#!">音乐</a>
+                  <a class="item" href="#!">影片</a>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 你可以更改板岩的位置、大小、或者形状。
+    items      :
+
+      - title      : 增加内距
+        description: 你可以增加板岩的内距。
+        code       : |
+          <div class="ts heading [[padded]] slate">
+              <span class="header">增加内距</span>
+              <span class="description">这可以让你的聚焦广告牌看起来不那么壅挤。</span>
+          </div>
+          <br>
+          <div class="ts heading [[very padded]] slate">
+              <span class="header">非常内距</span>
+              <span class="description">可以，这很内距。</span>
+          </div>
+          <br>
+          <div class="ts heading [[extra padded]] slate">
+              <span class="header">超级内距</span>
+              <span class="description">如果你还不满足的话还有这样增加内距地方式。</span>
+          </div>
+
+      - title      : 指定方向增加内距
+        description: 你还可以指定增加垂直或是水平的内距。
+        code       : |
+          <div class="ts heading [[vertically padded]] slate">
+              <span class="header">垂直内距</span>
+              <span class="description">仅增加垂直内距，水平内距维持预设。</span>
+          </div>
+          <br>
+          <div class="ts heading [[horizontally very padded]] slate">
+              <span class="header">水平非常内距</span>
+              <span class="description">这会增加水平的内距，但是垂直内距保持预设。</span>
+          </div>
+
+      - title      : 缩减
+        description: 你可以移除所有内距、或水平和垂直内距。
+        code       : |
+          <div class="ts heading [[fitted]] slate">
+              <span class="header">缩减全部</span>
+              <span class="description">这将使的你的板岩完全没有内距。</span>
+          </div>
+          <br>
+          <div class="ts heading [[horizontally fitted]] slate">
+              <span class="header">水平缩减</span>
+              <span class="description">板岩的左右内距将会消失。</span>
+          </div>
+          <br>
+          <div class="ts heading [[vertically fitted]] slate">
+              <span class="header">垂直缩减</span>
+              <span class="description">这样做的话上下内距将会消失。</span>
+          </div>
+
+      - title      : 无框线
+        description: 板岩可以不需要框线。
+        code       : |
+          <div class="ts basic [[borderless]] slate">
+              <span class="header">无框线板岩</span>
+              <span class="description">这个板岩没有框线。</span>
+          </div>
+
+      - title      : 文字对齐
+        description: 板岩内的文字可以靠左、右、甚至置中。
+        code       : |
+          <div class="ts [[right aligned]] slate">
+              <span class="header">靠右置齐</span>
+              <span class="description">这个广告牌的文字靠右。</span>
+          </div>
+          <br>
+          <div class="ts [[left aligned]] slate">
+              <span class="header">靠左置齐</span>
+              <span class="description">这个广告牌的文字靠左。</span>
+          </div>
+          <br>
+          <div class="ts [[center aligned]] slate">
+              <span class="header">置中对齐</span>
+              <span class="description">这个广告牌的文字置中。</span>
+          </div>
+
+      - title      : 流动
+        description: 这种板岩适合用在需要贴齐容器左右的时候，因为没有圆角。
+        code       : |
+          <div class="ts [[fluid]] slate">
+              <span class="header">流动板岩</span>
+              <span class="description">这个板岩没有圆角，适合贴齐左右边。</span>
+          </div>
+
+      - title      : 嵌入的
+        description: 板岩可以有内嵌阴影，看起来像是被嵌入一般。
+        code       : |
+          <div class="ts [[insetted]] slate">
+              <span class="header">嵌入板岩</span>
+              <span class="description">仔细看，这个板岩有内部阴影。</span>
+          </div>
+
+      - title      : 虚线的
+        description: 板岩可以有虚线框线。
+        code       : |
+          <div class="ts basic [[dashed]] slate">
+              <i class="upload {{icon}}"></i>
+              <span class="header">上传图片或影音</span>
+              <span class="description">将图片拖拉至此处进行上传。</span>
+          </div>
+
+      - title      : 可点击的
+        description: 板岩可以对点击动作进行回馈。
+        code       : |
+          <div class="ts [[clickable]] slate">
+              <i class="mouse pointer {{icon}}"></i>
+              <span class="header">点此看看</span>
+              <span class="description">点击此处会有相关的回馈效果。</span>
+          </div>
+          <br>
+          <div class="ts [[clickable]] basic dashed slate">
+              <i class="mouse pointer {{icon}}"></i>
+              <span class="header">点此看看</span>
+              <span class="description">点击此处会有相关的回馈效果。</span>
+          </div>
+
+      - title      : 轻巧版
+        description: 板岩可以是基于内容来当作宽度基准，而不是直接服贴附容器宽度。
+        code       : |
+          <div class="ts [[compact]] slate">
+              <i class="text width {{icon}}"></i>
+              <span class="header">文字决定宽度</span>
+              <span class="description">板岩内的文字越长，板岩的宽度就越宽。</span>
+          </div>
+
+      - title      : 尺寸
+        description: 板岩有多种尺寸。
+        code       : |
+          <div class="ts [[mini]] heading slate">
+              <span class="header">迷你</span>
+              <span class="description">这是一个迷你板岩。</span>
+          </div>
+          <br>
+          <div class="ts [[tiny]] heading slate">
+              <span class="header">微小</span>
+              <span class="description">这是一个微小板岩。</span>
+          </div>
+          <br>
+          <div class="ts [[small]] heading slate">
+              <span class="header">小的</span>
+              <span class="description">这是一个小的板岩。</span>
+          </div>
+          <br>
+          <div class="ts heading slate">
+              <span class="header">适中</span>
+              <span class="description">这是一个适中板岩。</span>
+          </div>
+          <br>
+          <div class="ts [[large]] heading slate">
+              <span class="header">大的</span>
+              <span class="description">这是一个大的板岩。</span>
+          </div>
+          <br>
+          <div class="ts [[big]] heading slate">
+              <span class="header">较大</span>
+              <span class="description">这是一个较大板岩。</span>
+          </div>
+          <br>
+          <div class="ts [[huge]] heading slate">
+              <span class="header">巨大</span>
+              <span class="description">这是一个巨大板岩。</span>
+          </div>
+          <br>
+          <div class="ts [[massive]] heading slate">
+              <span class="header">重量级</span>
+              <span class="description">这是一个重量级板岩。</span>
+          </div>

@@ -1,0 +1,49 @@
+slate:
+  title      : 分页签
+  description: 不换网页却能在多个内容之间作切换的好选择。
+
+tabs:
+  - type  : styles
+    to    : /modules/tab/
+  - type  : javascript
+    to    : /modules/tab/javascript/
+
+styles:
+  - category   : 种类
+    description: 分页签有不同种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的分页签组，但在没有启用之前页签内容会被隐藏。
+        code       : |
+          <div class="ts top attached tabbed menu">
+              <a class="item">分页</a>
+          </div>
+          <div class="ts bottom attached tab segment">
+              这是分页内容。
+          </div>
+
+  - category   : 状态
+    description: 分页签有不同的呈现状态。
+    items      :
+
+      - title      : 已启用
+        description: 一个已启用的分页签会显示在页面上。
+        code       : |
+          <div class="ts top attached tabbed menu">
+              <a class="active item">分页</a>
+          </div>
+          <div class="ts [[active]] bottom attached tab segment">
+              这是分页内容。
+          </div>
+
+      - title      : 读取中
+        description: 一个分页签可以呈现正在读取的状态。
+        code       : |
+          <div class="ts top attached tabbed menu">
+              <a class="active item">分页</a>
+          </div>
+          <div class="ts active [[loading]] bottom attached tab segment">
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+          </div>

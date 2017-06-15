@@ -1,0 +1,24 @@
+slate:
+  title      : 弹出式讯息
+  description: 砰！看看我！
+
+tabs:
+  - type  : styles
+    to    : /modules/popup/
+  - type  : javascript
+    to    : /modules/popup/javascript/
+
+styles:
+  - category   : JavaScript
+    description: 弹出式讯息有提供可用的 JavaScript 模块。
+    items      :
+      - title      : 行动装置禁用
+        description: 弹出式讯息就算不用 JavaScript 也能运作，但这会令行动装置用户困扰。当他们按下按钮时浏览器会误以为是将光标移动到元素上，进而出现恼人的弹出式讯息而遮蔽了画面。为了解决这个问题，你需要执行下列 JavaScript。
+        code       : |
+          <button class="ts info labeled icon button" data-tooltip="早安！我的朋友！你欠钱没还！">
+              <i class="mouse pointer icon"></i>
+              行动装置上点击此按钮不会有弹出式讯息
+          </button>
+        javascript: |
+          ts('[data-tooltip]').popup();
+        autoExecute: true

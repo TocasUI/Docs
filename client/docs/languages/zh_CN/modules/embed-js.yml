@@ -1,0 +1,59 @@
+slate:
+  title      : 嵌入物件
+  description: 把东西搬进来啰。译者：本章节载入了许多墙外的东西，记得先翻墙再来看范例❤️
+
+tabs:
+  - type  : styles
+    to    : /modules/embed/
+  - type  : javascript
+    to    : /modules/embed/javascript/
+
+styles:
+  - category   : JavaScript
+    description: 嵌入对象有提供可用的 JavaScript 模块。
+    items      :
+
+      - title      : 初始化
+        description: 你需要透过 JavaScript 初始化嵌入对象才能正常运作并加载正确的内容。
+        code       : |
+          <div class="ts embed" data-source="youtube" data-id="I6hHkf9mIcU" data-placeholder="!-embed:karen-!"></div>
+        javascript: |
+          ts('.ts.embed').embed();
+        autoExecute: true
+
+      - title      : 中继选项
+        description: |
+          <p>你能够透过中继选项来变更嵌入对象的一些参数或是外观。</p>
+          <table class="ts small stackable definition table">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>注释</th>
+                      <th>范例</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>data-placeholder</td>
+                      <td>预置封面的图片路径，这个图片会在嵌入对象尚未加载时出现。</td>
+                      <td><code>data-placeholder="image.png"</code></td>
+                  </tr>
+                  <tr>
+                      <td>data-options</td>
+                      <td>这会变动嵌入对象的卷标（Attributes），你亦能透过选项使影片自动播放、显示影片控制组件等。选项可以是键值，并以逗点分隔。</td>
+                      <td><code>data-options="controls, data-user-id=12345"</code></td>
+                  </tr>
+                  <tr>
+                      <td>data-query</td>
+                      <td>你能够手动指定网址参数，当请求远程影片时，这段参数会被追加在请求网址之后。像是指定 YouTube 的自动播放时很好用。</td>
+                      <td><code>data-query="autoplay=true"</code></td>
+                  </tr>
+                  <tr>
+                      <td>data-icon</td>
+                      <td>影片尚未播放前的图示是可以修改的，可用来表示此嵌入对象的型态。相关图标名称请参考图标组件。</td>
+                      <td><code>data-icon="map"</code></td>
+                  </tr>
+              </tbody>
+          </table>
+        code       : |
+          <div class="ts embed" data-source="youtube" data-id="I6hHkf9mIcU" [[data-query]]="autoplay=true" [[data-placeholder]]="!-16:9-!"></div>

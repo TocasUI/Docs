@@ -1,0 +1,145 @@
+slate:
+  title      : 复合功能选单
+  description: 像原生应用程序那样地将多项功能纳入右键、长按选单。
+
+tabs:
+  - type  : styles
+    to    : /modules/contextmenu/
+  - type  : javascript
+    to    : /modules/contextmenu/javascript/
+
+intro: |
+  <p>复合功能选单不仅能用于计算机上的鼠标右键，还可以在 Android、iOS 平板、智能型手机上使用（透过长按画面）。但复合功能选单是不被推荐使用的组件，原因是较不直觉。使用者通常不会按下右键查看是否有更多功能。建议仅用于偏向原生应用程序（如：文件编辑器）的页面上。</p>
+
+styles:
+  - category   : 种类
+    description: 复合功能选单有不同的种类可供选择。
+    items      :
+
+      - title      : 基本
+        description: 一个最基本的复合功能选单，这外观与下拉式选单是一样的。复合功能选单正常状况下是隐藏的除非你按下右键或是长按屏幕为止。但为了范例的示范需求，我们修改了样式将其保持常态显示。
+        code       : |
+          <div class="ts [[contextmenu]]">
+              <div class="item">
+                  新增
+              </div>
+              <div class="item">
+                  重新命名
+                  <span class="description">Ctrl + R</span>
+              </div>
+              <div class="item">
+                  <i class="folder icon"></i>
+                  移动至
+              </div>
+              <div class="item">
+                  <i class="trash icon"></i>
+                  移至垃圾桶
+              </div>
+              <div class="divider"></div>
+              <div class="item">
+                  下载为 ...
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 复合功能选单的内容由多种不同的结构组成。
+    items      :
+
+      - title      : 项目
+        description: 项目是构成选单中最基本的一个部分。
+        code       : |
+          <div class="ts contextmenu">
+              <div class="[[item]]">
+                  新增
+              </div>
+              <div class="[[item]]">
+                  重新命名
+              </div>
+              <div class="[[item]]">
+                  下载并压缩
+              </div>
+          </div>
+
+      - title      : 标题
+        description: 选单中可以有标题。
+        code       : |
+          <div class="ts contextmenu">
+              <div class="[[header]]">
+                  <i class="tags {{icon}}"></i>
+                  由下列标签筛选
+              </div>
+              <div class="item">
+                  已完成
+              </div>
+              <div class="item">
+                  进行中
+              </div>
+          </div>
+
+      - title      : 分隔线
+        description: 选单中可以插入分隔线来划分两个区块。
+        code       : |
+          <div class="ts contextmenu">
+              <div class="item">
+                  橙希
+              </div>
+              <div class="item">
+                  吴雨蓝
+              </div>
+              <div class="[[divider]]"></div>
+              <div class="item">
+                  羽田白音
+              </div>
+          </div>
+
+      - subtitle   : 区段分隔线
+        description: 分隔线的间距可以更大，用以加强分隔区段。
+        code       : |
+          <div class="ts contextmenu">
+              <div class="item">
+                  橙希
+              </div>
+              <div class="item">
+                  吴雨蓝
+              </div>
+              <div class="[[section divider]]"></div>
+              <div class="item">
+                  羽田白音
+              </div>
+          </div>
+
+      - title      : 图示
+        description: 选单内可以有图示点缀。
+        code       : |
+          <div class="ts contextmenu">
+              <div class="item">
+                  <i class="frown [[icon]]"></i>
+                  难过
+              </div>
+              <div class="item">
+                  <i class="meh [[icon]]"></i>
+                  喔
+              </div>
+              <div class="item">
+                  <i class="smile [[icon]]"></i>
+                  开心
+              </div>
+          </div>
+
+      - title      : 注释
+        description: 选单内的项目可以带有注释，用做诠释项目的概要。
+        code       : |
+          <div class="ts contextmenu">
+              <div class="item">
+                  <span class="text">图片</span>
+                  <span class="[[description]]">今天上午</span>
+              </div>
+              <div class="item">
+                  <span class="text">音乐</span>
+                  <span class="[[description]]">未曾变动</span>
+              </div>
+              <div class="item">
+                  <span class="text">备份</span>
+                  <span class="[[description]]">一年前</span>
+              </div>
+          </div>

@@ -1,0 +1,73 @@
+slate:
+  title      : 点心条
+  description: 附着在屏幕角落且带有通知文字的点心棒。
+
+tabs:
+  - type  : styles
+    to    : /modules/snackbar/
+  - type  : javascript
+    to    : /modules/snackbar/javascript/
+
+styles:
+  - category   : JavaScript
+    description: 点心条有提供可用的 JavaScript 模块。
+    items      :
+      - title      : 选项
+        description: |
+          <p>呼叫点心条时有这些参数选项可供使用。</p>
+          <table class="ts small celled stackable definition table">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>默认值</th>
+                      <th>注释</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>content</td>
+                      <td></td>
+                      <td>点心条的讯息内容。</td>
+                  </tr>
+                  <tr>
+                      <td>action</td>
+                      <td></td>
+                      <td>点心条的动作按钮文字。</td>
+                  </tr>
+                  <tr>
+                      <td>actionEmphasis</td>
+                      <td></td>
+                      <td>动作按钮的语意，如：<span class="ts horizontal label">primary</span>、<span class="ts horizontal label">info</span>、<span class="ts horizontal label">warning</span>⋯等。</td>
+                  </tr>
+                  <tr>
+                      <td>hoverStay</td>
+                      <td>false</td>
+                      <td>当鼠标移至点心条上时是否要延长点心条的存在时间。</td>
+                  </tr>
+                  <tr>
+                      <td>onClose</td>
+                      <td></td>
+                      <td>当点心条关闭时所呼叫的函式。</td>
+                  </tr>
+                  <tr>
+                      <td>onAction</td>
+                      <td></td>
+                      <td>当点心条上的动作按钮被按下时所会呼叫的函式。</td>
+                  </tr>
+              </tbody>
+          </table>
+        type       : code
+        code       : |
+          <div class="ts snackbar">
+              <div class="content"></div>
+              <a class="action"></a>
+          </div>
+        javascript: |
+          ts('.snackbar').snackbar({
+              content: '档案已经成功地送出了。',
+              action: '还原',
+              actionEmphasis: 'negative',
+              onAction: () => {
+                  alert('档案已顺利还原！');
+              }
+          });

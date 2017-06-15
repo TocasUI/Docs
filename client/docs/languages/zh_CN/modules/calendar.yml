@@ -1,0 +1,150 @@
+slate:
+  title      : 日历
+  description: 哇，2016 始春。
+
+styles:
+  - category   : 种类
+    description: 日历有不同种类可供选择。
+    items      :
+      - title      : 基本
+        description: 最基本的日历。
+        code       : |
+          <div class="ts [[calendar]]">
+              <div class="header">七月</div>
+              <div class="content">
+                  <div class="date">13</div>
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 日历由多个不同的内容构造所组成。
+    items      :
+
+      - title      : 标题
+        description: 日历的标题，可以用来显示月份或是当作主要标题。
+        code       : |
+          <div class="ts calendar">
+              <div class="[[header]]">十二月</div>
+          </div>
+
+      - title      : 日期
+        description: 日历中的日期。
+        code       : |
+          <div class="ts calendar">
+              <div class="header">九月</div>
+              <div class="[[content]]">
+                  <div class="date">14</div>
+              </div>
+          </div>
+
+      - title      : 日期范围
+        description: 日期可以是一个范围，而不是单一天。
+        code       : |
+          <div class="ts calendar">
+              <div class="header">九月</div>
+              <div class="content">
+                  <div class="date [[range]]">12 - 31</div>
+              </div>
+          </div>
+
+      - title      : 额外内容
+        description: 日历中可以摆放额外的内容。
+        code       : |
+          <div class="ts calendar">
+              <div class="header">七月</div>
+              <div class="content">
+                  <div class="date">13</div>
+                  <div class="[[extra]]">星期三</div>
+              </div>
+          </div>
+
+      - title      : 前后辍
+        description: 日历中的日期可以有前辍或是后辍。
+        remove     : <br><br>
+        code       : |
+          <div class="ts calendar">
+              <div class="header">十二月</div>
+              <div class="content">
+                  <div class="date">
+                      <span class="[[prefix]]">第</span>
+                      ?
+                      <span class="[[suffix]]">日</span>
+                  </div>
+              </div>
+          </div>
+          <br><br>
+          <div class="ts calendar">
+              <div class="header">十二月</div>
+              <div class="content">
+                  <div class="date">
+                      25
+                      <span class="[[suffix]]">日</span>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 日历的外观有所不同。
+    items      :
+
+      - title      : 圆角
+        description: 日历的边角可以是稍微圆角的。
+        code       : |
+          <div class="ts [[rounded]] calendar">
+              <div class="header">七月</div>
+              <div class="content">
+                  <div class="date">13</div>
+              </div>
+          </div>
+
+      - title      : 尺寸
+        description: 日历的尺寸可以改变。
+        code       : |
+          <div class="ts [[mini]] calendar">
+              <div class="header">迷你</div>
+              <div class="content">
+                  <div class="date">14</div>
+              </div>
+          </div>
+          <div class="ts [[tiny]] calendar">
+              <div class="header">微小</div>
+              <div class="content">
+                  <div class="date">14</div>
+              </div>
+          </div>
+          <div class="ts [[small]] calendar">
+              <div class="header">小的</div>
+              <div class="content">
+                  <div class="date">14</div>
+              </div>
+          </div>
+          <div class="ts [[medium]] calendar">
+              <div class="header">适中</div>
+              <div class="content">
+                  <div class="date">14</div>
+              </div>
+          </div>
+          <div class="ts [[large]] calendar">
+              <div class="header">稍大</div>
+              <div class="content">
+                  <div class="date">14</div>
+              </div>
+          </div>
+          <div class="ts [[big]] calendar">
+              <div class="header">大的</div>
+              <div class="content">
+                  <div class="date">14</div>
+              </div>
+          </div>
+          <div class="ts [[huge]] calendar">
+              <div class="header">巨大</div>
+              <div class="content">
+                  <div class="date">14</div>
+              </div>
+          </div>
+          <div class="ts [[massive]] calendar">
+              <div class="header">重量级</div>
+              <div class="content">
+                  <div class="date">14</div>
+              </div>
+          </div>

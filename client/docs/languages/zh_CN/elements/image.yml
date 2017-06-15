@@ -1,0 +1,144 @@
+slate:
+  title      : 图片
+  description: 搭拉，这看起来跟你本人不太像。
+
+intro: |
+  <p>图片在不指定大小的情况下，预设最大至少可以填满整个容器。</p>
+
+styles:
+  - category   : 种类
+    description: 图片具有不同的种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的图片。
+        code       : |
+          <img class="ts small [[image]]" src="!-4:3-!">
+
+      - title      : 连结
+        description: 图片也可以是被链接包覆住的。
+        code       : |
+          <[[a]] href="http://google.com" class="ts small image">
+              <img src="!-4:3-!">
+          </[[a]]>
+
+      - title      : 链接性图片
+        description: 图片除了能够被链接包覆住，亦能够让没被链接包覆着的图片看起来像链接一样，这很适合用在非连结但可供点击的图片。
+        code       : |
+          <a href="http://google.com" class="ts [[link]] small image">
+              <img src="!-4:3-!">
+          </a>
+          <img class="ts [[link]] small image" src="!-4:3-!">
+
+  - category   : 状态
+    description: 图片具有不同的状态。
+    items      :
+
+      - title      : 隐藏
+        description: 隐藏一个图片。
+        code       : |
+          <img class="ts [[hidden]] image" src="!-4:3-!">
+
+      - title      : 已停用
+        description: 显示一个图片已经过时、不可用。
+        code       : |
+          <img class="ts [[disabled]] small image" src="!-4:3-!">
+
+  - category   : 外观
+    description: 图片具有不同的外观。
+    items      :
+
+      - title      : 头像
+        description: 头像的大小会自动调整成比文字稍微大一些。
+        code       : |
+          <img class="ts [[avatar]] image" src="!-user-!">
+          <span>Yami Odymel</span>
+
+      - title      : 框线
+        description: 新增一个预设颜色的框线。
+        code       : |
+          <img class="ts small [[bordered]] image" src="!-1:1-!">
+
+      - title      : 流动
+        description: 会填满整个容器的图片。
+        code       : |
+          <img class="ts [[fluid]] image" src="!-4:3-!">
+
+      - title      : 圆角
+        description: 会加一些少许的圆角在图片角落。
+        code       : |
+          <img class="ts small [[rounded]] image" src="!-4:3-!">
+
+      - title      : 圆形
+        description: 将图片变成圆形。
+        code       : |
+          <img class="ts small [[circular]] image" src="!-1:1-!">
+
+      - title      : 垂直对齐
+        description: 将图片对齐上、下或中间。
+        code       : |
+          <img class="ts mini [[top aligned]] image" src="!-1:1-!"> 垂直置顶
+          <div class="ts divider"></div>
+          <img class="ts mini [[middle aligned]] image" src="!-1:1-!"> 垂直置中
+          <div class="ts divider"></div>
+          <img class="ts mini [[bottom aligned]] image" src="!-1:1-!"> 垂直置障
+
+      - title      : 水平置中
+        description: 将图片水平置中。
+        code       : |
+          <img class="ts small [[centered]] image" src="!-1:1-!">
+
+      - title      : 图内图示
+        description: 图片里面可以摆放图标，这会令图标浮动在图片的右下角落。
+        code       : |
+          <div class="ts small image">
+              <img src="!-1:1-!">
+              <i class="large check [[icon]]"></i>
+          </div>
+
+      - title      : 带空白
+        description: 新增一些空白在图片的左右旁。
+        code       : |
+          亚凡芽 <img class="ts mini [[spaced]] image" src="!-1:1-!"> 是一个基于 PHP 的模板引擎， 很适合用在具有 MVC 架构的大型应用程序中，其中亚凡芽还支持了动态 CSS 名称，你可以随机命名类别名称，或者是将类别名称转换成 Emoji（图释），也可以将 JavaScript 档案汇集成一个档案。 Tocas 是一个基于 CSS3 的
+          <img class="ts mini [[spaced]] image" src="!-1:1-!"> 网页接口框架， 以行动装置为主，同时也支持自定义颜色，还有更具有语意的类别名称。
+
+      - title      : 左右浮动
+        description: 让图片浮动置左或置右。
+        code       : |
+          <img class="ts tiny [[left floated]] image" src="!-1:1-!">
+          <p>
+              保障任何人的著作权，其中包括二次创作，二次创作仅可在原作者未声明否决下进行发布和创作， 在未经原作允许下衍生任何具有原作之内容，基于衍生理念与内容为判决要点，
+              原作必须基于合理使用之理念提出移除、上诉任何非符合合理使用概念的衍生内容， 合理使用的理念如下： 使用目的及性质 其着重点在于内容是否有所转化，如衍生创作另有新意，非仅复制原作内容。版权作品性质 <img class="ts tiny [[right floated]] image" src="!-1:1-!"> 以真实、事实所阐述之作品较虚构作品来的能够符合合理使用。使用版权作品的多寡 引用少量的原创著作比起引用大量来要的符合合理使用，但倘若原创著作成为衍生著作之核心内容，即使少量的原创著作被引用，也较不可能符合合理使用之原则。使用行为对于版权作品的市场或价值之影响 透过原创著作的内容而进行获利并造成原创著作部分损害，较不符合合理使用之原则。
+          </p>
+      - title      : 尺寸
+        description: 更改图片的大小，大小从 <span class="ts horizontal label">mini</span> 到 <span class="ts horizontal label">massive</span>。
+        code       : |
+          <img class="ts [[mini]] image" src="!-1:1-!">
+          <img class="ts [[tiny]] image" src="!-1:1-!">
+          <img class="ts [[small]] image" src="!-1:1-!">
+          <img class="ts [[medium]] image" src="!-1:1-!">
+
+  - category   : 群组
+    description: 图片可以是一个群组。
+    items      :
+
+      - title      : 尺寸
+        description: 群组内的图片大小将会符合群组所设定的尺寸。
+        code       : |
+          <div class="ts [[tiny]] images">
+              <img src="!-1:1-!">
+              <img src="!-1:1-!">
+              <img src="!-1:1-!">
+          </div>
+
+      - title      : 有关联的
+        description: 群组内的图片可以看起来有关联。
+        code       : |
+          <div class="ts small [[related]] images">
+              <img src="!-1:1-!">
+              <img src="!-1:1-!">
+          </div>
+          <br>
+          <div class="ts tiny circular [[related]] images">
+              <img src="!-1:1-!">
+              <img src="!-1:1-!">
+          </div>

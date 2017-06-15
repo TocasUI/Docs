@@ -1,0 +1,96 @@
+slate:
+  title      : 弹出式讯息
+  description: 砰！看看我！
+
+tabs:
+  - type  : styles
+    to    : /modules/popup/
+  - type  : javascript
+    to    : /modules/popup/javascript/
+
+intro: |
+  <p>用上弹出式讯息通常是个不好的设计。此组件会在鼠标移过某处时显示一个气泡讯息，这个讯息偏向提示，尚不打算增加过多丰富的功能。</p>
+
+styles:
+  - category   : 种类
+    description: 一个弹出式讯息具有多个不同的种类。
+    items      :
+      - title      : 弹出式讯息
+        description: 一个正常的弹出式讯息，弹出式讯息的位置默认在元素下方。
+        code       : |
+          <button class="ts info labeled icon {{button}}" [[data-tooltip]]="早安！我的朋友！你欠钱没还！">
+              <i class="mouse pointer {{icon}}"></i>
+              鼠标移至此查看范例
+          </button>
+
+      - title      : 标签
+        description: 弹出式讯息可以看起来更像普通标签，而不带有指向某处的记号。
+        code       : |
+          <button class="ts info labeled icon {{button}}" [[data-tooltip-type]]="label" data-tooltip="这个弹出式讯息没有箭头，像普通标签。">
+              <i class="mouse pointer {{icon}}"></i>
+              鼠标移至此查看范例
+          </button>
+
+      - title      : 附着于其他元素
+        description: |
+          弹出式讯息也可以套用在一般的文字或是链接甚至其他元素上，需要注意的是这依赖着 <span class="ts horizontal label">:after</span> 与 <span class="ts horizontal label">:before</span> 选择器，任何不是「容器」的都不适用，如：文字字段、图标、影像等。
+          <br><br>
+          你需要有个额外的容器包覆这些不适用的元素，然后在容器上配置弹出式讯息，请参阅下面这个范例。
+        code       : |
+          <a href="#!" [[data-tooltip]]="这是洨洨安。">
+              <img class="ts circular avatar {{image}}" src="!-user-!">
+          </a>
+          <a href="#!" [[data-tooltip]]="这是我好朋友，长得跟洨洨安有点像。">
+              <img class="ts circular avatar {{image}}" src="!-user-!">
+          </a>
+          <span>当然，你也能够让</span>
+          <a href="#!" [[data-tooltip]]="早安！朋友！">
+              普通的连结
+          </a>
+          <span>有弹出式讯息。</span>
+          <div class="ts {{input}}" [[data-tooltip]]="请输入您的账号。">
+              <input type="text" placeholder="鼠标移过来">
+          </div>
+
+  - category   : 状态
+    description: 弹出式讯息也具有状态。
+    items      :
+
+      - title      : 无弹出式讯息
+        description: |
+          有些时候你可能已经有外挂、或是插件来协助你完成弹出式讯息的实作，倘若你的外挂、插件也使用到了 <span class="ts horizontal label">[data-tooltip]</span> 属性，这个时候可能会与 Tocas UI 有所冲突，为此，你可以在该元素上加上 <span class="ts horizontal label">.untooltipped</span> 样式即可停用 Tocas UI 的弹出式讯息。
+        code       : |
+          <button class="ts info [[untooltipped]] button" data-tooltip="早安！我的朋友！你欠钱没还！">
+              这个按钮不会有弹出式讯息
+          </button>
+
+  - category   : 外观
+    description: 你可以更改弹出式讯息的位置、大小。
+    items      :
+
+      - title      : 讯息位置
+        description: 弹出式讯息出现的位置能够被更改。
+        code       : |
+          <button class="ts info button" [[data-tooltip-position]]="top left" data-tooltip="这是弹出式讯息。">上面左边</button>
+          <button class="ts info button" [[data-tooltip-position]]="top center" data-tooltip="这是弹出式讯息。">上面中间</button>
+          <button class="ts info button" [[data-tooltip-position]]="top right" data-tooltip="这是弹出式讯息。">上面右边</button>
+          <button class="ts info button" [[data-tooltip-position]]="bottom left" data-tooltip="这是弹出式讯息。">下面左边</button>
+          <button class="ts info button" [[data-tooltip-position]]="bottom center" data-tooltip="这是弹出式讯息。">下面中间</button>
+          <button class="ts info button" [[data-tooltip-position]]="bottom right" data-tooltip="这是弹出式讯息。">下面右边</button>
+          <button class="ts info button" [[data-tooltip-position]]="left" data-tooltip="这是弹出式讯息。">左边</button>
+          <button class="ts info button" [[data-tooltip-position]]="right" data-tooltip="这是弹出式讯息。">右边</button>
+
+      - title      : 出现延迟
+        description: 你可以决定鼠标移至元素上后要过多久才会出现弹出式讯息。
+        code       : |
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="disabled">停用延迟</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="0.1">0.1 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="0.2">0.2 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="0.3">0.3 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="0.4">0.4 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="0.5">0.5 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="1">1 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="2">2 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="3">3 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="4">4 秒</button>
+          <button class="ts info button" data-tooltip="这是弹出式讯息。" [[data-tooltip-delay]]="5">5 秒</button>

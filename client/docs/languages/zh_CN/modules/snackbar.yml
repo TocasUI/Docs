@@ -1,0 +1,117 @@
+slate:
+  title      : 点心条
+  description: 附着在屏幕角落且带有通知文字的点心棒。
+
+tabs:
+  - type  : styles
+    to    : /modules/snackbar/
+  - type  : javascript
+    to    : /modules/snackbar/javascript/
+
+intro: |
+  <p>点心条和讯息不一样的地方在于点心条是浮动在页面角落、且较单调的。同时当多个通知发生时，点心条只会显示最后一个通知且无法重迭。</p>
+  <p>倘若出现多个通知是你期望的目标，试着使用列表组件，且谨记避免过度遮蔽屏幕画面。</p>
+
+styles:
+  - category   : 种类
+    description: 点心条有不同种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的点心条会出现在屏幕左下角中。
+        type       : snackbar
+        code       : |
+          <div class="ts active [[snackbar]]">
+              <div class="content">
+                  你已成功地还原档案了。
+              </div>
+              <a class="primary action">重新送出</a>
+          </div>
+
+  - category   : 状态
+    description: 点心条有不同的呈现状态。
+    items      :
+
+      - title      : 已启用
+        description: 点心条默认并不会显示，直到将其设置为已启用。
+        type       : snackbar
+        code       : |
+          <div class="ts [[active]] snackbar">
+              <div class="content">
+                  早安！我的朋友！这段话是在我凌晨五点没睡觉时打的。
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 你能在点心条中放置不同的内容。
+    items      :
+
+      - title      : 内容
+        description: 用以呈现通知的主要文字和讯息。
+        type       : snackbar
+        code       : |
+          <div class="ts active snackbar">
+              <div class="[[content]]">
+                  澳门首家在线赌场上线啦！
+              </div>
+          </div>
+
+      - title      : 动作
+        description: 针对通知所提供的动作按钮。点心条上仅能有一个动作按钮。
+        type       : snackbar
+        code       : |
+          <div class="ts active snackbar">
+              <div class="content">
+                  这个档案已经损毁了。
+              </div>
+              <a class="[[action]]">移至回收桶</a>
+          </div>
+
+      - subtitle   : 动作语意
+        description: 动作按钮也能有不同的语意并以示其重要性。
+        type       : snackbar
+        code       : |
+          <div class="ts active snackbar">
+              <a class="[[primary]] action">主要</a>
+              <a class="[[info]] action">信息</a>
+              <a class="[[warning]] action">警告</a>
+              <a class="[[positive]] action">肯定</a>
+              <a class="[[negative]] action">否定</a>
+          </div>
+
+  - category   : 外观
+    description: 点心条的外观有所不同。
+    items      :
+
+      - title      : 同行
+        description: 点心条默认是浮动在屏幕上的，但能够使其成为同行点心条，和其他元素摆置在一块。
+        code       : |
+          <div class="ts active [[inline]] snackbar">
+              <div class="content">
+                  你有五则讯息尚未读取。
+              </div>
+          </div>
+
+      - title      : 位置
+        description: 点心条在屏幕角落的浮动位置是可以更改的。
+        type       : snackbar
+        code       : |
+          <div class="ts active [[top left]] snackbar">
+              <div class="content">
+                  上左
+              </div>
+          </div>
+          <div class="ts active [[top right]] snackbar">
+              <div class="content">
+                  上右
+              </div>
+          </div>
+          <div class="ts active [[bottom left]] snackbar">
+              <div class="content">
+                  下左
+              </div>
+          </div>
+          <div class="ts active [[bottom right]] snackbar">
+              <div class="content">
+                  下右
+              </div>
+          </div>

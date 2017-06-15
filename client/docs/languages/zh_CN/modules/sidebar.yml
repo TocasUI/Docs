@@ -1,0 +1,205 @@
+slate:
+  title      : 侧边栏
+  description: 从侧边滑出来，然后又滑回去了。
+
+tabs:
+  - type  : styles
+    to    : /modules/sidebar/
+  - type  : javascript
+    to    : /modules/sidebar/javascript/
+
+intro: |
+  <p>在 Tocas UI 中并没有汉堡选单（类似 Bootstrap 的响应式选单），因为那较不直觉，容易令人猜测选单的出现位置。为了解决这个问题 Tocas UI 有着类似原生应用程序一样的选单。</p>
+  <p>侧边栏只能用于网页最顶层，而不能嵌套在页面上的容器内。但为了良好地示范侧边栏的应用，这个页面上有稍微修改令侧边栏能够套入容器中。</p>
+
+styles:
+  - category   : 页面布局
+    description: 一但使用了侧边栏，你就必须更改页面结构。
+    items      :
+      - title      : 页面推动器和侧边栏
+        description: 侧边栏出现时会将页面向特定方向推动，为了达到这个效果，网页中 <span class="ts horizontal label">&lt;body&gt;</span> 的结构就必须像下面这样做。
+        type       : code
+        code       : |
+          <body>
+              <!-- 侧边栏组件 -->
+              <div class="ts left [[sidebar]]">
+              </div>
+              <!-- / 侧边栏组件 -->
+
+              <!-- 页面推动器 -->
+              <div class="[[pusher]]">
+                  <!-- 网页内容摆置于此 -->
+              </div>
+              <!-- / 页面推动器 -->
+          </body>
+
+      - title      : 挤压的推动器
+        description: 通常来说侧边栏出现时，会将页面往某个方向推。但你能让页面呈现被挤压而不是被推出屏幕外。如果你有一个常态的功能侧边栏就很适合使用这种推动器。
+        type       : code
+        code       : |
+          <div class="[[squeezable]] pusher">
+              <!-- 网页内容摆置于此 -->
+          </div>
+
+  - category   : 种类
+    description: 侧边栏具有不同的种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的侧边栏会带有内距，你能够在内部摆置其他组件。
+        type       : sidebar
+        code       : |
+          <div class="ts static visible [[left sidebar]]">
+              <div class="ts {{header}}">
+                  搭拉！
+                  <div class="sub header">你打开了秘密的侧边栏！</div>
+              </div>
+              <div class="ts {{segment}}">
+                  你可以像这样在侧边栏放置很多不同的组件。
+              </div>
+          </div>
+
+      - title      : 垂直选单
+        description: 侧边栏也能够是一个由选单元件所组成的，这会很常用到。搭配 <span class="ts horizontal label">inverted</span> 的反色语气能让侧边选单更加的明显。
+        type       : sidebar
+        code       : |
+          <div class="ts static visible left sidebar inverted [[vertical menu]]">
+              <a class="item">首页</a>
+              <a class="item">文件</a>
+              <a class="item">下载</a>
+              <div class="item">
+                  首页功能
+                  <div class="menu">
+                      <a class="active item">搜寻</a>
+                      <a class="item">新增</a>
+                      <a class="item">移除</a>
+                  </div>
+              </div>
+              <a class="bottom item">注销</a>
+          </div>
+
+  - category   : 状态
+    description: 侧边栏和相关的组件有不同的状态。
+    items      :
+
+      - title      : 静态显示
+        description: 侧边栏在预设情况下是隐藏的，你可以手动将其保持在显示状态。
+        type       : sidebar
+        code       : |
+          <div class="ts [[static visible]] left sidebar">
+              <div class="ts {{header}}">
+                  <i class="unhide {{icon}}"></i>
+                  默认显示
+              </div>
+              <p>这个侧边栏不需要透过 JavaScript 切换，就会直接显示出来。</p>
+          </div>
+
+  - category   : 外观
+    description: 侧边栏有着不同的外观点缀。
+    items      :
+
+      - title      : 水平方向
+        description: 一个侧边栏必须要指定在屏幕上呈现的方向。
+        type       : sidebar
+        code       : |
+          <div class="ts static visible [[left]] sidebar">
+              <div class="ts {{header}}">
+                  <i class="left arrow {{icon}}"></i>
+                  靠左
+                  <div class="sub header">哇喔！这是个靠左边的侧边栏呢！</div>
+              </div>
+          </div>
+          <div class="ts static visible [[right]] sidebar">
+              <div class="ts {{header}}">
+                  <i class="right arrow {{icon}}"></i>
+                  靠右
+                  <div class="sub header">或者也能像这样向右靠齐。</div>
+              </div>
+          </div>
+
+      - title      : 覆盖的
+        description: 侧边栏一般来说会将网页内容往旁边推，但你可以让侧边栏是覆盖并浮在页面上的。这么做的话页面内容就不会被推到一旁。
+        type       : sidebar
+        code       : |
+          <div class="ts static visible [[overlapped]] left sidebar">
+              这个侧边栏会覆盖在页面内容上方。
+          </div>
+
+      - title      : 无内距
+        description: 侧边栏可以没有内距，这很适合摆放流动宽度的组件。
+        type       : sidebar
+        code       : |
+          <div class="ts static visible [[fitted]] left sidebar">
+              <div class="ts small fluid inverted negative {{message}}">
+                  <div class="header">账号不安全。</div>
+                  请确保您已启用二步骤验证。
+              </div>
+          </div>
+
+      - title      : 增加内距
+        description: 你可以增加侧边栏的内距，看起来会更宽阔。
+        type       : sidebar
+        code       : |
+          <div class="ts static visible [[padded]] left sidebar">
+              增加内距的侧边栏。
+          </div>
+          <div class="ts static visible [[very padded]] right sidebar">
+              增加更多内距的侧边栏。
+          </div>
+
+      - title      : 宽度
+        description: |
+          <p>你可以更改侧边栏的宽度。</p>
+          <table class="ts small stackable definition table">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>64px</th>
+                      <th>180px</th>
+                      <th>230px</th>
+                      <th>300px</th>
+                      <th>360px</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>样式名称</td>
+                      <td><span class="ts horizontal label">very thin</span></td>
+                      <td><span class="ts horizontal label">thin</span></td>
+                      <td>预设</td>
+                      <td><span class="ts horizontal label">wide</span></td>
+                      <td><span class="ts horizontal label">very wide</span></td>
+                  </tr>
+                  <tr>
+                      <td>中文称呼</td>
+                      <td>非常窄</td>
+                      <td>窄的</td>
+                      <td></td>
+                      <td>宽的</td>
+                      <td>非常宽</td>
+                  </tr>
+                  <tr>
+                      <td>行动装置全宽</td>
+                      <td><i class="x icon"></i></td>
+                      <td><i class="x icon"></i></td>
+                      <td><i class="x icon"></i></td>
+                      <td><i class="positive check icon"></i></td>
+                      <td><i class="positive check icon"></i></td>
+                  </tr>
+              </tbody>
+          </table>
+        type       : sidebar
+        code       : |
+          <div class="ts static visible [[wide]] left sidebar vertical {{menu}}">
+              <div class="image item">
+                  <img src="!-16:9-!">
+              </div>
+              <a class="item">Yami Odymel</a>
+              <div class="item">
+                  个人资料
+                  <div class="menu">
+                      <a class="active item">隐私</a>
+                      <a class="item">好友</a>
+                      <a class="item">文章</a>
+                  </div>
+              </div>
+          </div>

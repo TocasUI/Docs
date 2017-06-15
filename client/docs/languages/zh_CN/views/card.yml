@@ -1,0 +1,888 @@
+slate:
+  title      : 卡片
+  description: 随心所欲，像汉堡一样，拼凑出你喜欢的。
+
+intro: |
+  <p>卡片的内容可以是由各式各样的元素组成，这一个特点请参考「内容」的介绍区块。</p>
+  <p>卡片和片段事实上外观相同（它们来自同个样式），但你不应该因为外观一样，就将原本应该用卡片显示的内容以片段代替。</p>
+  <p>请别忘记：虽然外观一样，但是内在却不一样。</p>
+
+styles:
+  - category   : 种类
+    description: 卡片具有不同的种类。
+    items      :
+      - title      : 基本
+        description: 一个最基本的卡片。
+        code       : |
+          <div class="ts [[card]]">
+              <div class="image">
+                  <img src="!-4:3-!">
+              </div>
+              <div class="content">
+                  <div class="header">Tocas Collection</div>
+                  <div class="meta">
+                      <a>@ts_collection</a>
+                  </div>
+                  <div class="description">
+                      <p>在同个屋檐下，做着那一成不变的事情，</p>
+                      <p>就算没有外星人来袭击，</p>
+                      <p>偶尔也会发生一些意想之外的事情。</p>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 语意
+        description: 卡片可以有着不同的语意。
+        code       : |
+          <div class="ts [[primary]] card">
+              <div class="content">
+                  <div class="header">Jajjimento</div>
+                  <div class="description">
+                      Jajjimento（ジャッジメント）中文涵意是风纪委员，
+                      这是用来验证窗体的 PHP 类别。
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[info]] card">
+              <div class="content">
+                  <div class="header">夏希</div>
+                  <div class="description">
+                      夏希是一个基于 PHP 的时间类别，
+                      用以取得现在的时间，或者是数天后的现在时刻。
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[warning]] card">
+              <div class="content">
+                  <div class="header">帝国</div>
+                  <div class="description">
+                      帝国是一个基于 PHP 的权限管理系统，
+                      建立一个帝国需要细心的规划。
+                  </div>
+              </div>
+          </div>
+
+      - title      : 肯定和否定
+        description: 卡片可以带有肯定或否定的语气。
+        code       : |
+          <div class="ts [[positive]] card">
+              <div class="content">
+                  <div class="header">正面 :)</div>
+                  <div class="description">
+                      这是一个比较正面的卡片。
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[negative]] card">
+              <div class="content">
+                  <div class="header">负面 :(</div>
+                  <div class="description">
+                      我是一张比较负面的卡片。
+                  </div>
+              </div>
+          </div>
+
+      - title      : 反色语意
+        description: 卡片的语意可以是反色的。
+        code       : |
+          <div class="ts [[inverted]] card">
+              <div class="content">
+                  <div class="header">反色</div>
+                  <div class="description">
+                      我是一张反色的卡片，喔耶！！
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[inverted]] [[primary]] card">
+              <div class="content">
+                  <div class="header">Jajjimento</div>
+                  <div class="description">
+                      Jajjimento（ジャッジメント）中文涵意是风纪委员，
+                      这是用来验证窗体的 PHP 类别。
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[inverted]] [[info]] card">
+              <div class="content">
+                  <div class="header">夏希</div>
+                  <div class="description">
+                      夏希是一个基于 PHP 的时间类别，
+                      用以取得现在的时间，或者是数天后的现在时刻。
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[inverted]] [[warning]] card">
+              <div class="content">
+                  <div class="header">帝国</div>
+                  <div class="description">
+                      帝国是一个基于 PHP 的权限管理系统，
+                      建立一个帝国需要细心的规划。
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[inverted]] [[positive]] card">
+              <div class="content">
+                  <div class="header">正面 :)</div>
+                  <div class="description">
+                      这是一个比较正面的卡片。
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[inverted]] [[negative]] card">
+              <div class="content">
+                  <div class="header">负面 :(</div>
+                  <div class="description">
+                      我是一张比较负面的卡片。
+                  </div>
+              </div>
+          </div>
+
+      - title      : 多个卡片
+        description: 卡片可以集成一个群组并有着相同的高度或是分享共同样式。
+        code       : |
+          <div class="ts [[cards]]">
+              <div class="ts card">
+                  <div class="content">
+                      <div class="header">
+                          Yami Odymel
+                      </div>
+                      <div class="description">
+                          看似最重要的东西却没能被妥善利用，
+                          没有人能发现这一点，因为他们早已活在过去，
+                          才刚开始的序章却被放在页尾。
+                      </div>
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="content">
+                      <div class="header">
+                          小安网站
+                      </div>
+                      <div class="description">
+                          你将会在这里看见一个魔法师的日常生活，
+                          没错，只要你能够单身三十年，
+                          你也可以跟我一样成为魔法师。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 卡片是由多种内容所组成的，你可以在此任意挑选并组合搭配。
+    items      :
+
+      - title      : 内容
+        description: 一个放置文字的区块。
+        code       : |
+          <div class="ts card">
+              <div class="[[content]]">
+                  人的生命有两次，一次是你没发现的时候，一次是你发现的时候。
+              </div>
+          </div>
+
+      - title      : 标题
+        description: 用以放置人名、标题、名称的区块。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="[[header]]">哔叭啦叭啦叭叭拉哔哔叭啦</div>
+                  <div class="description">
+                      <p>这是来自地狱的智障骷髅智障骷髅小喇叭手。</p>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 副标题
+        description: 你可以用副标题来诠释你的大标题。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="header">
+                      三十公分
+                      <div class="[[sub header]]">人人都渴望的尺寸。</div>
+                  </div>
+                  <div class="description">
+                      <p>所谓的标准乡民尺寸三十公分，</p>
+                      <p>无论是谁都会想要拥有。</p>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 较小的标题
+        description: 标题与其子标题可以稍微小一点。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="[[smaller header]]">
+                      计算机玩瞎咪
+                      <div class="sub header">关于计算机、日常生活、休闲的去处。</div>
+                  </div>
+                  <div class="description">
+                      <p>Event Store 是一个基于 CQRS 与 Event Sourcing 理念所衍生出来的新概念并由 C# 撰写。这是一个微服务事件储藏中心，这可能很难懂，但别紧张，这些都会在本文中得到答案。</p>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 图片
+        description: 一个用以放置图片的区块。
+        code       : |
+          <div class="ts card">
+              <div class="[[image]]">
+                  <img src="!-4:3-!">
+              </div>
+              <div class="content">
+                  <p>你将会在这里看见一个魔法师的日常生活，</p>
+                  <p>没错，只要你能够单身三十年，</p>
+                  <p>你也可以跟我一样成为魔法师。</p>
+              </div>
+          </div>
+
+      - title      : 影片
+        description: 你可以在卡片中摆放 HTML5 影片，或是 YouTube、Vimeo 等外部影片。
+        code       : |
+          <div class="ts card">
+              <div class="[[video]]">
+                  <video src="http://html5demos.com/assets/dizzy.mp4" autoplay muted loop></video>
+              </div>
+              <div class="content">
+                  猫咪转啊转，转啊转。像这样放入一个 HTML5 的自定义影片。
+              </div>
+          </div>
+          <div class="ts card">
+              <div class="[[video]]">
+                  <iframe src="https://www.youtube.com/embed/vbZBAC3WbTs"></iframe>
+              </div>
+              <div class="content">
+                  透过 iframe 标签你可以嵌入 YouTube 或 Vimeo 的影片，他们会自动贴合卡片的宽度。
+              </div>
+          </div>
+          <div class="ts card">
+              <div class="[[video]]">
+                  <div class="ts 1:1 active {{embed}}">
+                      <video src="https://www.quirksmode.org/html5/videos/big_buck_bunny.webm" autoplay muted loop></video>
+                  </div>
+              </div>
+              <div class="content">
+                  你也可以透过 Tocas UI 的「嵌入对象」组件来自定义影片长宽比。这个范例嵌入了一个 1:1 正方形的影片。
+              </div>
+          </div>
+
+      - title      : 图片、影片标题
+        description: 图片或是影片区块内可以有标题与子标题。
+        code       : |
+          <div class="ts card">
+              <div class="image">
+                  <img src="!-4:3-!">
+                  <div class="[[header]]">
+                      三十公分
+                      <div class="[[sub header]]">人人都渴望的尺寸。</div>
+                  </div>
+              </div>
+              <div class="content">
+                  <p>你将会在这里看见一个魔法师的日常生活，</p>
+                  <p>没错，只要你能够单身三十年，</p>
+                  <p>你也可以跟我一样成为魔法师。</p>
+              </div>
+          </div>
+
+      - title      : 注释
+        description: 用来诠释卡片内容的区块。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="header">文青短文精选</div>
+                  <div class="[[description]]">
+                      <p>路，就是一条直直的。</p>
+                      <p>哥 抽的不是烟 是筋。</p>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 元数据
+        description: 放置时间、卷标、短数据的区块。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="header">小安网站</div>
+                  <div class="[[meta]]">
+                      <a>@xiaoan</a>
+                      <a>七月</a>
+                  </div>
+                  <div class="description">
+                      <p>你将会在这里看见一个魔法师的日常生活，</p>
+                      <p>没错，只要你能够单身三十年，</p>
+                      <p>你也可以跟我一样成为魔法师。</p>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 带点元数据
+        description: 元数据可以有「子弹点」或是「中点」来做区隔。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="header">小安网站</div>
+                  <div class="[[bulleted]] meta">
+                      <a>@xiaoan</a>
+                      <a>七月</a>
+                  </div>
+              </div>
+          </div>
+          <div class="ts card">
+              <div class="content">
+                  <div class="header">小安网站</div>
+                  <div class="[[middoted]] meta">
+                      <a>@xiaoan</a>
+                      <a>七月</a>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 动作
+        description: 放置对卡片做出某种动作的按钮区块。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="[[actions]]">
+                      <div class="ts separated secondary icon {{buttons}}">
+                          <button class="ts {{button}}">
+                              <i class="share {{icon}}"></i>
+                          </button>
+                          <button class="ts {{button}}">
+                              <i class="vertical ellipsis {{icon}}"></i>
+                          </button>
+                      </div>
+                  </div>
+                  <div class="header">+%Z%</div>
+                  <div class="middoted meta">
+                      <div>作词・作编曲：大石昌良</div>
+                  </div>
+                  <div class="description">
+                      <p>Welcome to ようこそジャパリパーク！</p>
+                      <p>今日もドッタンバッタン大騒ぎ</p>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 连结
+        description: 你可以将一些区块转换成连结，如果要让整张卡成为卡片，请观看下方「外观」章节。
+        code       : |
+          <div class="ts card">
+              <[[a]] class="image" href="#!">
+                  <img src="!-4:3-!">
+              </[[a]]>
+              <div class="content">
+                  <[[a]] class="header" href="#!">iPhone 7 开卖！</[[a]]>
+                  <div class="meta">
+                      <a href="#!">两天前</a>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 按钮
+        description: 你也可以把按钮放入卡片中。
+        code       : |
+          <div class="ts card">
+              <div class="ts fluid [[top attached]] [[buttons]]">
+                  <button class="ts button">编辑</button>
+              </div>
+              <div class="content">
+                  <div class="header">Tocas Collection</div>
+                  <div class="description">
+                      <p>在同个屋檐下，做着那一成不变的事情，</p>
+                      <p>就算没有外星人来袭击，</p>
+                      <p>偶尔也会发生一些意想之外的事情。</p>
+                  </div>
+              </div>
+              <div class="ts fluid [[bottom attached]] [[buttons]]">
+                  <button class="ts button">完成预览</button>
+              </div>
+          </div>
+
+      - title      : 偏见按钮
+        description: 卡片中可以插入偏见按钮来营造一个类似问答的卡片。
+        code       : |
+          <div class="ts inverted primary card">
+              <div class="content">
+                  <div class="header">尺寸问题</div>
+                  <div class="description">
+                      你有达到 30 公分，正所谓乡民标准尺寸吗？
+                  </div>
+              </div>
+              <div class="ts fluid bottom attached buttons">
+                  <button class="ts [[opinion]] button">有的</button>
+                  <button class="ts [[secondary opinion]] button">没有</button>
+              </div>
+          </div>
+
+      - title      : 代表性符号
+        description: 放入一个代表这张卡片性质的符号。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <p>任何已发布或是计划中之产品及服务，</p>
+                  <p>皆不得用来刻意偏颇大众想法、喜好、甚至混淆视听，</p>
+                  <p>且该产品及服务不得拥有自我立场。</p>
+              </div>
+              <div class="[[symbol]]">
+                  <i class="caution circle icon"></i>
+              </div>
+          </div>
+
+      - title      : 额外内容
+        description: 一个与这个卡片有关连的额外内容。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="header">绝园的暴风雨</div>
+                  <div class="description">
+                      <p>正气和狂气，理性和知性，自信和确信，</p>
+                      <p>在悲剧性的不合理世界，故事开始了。</p>
+                  </div>
+              </div>
+              <div class="[[extra content]]">
+                  <i class="icon unhide"></i> 934 次欣赏
+              </div>
+          </div>
+
+      - subtitle   : 额外内容发音方式
+        description: 你可以用不同的发音方式来替额外内容做些点缀。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="header">Zedd - Papercut (Audio) ft. Troye Sivan</div>
+                  <div class="description">
+                      <p>Get “True Colors” on iTunes: http://smarturl.it/ZeddTrueColors</p>
+                  </div>
+              </div>
+              <div class="[[extra content]]">
+                  <i class="icon unhide"></i> 6,439,852 观看次数
+              </div>
+              <div class="[[secondary]] extra content">
+                  <i class="icon thumbs up"></i> 109,159 个喜欢
+              </div>
+              <div class="[[tertiary]] extra content">
+                  <i class="icon thumbs down"></i> 1,077 个讨厌
+              </div>
+          </div>
+
+      - title      : 重迭内容
+        description: 内容可以重迭在整张卡片的上面。
+        code       : |
+          <div class="ts card">
+              <div class="image">
+                  <img style="opacity: 0.2" src="!-4:3-!">
+              </div>
+              <div class="[[overlapped content]]">
+                  <div class="description">
+                      <p>这是一个来自台湾的社群网站，</p>
+                      <p>在这里，我们并没有「赞」，或是「已读」。</p>
+                      <p>取而代之的，是一个「星号」，</p>
+                      <p>你可以假装没看见你朋友发给你的讯息，</p>
+                      <p>或者——你可以按下「星号」，告诉对方你知道了。</p>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 自由排列
+        description: 现在你学到了许多的内容结构，你可以透过自由排列的方式来达成不同的效果。
+        remove     : <br>
+        code       : |
+          <div class="ts [[card]]">
+              <div class="content">
+                  <div class="header">伊繁星最高协议</div>
+                  <div class="meta">
+                      <div>@ce_laws</div>
+                  </div>
+              </div>
+              <div class="image">
+                  <img src="!-4:3-!">
+              </div>
+              <div class="content">
+                  <div class="description">
+                      <p>任何已发布或是计划中之产品及服务，</p>
+                      <p>皆不得用来刻意偏颇大众想法、喜好、甚至混淆视听，</p>
+                      <p>且该产品及服务不得拥有自我立场。</p>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <div class="ts [[card]]">
+              <div class="secondary extra content">
+                  <div class="header">你上次错过了...</div>
+              </div>
+              <div class="content">
+                  <div class="description">
+                      Sed vitae egestas ex.
+                      Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit.
+                      Sed et felis eleifend,
+                      molestie dolor in,
+                      scelerisque sapien.
+                  </div>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 卡片具有不同的外观。
+    items      :
+
+      - title      : 简洁问答
+        description: 一个将按钮独立摆放的问答。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="header">请问</div>
+                  <div class="description">
+                      <p>比起小明，您是否更喜欢小安？</p>
+                  </div>
+              </div>
+              <div class="symbol">
+                  <i class="question circle icon"></i>
+              </div>
+              <div class="right aligned secondary extra content">
+                  <button class="ts primary button">是的</button>
+                  <button class="ts button">不是</button>
+              </div>
+          </div>
+
+      - title      : 文字对齐
+        description: 文字可以靠左、右、甚至置中。
+        code       : |
+          <div class="ts card">
+              <div class="content">
+                  <div class="[[center aligned]] header">
+                      我置中
+                  </div>
+                  <div class="[[left aligned]] description">
+                      这置左
+                  </div>
+              </div>
+              <div class="[[right aligned]] extra content">
+                  然后靠右
+              </div>
+          </div>
+          <div class="ts card">
+              <div class="[[center aligned]] content">
+                  <div class="header">
+                      这种置中方式
+                  </div>
+                  <div class="description">
+                      可以一次置中多个元素。
+                  </div>
+              </div>
+          </div>
+
+      - title      : 置中卡片
+        description: 卡片本身可以是置中的。
+        code       : |
+          <div class="ts [[centered]] card">
+              <div class="image">
+                  <img src="!-4:3-!">
+              </div>
+              <div class="content">
+                  <a class="header">Yami Odymel</a>
+              </div>
+          </div>
+
+      - title      : 抬举
+        description: 卡片可以看起来像是浮在空中，被抬举一样。
+        code       : |
+          <div class="ts [[raised]] card">
+              <div class="image">
+                  <img src="!-4:3-!">
+              </div>
+              <div class="content">
+                  <a class="header">Yami Odymel</a>
+              </div>
+          </div>
+
+      - title      : 轻巧版
+        description: 使卡片依照内容作为宽度基准，而不是直接服贴父容器的宽度。
+        code       : |
+          <div class="ts [[compact]] card">
+              <div class="content">
+                  <a class="description">这张卡片会依照内容来进行宽度伸缩。</a>
+              </div>
+          </div>
+
+      - title      : 增加内距
+        description: 你可以增加卡片内容的内距。
+        code       : |
+          <div class="ts card">
+              <div class="secondary [[very padded]] extra content">
+                  <div class="ts icon {{header}}">
+                      <i class="file {{icon}}"></i>
+                  </div>
+              </div>
+              <div class="[[padded]] content">
+                  <div class="ts {{list}}">
+                      <div class="item">
+                          <i class="time {{icon}}"></i>
+                          <div class="content">
+                              <div class="header">最后开启时间</div>
+                              <div class="description">2017-06-13 12:36PM</div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <i class="lock {{icon}}"></i>
+                          <div class="content">
+                              <div class="header">档案验证码</div>
+                              <div class="description">20838a8df7cc0babd745c7af4b7d94e2</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 链接卡片
+        description: 整张卡片可以是一个链接。
+        code       : |
+          <[[a]] class="ts card" href="http://www.example.com">
+              <div class="content">
+                  <div class="header">关于我</div>
+                  <div class="meta">
+                      <div>@Xiaoan</div>
+                  </div>
+                  <div class="description">
+                      你将会在这里看见一个魔法师的日常生活，
+                      没错，只要你能够单身三十年，
+                      你也可以跟我一样成为魔法师。
+                  </div>
+              </div>
+              <div class="extra content">
+                  <div class="right floated author">
+                      <img class="ts circular avatar image" src="!-user-!"> 小安
+                  </div>
+              </div>
+          </[[a]]>
+
+      - title      : 平面化
+        description: 卡片可以看起来是平的，没有阴影。
+        code       : |
+          <div class="ts [[flatted]] card">
+              <div class="content">
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
+                  Sed et felis eleifend,
+                  molestie dolor in, scelerisque sapien.
+              </div>
+          </div>
+
+      - title      : 卡片栏数
+        description: 卡片群组可以设定字段数量，并在超过时自动换行，允许的卡片数量从 <span class="ts horizontal label">one</span> 至 <span class="ts horizontal label">ten</span>。
+        code       : |
+          <div class="ts [[four]] cards">
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">Karen</a>
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">Caris</a>
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">Imperium</a>
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">Natsuki</a>
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">Avane</a>
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">Eneko</a>
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">Iknore</a>
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-user3-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">Aira</a>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 自动层迭
+        description: 卡片可以在行动装置上自动层迭成一行。
+        code       : |
+          <div class="ts [[stackable]] three cards">
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 双倍层迭
+        description: 在行动装置上卡片群组能够以双倍层迭的方式将卡片重新排序，假设卡片群组设定一排四张，那么在行动装置上将会变成一排两张。
+        code       : |
+          <div class="ts [[doubling]] four cards">
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 瀑布流
+        description: 卡片群组可以是呈现一个瀑布流的样式，你可以透过 <span class="ts horizontal label">one</span> 到 <span class="ts horizontal label">ten</span> 指定瀑布流的排数。
+        code       : |
+          <div class="ts [[three]] [[waterfall]] cards">
+              <div class="ts card">
+                  <div class="content">
+                      Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit.
+                      Sed et felis eleifend, molestie dolor in,
+                      scelerisque sapien.
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="content">
+                      Nullam sed turpis vel purus consectetur elementum a sed ante.
+                      In venenatis ligula nisl,
+                      sed dapibus felis ultrices eu.
+                      Curabitur finibus leo dolor,
+                      eu euismod mi elementum ut.
+                      Donec ac interdum urna.
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="content">
+                      Class aptent taciti sociosqu ad litora
+                      torquent per conubia nostra,
+                      per inceptos himenaeos.
+                      Morbi rhoncus porta mi et finibus.
+                      Pellentesque nisi massa,
+                      imperdiet ac egestas ut,
+                      ullamcorper sit amet urna.
+                      Fusce maximus vitae orci vel hendrerit.
+                      Pellentesque habitant morbi tristique senectus
+                      et netus et malesuada fames ac turpis egestas.
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="content">
+                      Cras eget dui ut eros pulvinar euismod eget rutrum odio.
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="content">
+                      Curabitur vel arcu tortor.
+                      Sed sed libero pellentesque,
+                      venenatis justo a, lobortis velit.
+                      Ut cursus, turpis nec sodales posuere,
+                      libero orci maximus lectus,
+                      sed tincidunt eros diam vel urna.
+                  </div>
+              </div>
+              <div class="ts card">
+                  <div class="content">
+                      Pellentesque nisi massa,
+                      imperdiet ac egestas ut,
+                      ullamcorper sit amet urna.
+                      Fusce maximus vitae orci vel hendrerit.
+                      Pellentesque habitant morbi tristique
+                      senectus et netus et malesuada fames ac turpis egestas.
+                      Donec vel sagittis purus.
+                      Morbi ultrices,
+                      quam et feugiat dignissim
+                  </div>
+              </div>
+          </div>

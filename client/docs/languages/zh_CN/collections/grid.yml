@@ -1,0 +1,367 @@
+slate:
+  title      : 网格系统
+  description: 用以设计网页架构，比科技部的表格还要好太多了。
+
+intro: |
+  <p>Tocas UI 的网格系统和 Bootstrap 的较为不同，比起 Bootstrap 来说，Tocas UI 且更具弹性与更强大的功能还更加地自动化。</p>
+  <p>为了方便展示网格系统，我们将背景加上了灰色，在实际应用中将会是透明的。</p>
+
+styles:
+  - category   : 教学
+    description: 网格系统由多个字段组成，而这些字段可以有不同属性。
+    items      :
+      - title      : 基本
+        description: 一个基本的网格系统，这可以用来规划你网页上的排版。
+        code       : |
+          <div class="ts [[grid]]">
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+          </div>
+
+      - title      : 字段
+        description: |
+          <p>我们称被划分开来的区块为「字段」，而每个字段的宽度都是可以自己决定的。一个网格系统被划分为<strong>十六格</strong>，这将使的你的网格系统更加地具有弹性。</p>
+
+          <p>这个范例的第一行有<strong>四个字段</strong>，这意味着每一个字段都是<strong>四格宽</strong>，而四格宽的字段共有<strong>四个</strong>，那就是 <span class="ts horizontal label">4 * 4 = 16 </span> 也就刚好符合了一行所能够承受的<strong>最大格数（十六格）</strong>。</p>
+
+          <p>另一行是则是由<strong>两格宽</strong>、<strong>八格宽</strong>还有<strong>六格宽</strong>的字段所组成，这意味着 <span class="ts horizontal label">2 + 8 + 6 = 16 </span>，也就刚好达到了一行的最大格数。</p>
+        code       : |
+          <div class="ts grid">
+              <div class="four wide [[column]]"></div>
+              <div class="four wide [[column]]"></div>
+              <div class="four wide [[column]]"></div>
+              <div class="four wide [[column]]"></div>
+              <div class="two wide [[column]]"></div>
+              <div class="eight wide [[column]]"></div>
+              <div class="six wide [[column]]"></div>
+          </div>
+
+      - title      : 列
+        description: |
+          <p>「列」用来确保「字段」<strong>不会因为超过十六格而自动换行</strong>。</p>
+          <p>同时「列」也可以确保自己是独立的一行。</p>
+        code       : |
+          <div class="ts grid">
+              <div class="[[row]]">
+                  <div class="three wide column"></div>
+                  <div class="three wide column"></div>
+                  <div class="three wide column"></div>
+                  <div class="three wide column"></div>
+              </div>
+              <div class="two wide column"></div>
+              <div class="five wide column"></div>
+              <div class="nine wide column"></div>
+              <div class="[[row]]">
+                  <div class="sixteen wide column"></div>
+                  <div class="sixteen wide column"></div>
+                  <div class="sixteen wide column"></div>
+                  <div class="sixteen wide column"></div>
+              </div>
+          </div>
+
+      - title      : 较宽松的网格
+        description: 当你发现字段和字段之间太相近，你可以考虑透过 <span class="ts horizontal label">relaxed grid</span> 来增加字段之间的间距。
+        code       : |
+          <div class="ts grid">
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+          </div>
+          <div class="ts [[relaxed]] grid">
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+          </div>
+
+  - category   : 字段
+    description: 网格系统中最重要的部分。
+    items      :
+
+      - title      : 自动换行
+        description: 一旦该行的字段超过十六格（意指「宽度」，而<strong>不是字段数量</strong>），就会自动换到下一行。
+        code       : |
+          <div class="ts grid">
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+          </div>
+
+      - title      : 内容
+        description: |
+          <p>字段<strong>不应该被套用任何自定义的样式</strong>，字段只是一个容器，你应该在里面放入你要的元素和样式，而<strong>不是直接在字段上更改</strong>。</p>
+        code       : |
+          <div class="ts three column grid">
+              <div class="[[column]]">
+                  <div class="ts {{segment}}">试着在 Column 中摆放元素。</div>
+              </div>
+              <div class="[[column]]">
+                  <div class="ts secondary {{segment}}">而不是直接更改 Column 的样式。</div>
+              </div>
+              <div class="[[column]]">
+                  <div class="ts tertiary {{segment}}">不然很有可能发生量子错误！</div>
+              </div>
+          </div>
+
+      - title      : 宽度
+        description: |
+          <p>字段的宽度由 <span class="ts horizontal label">* wide</span> 决定，例如 <span class="ts horizontal label">one wide</span> 就是一格，<span class="ts horizontal label">sixteen wide</span> 则是十六格。</p>
+          <p>十六格刚好会符合一行最大的宽度，八格则是填满一行的一半。</p>
+        code       : |
+          <div class="ts grid">
+              <div class="[[one wide]] column"></div>
+              <div class="[[fifteen wide]] column"></div>
+              <div class="[[three wide]] column"></div>
+              <div class="[[thirteen wide]] column"></div>
+              <div class="[[six wide]] column"></div>
+              <div class="[[ten wide]] column"></div>
+              <div class="[[four wide]] column"></div>
+              <div class="[[twelve wide]] column"></div>
+              <div class="[[sixteen wide]] column"></div>
+          </div>
+
+      - title      : 拉伸的
+        description: |
+          <p>不指定字段宽度的时候，单个、或多个字段可以被拉伸到填满整个网格系统，并将其他字段缩短至它们的内容宽度。这很适合用在两栏式的排版，或是输入字段与按钮。</p>
+        code       : |
+          <div class="ts grid">
+              <div class="[[stretched]] column">
+                  <div class="ts fluid input">
+                      <input type="text" placeholder="在此输入您想找的数据⋯⋯">
+                  </div>
+              </div>
+              <div class="column">
+                  <button class="ts button">搜寻</button>
+              </div>
+          </div>
+
+  - category   : 列
+    description: 「列」用来整合、包覆字段，甚至可以再细分宽度。
+    items      :
+
+      - title      : 宽度细分
+        description: |
+          <p>你可以在「列」里面规划这一列应该要有几个字段，例如 <span class="ts horizontal label">two column</span> 就能够指列有<strong>两个字段</strong>，也就是一格字段有<strong>八格宽</strong>。</p>
+          <p>因为一列最多允许十六格，为了达成一列中有两个字段，即是 <span class="horizontal label">16 / 2 = 8</span>。</p>
+          <p>当你了解如何善用宽度细分，你也能够将一列切成三个字段，甚至四个、五个，而不会因为字段宽度无法除尽十六而作罢。</p>
+        code       : |
+          <div class="ts grid">
+              <div class="[[two column]] row">
+                  <div class="column"></div>
+                  <div class="column"></div>
+              </div>
+          </div>
+
+      - title      : 浮动字段
+        description: 列里面的字段可以是浮动的。
+        code       : |
+          <div class="ts four column grid">
+              <div class="four column row">
+                  <div class="[[left floated]] column"></div>
+                  <div class="[[right floated]] column"></div>
+              </div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+          </div>
+
+  - category   : 网格
+    description: 网格是最外层的容器。
+    items      :
+
+      - title      : 多重网格
+        description: 网格系统内可以还可以再有另一个网格系统。
+        code       : |
+          <div class="ts two column grid">
+              <div class="column">
+                  <div class="ts four column [[grid]]">
+                      <div class="column"></div>
+                      <div class="column"></div>
+                      <div class="column"></div>
+                      <div class="column"></div>
+                  </div>
+              </div>
+              <div class="column"></div>
+          </div>
+
+      - title      : 宽度细分
+        description: |
+          <p>这和「列」的宽度细分相同，但你可以<strong>直接在网格上进行细分</strong>，例如 <span class="ts horizontal label">four column</span> 就能够指定网格系统的一行会有<strong>四个字段</strong>，也就是一格字段有<strong>四格宽</strong>。</p>
+          <p>因为一列最多允许十六格，为了达成一列中有四个字段，即是 <span class="ts horizontal label">16 / 4 = 4</span>。</p>
+          <p>透过这种方法不需要手动设定每一个字段要有几格宽，十分地方便。</p>
+        code       : |
+          <div class="ts [[four column]] grid">
+              <div class="[[two column]] row">
+                  <div class="column"></div>
+              </div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="column"></div>
+          </div>
+
+      - title      : 置中
+        description: 网格系统内的字段可以从中间开始。
+        code       : |
+          <div class="ts four column [[centered]] grid">
+              <div class="column"></div>
+              <div class="column"></div>
+          </div>
+
+      - title      : 内容对齐
+        description: |
+          <p>网格系统内的字段内容可以对齐左、右、甚至中间，</p>
+          <p>这个设定可以配置于整个网格系统、单列、甚至单个字段。</p>
+        code       : |
+          <div class="ts [[center aligned]] four column grid">
+              <div class="column">置中的文字</div>
+              <div class="[[left aligned]] two column row">
+                  <div class="column">置左的文字</div>
+                  <div class="[[right aligned]] column">置右的文字</div>
+              </div>
+          </div>
+
+  - category   : 响应式网格
+    description: |
+      <p>响应式网格可以在行动装置或小型屏幕上自动缩放，</p>
+      <p>你甚至只需要加一个样式，其他让我们来就好了。</p>
+    items      :
+
+      - title      : 自动层迭
+        description: 自动层迭会在手机上时自动将所有字段缩成一排。
+        code       : |
+          <div class="ts [[stackable]] grid">
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+              <div class="four wide column"></div>
+          </div>
+
+      - title      : 排序反转
+        description: 你可以在指定装置上反转网格系统的排序。
+        code       : |
+          <div class="ts [[mobile reversed]] two column grid">
+              <div class="column">
+                  <div class="ts {{segment}}">第一个，手机第二个</div>
+              </div>
+              <div class="column">
+                  <div class="ts secondary {{segment}}">第二个，手机第ㄧ个</div>
+              </div>
+          </div>
+          <div class="ts [[tablet reversed]] two column grid">
+              <div class="column">
+                  <div class="ts {{segment}}">第一个，平板第二个</div>
+              </div>
+              <div class="column">
+                  <div class="ts secondary {{segment}}">第二个，平板第ㄧ个</div>
+              </div>
+          </div>
+          <div class="ts [[computer reversed]] two column grid">
+              <div class="column">
+                  <div class="ts {{segment}}">第一个，计算机第二个</div>
+              </div>
+              <div class="column">
+                  <div class="ts secondary {{segment}}">第二个，计算机第ㄧ个</div>
+              </div>
+          </div>
+
+      - title      : 双倍层迭
+        description: 这会让你的字段在手机和平板上以双倍的宽度增加，例如一个<strong>八个字段</strong>的行会在平板上成为<strong>四个字段</strong>然后手机上会是<strong>两个字段</strong>。
+        code       : |
+          <div class="ts grid">
+              <div class="[[doubling]] eight column row">
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+              </div>
+              <div class="[[doubling]] six column row">
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+              </div>
+              <div class="[[doubling]] four column row">
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+                  <div class="column"></div>
+              </div>
+          </div>
+
+      - title      : 手动调整
+        description: |
+          <p>你可以自定义在不同装置上字段所占的格数，你总共有这些装置可供选择。</p>
+          <table class="ts small stackable definition table">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>&lt; 767px</th>
+                      <th>&gt; 767px</th>
+                      <th>&gt; 991px</th>
+                      <th>&gt; 1199px</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>样式名称</td>
+                      <td><span class="ts horizontal label">mobile</span></td>
+                      <td><span class="ts horizontal label">tablet</span></td>
+                      <td><span class="ts horizontal label">computer</span></td>
+                      <td><span class="ts horizontal label">large screen</span></td>
+                  </tr>
+                  <tr>
+                      <td>装置称呼</td>
+                      <td>行动装置</td>
+                      <td>平板</td>
+                      <td>一般计算机</td>
+                      <td>大型屏幕</td>
+                  </tr>
+              </tbody>
+          </table>
+          <p>透过 <span class="ts horizontal label">[格数] wide [装置]</span> 使用这些装置，就像 <span class="ts horizontal label">one wide computer</span> 即是在计算机上成为一格宽。</p>
+        code       : |
+          <div class="ts grid">
+              <div class="[[eight wide computer]] [[four wide mobile]] column"></div>
+              <div class="[[eight wide computer]] [[four wide mobile]] column"></div>
+              <div class="[[eight wide computer]] [[four wide mobile]] column"></div>
+              <div class="[[eight wide computer]] [[four wide mobile]] column"></div>
+              <div class="[[four wide computer]] [[eight wide mobile]] column"></div>
+              <div class="[[four wide computer]] [[eight wide mobile]] column"></div>
+              <div class="[[four wide computer]] [[eight wide mobile]] column"></div>
+              <div class="[[four wide computer]] [[eight wide mobile]] column"></div>
+          </div>
+
+      - title      : 手动隐藏
+        description: 你可以透过 <span class="ts horizontal label">[装置] only</span> 在不同装置上隐藏特定列、字段。
+        code       : |
+          <div class="ts grid">
+              <div class="eight wide [[computer only]] column"></div>
+              <div class="eight wide [[computer only]] column"></div>
+              <div class="four wide [[mobile only]] column"></div>
+              <div class="four wide [[mobile only]] column"></div>
+              <div class="four wide [[mobile only]] column"></div>
+              <div class="four wide [[mobile only]] column"></div>
+              <div class="[[large screen only]] row">
+                  <div class="six wide column"></div>
+                  <div class="six wide column"></div>
+                  <div class="four wide column"></div>
+              </div>
+              <div class="eight wide [[tablet only]] eight wide [[mobile only]] column"></div>
+              <div class="eight wide [[tablet only]] eight wide [[mobile only]] column"></div>
+          </div>

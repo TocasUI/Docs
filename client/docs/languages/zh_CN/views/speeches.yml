@@ -1,0 +1,389 @@
+slate:
+  title      : 对话
+  description: 跨国交际的好方式。
+
+intro: |
+  <p>对话可搭配卡片、片段来达成一个类似聊天室的样式。</p>
+
+styles:
+  - category   : 对话气泡
+    description: 气泡有不同的样式。
+    items      :
+      - title      : 对话
+        description: 一个最正常不过的对话气泡。
+        code       : |
+          <div class="ts [[speeches]]">
+            <div class="[[speech]]">
+                <div class="content">早安，我的朋友！</div>
+            </div>
+          </div>
+
+      - title      : 右侧对话
+        description: 对话也可以是来自右边的。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[right]] speech">
+                  <div class="content">早安，我的朋友！</div>
+              </div>
+          </div>
+
+      - title      : 语意
+        description: 对话可以有不同的语意。
+        code       : |
+          <div class="ts speeches">
+            <div class="[[primary]] speech">
+                <div class="content">这是主要语气的对话气泡。</div>
+            </div>
+            <div class="[[info]] speech">
+                <div class="content">这是信息语气的对话气泡。</div>
+            </div>
+            <div class="[[warning]] speech">
+                <div class="content">这是警告语气的对话气泡。</div>
+            </div>
+          </div>
+
+      - title      : 肯定和否定
+        description: 对话可以是肯定或是否定意味。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[negative]] speech">
+                  <div class="content">不好了！这是带有否定意味的对话！</div>
+              </div>
+              <div class="[[positive]] speech">
+                  <div class="content">赞啦！这是很肯定的对话气泡。</div>
+              </div>
+          </div>
+
+      - title      : 发音方式
+        description: 可以利用不同的发音方式来点缀讯息。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[secondary]] speech">
+                  <div class="content">这是次要发音方式，看起来颜色较深。</div>
+              </div>
+              <div class="[[tertiary]] speech">
+                  <div class="content">这是其次发音方式，比刚才的还要更深了一点点。</div>
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 对话气泡的内部可以摆放不同的内容。
+    items      :
+
+      - title      : 头像
+        description: 对话内容也可以具有头像。
+        code       : |
+          <div class="ts speeches">
+              <div class="speech">
+                  <div class="[[avatar]]">
+                    <img src="!-user-!">
+                  </div>
+                  <div class="content">早安！</div>
+              </div>
+          </div>
+
+      - title      : 文字
+        description: 用来呈现对话的主要文字内容，如果对话仅有文字而没有别的元素，可以省略。
+        code       : |
+          <div class="ts speeches">
+              <div class="speech">
+                  <div class="content">我是纯文本的对话内容。</div>
+              </div>
+              <div class="speech">
+                  <div class="content">
+                    <div class="author">Yami Odymel</div>
+                    <div class="[[text]]">这个对话内容结构较复杂，所以需要用注释包起来。</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 作者
+        description: 对话内容可以带有一个作者、讯息发布者的名称。
+        code       : |
+          <div class="ts speeches">
+              <div class="speech">
+                  <div class="[[author]]">Yami Odymel</div>
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="text">大家好啊！</div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 自由摆放作者名称
+        description: 作者名称除了不只能够摆在对话外，也可以和对话同行，或是放置于对话内。
+        code       : |
+          <div class="ts speeches">
+              <div class="speech">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="[[inline]] [[author]]">Yami Odymel</div>
+                      <div class="text">：嗨！早安。</div>
+                  </div>
+              </div>
+              <div class="speech">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="author">Haneda Shirone</div>
+                      <div class="text">啰哈！</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 图片
+        description: 对话内容可以摆放一张图片。
+        code       : |
+          <div class="ts speeches">
+            <div class="speech">
+                <div class="content">
+                    <div class="author">Yami Odymel</div>
+                    <div class="[[image]]">
+                        <img src="!-16:9-!">
+                    </div>
+                    <div class="text">前天去夏威夷旅行，怎样？拍得不错吧！。</div>
+                </div>
+            </div>
+          </div>
+
+      - title      : 元数据
+        description: 你可以在对话内容下方插入一些元数据。
+        code       : |
+          <div class="ts speeches">
+              <div class="speech">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="text">月月，搭拉安。</div>
+                      <div class="[[meta]]">
+                          <div class="item">12:33 PM</div>
+                          <div class="item">已读</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 带点元数据
+        description: 元数据可以有「子弹点」或是「中点」来做区隔。别忘记，你的元数据也可以像作者名称那样放置在对话气泡的外面。
+        code       : |
+          <div class="ts speeches">
+              <div class="speech">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">这个讯息的元数据带有子弹点。</div>
+                  <div class="[[bulleted]] [[meta]]">
+                      <div class="item">09:16 PM</div>
+                      <div class="item">已读</div>
+                  </div>
+              </div>
+              <div class="speech">
+                    <div class="avatar">
+                        <img src="!-user-!">
+                    </div>
+                    <div class="content">这个则是中点的元数据。</div>
+                    <div class="[[middoted]] [[meta]]">
+                        <div class="item">03:54 AM</div>
+                        <div class="item">已传送</div>
+                    </div>
+              </div>
+          </div>
+
+      - title      : 分隔线
+        description: 透过分隔线组件，你能以此来当作两个对话之间的分隔点。
+        code       : |
+          <div class="ts speeches">
+              <div class="speech">
+                  <div class="content">
+                      吻仔鱼，这里充满了很多吻仔鱼。
+                  </div>
+              </div>
+              <div class="[[ts horizontal divider]]">今天</div>
+              <div class="right speech">
+                  <div class="content">
+                      喔，等一下，蛤？
+                  </div>
+              </div>
+          </div>
+
+      - title      : 引用
+        description: 对话内可以插入一个引用组件。
+        code       : |
+          <div class="ts speeches">
+              <div class="speech">
+                  <div class="content">
+                      <div class="text">
+                          <blockquote class="[[ts secondary quote]]">
+                              Yami Odymel
+                              <br>
+                              看看我，这是引用组件欸！
+                          </blockquote>
+                          Tocas UI 的聊天室组件支持引用欸，真是太 Telegram 了。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 群组
+    description: 多个对话气泡可以被包覆成一个群组，避免重复的头像并将对话串联在一起。
+    items      :
+      - title      : 群组
+        description: 一个最基本的对话群组。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[group]]">
+                  <div class="speech">
+                      <div class="avatar">
+                          <img src="!-user-!">
+                      </div>
+                      <div class="content">
+                          <div class="author">Yami Odymel</div>
+                          <div class="text">这些对话气泡组成了一个群组。</div>
+                      </div>
+                  </div>
+                  <div class="speech">
+                      <div class="avatar">
+                          <img src="!-user-!">
+                      </div>
+                      <div class="content">
+                          <div class="author">Yami Odymel</div>
+                          <div class="text">有些重复的内容会被隐藏，像是头像、作者名称、元数据。</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 右侧群组
+        description: 群组可以是向右对齐的。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[right]] group">
+                  <div class="speech">
+                      <div class="content">我是右侧群组。</div>
+                  </div>
+                  <div class="speech">
+                      <div class="content">看起来很像是自己所发出的对话讯息。</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 圆形群组
+        description: 群组可以指定圆形样式，这除了让对话气泡是圆形之外，还能够看起来是一体的。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[circular]] group">
+                  <div class="speech">
+                      <div class="avatar">
+                          <img src="!-user-!">
+                      </div>
+                      <div class="content">这个对话气泡除了是圆的以外，</div>
+                  </div>
+                  <div class="speech">
+                      <div class="avatar">
+                          <img src="!-user-!">
+                      </div>
+                      <div class="content">看起来也不会太突兀。</div>
+                  </div>
+                  <div class="speech">
+                      <div class="avatar">
+                          <img src="!-user-!">
+                      </div>
+                      <div class="content">就像 Facebook Messenger 那样串连在一起。</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 指标群组
+        description: 同时你也能够将群组也能够看起来带有指标，省去了在每个对话气泡上设置指针样式的麻烦。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[pointing]] group">
+                  <div class="speech">
+                      <div class="content">这是个指标对话气泡群组。</div>
+                  </div>
+                  <div class="speech">
+                      <div class="content">但只有最后一个对话气泡才会有三角形指标。</div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 对话有不同的外观点缀。
+    items      :
+
+      - title      : 无框线
+        description: 对话气泡可以看起来是没有框线的。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[borderless]] speech">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="author">Yami Odymel</div>
+                      <div class="text">这个对话气泡没有框线，不觉得看起来好像有点宽敞了吗？</div>
+                  </div>
+              </div>
+              <div class="[[borderless]] speech">
+                  <div class="avatar">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="author">Haneda Shirone</div>
+                      <div class="text">嗯⋯⋯。</div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 带指标的
+        description: 对话气泡可以看起来有个三角形指标。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[pointing]] speech">
+                  <div class="content">哇喔！看看这气泡的左边！</div>
+              </div>
+          </div>
+
+      - title      : 圆形
+        description: 对话气泡可以看起来是圆形的。
+        code       : |
+          <div class="ts speeches">
+              <div class="[[circular]] speech">
+                  <div class="content">昨天你有看到彗星撞地球吗？</div>
+              </div>
+          </div>
+
+      - title      : 尺寸
+        description: 对话有不同的尺寸可供选择。
+        code       : |
+          <div class="ts [[tiny]] speeches">
+            <div class="speech">
+                <div class="content">微小</div>
+            </div>
+          </div>
+          <div class="ts [[small]] speeches">
+            <div class="speech">
+                <div class="content">小型</div>
+            </div>
+          </div>
+          <div class="ts [[medium]] speeches">
+            <div class="speech">
+                <div class="content">适中</div>
+            </div>
+          </div>
+          <div class="ts [[large]] speeches">
+            <div class="speech">
+                <div class="content">大型</div>
+            </div>
+          </div>
+          <div class="ts [[big]] speeches">
+            <div class="speech">
+                <div class="content">大的</div>
+            </div>
+          </div>

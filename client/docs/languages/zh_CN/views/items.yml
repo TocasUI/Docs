@@ -1,0 +1,679 @@
+slate:
+  title      : 项目
+  description: 用来陈列商品或者是一些项目都很不错用。
+
+styles:
+  - category   : 种类
+    description: 项目有多个种类。
+    items      :
+      - title      : 基本
+        description: 最基本的项目群组。
+        code       : |
+          <div class="ts [[items]]">
+              <div class="item">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">吻仔鱼</a>
+                      <div class="meta">
+                          <span>$32 元</span>
+                      </div>
+                      <div class="description">
+                          「吻仔鱼」吻仔鱼身长1～3公分、呈透明状，由各种鱼类的稚仔鱼组成，其中以日本鯷、刺公鯷、异叶公鯷为主，成长至4公分、体色变黑、侧线有银带出现时，就称为「鱙仔鱼」。但吻仔鱼长到两岁大、体长3～4公分时，就会结束生命。主要指的是鯷鱼类和沙丁鱼类鱼苗的总称，是多种鱼类赖以生存的重要食物，但绝不是我们人类赖以生存的重要食物。总结各方的说法，捕捞吻仔鱼，是会对渔业产量、生态环境有所影响。
+                      </div>
+                      <div class="extra">
+                          百度知道
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">芒果</a>
+                      <div class="meta">
+                          <span>Mango</span>
+                      </div>
+                      <div class="description">
+                          是芒果属的一种植物和果实，原产自北印度和马来半岛，
+                          在梵语中叫作āmra，音译为「庵罗」，或叫作āmalaka，
+                          音译为「庵摩勒」、「庵摩罗」、「阿摩落伽」。
+                      </div>
+                      <div class="extra">
+                          维基百科
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 状态
+    description: 项目能够有不同的状态。
+    items      :
+
+      - title      : 已启用
+        description: 项目能够呈现正在使用、已经启用的状态。
+        code       : |
+          <div class="ts segmented items">
+              <div class="item">
+                  以西结
+              </div>
+              <div class="[[active]] item">
+                  伊波咲
+              </div>
+              <div class="item">
+                  栗宫希实
+              </div>
+          </div>
+
+      - title      : 已选择
+        description: 项目可以看起来像是被选择、圈选的样子。
+        code       : |
+          <div class="ts segmented items">
+              <div class="item">
+                  The Walking Dead
+              </div>
+              <div class="[[selected]] item">
+                  Breaking Bad
+              </div>
+              <div class="item">
+                  Love Actually
+              </div>
+          </div>
+
+  - category   : 内容
+    description: 项目由多种不同构造的内容组成。
+    items      :
+
+      - title      : 图片
+        description: 项目可以包含图片。
+        code       : |
+          <div class="ts divided items">
+              <div class="item">
+                  <div class="[[image]]">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="[[image]]">
+                      <img src="!-4:3-!">
+                  </div>
+              </div>
+          </div>
+
+      - title      : 内容
+        description: 项目中可以有内容来叙述项目。
+        code       : |
+          <div class="ts divided items">
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="[[content]]">
+                      台湾，旧称福尔摩沙，是位于亚洲东部、太平洋西北侧的岛屿，
+                      地处琉球群岛与菲律宾群岛之间，西隔台湾海峡与欧亚大陆相望－维基百科。
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="[[content]]">
+                      「台湾」之名的由来说法甚多，在明朝以后的文献中，
+                      台湾亦写作「大员」、「台员」（三者台语：同音：Tai-oan），
+                      或是「鸡笼山」、「鸡笼」、「北港」、「东蕃」等－维基百科。
+                  </div>
+              </div>
+          </div>
+
+      - title      : 标题
+        description: 项目中可以有标题。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      <div class="[[header]]">
+                          笨蛋测验召唤兽
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      <div class="[[header]]">
+                          零之使魔
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 元数据
+        description: 可以在项目中放入元数据。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="content">
+                      <div class="header">
+                          戳戳洨洨安
+                      </div>
+                      <div class="[[meta]]">
+                          <span>Android</span>
+                          <span>免费下载</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 带点元数据
+        description: 元数据可以有「子弹点」或是「中点」来做区隔。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="content">
+                      <div class="header">
+                          计算机玩瞎咪
+                      </div>
+                      <div class="[[middoted]] meta">
+                          <span>Yami Odymel</span>
+                          <span>台湾</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="content">
+                      <div class="header">
+                          希豹
+                      </div>
+                      <div class="[[bulleted]] meta">
+                          <span>Seadog007</span>
+                          <span>台湾</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - subtitle   : 同行元数据
+        description: 元数据可以和标题是同一行。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="content">
+                      <div class="header">
+                          标题
+                      </div>
+                      <div class="[[inline]] meta">
+                          <span>同行</span>
+                          <span>元数据</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 注释
+        description: 项目中可以带有注释来诠释整个项目。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+                  <div class="content">
+                      <div class="header">Macbook Air</div>
+                      <div class="[[description]]">
+                          一台由贾伯斯从牛皮信封袋中拿出来的轻薄笔电，令人为之惊艳，叹为观止。省去 CD 光驱的时代从这个时候开始。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 动作
+        description: 项目中可以摆有具功能性按钮的区块。
+        code       : |
+          <div class="ts small single line items">
+              <div class="item">
+                  <div class="ts mini {{image}}">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="content">
+                      <div class="header">博丽灵梦</div>
+                      <div class="meta">
+                          <div>@Hakurei_Reimu</div>
+                      </div>
+                  </div>
+                  <div class="[[actions]]">
+                      <div class="ts button">
+                          加入好友
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts mini {{image}}">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="content">
+                      <div class="header">东风谷早苗</div>
+                      <div class="meta">
+                          <div>@Kochiya_Sanae</div>
+                      </div>
+                  </div>
+                  <div class="[[actions]]">
+                      <div class="ts button">
+                          加入好友
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 图示
+        description: 项目中可以摆放一个区块用来显示单个项目的图标。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <i class="large users [[icon]]"></i>
+                  <div class="content">
+                      <div class="header">群众会议</div>
+                      <div class="extra">
+                          由大众共同表决的决议会。
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <i class="large inverted info rounded announcement [[icon]]"></i>
+                  <div class="content">
+                      <div class="header">系统公告</div>
+                      <div class="extra">
+                          官方的主要消息。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 连结
+        description: 项目中可以有链接，如果你想让整个项目变成链接请参考更下方的教学。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <[[a]] class="ts tiny {{image}}">
+                      <img src="!-user-!">
+                  </[[a]]>
+                  <div class="content">
+                      <a class="header">羽田白音</a>
+                      <div class="description">
+                          来自日本，在台湾目睹一场飞机事故并在其中拯救了另一名乘客，但得到的回报却不是感谢。
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <[[a]] class="ts tiny {{image}}">
+                      <img src="!-user3-!">
+                  </[[a]]>
+                  <div class="content">
+                      <a class="header">卡莉丝</a>
+                      <div class="description">
+                          总是以玩乐为主的初中生，把大多数的时间都花在打理自己的外观上，尝试着让自己成为能够大受瞩目的人物。
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 额外内容
+        description: 你可以在项目中放入额外内容。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <div class="content">
+                      <div class="header">废除博爱座</div>
+                      <div class="description">
+                          近年来，台湾一般民众之文化水平已明显提高，在公共运输工具上让座给有需要的人已经成为一个常见的行为。不仅仅局限于博爱座，一般座位也常见让座这样的行为。
+                      </div>
+                      <div class="[[extra]]">
+                          <i class="check {{icon}}"></i>
+                          121 个赞同
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  - category   : 外观
+    description: 项目可以有不同的外观点缀。
+    items      :
+      - title      : 分隔的
+        description: 项目和另一个项目之间可以有分隔线做为区隔的界线。
+        code       : |
+          <div class="ts [[divided]] items">
+              <div class="item">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">吻仔鱼</a>
+                      <div class="meta">
+                          <span>$32 元</span>
+                      </div>
+                      <div class="description">
+                          一般可分为淡水鱼魩仔鱼与海水鱼魩仔鱼两类。根据台湾大学王友慈博士指出，魩仔鱼是单一种鱼类，是沙丁鱼苗，若捞捕作业不正确有可能捞到数十至一百五十种类的鱼苗。
+                      </div>
+                      <div class="extra">
+                          维基百科
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+                  <div class="content">
+                      <a class="header">芒果</a>
+                      <div class="meta">
+                          <span>Mango</span>
+                      </div>
+                      <div class="description">
+                          是芒果属的一种植物和果实，原产自北印度和马来半岛，在梵语中叫作āmra，音译为「庵罗」，或叫作āmalaka，音译为「庵摩勒」、「庵摩罗」、「阿摩落伽」。
+                      </div>
+                      <div class="extra">
+                          维基百科
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 片段的
+        description: 项目可以看起来像片段那样层层分明。
+        code       : |
+          <div class="ts [[segmented]] items">
+              <div class="item">
+                  <div class="ts mini {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      トリノライン
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts mini {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      ReLieF～亲爱なるあなたへ～
+                  </div>
+              </div>
+          </div>
+
+      - title      : 可选择的
+        description: 项目可以在鼠标移上去时出现可选择的样式。
+        code       : |
+          <div class="ts [[selection]] items">
+              <div class="item">
+                  <div class="ts mini {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      こんじきのやみ
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts mini {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      くろさき めあ
+                  </div>
+              </div>
+          </div>
+
+      - title      : 较宽松
+        description: 项目和项目之间的间隙可以更为宽松。
+        remove     : <br>
+        code       : |
+          <div class="ts [[relaxed]] items">
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      <div class="header">
+                          New Game!
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      <div class="header">
+                          Re:从零开始的异世界生活
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <div class="ts [[very relaxed]] items">
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      <div class="header">
+                          Fate/kaleid liner 魔法少女☆伊莉雅3rei
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-1:1-!">
+                  </div>
+                  <div class="middle aligned content">
+                      <div class="header">
+                          这个美术社大有问题！
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 单行的
+        description: 项目可以是禁止换行，保持单行且在文字溢出时显示「⋯」隐藏。
+        code       : |
+          <div class="ts [[single line]] items">
+              <div class="item">
+                  <div class="content">
+                      <div class="header">
+                          支付系统？
+                      </div>
+                      <div class="description">
+                          在真正要做钱包之前先用了 PayPal 的项目还有 Tocas UI 稍微搭配了一下，感觉外观还是不错的。然后提到 PayPal 又让我想起台湾阻挡第三方支付的事情⋯。
+                      </div>
+                      <div class="extra">
+                          2016 年 12 月 19 日
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="content">
+                      <div class="header">
+                          Tocas UI 2.1 新元素：板岩
+                      </div>
+                      <div class="description">
+                          板岩是聚焦广告牌的后继者，板岩除了拥有作为页面标题区块的功能外，现在还可以当作一个预置区块（Placeholder），例如一个空的购物车就可以用上板岩。
+                      </div>
+                      <div class="extra">
+                          2016 年 11 月 28 日
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 附着
+        description: 片段的项目可以和其他组件附着在一块。
+        code       : |
+          <div class="ts [[top attached]] {{header}}">
+              推荐影片
+          </div>
+          <div class="ts [[attached]] segmented items">
+              <div class="item">
+                  <div class="image">
+                      <img src="!-16:9-!">
+                  </div>
+                  <div class="content">
+                      【阿津】Inner Voices 恐怖游戏 - 还可以啦(´;ω;`)
+                  </div>
+              </div>
+          </div>
+          <div class="ts [[attached]] {{header}}">
+              再看一次
+          </div>
+          <div class="ts [[bottom attached]] segmented items">
+              <div class="item">
+                  <div class="image">
+                      <img src="!-16:9-!">
+                  </div>
+                  <div class="content">
+                      INJUSTICE 2 HARLEY QUINN ENDING - Arcade Ladder Walkthrough Gameplay (Character Story)
+                  </div>
+              </div>
+          </div>
+
+      - title      : 链接项目
+        description: 单个项目可以是一个链接。
+        code       : |
+          <div class="ts [[link]] items">
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="middle aligned content">
+                      <div class="header">
+                          Lorem ipsum
+                      </div>
+                      <div class="description">
+                          Curabitur efficitur nisi vitae lorem bibendum pulvinar.
+                          Nec risus ac tellus euismod varius.
+                          Nullam commodo turpis lorem,
+                          vitae luctus magna consequat sed.
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts tiny {{image}}">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="middle aligned content">
+                      <div class="header">
+                          Cum sociis
+                      </div>
+                      <div class="description">
+                          Quisque gravida dictum justo,
+                          vitae dignissim est luctus a. Phasellus placerat,
+                          nunc eget hendrerit dictum,
+                          orci urna iaculis enim.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 垂直对齐
+        description: 你可以自定义项目内容的垂直对齐。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+                  <div class="[[top aligned]] content">
+                      <div class="header">
+                          这个标题会贴齐上方
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+                  <div class="[[middle aligned]] content">
+                      <div class="header">
+                          这会垂直置中
+                      </div>
+                  </div>
+                  <div class="[[middle aligned]] actions">
+                      <div class="ts positive button">
+                          动作区块也行
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="image">
+                      <img src="!-4:3-!">
+                  </div>
+                  <div class="[[bottom aligned]] content">
+                      <div class="header">
+                          然后这个会贴齐底部
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      - title      : 浮动
+        description: 项目的内容可以左右浮动。
+        code       : |
+          <div class="ts items">
+              <div class="item">
+                  <div class="ts small {{image}}">
+                      <img src="!-user-!">
+                  </div>
+                  <div class="top aligned content">
+                      <div class="header">
+                          Lorem ipsum
+                      </div>
+                      <div class="description">
+                          Curabitur efficitur nisi vitae lorem bibendum pulvinar.
+                          Nec risus ac tellus euismod varius.
+                          Nullam commodo turpis lorem,
+                          vitae luctus magna consequat sed.
+                      </div>
+                      <div class="extra">
+                          <div class="ts [[right floated]] {{button}}">
+                              加入好友
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="ts small {{image}}">
+                      <img src="!-user2-!">
+                  </div>
+                  <div class="top aligned content">
+                      <div class="header">
+                          Cum sociis
+                      </div>
+                      <div class="description">
+                          Quisque gravida dictum justo,
+                          vitae dignissim est luctus a. Phasellus placerat,
+                          nunc eget hendrerit dictum,
+                          orci urna iaculis enim.
+                      </div>
+                      <div class="extra">
+                          <div class="ts [[right floated]] {{button}}">
+                              加入好友
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
