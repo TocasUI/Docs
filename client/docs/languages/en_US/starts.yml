@@ -1,16 +1,16 @@
 slate:
-  title      : 從這開始
-  description: 歡迎使用 Tocas UI。
+  title      : Start here
+  description: Welcome to Tocas UI。
 
 items:
-  - title      : 開始使用
+  - title      : Getting started
     link       : /getting-started/
-    description: 學習如何使用 Tocas UI，並理解與其他 CSS 框架（如：Bootstrap）的差異。
+    description: Learn how to use Tocas UI,and understanding the different with Tocas UI and other CSS framework(ex. Bootstrap).
     symbol     : flag
 
-  - title      : 基本元素
+  - title      : HTML elements
     link       : /typography/
-    description: 我們修改了一些基本元素的樣式，令其更加美觀。
+    description: We modify some HTML elements,make it more beautiful.
     symbol     : cube
 
   #- title      : 元件理念
@@ -18,12 +18,12 @@ items:
   #  description: 理解 Tocas UI 的元件理念並學習如何將元件組合在一起。
   #  symbol     : comments outline
 
-  - title      : 實際範例
+  - title      : Examples
     link       : /examples/
-    description: 透過 Tocas UI 所做出的企業級範例網站，且開放原始碼並供自由下載與修改。
+    description: Through the enterprise model site made by Tocas UI, and open source for free download and modify.
     symbol     : cubes
 
-  - title      : 遊樂場
+  - title      : Playground
     link       : /try/
-    description: 直接線上測試並編輯 Tocas UI，還能與他人一同分享相關結構。
+    description: Test and edit Tocas UI online and share it with others.
     symbol     : code
