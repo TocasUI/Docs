@@ -24,7 +24,7 @@ styles:
       - title      : 缩写
         description: 文字可以是缩写，且在鼠标滑过时出现完整文字。
         code       : |
-          <[[abbr]] title="HyperText Markup Language" class="initialism">HTML</[[abbr]]> 是卷标语言，而不是一种程序语言。
+          <[[abbr]] title="HyperText Markup Language">HTML</[[abbr]]> 是卷标语言，而不是一种程序语言。
 
       - title      : 上标与下标
         description: 将指定文字偏上或偏下。

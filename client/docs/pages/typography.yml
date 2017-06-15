@@ -24,7 +24,7 @@ styles:
       - title      : 縮寫
         description: 文字可以是縮寫，且在滑鼠滑過時出現完整文字。
         code       : |
-          <[[abbr]] title="HyperText Markup Language" class="initialism">HTML</[[abbr]]> 是標籤語言，而不是一種程式語言。
+          <[[abbr]] title="HyperText Markup Language">HTML</[[abbr]]> 是標籤語言，而不是一種程式語言。
 
       - title      : 上標與下標
         description: 將指定文字偏上或偏下。
