@@ -202,7 +202,7 @@ styles:
         description: <p>以樣式修飾一個元素的顏色、大小、外觀時和先前的區塊與元素命名方式皆相同且不可是縮寫，以避免你在忘記過往是如何縮寫的。</p><p>簡單來說：小的（small）不可以被縮寫成（sm）；如果有兩個單字仍以空白隔開，例如：向左浮動（left floated）。</p>
         code       : |
           <!-- ✖ 別這樣 -->
-          <div class="continer continer-lg">
+          <div class="container container-lg">
               <div class="picture picture-sm"></div>
               <button class="btn btn-lf"></button>
           </div>
