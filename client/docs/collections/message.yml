@@ -134,10 +134,10 @@ styles:
         code       : |
           <div class="ts message">
               <div class="header">現已推出</div>
-              <div class="[[list]]">
+              <[[ul]]>
                   <li>虛擬實境擴充</li>
                   <li>肥宅模擬器 2016</li>
-              </div>
+              </[[ul]]>
           </div>
 
       - title      : 圖示
