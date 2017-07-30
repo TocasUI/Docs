@@ -657,6 +657,24 @@ styles:
               </div>
           </[[a]]>
 
+      - title      : 無邊框
+        description: 卡片可以沒有邊框線。
+        code       : |
+          <div class="ts [[borderless]] card">
+              <div class="content">
+                  <div class="header">這個是標題</div>
+                  <div class="description">
+                      <p>然後這裡是文字註釋，</p>
+                      <p>很重要的文字註釋。</p>
+                  </div>
+              </div>
+              <div class="extra content">
+                  <div class="right floated author">
+                      <img class="ts circular avatar image" src="!-user-!"> 小安
+                  </div>
+              </div>
+          </div>
+
       - title      : 平面化
         description: 卡片可以看起來是平的，沒有陰影。
         code       : |

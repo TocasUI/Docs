@@ -12,7 +12,7 @@
             div(:class="$style.slate_background", :style="{background: backgroundPattern}")
 
             .ts.inverted.center.aligned.header(:class='$style.slate_header')
-                | Tocas UI 2.3
+                | Tocas UI 2.3.3
                 .sub.header(:class='$style.slate_subHeader') 這裡迎來新世界
 
             //- 快速使用
@@ -52,7 +52,6 @@
                     .center.aligned.column(:class="$style.donators_secondary")
                         img.ts.mini.rounded.spaced.image(src='~images/donators/Sean_Wei.jpg')
                         | Sean Wei
-            a(href='https://patreon.com/yamiodymel', target='_blank', :class="$style.donators_bePatreon") 成為贊助者
 
         //- 簡介大綱
         .ts.narrow.container(:class="$style.description")
@@ -322,9 +321,9 @@ export default
         importCode:
             """
             <!-- Tocas UI：CSS 與元件 -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.2/tocas.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
             <!-- Tocas JS：模塊與 JavaScript 函式 -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.2/tocas.js"><\/script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"><\/script>
             """
         buttonExample:
             """

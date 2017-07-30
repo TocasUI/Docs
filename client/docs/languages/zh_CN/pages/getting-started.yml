@@ -14,7 +14,7 @@ styles:
         description: |
           这是由一家知名 CDN 公司 <a href="https://www.cloudflare.com">CloudFlare</a> 所提供的免费服务并且提供够快的服务速度，这使你不需要下载 Tocas UI，只需要将下列标签放置于 HTML 中的 <span class="ts horizontal label">&lt;head&gt; .. &lt;/head&gt;</span> 处即可，且该公司提供可靠的上线时间令你毋须担心。
         code       : |
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.2/tocas.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
 
       - title      : 自行下载 Tocas UI
         type       : code

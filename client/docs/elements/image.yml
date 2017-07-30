@@ -43,6 +43,11 @@ styles:
         code       : |
           <img class="ts [[disabled]] small image" src="!-4:3-!">
 
+      - title      : 已選擇
+        description: 一個已被選取的圖片。
+        code       : |
+          <img class="ts [[selected]] small image" src="!-4:3-!">
+
   - category   : 外觀
     description: 圖片具有不同的外觀。
     items      :
