@@ -162,8 +162,6 @@ styles:
           - external
           - privacy
           - settings
-          - comments
-          - external
           - trophy
           - payment
           - feed
@@ -1038,7 +1036,6 @@ styles:
           - dot circle outline
           - try
           - graduation
-          - circle outline
           - sliders
           - weixin
           - tty
