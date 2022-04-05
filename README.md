@@ -1,15 +1,15 @@
 # Docs
 
-這是 Tocas UI 的[官方教學文件](https://tocas-ui.com/)原始碼。
+這是 Tocas UI 的[官方教學文件](https://v2.tocas-ui.com/)原始碼。
 
 ![](./images/screenshot.png)
 
 ## 使用技術
 
-* Vue.js（Vuex）
-* Sass（CSS Module）
-* Pug（Jade）
-* JavaScript（ES6）
+-   Vue.js（Vuex）
+-   Sass（CSS Module）
+-   Pug（Jade）
+-   JavaScript（ES6）
 
 ## 開始編輯
 
@@ -52,37 +52,37 @@ Docs
 
 ```yml
 slate:
-  title      : 按鈕
-  description: 一個重要的按鈕，我們將它視為核彈按鈕般，精心設計和呵護。
+    title: 按鈕
+    description: 一個重要的按鈕，我們將它視為核彈按鈕般，精心設計和呵護。
 
 intro: |
-  <p>按鈕具有多種樣式和語意，請注意的是，語意和顏色不同，請不要為了要新增紅色按鈕，就建立一個「負面」按鈕。</p>
-  <p>請務必遵循 CSS 樣式中的含意。</p>
+    <p>按鈕具有多種樣式和語意，請注意的是，語意和顏色不同，請不要為了要新增紅色按鈕，就建立一個「負面」按鈕。</p>
+    <p>請務必遵循 CSS 樣式中的含意。</p>
 
 styles:
-  - category   : 種類
-    description: 一個按鈕具有多個不同的種類。
-    items      :
-      - title      : 按鈕
-        description: 一個正常的按鈕。
-        code       : |
-          <button class="ts [[button]]">按鈕</button>
+    - category: 種類
+      description: 一個按鈕具有多個不同的種類。
+      items:
+          - title: 按鈕
+            description: 一個正常的按鈕。
+            code: |
+                <button class="ts [[button]]">按鈕</button>
 ```
 
 ### 特殊格式
 
 在 Tocas UI 中有三個特殊標記：
 
-* `[[文字]]`：這會用來凸顯包覆的文字，很常用在需要特別標記重要樣式名稱（Class）的時候。
-* `{{文字}}`：自動將包覆的文字轉換成相關連結，如 `{{segment}}` 將會被轉換成 `<a href="//tocas-ui.com/elements/segment">segment</a>`，這很常用在希望能將樣式名稱中的某元素加上相關連結時候。
-* `!-文字-!`：這會將文字轉換成圖片，可用關鍵字有：`16:9`、`1:1`、`4:3`、`user`、`user2`、`user3`。
+-   `[[文字]]`：這會用來凸顯包覆的文字，很常用在需要特別標記重要樣式名稱（Class）的時候。
+-   `{{文字}}`：自動將包覆的文字轉換成相關連結，如 `{{segment}}` 將會被轉換成 `<a href="//v2.tocas-ui.com/elements/segment">segment</a>`，這很常用在希望能將樣式名稱中的某元素加上相關連結時候。
+-   `!-文字-!`：這會將文字轉換成圖片，可用關鍵字有：`16:9`、`1:1`、`4:3`、`user`、`user2`、`user3`。
 
 具體範例如下：
 
 ```yml
-- title      : 按鈕
+- title: 按鈕
   description: 一個正常的按鈕。
-  code       : |
+  code: |
       <button class="ts icon [[button]]">
           <i class="heart {{icon}}"></i>
       </button>
@@ -95,20 +95,20 @@ The translation files are under the `client/docs/langages/` directory, find your
 
 1. Replace it with bullshit when it's bullshit.
 
-   (When the words are not telling a story, replace it with your own bullshit.)
+    (When the words are not telling a story, replace it with your own bullshit.)
 
 2. Translate it when the word has meaning.
 
-   (Translate them when the words are telling something meaningful, or a tutorial.)
+    (Translate them when the words are telling something meaningful, or a tutorial.)
 
 3. Don't hard-translate it when it's a "meme".
 
-   (Try to replace the joke with the jokes which were borned in your country.)
+    (Try to replace the joke with the jokes which were borned in your country.)
 
 4. The file format is based on YAML, be careful about the indents.
 
-   (2 spaces for YAML, 4 spaces for the CSS, HTML, JavaScript in the YAML.)
+    (2 spaces for YAML, 4 spaces for the CSS, HTML, JavaScript in the YAML.)
 
 5. Send the Pull Request when you're done with a chapter.
 
-   (You don't have to finish it all to send the Pull Request, just send it whenever you want.)
+    (You don't have to finish it all to send the Pull Request, just send it whenever you want.)
